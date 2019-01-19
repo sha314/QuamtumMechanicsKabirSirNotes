@@ -1,0 +1,128 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}sheet-1 :Dirac Delta Function}{9}{chapter.1}
+\ttl@starttoc {default@1}
+\contentsline {section}{\numberline {1.1}Other representation of delta function}{10}{section.1.1}
+\contentsline {section}{\numberline {1.2}Properties of the delta function}{11}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Notes}{13}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Derivatives of the delta function}{14}{section.1.3}
+\contentsline {section}{\numberline {1.4}Integration of the delta function}{15}{section.1.4}
+\contentsline {section}{\numberline {1.5}Three - dimensional delta function}{15}{section.1.5}
+\contentsline {section}{\numberline {1.6}Fourier Transformation}{17}{section.1.6}
+\contentsline {chapter}{\numberline {2}sheet-2 : Linear Vector Space}{19}{chapter.2}
+\ttl@stoptoc {default@1}
+\ttl@starttoc {default@2}
+\contentsline {section}{\numberline {2.1}Definition}{19}{section.2.1}
+\contentsline {section}{\numberline {2.2}Example of linear vector space}{20}{section.2.2}
+\contentsline {section}{\numberline {2.3}Inner product space or a unitary vector space}{22}{section.2.3}
+\contentsline {section}{\numberline {2.4}Examples of scalar product}{22}{section.2.4}
+\contentsline {section}{\numberline {2.5}Norm of a vector}{24}{section.2.5}
+\contentsline {section}{\numberline {2.6}Metric included by the scalar product}{24}{section.2.6}
+\contentsline {section}{\numberline {2.7}Schwarz's inequality}{25}{section.2.7}
+\contentsline {section}{\numberline {2.8}Analogy of Schwarz inequlity with vectors in a three-dimensional Euclidean space $\mathbb {R}^3$}{25}{section.2.8}
+\contentsline {section}{\numberline {2.9}Orthogonality and linear independence}{26}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Linear independence}{26}{subsection.2.9.1}
+\contentsline {section}{\numberline {2.10}Orthonormality and linear independence}{26}{section.2.10}
+\contentsline {section}{\numberline {2.11}Schmidt orthonormalization method}{26}{section.2.11}
+\contentsline {section}{\numberline {2.12}Dimension of a vector space}{27}{section.2.12}
+\contentsline {section}{\numberline {2.13}Complete vector space}{27}{section.2.13}
+\contentsline {section}{\numberline {2.14}Convergence of a sequence of vectors in a vector space}{28}{section.2.14}
+\contentsline {subsection}{\numberline {2.14.1}An example of a vector space whose Cauchy sequence does not converse to a vector in the vector space}{28}{subsection.2.14.1}
+\contentsline {section}{\numberline {2.15}Hilbert space}{29}{section.2.15}
+\contentsline {section}{\numberline {2.16}Basis vectors in a Hilbert space}{29}{section.2.16}
+\contentsline {subsection}{\numberline {2.16.1}Finite dimensional space}{29}{subsection.2.16.1}
+\contentsline {subsection}{\numberline {2.16.2}Infinite dimensional vector space}{30}{subsection.2.16.2}
+\contentsline {subsection}{\numberline {2.16.3}Example}{31}{subsection.2.16.3}
+\contentsline {section}{\numberline {2.17}Dirac notation}{31}{section.2.17}
+\contentsline {subsection}{\numberline {2.17.1}Scalar product}{31}{subsection.2.17.1}
+\contentsline {subsection}{\numberline {2.17.2}Dual vector space}{31}{subsection.2.17.2}
+\contentsline {subsection}{\numberline {2.17.3}Bra notation for the vectors of $V^*$}{32}{subsection.2.17.3}
+\contentsline {subsection}{\numberline {2.17.4}Correspondence between kets and bras}{32}{subsection.2.17.4}
+\contentsline {subsection}{\numberline {2.17.5}The correspondence in anti-linear}{32}{subsection.2.17.5}
+\contentsline {subsection}{\numberline {2.17.6}Dirac notation for the scalar product}{32}{subsection.2.17.6}
+\contentsline {chapter}{\numberline {3}sheet-3 : Linear Vector Space (continued)}{35}{chapter.3}
+\ttl@stoptoc {default@2}
+\ttl@starttoc {default@3}
+\contentsline {section}{\numberline {3.1}Operators in a Hilbert Space}{35}{section.3.1}
+\contentsline {section}{\numberline {3.2}Linear operators}{35}{section.3.2}
+\contentsline {section}{\numberline {3.3}Commutator of two operators}{36}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Some properties of commutators}{36}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Projection operator}{36}{section.3.4}
+\contentsline {section}{\numberline {3.5}Representation of vectors and operators}{37}{section.3.5}
+\contentsline {section}{\numberline {3.6}Matrix representation of ket and bra vectors}{39}{section.3.6}
+\contentsline {section}{\numberline {3.7}Representation of an operator in a basis}{40}{section.3.7}
+\contentsline {section}{\numberline {3.8}Matrix representation of the sum and product of two operators}{41}{section.3.8}
+\contentsline {chapter}{\numberline {4}sheet-4 : Linear Vector Space (continued)}{43}{chapter.4}
+\ttl@stoptoc {default@3}
+\ttl@starttoc {default@4}
+\contentsline {section}{\numberline {4.1}Adjoint operator}{43}{section.4.1}
+\contentsline {section}{\numberline {4.2}Hermitian or Self-adjoint operator}{44}{section.4.2}
+\contentsline {section}{\numberline {4.3}Inverse operator}{45}{section.4.3}
+\contentsline {section}{\numberline {4.4}Unitary operator}{45}{section.4.4}
+\contentsline {section}{\numberline {4.5}Function of Operators}{45}{section.4.5}
+\contentsline {chapter}{\numberline {5}sheet-5 : Eigenvalue and Eigenvectors of Operators}{47}{chapter.5}
+\ttl@stoptoc {default@4}
+\ttl@starttoc {default@5}
+\contentsline {chapter}{\numberline {6}sheet-6 : Coordinate and Momentum Representation}{49}{chapter.6}
+\ttl@stoptoc {default@5}
+\ttl@starttoc {default@6}
+\contentsline {chapter}{\numberline {7}sheet-7 : Postulates of Quantum Mechanics}{51}{chapter.7}
+\ttl@stoptoc {default@6}
+\ttl@starttoc {default@7}
+\contentsline {chapter}{\numberline {8}sheet-8 : Compatibility of Observable}{53}{chapter.8}
+\ttl@stoptoc {default@7}
+\ttl@starttoc {default@8}
+\contentsline {chapter}{\numberline {9}sheet-9 : The Uncertainty Principle}{55}{chapter.9}
+\ttl@stoptoc {default@8}
+\ttl@starttoc {default@9}
+\contentsline {chapter}{\numberline {10}sheet-10 : Harmonic Oscillator}{57}{chapter.10}
+\ttl@stoptoc {default@9}
+\ttl@starttoc {default@10}
+\contentsline {chapter}{\numberline {11}sheet-11 : Quantum Dynamics}{59}{chapter.11}
+\ttl@stoptoc {default@10}
+\ttl@starttoc {default@11}
+\contentsline {chapter}{\numberline {12}sheet-12 : The Path Integral Formulation of Quantum Theory}{61}{chapter.12}
+\ttl@stoptoc {default@11}
+\ttl@starttoc {default@12}
+\contentsline {chapter}{\numberline {13}sheet-13 : Potential Wells and Barriers}{63}{chapter.13}
+\ttl@stoptoc {default@12}
+\ttl@starttoc {default@13}
+\contentsline {chapter}{\numberline {14}sheet-14 : Particle Motion in 3-Dimension}{65}{chapter.14}
+\ttl@stoptoc {default@13}
+\ttl@starttoc {default@14}
+\contentsline {chapter}{\numberline {15}sheet-15 : The Hydrogen Atom}{67}{chapter.15}
+\ttl@stoptoc {default@14}
+\ttl@starttoc {default@15}
+\contentsline {chapter}{\numberline {16}sheet-16 : Angular Momentum 1}{69}{chapter.16}
+\ttl@stoptoc {default@15}
+\ttl@starttoc {default@16}
+\contentsline {chapter}{\numberline {17}sheet-17 : Angular Momentum 2: spin 1/2 system}{71}{chapter.17}
+\ttl@stoptoc {default@16}
+\ttl@starttoc {default@17}
+\contentsline {chapter}{\numberline {18}sheet-18 : Rotations and Angular Momentum}{73}{chapter.18}
+\ttl@stoptoc {default@17}
+\ttl@starttoc {default@18}
+\contentsline {chapter}{\numberline {19}sheet-19 : Addition of Angular Momentum}{75}{chapter.19}
+\ttl@stoptoc {default@18}
+\ttl@starttoc {default@19}
+\contentsline {chapter}{\numberline {20}sheet-20 : Time Independent Perturbation}{77}{chapter.20}
+\ttl@stoptoc {default@19}
+\ttl@starttoc {default@20}
+\contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{79}{chapter.21}
+\ttl@stoptoc {default@20}
+\ttl@starttoc {default@21}
+\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{81}{chapter.22}
+\ttl@stoptoc {default@21}
+\ttl@starttoc {default@22}
+\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{83}{chapter.23}
+\ttl@stoptoc {default@22}
+\ttl@starttoc {default@23}
+\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{85}{chapter.24}
+\ttl@stoptoc {default@23}
+\ttl@starttoc {default@24}
+\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{87}{chapter.25}
+\ttl@stoptoc {default@24}
+\ttl@starttoc {default@25}
+\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{89}{chapter.26}
+\ttl@stoptoc {default@25}
+\ttl@starttoc {default@26}
+\contentsfinish 
