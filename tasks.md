@@ -15,13 +15,13 @@ writing done by shahnoor
 figure ... pending
 
 # Chapter5
-
+writing by shahnoor - pending
 
 # Chapter6
 
 
 # Chapter7
-
+writing by Asif - pending
 
 # Chapter8
 

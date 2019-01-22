@@ -1,6 +1,14 @@
 %\chapterimage{head2.png} % Chapter heading image
+
 \chapter{sheet-1 :Dirac Delta Function}
 \label{chapter1.dirac-delta}
+
+\ifpdf
+\graphicspath{{Chapter1/figs/}}
+\else
+\graphicspath{{Chapter1/figs/}}
+\fi
+
 
 	Consider the function $D_\epsilon(x)$ given by
 	\begin{eqnarray}
@@ -10,10 +18,14 @@
 			0 \ \ &\text{for} \ \  |x| > \frac{\epsilon}{2} 
 		\end{cases}
 	\end{eqnarray}
-	where $\epsilon$ is a positive parameter. The plot of the function is shown below
+	where $\epsilon$ is a positive parameter. The plot of the function is shown in figure (\ref{fig.cpt1.figure1}).
 	
-	
-	% figure 1
+	\begin{figure}
+		\centering
+		\subfloat[]{\includegraphics[width=5cm]{delta.pdf}}
+		\caption{Dirac Delta Function}
+		\label{fig.cpt1.figure1}
+	\end{figure}
 	
 	The integral of the function with respect to $x$ is $1$, i.e.,
 	\begin{equation}
@@ -57,14 +69,21 @@
 			Consider the function
 			\begin{equation}
 				D_\epsilon(x) = \frac{1}{\epsilon \sqrt{\pi}} e^{-x^2/\epsilon^2}  \ \ \ (\epsilon > 0)
+				\label{eqn.other-reps-exp}
 			\end{equation}
 			For each value of the parameter $\epsilon$, this function satisfies
 			\begin{equation}
 			\int_{-\infty}^{\infty} D_\epsilon(x) dx = 1
 			\end{equation}
 		
+		\begin{figure}
+			\centering
+			\subfloat[]{\includegraphics[width=5cm]{chapter1-delta-reps-exp.pdf}}
+			\subfloat[]{\includegraphics[width=5cm]{chapter1-delta-reps-sine.pdf}}
+			\caption{Plot of function $D_\epsilon(x)$ for (a) equation (\ref{eqn.other-reps-exp}) (b) and equation (\ref{eqn.other-reps-sin})}
+			\label{fig.cpt1.figure2}
+		\end{figure}
 		
-		%figure
 		
 		When plotted against $x$, the function has a peak at the origin. The peak has a height of $\frac{1}{\epsilon \sqrt{\pi}}$ and a width of order $\epsilon$ (exactly how the width is defined doesn't matter). So if $\epsilon$ is allowed to become very small, the peak becomes very tall and very narrow. Outside the peak the function becomes extremely small. Thus we have
 		\begin{equation}
@@ -77,9 +96,10 @@
 		Consider another function
 		\begin{equation}
 			D_\epsilon(x) = \frac{1}{\pi} \frac{\sin(x/\epsilon)}{x} \ \ \ \ (\epsilon > 0)
+			\label{eqn.other-reps-sin}
 		\end{equation} 
 		
-		% figure
+
 		
 		For any value of the parameter $\epsilon$ we have 
 		\begin{equation}
@@ -272,7 +292,12 @@
 	\section{Derivatives of the delta function}
 		One may define the derivative $\delta^\prime(x)$ of the delta function. When $\epsilon$ is small, the derivative of $D_\epsilon(x)$ has two peaks close to the origin, one peak is positive and the other is negative as drawn in the figure below
 		
-		
+		\begin{figure}
+			\centering
+			\subfloat[]{\includegraphics[height=8cm,width=5cm]{chapter1-delta-reps-exp-derivative.pdf}}
+			\caption{(a) Derivative of Delta Function}
+			\label{}
+		\end{figure}
 		% figure
 		
 		

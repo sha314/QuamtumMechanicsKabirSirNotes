@@ -1,0 +1,56 @@
+%\chapterimage{head2.png} % Chapter heading image
+\appendix{Integrals}
+\label{appendix1.Integrals}
+
+\ifpdf
+\graphicspath{{Appendix1/figs/}}
+\else
+\graphicspath{{Appendix1/figs/}}
+\fi
+
+\begin{equation}
+	\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+\end{equation}
+proof:\\
+let,
+\begin{equation}
+	I = \int_{-\infty}^{\infty} e^{-x^2} dx 
+\end{equation}
+then
+\begin{eqnarray}
+	I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} e^{-(x^2+y^2)} dx dy
+\end{eqnarray}
+using $r^2 = x^2 + y^2$ since
+\begin{eqnarray}
+	x &= r \cos \theta \\
+	y &= r \sin \theta
+\end{eqnarray}
+we get 
+\begin{eqnarray}
+	I^2 
+	&= \int_{0}^{2 \pi}\int_{0}^{\infty} e^{-r^2} r dr d\theta \\
+	&= 2 \pi \int_{0}^{\infty} e^{-r^2} r dr
+\end{eqnarray}
+let $u = r^2$ therefore $rdr = du/2$
+\begin{eqnarray}
+I^2 
+&=  \pi \int_{0}^{\infty} e^{-u} du \\
+&=  \pi \left[\frac{e^{-u}}{-1} \right]_{0}^{\infty} \\
+&= \pi \left[0 - (-1)\right] \\
+&= \pi
+\end{eqnarray}
+therefore $I=\sqrt{\pi}$\\
+\textbf{another}\\
+\begin{eqnarray}
+I = \int_{-\infty}^{\infty} dx \  e^{-\left(b^2 x^2 + a x\right)}
+\end{eqnarray}
+Notice that $\left(b^2 x^2 + a x\right) = (b x + \frac{a}{2 b})^2 - \frac{a^2}{4b^2}$
+\begin{eqnarray}
+I = e^{a^2/4b^2}\int_{-\infty}^{\infty} dx\ e^{-(b x + \frac{a}{2 b})^2}
+\end{eqnarray}
+let $z = b x + \frac{a}{2 b}$ thus $dz = b dx$
+\begin{eqnarray}
+I 
+&= e^{a^2/4b^2} \frac{1}{b} \int_{-\infty}^{\infty} dz\  e^{-z^2} \\
+&= e^{a^2/4b^2} \frac{\sqrt{\pi}}{b}
+\end{eqnarray}

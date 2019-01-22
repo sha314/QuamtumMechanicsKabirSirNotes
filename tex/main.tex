@@ -1,6 +1,4 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  My documentation report
-%  Objective: Explain what I did and how, in order to help someone continue with the investigation
 %
 % Important note:
 % Chapter heading images should have a 2:1 width:height ratio,
@@ -9,14 +7,6 @@
 % The images can be found anywhere, usually on sky surveys websites or the
 % Astronomy Picture of the day archive http://apod.nasa.gov/apod/archivepix.html
 %
-% The original template (the Legrand Orange Book Template) can be found here --> http://www.latextemplates.com/template/the-legrand-orange-book
-%
-% Original author of the Legrand Orange Book Template:
-% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
-% Vel (vel@latextemplates.com)
-%
-% Original License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 %----------------------------------------------------------------------------------------
@@ -39,7 +29,22 @@
 \usepackage[utf8]{inputenc} % Required for including letters with accents
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 
+%% Graphics packages
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{subfloat}
+
 \usepackage{physics} % for physics related notation
+\usepackage{amsthm}
+
+
+\usepackage{exsheets}
+\usepackage{answers}
+\usepackage{probsoln}
+\usepackage{enumitem}
+
+\usepackage{kbordermatrix}% http://www.hss.caltech.edu/~kcb/TeX/kbordermatrix.sty
+\usepackage{blkarray} % for block matrix with labels
 
 % Bibliography
 %\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
@@ -47,7 +52,7 @@
 %\defbibheading{bibempty}{}
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
-
+\input{commands}
 \begin{document}
 \title{Quantum Mechanics}
 
@@ -98,7 +103,7 @@
 Thanks to the following individuals \\
 %\vfill
 {\centering
-Muhammad Shahnoor Rahman}
+Muhammad Shahnoor Rahman, Department of Physics, University of Dhaka.\\}
 
 
 
@@ -106,7 +111,7 @@ Muhammad Shahnoor Rahman}
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-\chapterimage{head1.png} % Table of contents heading image
+\chapterimage{Pictures/head1.png} % Table of contents heading image
 
 \pagestyle{empty} % No headers
 
@@ -151,6 +156,9 @@ Muhammad Shahnoor Rahman}
 \include{Chapter24/chapter24}
 \include{Chapter25/chapter25}
 \include{Chapter26/chapter26}
+
+
+\include{Appendix1/appendix1}
 
 
 
