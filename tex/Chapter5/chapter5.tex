@@ -199,7 +199,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{equation}
 	Thus, the set of vectors $\{ \ket{\lambda_i, s^{(i)}}; \quad \lambda_i \quad \text{fixed}, \quad s^{(i)}=1,2\ldots,g_{\lambda_i} \}$ spans a subspace, called the eigen subspace of $\lambda_i$, of the original $n$ dimensional vector space. The eigenvectors belonging to a degenerate eigenvalue need not be orthogonal to each other even if they are linearly independent, as the general theorem of hermitian operators proves the orthogonality of eigenvectors belonging to different eigenvalues.\\
 	
-	However, using Schmidt orthonormalization procedure, we can get a set of $g_{\lambda_i}$ orthogonal 
+	However, using Schmidt orthonormalization procedure (see section (\ref{chapter2.schmidt-orthonormalization-method})), we can get a set of $g_{\lambda_i}$ orthogonal 
 	eigenfunctions %@@@@@@@ or
 %	 eigenvectors %@@@@@@@ ?
 	  of eigenvalue $\lambda_i$ from a set of $g_{\lambda_i}$ linearly independent set of
@@ -353,30 +353,454 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		&= \det(\mathbf{A} - \lambda \mathbf{I})
 	\end{eqnarray}
 	Thus, there is no change in the secular equation even if we change the basis set. Since the eigenvalues are the roots of the secular equation, the eigenvalues are representation independent. They are characteristics of the operator $\hat{A}$ itself, and not of any particular representation.\\
+
+	Next, we will show that the determinant and the trace of the matrix representation $A$ are independent of the basis used for the representation.\\
+	
+	Since $\mathbf{A}^\prime = \mathbf{S} \mathbf{A} \mathbf{S}^{-1}$ we have 
+	\begin{eqnarray}
+		\det(\mathbf{A}^\prime) 
+		&= \det(\mathbf{S} \mathbf{A} \mathbf{S}^{-1}) \nonumber \\
+		&= \det(\mathbf{S}^{-1}\mathbf{S} \mathbf{A} ) \nonumber \\
+		&= \det(\mathbf{A})
+	\end{eqnarray}
+	i.e., the determinant is independent of the representation.\\
+	
+	We also have
+	\begin{equation}
+		\Tr (\mathbf{A}^\prime) = \Tr (\mathbf{S}\mathbf{A}^\prime\mathbf{S}^{-1})=\Tr(\mathbf{S}^{-1}\mathbf{S} \mathbf{A}) = \Tr (\mathbf{A})
+	\end{equation}
+	i.e., the trace is also independent of the representation. In the above derivations, we have used the identities,
+	\begin{eqnarray}
+		\det( \mathbf{A}\mathbf{B}) = \det(\mathbf{B}\mathbf{A}) \\
+		\Tr( \mathbf{A}\mathbf{B}) = \Tr(\mathbf{B}\mathbf{A})
+	\end{eqnarray}
+	where $\mathbf{A}$ and $\mathbf{B}$ are square matrices. Now, if we use the eigenbasis of the hermitian operator $A$ for the representation, then $\mathbf{A}$ is a diagonal matrix with
+	\begin{eqnarray}
+		\det \mathbf{A} &= \prod_i \lambda_i \\
+		\Tr \mathbf{A} &= \sum_i \lambda_i 
+	\end{eqnarray}
+	If an eigenvalue is $g$-fold degenerate, then that eigenvalue has to be repeated $g$ times while calculating the determinant and trace of the matrix $\mathbf{A}$.\\
+	
 	
 	
 	\section{Infinite dimensional vector space}
+	We have shown that a linear operaor is a finite $n$-dimensional vector space has $n$ eigenvalues some of which may be repeated. If the operator is hermitian, then the eigenvalues are real and eigenvectors belonging to different eigenvalues are orthogonal and hence linearly independent.\\
+	
+	Further, if an eigenvalue $\lambda$ of a hermitian operator is $g$-fold degenerate, then there are $g$ linearly independent eigenvectors corresponding to $\lambda$, these degenerate eigenvectors are not necessarily orthogonal even if they are linearly independent. However, we can orthogonalize the degenerate eigenvectors using the Schmidt orthonormalization procedure (see section (\ref{chapter2.schmidt-orthonormalization-method})). \\
+	
+	Thus in a finite $n$-dimensional vector space, the eigenvectors of any hermitian operator form a set of orthonormal basis vectors.\\
+	
+	In an infinite dimensional vector space, the number of eigenvalues and eigenvectors of a hermitian operators are infinitely many. However, it is possible that the eigenvectors of some hermitian operators do not form a complete set in an infinite dimensional vector space.\\
+	
+	
+	Hermitian operators are of vital importance in quantum mechanics because to every observable (e.g., position, linear momentum, angular momentum, spin etc.) we \textit{associate} a corresponding hermitian operator. Of course, there are hermitian operators which are not associated with any observable.\\
+	
+	The eigenvectors of a hermitian operator representing a physical observable form a complete set even in an infinite-dimensional Hilbert space. The eigenvectors of a hermitian operator not associated with any observale may not form a complete basis set in an infinite dimensional space.\\
+	
+	
+	
 	\section{Completeness condition for the eigenvectors of a Hermitian Operator}
+	Let us assume that the eigenvalue spectrum of a hermitian operator $\hat{A}$ form a discrete set. In other words, the eigenvalues $a_i,\quad i=1,2,\ldots$ of the operator are discrete real numbers.\\
+	
+	Assume, for the time being, that the eigenvalues are non-degenerate so that these is only one linearly independent eigenvectors $\ket{a_i}$ corresponding to each eigenvalue $a_i$. The eigenvectors $\{\ket{a_i}, i=1,2,\ldots\}$ form a complete orthogonal set of basis vectors. Therefore, an arbitrary vector $\ket{\psi}$ of the vector space can be expanded as a linear combination of the vector in the basis set, i.e.,
+	\begin{equation}
+		\ket{\psi} = \sum_{i} a_i \ket{a_i}
+	\end{equation}
+	where $c_i = \braket{a_i}{\psi}$. Therefore, we can write
+	\begin{equation}
+		\ket{\psi} = \sum_i \braket{a_i}{\psi} \ket{a_i} = \sum_i \ket{a_i}\braket{a_i}{\psi}
+	\end{equation}
+	Since $\ket{\psi}$ is arbitrary, we must have
+	\begin{equation}
+		\hat{\mathbf{1}} = \sum_i \ket{a_i}\bra{a_i} = \sum_i \hat{P}_i
+		\label{chapter5.eqn1-completeness}
+	\end{equation}
+	where
+	\begin{equation}
+		\hat{P}_i = \ket{a_i}\bra{a_i}
+		\label{chapter5.eqn2-projection}
+	\end{equation}
+	is the projection along $\ket{a_i}$.\\
+	
+	Using the basis $\{\ket{u_i}\}$, any operator $\hat{O}$ can be expressed as 
+	\begin{eqnarray}
+		\hat{O} = \hat{\mathbf{1}} \hat{O} \hat{\mathbf{1}} 
+		&= \sum_{i,j} \ket{a_i}\bra{a_i} \hat{O} \ket{a_j}\bra{a_j} \nonumber \\
+		&= \sum_{i,j} \ket{a_i} O_{ij} \bra{a_j}
+		\label{chapter5.eqn3-operator-as-matrix}
+	\end{eqnarray}
+	where $O_{ij} \equiv \bra{a_i} \hat{O} \ket{a_j}$ are the matrix element of  $\hat{O}$ in the basis $\{\ket{u_i}\}$. Since basis is the eigenbasis of the operator $\hat{A}$, the matrix elements of $\hat{A}$ in the basis will be diagonal, i.e., 
+	\begin{equation}
+		\hat{A} = \sum_i a_i \ket{a_i}\bra{a_i} = \sum_i a_i \hat{P}_i
+		\label{chapter5.eqn4-diagonalized-operator-projection}
+	\end{equation}
+	Any other oberator $\hat{B}$ will in general not be diagonal in the eigenbasis of $\hat{A}$ unless the eigenvectors of $\hat{B}$ and $\hat{A}$ coincide. Later, we will see that two operators $\hat{A}$ and $\hat{B}$ have simultaneous eigenvectors if they commute, i.e., if $[\hat{A},\hat{B}]=0$.\\
+	
+	Now, we will generalize the notation to include degeneracy, suppose the eigenvalue $a_i$ is a $g_i$ fold degenerate. Then the eigenvectors belonging to the eigenvalue $a_i$ is written as $\ket{a_i, s^{(i)}}$ where $s^{(i)}$ can take values $1,2,\ldots, g_i$. The set of vectors $\{\ket{a_i, s^{(i)}}, \quad s^{(i)}=1,2,\ldots,g_i;\quad i=1,2,\ldots\}$ Form a complete orthogonal set. The completeness condition is
+	\begin{equation}
+		\sum_{i=1}^{\infty} \sum_{s^{i}=1}^{g_i} \ket{a_i, s^{(i)}}\bra{a_i, s^{(i)}} = \hat{\mathbf{1}}
+		\label{chapter5.eqn5-completeness-degenerate}
+	\end{equation}
+	and the orthogonality condition is
+	\begin{equation}
+		\braket{a_i, s^{(i)}}{a_j, s^{(j)}} = \delta_{ij}\delta_{s^{i}s^{(j)}}
+		\label{chapter5.eqn6-orthogonality-degenerate}
+	\end{equation}
+	We can rewrite equation (\ref{chapter5.eqn5-completeness-degenerate}) as (exactly as the non degenerate case)
+	\begin{equation}
+		\hat{\mathbf{1}} = \sum_i \hat{P}_i
+		\label{chapter5.eqn7-completeness-degenerate-rewrite}
+	\end{equation}
+	where
+	\begin{equation}
+		\hat{P}_i = \sum_{s^{(i)}=1}^{g_i} \ket{a_i, s^{(i)}}\bra{a_j, s^{(j)}}
+		\label{chapter5.eqn8-projection-degenerate}
+	\end{equation}
+	is the projection operator on the eigensubspace of $a_i$. The operator $\hat{A}$ can then be written in its own eigenbasis as 
+	$\hat{A} = \sum_i a_i \hat{P}_i$ with $\hat{P}_i$ given in equation (\ref{chapter5.eqn8-projection-degenerate})
+	
+	
 	
 	\section{Hermitian operator with continuous eigenvalue spectrum}
+	In Quantum Mechanics we encounter hermitian operator like position operator, momentum operator whose eigenvalues range over a continuum of real values. Such an eigenvalue spectrum is called continuous. There are also hermitian operators whose eigenvalue spectrum may be both discrete and continuous.
+	
 		\subsection{Continuous Spectrum}
+		Let us consider an operator $A$ whose eigenvalues can vary continuously over a certain domain of real numbers
+		\begin{equation}
+			A \ket{a} = a \ket{a}
+			\label{chapter5.eqn9-eigenvalue}
+		\end{equation}
+		If there is degeneracy, we will put in a second index $s$ to distinguish between degenerate vectors. Thus we may write $\ket{a\quad s}$ to denote a degenerate eigenvector. We assume that there is no degeneracy. In case of degeneracy it is a simple matter to generalize our notations. We assume that the vectors $\ket{a}$ form a complete set. The completeness condition can be written as
+		\begin{equation}
+			\int da \quad \ket{a}\bra{a} = \hat{\mathbf{1}}
+			\label{chapter5.eqn10-completenss-continuous}
+		\end{equation}
+		Where the integral extends over the entire domain in which $a$ varies. Usually this domain is $-\infty$ to $\infty$.\\
+		
+		Two eigenkets $\ket{a}$ and $\ket{a^\prime}$ with $a\neq a^\prime$ are orthogonal because $A$ is  hermitian operator, i.e.,
+		\begin{equation}
+			\braket{a}{a^\prime} = 0 ; \quad  a \neq a^\prime
+			\label{chapter5.eqn11-orthogonal-continuous}
+		\end{equation}
+		What will the scalar product be if $a=a^\prime$ ? Can we take $\braket{a}{a} = 1$ as in the discrete case where we normalized the eigenkets as $\braket{a_i}{a_i} = 1$?\\
+		
+		The answer is \textbf{no}, i.e., in the case where the eigenvalues $a$ vary continuously, the kets $\ket{a}$ cannot be normalized to unity. To see this, expand an arbitrary ket $\ket{f}$ in the eigenbasis $\{\ket{a}\}$ of the operator $\hat{A}$. We have
+		\begin{equation}
+			\ket{f} = \int da^\prime \quad \ket{a^\prime}\braket{a^\prime}{f}
+			\label{chapter5.eqn10-expansion-continuous}
+		\end{equation}
+		Taking the scalar product of $\ket{f}$ with $\ket{a}$, we get
+		\begin{eqnarray}
+		\braket{a}{f} 
+		&= \int da^\prime \quad \ket{a^\prime}\braket{a^\prime}{f} \nonumber \\
+		f(a) &= \int da^\prime \quad \ket{a^\prime}f(a^\prime)
+		\label{chapter5.eqn11-scalar-product-continuous}
+		\end{eqnarray}
+		Where we have defined $f(a)$ as $f(a) = \braket{a}{f}$. In order for equation (\ref{chapter5.eqn11-scalar-product-continuous}) to be valid, we must have
+		\begin{equation}
+			\braket{a}{a^\prime} = \delta(a-a^\prime)
+			\label{chapter5.eqn12-delta-func}
+		\end{equation}
+		for, with this choice, the right side of equation (\ref{chapter5.eqn11-scalar-product-continuous}) becomes equal to the left side:
+		\begin{eqnarray}
+			f(a) = \int da^\prime \quad \delta(a-a^\prime) f(a^\prime)
+		\end{eqnarray}
+		Thus, setting $a^\prime = a$ in equation (\ref{chapter5.eqn12-delta-func}) we find
+		\begin{equation}
+			\braket{a}{a} = \delta(0) = \infty
+		\end{equation}
+		In other words, the eigenkets $\{\ket{a}\}$ are not normalizable to unity since $\braket{a}{a}$ is not finite. Therefore, the eigenkets $\braket{a}{a}$ do not belong to the Hilbert space. However, we can include such eigenkets in the vector space, and the augmented vector space is called the \underline{physical Hilbert space}.\\
+		
+		The kets $\{\ket{a}\}$  are not physically realizable in the sense that no physical state of a system can have a state vector $\ket{\psi}$ which is one of the eigenkets $\ket{a}$. However, the set of eigenkets $\{\ket{a}\}$ can form a basis set because arbitrary ket $\ket{\psi}$ of finite norm can always be expanded in terms of $\{\ket{a}\}$.\\
+		
+		As a matter of terminology, we say that the eigenkets belonging to continuously varying eigenvalues of a hermitian operator are "normalizable" to a delta function, i.e. $\braket{a}{a^\prime} = \delta(a-a^\prime)$, even though the kets $\ket{a}$ are not normalizable in the strict mathematical sense, since
+		\begin{equation}
+			|| \ket{a} || = \infty
+		\end{equation}
+		In summary, for continuously varying eigenvalues, the orthogonality (\ref{chapter5.eqn13-orthogonality}) and completeness (\ref{chapter5.eqn13-completenss}) of the eigenvectors of a hermitian operator are written as
+		\begin{eqnarray}
+			\braket{a}{a^\prime} &= \delta(a-a^\prime)  \label{chapter5.eqn13-orthogonality}\\
+			\hat{\mathbf{1}} &= \int da  \ket{a}\bra{a}  \label{chapter5.eqn13-completenss}
+		\end{eqnarray}
+		
 		
 	\section{Hermitian operator with continuous and discrete eigenvalue}
+	The eigenvalue spectrum of a hermitian operator can be both discrete and continuous, In such a situation we have
+	\begin{equation}
+		\hat{A} \ket{a_i} = a_i \ket{a_i} ; \quad i=1,2,\ldots
+	\end{equation}
+	for discrete eigenvalues, and
+	\begin{equation}
+		\hat{A}\ket{a} = a\ket{a};\quad a\in D \subset R
+	\end{equation}
+	for continuous eigenvalues. The completeness condition is
+	\begin{equation}
+		\sum_i \ket{a_i}\bra{a_i} + \int da \ket{a\bra{a}} = \hat{\mathbf{1}}
+	\end{equation}
+	and the orthogonality condition are
+	\begin{eqnarray}
+		\braket{a_i}{a_j} = \delta_{ij} \\
+		\braket{a}{a^\prime} =\delta(a-a^\prime)\\
+		\braket{a_i}{a} = 0
+	\end{eqnarray}
 	
 	\section{Problems}
-	
-	Find the eigenvalues and the corresponding eigenvectors of the matrix
+	\begin{enumerate}
+		\item Find the eigenvalues and the corresponding eigenvectors of the matrix
+		\begin{equation}
+			M = \left[\begin{matrix}
+			1 & 1 \\ 0 & 1
+			\end{matrix}\right]
+		\end{equation}
+		can this matrix be diagonalized?\\
+		
+		\textbf{Ans.}\\
+		The eigenvalue eqation is
+		\begin{equation}
+		\left[
+			\begin{matrix}
+				1 & 1 \\ 0 & 1
+			\end{matrix}
+			\right]
+			\left[\begin{matrix}
+			x_1 \\ x_2
+			\end{matrix}\right] 
+			= 
+			\lambda 
+			\left[\begin{matrix}
+			x_1 \\ x_2
+			\end{matrix}\right]
+		\end{equation}
+		The secular equation is then 
+		\begin{eqnarray}
+			\det(M - \lambda \mathbf{1}) &= 0 \nonumber\\
+			\left|\begin{matrix}
+			1-\lambda & 1 \\ 0 & 1-\lambda
+			\end{matrix}\right| &=0 \nonumber \\
+			\left(1-\lambda\right)^2 &= 0 \nonumber
+		\end{eqnarray}
+		i.e., $\lambda = 1,1$ (2 fold degeneracy)\\
+		
+		\underline{Eigenvector}\\
+		With $\lambda=1$ the eigenvalue equation is
+		\begin{eqnarray}
+			\left[\begin{matrix}
+				1 & 1 \\ 0 & 1
+			\end{matrix}\right]
+			\left[\begin{matrix}
+				x_1 & x_2
+			\end{matrix}\right]
+			&= 1 \left[\begin{matrix}
+			x_1 & x_2
+			\end{matrix}\right] \nonumber\\
+			\left[\begin{matrix}
+				x_1+x_2 \\ x_2
+			\end{matrix}\right]
+			&= \left[\begin{matrix}
+			x_1 & x_2
+			\end{matrix}\right]
+		\end{eqnarray}
+		Thus
+		\begin{eqnarray}
+			x_1 + x_2 &= x_1 \nonumber \\
+			x_2 &= 0 \nonumber
+		\end{eqnarray}
+		The element $x_1$ is arbitrary. Hence
+		\begin{equation}
+			\ket{1} = 
+			\left[\begin{matrix}
+				x_1 \\ 0
+			\end{matrix}\right]
+		\end{equation}
+		Normalizing
+		\begin{equation}
+		\ket{1} = 
+		\left[\begin{matrix}
+		1 \\ 0
+		\end{matrix}\right]
+		\end{equation}
+		We have found just one linearly independent eigenvector with $\lambda=1$. Since $M$ is not hermitian, there is no guarantee that there would be two linearly independent eigenvectors for a two fold degenerate eigenvalue. Here, for the given matrix $M$, which is non-hermitian, we have only one linearly independent eigenvector corresponding to the two-fold degenerate eigenvalue $\lambda=1$. So we do not have a complete set of eigenvectors of $M$ to span the two dimensional vector space. Hence $M$ is not diagonalizable by a change of basis, i.e., by a similarity transformation.
+		
+		
+
+	\item	Find the eigenvalues and the corresponding eigenvectors of the matrix
 	\begin{equation}
 		A = \left[
 		\begin{matrix}
-			3 & \imath \\-\imath & 3
+			3 & \iu \\-\iu & 3
 		\end{matrix}
 		\right]
 	\end{equation}
+	\textbf{Ans.}\\
+	 First note that $A^\dagger=A$, i.e., the matrix is hermitian. Hence the eigenvalues would be real and the eigenvectors belonging to distinct eigenvalues would be orthogonal. \\
+	 The eigenvalue equation is
+	 \begin{eqnarray}
+		 \left[\begin{matrix}
+			 3 & \iu \\ -\iu & 3
+		 \end{matrix}\right]
+		 \left[\begin{matrix}
+		 x_1 \\ x_2
+		 \end{matrix}\right]
+		 &= \lambda \left[\begin{matrix}
+		 x_1 \\ x_2
+		 \end{matrix}\right] \nonumber \\
+		 \left[\begin{matrix}
+		 3-\lambda & \iu \\ -\iu & 3-\lambda
+		 \end{matrix}\right]
+		 \left[\begin{matrix}
+		 x_1 \\ x_2
+		 \end{matrix}\right]
+		 &= \lambda \left[\begin{matrix}
+		 0 \\ 0
+		 \end{matrix}\right] 
+		 \label{chapter5.eqn1-example2}
+	 \end{eqnarray}
+	 The secular equation is
+	 \begin{eqnarray}
+		 \left|\begin{matrix}
+		 3-\lambda & \iu \\ -\iu & 3-\lambda
+		 \end{matrix}\right| &= 0 \nonumber \\
+		 (3-\lambda)^2 - (\iu)(-\iu) &= 0 \nonumber \\
+		 (\lambda-3)^2 - 1 &= 0 \nonumber \\
+		 (\lambda - 3 - 1)(\lambda - 3 + 1) &= 0 \nonumber \\
+		 \lambda = 2,4
+	 \end{eqnarray}
+	None of the roots are degenerate.\\
+	\underline{Eigenvector for $\lambda=2$}\\
+	\begin{eqnarray}
+		\left[\begin{matrix}
+		3-2 & \iu \\ -\iu & 3-2
+		\end{matrix}\right]
+		\left[\begin{matrix}
+		x_1 \\ x_2
+		\end{matrix}\right]
+		&= \oslash \nonumber \\
+		\left[\begin{matrix}
+		x_1 + \iu x_2 \\ -\iu x_1 + x_2
+		\end{matrix}\right]
+		&= \oslash \nonumber
+	\end{eqnarray}
+	Thus
+	\begin{eqnarray}
+		x_1 + \iu x_2 &= 0 \label{chapter5.eqn2-example2} \\
+		-\iu x_1 + x_2 &= 0 \label{chapter5.eqn3-example2}
+	\end{eqnarray}
+	We get the solution $x_1 = -\iu x_2$. Taking $x_2$ to be arbitrary
+	\begin{equation}
+		\ket{2} = \left[\begin{matrix}
+			-\iu x_2 \\ x_2
+		\end{matrix}\right]
+	\end{equation}
+	Normalizing
+	\begin{eqnarray}
+		\braket{2}{2} &= 1 \nonumber \\
+		\left[\begin{matrix}
+		\iu x_2^* & x_2^*
+		\end{matrix}\right]
+				\left[\begin{matrix}
+		-\iu x_2 \\ x_2
+		\end{matrix}\right] 
+		&=1 \nonumber \\
+		2 \left|x_2\right|^2 &= 1 \nonumber \\
+		\left|x_2\right| = \frac{1}{\sqrt{2}}
+	\end{eqnarray}
+	Take $x_2 \dot{=} \frac{1}{\sqrt{2}}$.\\
+	We could have taken
+	\begin{equation}
+		x_2 = -\frac{1}{\sqrt{2}} \\
+	\end{equation}
+	or
+	\begin{equation}
+		x_2 = e^{\iu \phi} \frac{1}{\sqrt{2}} \\
+	\end{equation}
 
-
-
-	Find the eigenvalues and the corresponding eigenvectors of the matrix
+	In all cases $\left|x_2\right| = \frac{1}{\sqrt{2}}$\\
+	
+	Normalized eigenvector $\ket{2}$ is
+	\begin{equation}
+		\ket{2} = \frac{1}{\sqrt{2}} \left[\begin{matrix}
+			-\iu \\ 1
+		\end{matrix}\right]
+	\end{equation}
+	
+	
+	\underline{Eigenvector for $\lambda=4$}\\
+	\begin{eqnarray}
+	\left[\begin{matrix}
+	3-4 & \iu \\ -\iu & 3-4
+	\end{matrix}\right]
+	\left[\begin{matrix}
+	x_1 \\ x_2
+	\end{matrix}\right]
+	&= \oslash \nonumber \\
+	\left[\begin{matrix}
+	-x_1 + \iu x_2 \\ -\iu x_1 - x_2
+	\end{matrix}\right]
+	&= \oslash \nonumber
+	\end{eqnarray}
+	Thus
+	\begin{eqnarray}
+	-x_1 + \iu x_2 &= 0 \label{chapter5.eqn5-example2} \\
+	-\iu x_1 - x_2 &= 0 \label{chapter5.eqn6-example2}
+	\end{eqnarray}
+	We get the solution $x_1 \dot{=} \iu x_2$. Taking $x_2$ to be arbitrary
+	\begin{equation}
+	\ket{4} = \left[\begin{matrix}
+	\iu x_2 \\ x_2
+	\end{matrix}\right]
+	\end{equation}
+	The value of $x_2$ has to be found from normalization
+	\begin{eqnarray}
+	\braket{4}{4} &= 1 \nonumber \\
+	\left[\begin{matrix}
+	-\iu x_2^* & x_2^*
+	\end{matrix}\right]
+	\left[\begin{matrix}
+	\iu x_2 \\ x_2
+	\end{matrix}\right] 
+	&=1 \nonumber \\
+	2 \left|x_2\right|^2 &= 1 \nonumber \\
+	\left|x_2\right| = \frac{1}{\sqrt{2}}
+	\end{eqnarray}
+	Take $x_2 = \frac{1}{\sqrt{2}}$.	
+	Normalized eigenvector $\ket{4}$ is
+	\begin{equation}
+	\ket{4} = \frac{1}{\sqrt{2}} \left[\begin{matrix}
+	\iu \\ 1
+	\end{matrix}\right]
+	\end{equation}
+	\underline{Orthogonality of the eigenvectors}
+	\begin{eqnarray}
+	\ket{2} &= \frac{1}{\sqrt{2}} \left[\begin{matrix}
+	-\iu \\ 1
+	\end{matrix}\right] \\
+	\ket{4} &= \frac{1}{\sqrt{2}} \left[\begin{matrix}
+	\iu \\ 1
+	\end{matrix}\right]
+	\end{eqnarray}
+	\begin{equation}
+		\braket{2}{4} = \frac{1}{2} \left[\begin{matrix}
+		\iu & 1
+		\end{matrix}\right] \left[\begin{matrix}
+		\iu \\ 1
+		\end{matrix}\right] = \frac{1}{2} \left(\iu^2 + 1\right) = 0
+	\end{equation}
+	If we take $\ket{2}$ and $\ket{4}$ as the basis the matrix representation of $\hat{A}$ is
+	\begin{equation}
+		\hat{A} \rightarrow 
+		\left[\begin{matrix}
+			\bra{2}\hat{A}\ket{2} & \bra{2}\hat{A}\ket{4} \\
+			\bra{4}\hat{A}\ket{2} & \bra{4}\hat{A}\ket{4}
+		\end{matrix}\right] 
+		= \left[\begin{matrix}
+			2 & 0 \\ 0 & 4
+		\end{matrix}\right]
+	\end{equation}
+	
+	Now the similarity transformation that diagonalizes the matrix $A$
+	
+	
+	\item	Find the eigenvalues and the corresponding eigenvectors of the matrix
 	\begin{equation}
 	M = \frac{1}{2}\left[
 	\begin{matrix}
@@ -387,4 +811,4 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\right]
 	\end{equation}
 
-		
+	\end{enumerate}

@@ -1,17 +1,21 @@
 # Chapter1
 writing done by shahnoor
+
 figure ... pending
 
 # Chapter2
 writing done by shahnoor
+
 figure ... pending
 
 # Chapter3
 writing done by shahnoor
+
 figure ... pending
 
 # Chapter4
 writing done by shahnoor
+
 figure ... pending
 
 # Chapter5
@@ -21,12 +25,16 @@ writing by shahnoor - pending
 
 
 # Chapter7
-writing by Asif - pending
+writing by Asif - forked -pending
+
+branch - "by-asif"
 
 # Chapter8
 
 
 # Chapter9
+writing by Nowrin - forked - pending
+branch - "by-nowrin"
 
 
 # Chapter10
