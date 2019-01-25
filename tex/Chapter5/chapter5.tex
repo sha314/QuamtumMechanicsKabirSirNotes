@@ -797,8 +797,57 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\end{matrix}\right]
 	\end{equation}
 	
-	Now the similarity transformation that diagonalizes the matrix $A$
-	
+	Now the similarity transformation that diagonalizes the matrix $A$. First the matrix $S$ that has the columns as the eigenvectors is
+	\begin{equation}
+		S = 
+		\begin{blockarray}{ccc}
+		\ & \ket{2} & \ket{4}\\
+		\begin{block}{c[cc]}
+		\ & -\iu/\sqrt{2} & \iu/\sqrt{2}  \\
+		\ & 1/\sqrt{2} & 1/\sqrt{2}	\\
+		\end{block}
+		\end{blockarray}
+	\end{equation}
+	Therefore,
+	\begin{eqnarray}
+	A^\prime &= 
+	\begin{blockarray}{ccc}
+		\ & \ & \ \\
+	\begin{block}{c[cc]}
+	\bra{2} & \iu/\sqrt{2} & 1/\sqrt{2}  \\
+	\bra{4} & -\iu/\sqrt{2} & 1/\sqrt{2}\\
+	\end{block}
+	\end{blockarray}
+	A
+	\begin{blockarray}{ccc}
+	\ & \ket{2} & \ket{4}\\
+	\begin{block}{c[cc]}
+	\ & -\iu/\sqrt{2} & \iu/\sqrt{2}  \\
+	\ & 1/\sqrt{2} & 1/\sqrt{2}	\\
+	\end{block}
+	\end{blockarray} \\
+	&= 
+	\begin{blockarray}{ccc}
+	\ & \ & \ \\
+	\begin{block}{c[cc]}
+	\bra{2} & \iu/\sqrt{2} & 1/\sqrt{2}  \\
+	\bra{4} & -\iu/\sqrt{2} & 1/\sqrt{2}\\
+	\end{block}
+	\end{blockarray}
+	\left[
+	\begin{matrix}
+	3 & \iu \\ -\iu & 3
+	\end{matrix}
+	\right]
+	\begin{blockarray}{ccc}
+	\ & \ket{2} & \ket{4}\\
+	\begin{block}{c[cc]}
+	\ & -\iu/\sqrt{2} & \iu/\sqrt{2}  \\
+	\ & 1/\sqrt{2} & 1/\sqrt{2}	\\
+	\end{block}
+	\end{blockarray}\\
+	&= S^{-1} A S
+	\end{eqnarray}
 	
 	\item	Find the eigenvalues and the corresponding eigenvectors of the matrix
 	\begin{equation}
@@ -810,5 +859,166 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{matrix}
 	\right]
 	\end{equation}
+	\textbf{Ans.}\\
+	The matrix $M$ is hermitian. Therefore the eigenvalues are real. The eigenvalues are obtained by solving the secular equation
+	\begin{align*}
+		\left|\begin{matrix}
+		\frac{3}{2} - \lambda & -\frac{1}{2} & 0 \\
+		-\frac{1}{2} & \frac{3}{2} -\lambda & 0 \\
+		0 & 0 & 1-\lambda
+		\end{matrix}\right| &= 0 \\
+		(1-\lambda)\left[(\frac{3}{2}-\lambda)^2 - (-\frac{1}{2})(-\frac{1}{2})\right] &= 0 \\
+		(\lambda-1)\left[(\lambda-3/2+1/2)(\lambda-3/2-1/2)\right] &= 0\\
+		(\lambda-1)(\lambda-1)(\lambda-2) &= 0
+	\end{align*}
+	Thus the eigenvalues are $\lambda = 1,1,2$. The eigenvalue $1$ is two fold degenerate and the eigenvalue $2$ is non-degenerate, the two distinct eigenvalues are $\lambda_1=1$ with $g_1=2$ and $\lambda_2=2$ with $g_2=1$.
+	
+	\underline{Eigenvector for $\lambda=1$}\\
+	Since $M$ is hermitian, there will be two linearly independent eigenvectors corresponding to $\lambda=1$. We will make the two linearly independent eigenvectors orthogonal. The eigenvalue equation is
+	\begin{align*}
+		\mathbf{A} \left[\begin{matrix}
+		x_1 \\ x_2 \\ x_3
+		\end{matrix}\right]
+		&= 1 \left[\begin{matrix}
+		x_1 \\ x_2 \\ x_3
+		\end{matrix}\right] \\
+		\left[\begin{matrix}
+		\frac{3}{2}-1 & -\frac{1}{2} & 0 \\
+		-\frac{1}{2} &\frac{3}{2}-1 & 0 \\
+		0 & 0 & 1-1
+		\end{matrix}\right]
+		\left[\begin{matrix}
+		x_1 \\ x_2 \\ x_3
+		\end{matrix}\right] \\
+		&=
+		\left[\begin{matrix}
+		0 \\ 0 \\ 0
+		\end{matrix}\right] \\
+		\left[\begin{matrix}
+		\frac{1}{2} & -\frac{1}{2} & 0 \\
+		-\frac{1}{2} &\frac{1}{2} & 0 \\
+		0 & 0 & 0
+		\end{matrix}\right]
+		\left[\begin{matrix}
+		x_1 \\ x_2 \\ x_3
+		\end{matrix}\right] \\
+		&=
+		\left[\begin{matrix}
+		0 \\ 0 \\ 0
+		\end{matrix}\right]\\
+		\left[\begin{matrix}
+		1 & -1 & 0 \\
+		-1 & 1 & 0 \\
+		0 & 0 & 0
+		\end{matrix}\right]
+		\left[\begin{matrix}
+		x_1 \\ x_2 \\ x_3
+		\end{matrix}\right] \\
+		&=
+		\left[\begin{matrix}
+		0 \\ 0 \\ 0
+		\end{matrix}\right]
+	\end{align*}
+	Therefore $x_1=x_2=x$ (say) with arbitrary $x$. Also $x_3$ is arbitrary. Hence
+	\begin{equation}
+		\ket{1} = \left[\begin{matrix}
+			x \\ x \\ x_3
+		\end{matrix}\right]
+	\end{equation}
+	Choose $x=1$ and $x_3=0$ so that 
+	\begin{equation}
+		\ket{1}^{(1)} = \left[\begin{matrix}
+		1 \\ 1 \\ 0
+		\end{matrix}\right]
+	\end{equation}
+	Normalizing
+	\begin{equation}
+	\ket{1}^{(1)} = \frac{1}{\sqrt{2}}\left[\begin{matrix}
+	1 \\ 1 \\ 0
+	\end{matrix}\right] = \ket{\lambda=1,s=1}
+	\end{equation}
+	Next	Choose $x=0$ and $x_3=1$
+	\begin{equation}
+	\ket{1}^{(2)} = \left[\begin{matrix}
+	0 \\ 0 \\ 1
+	\end{matrix}\right] = \ket{\lambda=1,s=2}
+	\end{equation}
+	These are two orthogonal eigenvectors with eigenvalue $\lambda=1$.
+	
+	
+	
+	\underline{Eigenvector for $\lambda=2$}\\
+	Here $g_{\lambda=2}=1$. The eigenvalue equation is
+	\begin{align*}
+		\left[\begin{matrix}
+			\frac{3}{2}-2 & -\frac{1}{2} & 0 \\
+			-\frac{1}{2} &\frac{3}{2}-2 & 0 \\
+			0 & 0 & 1-2
+		\end{matrix}\right]
+		\left[\begin{matrix}
+			x_1 \\ x_2 \\ x_3
+		\end{matrix}\right] \\
+		&=
+		\left[\begin{matrix}
+			0 \\ 0 \\ 0
+		\end{matrix}\right] \\
+		\left[\begin{matrix}
+			-\frac{1}{2} & -\frac{1}{2} & 0 \\
+			-\frac{1}{2} & -\frac{1}{2} & 0 \\
+			0 & 0 & -1
+		\end{matrix}\right]
+		\left[\begin{matrix}
+			x_1 \\ x_2 \\ x_3
+		\end{matrix}\right]
+	\end{align*}
+	Therefore $x_1=-x_2=x$ (say) with arbitrary $x$. Also $x_3=0$. Therefore, eigenvector $\ket{2}$ is of the form
+	\begin{equation}
+		\ket{2} = \left[\begin{matrix}
+			x \\ -x \\ 0
+		\end{matrix}\right]
+	\end{equation}
+	
+	Normalizing
+	\begin{equation}
+		\ket{2} = \frac{1}{\sqrt{2}}\left[\begin{matrix}
+			1 \\ -1 \\ 0
+		\end{matrix}\right] = \ket{\lambda=1,s=1}
+	\end{equation}
+	
+	\textbf{Similarity Transformation}
+	\begin{equation}
+		M^\prime = S M S^\dagger
+	\end{equation}
+	Now
+	\begin{equation}
+		S^\dagger =
+		 \begin{blockarray}{cccc}
+		\ & \ket{1,1} & \ket{1,2} & \ket{2}\\
+		\begin{block}{c[ccc]}
+		\ & \frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}}  \\
+		\ & \frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}  \\
+		\ & 0 & 1 & 0  \\
+		\end{block}
+		\end{blockarray} \\
+	\end{equation}
+	\begin{equation}
+		S = \left(S^\dagger\right)^\dagger = 
+ 		\begin{blockarray}{cccc}
+		\begin{block}{c[ccc]}
+		\bra{1,1} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0  \\
+		\bra{1,2} & 0 & 0 & 1  \\
+		\bra{2} & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} & 0  \\
+		\end{block}
+		\end{blockarray} \\
+	\end{equation}
+	Then the matrix $M^\prime$ is diagonal
+	\begin{equation}
+		\mathbf{M}^\prime = \mathbf{S}\mathbf{M}\mathbf{S}^\dagger = \left[\begin{matrix}
+		1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2
+		\end{matrix}\right]
+	\end{equation}
+
+	
+
 
 	\end{enumerate}

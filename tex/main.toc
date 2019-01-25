@@ -65,25 +65,25 @@
 \contentsline {subsection}{\numberline {5.9.1}Continuous Spectrum}{59}{subsection.5.9.1}
 \contentsline {section}{\numberline {5.10}Hermitian operator with continuous and discrete eigenvalue}{60}{section.5.10}
 \contentsline {section}{\numberline {5.11}Problems}{61}{section.5.11}
-\contentsline {chapter}{\numberline {6}sheet-6 : Coordinate and Momentum Representation}{65}{chapter.6}
-\contentsline {chapter}{\numberline {7}sheet-7 : Postulates of Quantum Mechanics}{67}{chapter.7}
-\contentsline {chapter}{\numberline {8}sheet-8 : Compatibility of Observable}{69}{chapter.8}
-\contentsline {chapter}{\numberline {9}sheet-9 : The Uncertainty Principle}{71}{chapter.9}
-\contentsline {chapter}{\numberline {10}sheet-10 : Harmonic Oscillator}{73}{chapter.10}
-\contentsline {chapter}{\numberline {11}sheet-11 : Quantum Dynamics}{75}{chapter.11}
-\contentsline {chapter}{\numberline {12}sheet-12 : The Path Integral Formulation of Quantum Theory}{77}{chapter.12}
-\contentsline {chapter}{\numberline {13}sheet-13 : Potential Wells and Barriers}{79}{chapter.13}
-\contentsline {chapter}{\numberline {14}sheet-14 : Particle Motion in 3-Dimension}{81}{chapter.14}
-\contentsline {chapter}{\numberline {15}sheet-15 : The Hydrogen Atom}{83}{chapter.15}
-\contentsline {chapter}{\numberline {16}sheet-16 : Angular Momentum 1}{85}{chapter.16}
-\contentsline {chapter}{\numberline {17}sheet-17 : Angular Momentum 2: spin 1/2 system}{87}{chapter.17}
-\contentsline {chapter}{\numberline {18}sheet-18 : Rotations and Angular Momentum}{89}{chapter.18}
-\contentsline {chapter}{\numberline {19}sheet-19 : Addition of Angular Momentum}{91}{chapter.19}
-\contentsline {chapter}{\numberline {20}sheet-20 : Time Independent Perturbation}{93}{chapter.20}
-\contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{95}{chapter.21}
-\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{97}{chapter.22}
-\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{99}{chapter.23}
-\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{101}{chapter.24}
-\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{103}{chapter.25}
-\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{105}{chapter.26}
+\contentsline {chapter}{\numberline {6}sheet-6 : Coordinate and Momentum Representation}{67}{chapter.6}
+\contentsline {chapter}{\numberline {7}sheet-7 : Postulates of Quantum Mechanics}{69}{chapter.7}
+\contentsline {chapter}{\numberline {8}sheet-8 : Compatibility of Observable}{71}{chapter.8}
+\contentsline {chapter}{\numberline {9}sheet-9 : The Uncertainty Principle}{73}{chapter.9}
+\contentsline {chapter}{\numberline {10}sheet-10 : Harmonic Oscillator}{75}{chapter.10}
+\contentsline {chapter}{\numberline {11}sheet-11 : Quantum Dynamics}{77}{chapter.11}
+\contentsline {chapter}{\numberline {12}sheet-12 : The Path Integral Formulation of Quantum Theory}{79}{chapter.12}
+\contentsline {chapter}{\numberline {13}sheet-13 : Potential Wells and Barriers}{81}{chapter.13}
+\contentsline {chapter}{\numberline {14}sheet-14 : Particle Motion in 3-Dimension}{83}{chapter.14}
+\contentsline {chapter}{\numberline {15}sheet-15 : The Hydrogen Atom}{85}{chapter.15}
+\contentsline {chapter}{\numberline {16}sheet-16 : Angular Momentum 1}{87}{chapter.16}
+\contentsline {chapter}{\numberline {17}sheet-17 : Angular Momentum 2: spin 1/2 system}{89}{chapter.17}
+\contentsline {chapter}{\numberline {18}sheet-18 : Rotations and Angular Momentum}{91}{chapter.18}
+\contentsline {chapter}{\numberline {19}sheet-19 : Addition of Angular Momentum}{93}{chapter.19}
+\contentsline {chapter}{\numberline {20}sheet-20 : Time Independent Perturbation}{95}{chapter.20}
+\contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{97}{chapter.21}
+\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{99}{chapter.22}
+\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{101}{chapter.23}
+\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{103}{chapter.24}
+\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{105}{chapter.25}
+\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{107}{chapter.26}
 \contentsfinish 

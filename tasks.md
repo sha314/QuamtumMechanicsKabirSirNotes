@@ -19,7 +19,7 @@ writing done by shahnoor
 figure ... pending
 
 # Chapter5
-writing by shahnoor - pending
+writing by shahnoor - done on 2019.01.25
 
 # Chapter6
 
@@ -41,6 +41,8 @@ branch - "by-nowrin"
 
 
 # Chapter11
+writing by Atik vai - - pending
+
 
 
 # Chapter12
