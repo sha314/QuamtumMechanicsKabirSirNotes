@@ -123,9 +123,9 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{equation}
 	In matrix notation, we can write
 	\begin{equation}
-		\left|\mathbf{A} - \lambda \mathbf{1} \right| = 0
+		\left|\mathbb{A} - \lambda \mathbb{1} \right| = 0
 	\end{equation}
-	This equation, which is a polynomial equation of degree $n$ in the unknown $\lambda$, is called the secular equation of the matrix $\mathbf{A}$. Solving this equation we get $n$ roots which we label as 
+	This equation, which is a polynomial equation of degree $n$ in the unknown $\lambda$, is called the secular equation of the matrix $\mathbb{A}$. Solving this equation we get $n$ roots which we label as 
 	\begin{equation}
 		\lambda_1, \lambda_2, \ldots, \lambda_n \nonumber
 	\end{equation}
@@ -154,7 +154,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{equation}
 	Writing out the matrix ($A_{ij}^\prime$) in full
 	\begin{equation}
-		\mathbf{A}^\prime = \left[
+		\mathbb{A}^\prime = \left[
 		\begin{matrix}
 			\lambda_1 &	0	& 0	& \ldots	& 0 \\			
 			0 &	\lambda_2	& 0	& \ldots	& 0 \\
@@ -163,7 +163,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\end{matrix}
 		\right]
 	\end{equation}
-	An operator or a matrix $\mathbf{A}$ is said to be diagonalizable, if we can find a basis in which the matrix becomes diagonal. For a hermitian operator we can always find a basis, the eigenbasis of the operator, in which the matrix representation of the operator is diagonal with the eigenvalues as the diagonal elements.\\
+	An operator or a matrix $\mathbb{A}$ is said to be diagonalizable, if we can find a basis in which the matrix becomes diagonal. For a hermitian operator we can always find a basis, the eigenbasis of the operator, in which the matrix representation of the operator is diagonal with the eigenvalues as the diagonal elements.\\
 	
 	For a non-hermitian operator in an $n$  dimensional vector space, there is no guarantee that the matrix reprsentation $A_{ij}^\prime$ in the eigenbasis of the operator is diagonal. This is because, in general, the eigenvectors are  not orthogonal, i.e., $\braket{\lambda_i}{\lambda_j} \neq \delta_{ij}$
 	
@@ -347,39 +347,39 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{equation}
 	since $S$ is unitary matrix. Then
 	\begin{eqnarray}
-		\det(\mathbf{A}^\prime - \lambda \mathbf{I}) 
-		&= \det(\mathbf{S}\mathbf{A}^\prime \mathbf{S}^{-1} - \lambda \mathbf{S} \mathbf{I} \mathbf{S}^{-1}) \nonumber \\
-		&= \det(\mathbf{S}(\mathbf{A} - \lambda \mathbf{I}) \mathbf{S}^{-1})\nonumber \\
-		&= \det(\mathbf{A} - \lambda \mathbf{I})
+		\det(\mathbb{A}^\prime - \lambda \mathbb{I}) 
+		&= \det(\mathbb{S}\mathbb{A}^\prime \mathbb{S}^{-1} - \lambda \mathbb{S} \mathbb{I} \mathbb{S}^{-1}) \nonumber \\
+		&= \det(\mathbb{S}(\mathbb{A} - \lambda \mathbb{I}) \mathbb{S}^{-1})\nonumber \\
+		&= \det(\mathbb{A} - \lambda \mathbb{I})
 	\end{eqnarray}
 	Thus, there is no change in the secular equation even if we change the basis set. Since the eigenvalues are the roots of the secular equation, the eigenvalues are representation independent. They are characteristics of the operator $\hat{A}$ itself, and not of any particular representation.\\
 
 	Next, we will show that the determinant and the trace of the matrix representation $A$ are independent of the basis used for the representation.\\
 	
-	Since $\mathbf{A}^\prime = \mathbf{S} \mathbf{A} \mathbf{S}^{-1}$ we have 
+	Since $\mathbb{A}^\prime = \mathbb{S} \mathbb{A} \mathbb{S}^{-1}$ we have 
 	\begin{eqnarray}
-		\det(\mathbf{A}^\prime) 
-		&= \det(\mathbf{S} \mathbf{A} \mathbf{S}^{-1}) \nonumber \\
-		&= \det(\mathbf{S}^{-1}\mathbf{S} \mathbf{A} ) \nonumber \\
-		&= \det(\mathbf{A})
+		\det(\mathbb{A}^\prime) 
+		&= \det(\mathbb{S} \mathbb{A} \mathbb{S}^{-1}) \nonumber \\
+		&= \det(\mathbb{S}^{-1}\mathbb{S} \mathbb{A} ) \nonumber \\
+		&= \det(\mathbb{A})
 	\end{eqnarray}
 	i.e., the determinant is independent of the representation.\\
 	
 	We also have
 	\begin{equation}
-		\Tr (\mathbf{A}^\prime) = \Tr (\mathbf{S}\mathbf{A}^\prime\mathbf{S}^{-1})=\Tr(\mathbf{S}^{-1}\mathbf{S} \mathbf{A}) = \Tr (\mathbf{A})
+		\Tr (\mathbb{A}^\prime) = \Tr (\mathbb{S}\mathbb{A}^\prime\mathbb{S}^{-1})=\Tr(\mathbb{S}^{-1}\mathbb{S} \mathbb{A}) = \Tr (\mathbb{A})
 	\end{equation}
 	i.e., the trace is also independent of the representation. In the above derivations, we have used the identities,
 	\begin{eqnarray}
-		\det( \mathbf{A}\mathbf{B}) = \det(\mathbf{B}\mathbf{A}) \\
-		\Tr( \mathbf{A}\mathbf{B}) = \Tr(\mathbf{B}\mathbf{A})
+		\det( \mathbb{A}\mathbb{B}) = \det(\mathbb{B}\mathbb{A}) \\
+		\Tr( \mathbb{A}\mathbb{B}) = \Tr(\mathbb{B}\mathbb{A})
 	\end{eqnarray}
-	where $\mathbf{A}$ and $\mathbf{B}$ are square matrices. Now, if we use the eigenbasis of the hermitian operator $A$ for the representation, then $\mathbf{A}$ is a diagonal matrix with
+	where $\mathbb{A}$ and $\mathbb{B}$ are square matrices. Now, if we use the eigenbasis of the hermitian operator $A$ for the representation, then $\mathbb{A}$ is a diagonal matrix with
 	\begin{eqnarray}
-		\det \mathbf{A} &= \prod_i \lambda_i \\
-		\Tr \mathbf{A} &= \sum_i \lambda_i 
+		\det \mathbb{A} &= \prod_i \lambda_i \\
+		\Tr \mathbb{A} &= \sum_i \lambda_i 
 	\end{eqnarray}
-	If an eigenvalue is $g$-fold degenerate, then that eigenvalue has to be repeated $g$ times while calculating the determinant and trace of the matrix $\mathbf{A}$.\\
+	If an eigenvalue is $g$-fold degenerate, then that eigenvalue has to be repeated $g$ times while calculating the determinant and trace of the matrix $\mathbb{A}$.\\
 	
 	
 	
@@ -412,7 +412,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{equation}
 	Since $\ket{\psi}$ is arbitrary, we must have
 	\begin{equation}
-		\hat{\mathbf{1}} = \sum_i \ket{a_i}\bra{a_i} = \sum_i \hat{P}_i
+		\hat{\mathbb{1}} = \sum_i \ket{a_i}\bra{a_i} = \sum_i \hat{P}_i
 		\label{chapter5.eqn1-completeness}
 	\end{equation}
 	where
@@ -424,7 +424,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	
 	Using the basis $\{\ket{u_i}\}$, any operator $\hat{O}$ can be expressed as 
 	\begin{eqnarray}
-		\hat{O} = \hat{\mathbf{1}} \hat{O} \hat{\mathbf{1}} 
+		\hat{O} = \hat{\mathbb{1}} \hat{O} \hat{\mathbb{1}} 
 		&= \sum_{i,j} \ket{a_i}\bra{a_i} \hat{O} \ket{a_j}\bra{a_j} \nonumber \\
 		&= \sum_{i,j} \ket{a_i} O_{ij} \bra{a_j}
 		\label{chapter5.eqn3-operator-as-matrix}
@@ -438,7 +438,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	
 	Now, we will generalize the notation to include degeneracy, suppose the eigenvalue $a_i$ is a $g_i$ fold degenerate. Then the eigenvectors belonging to the eigenvalue $a_i$ is written as $\ket{a_i, s^{(i)}}$ where $s^{(i)}$ can take values $1,2,\ldots, g_i$. The set of vectors $\{\ket{a_i, s^{(i)}}, \quad s^{(i)}=1,2,\ldots,g_i;\quad i=1,2,\ldots\}$ Form a complete orthogonal set. The completeness condition is
 	\begin{equation}
-		\sum_{i=1}^{\infty} \sum_{s^{i}=1}^{g_i} \ket{a_i, s^{(i)}}\bra{a_i, s^{(i)}} = \hat{\mathbf{1}}
+		\sum_{i=1}^{\infty} \sum_{s^{i}=1}^{g_i} \ket{a_i, s^{(i)}}\bra{a_i, s^{(i)}} = \hat{\mathbb{1}}
 		\label{chapter5.eqn5-completeness-degenerate}
 	\end{equation}
 	and the orthogonality condition is
@@ -448,7 +448,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{equation}
 	We can rewrite equation (\ref{chapter5.eqn5-completeness-degenerate}) as (exactly as the non degenerate case)
 	\begin{equation}
-		\hat{\mathbf{1}} = \sum_i \hat{P}_i
+		\hat{\mathbb{1}} = \sum_i \hat{P}_i
 		\label{chapter5.eqn7-completeness-degenerate-rewrite}
 	\end{equation}
 	where
@@ -472,7 +472,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\end{equation}
 		If there is degeneracy, we will put in a second index $s$ to distinguish between degenerate vectors. Thus we may write $\ket{a\quad s}$ to denote a degenerate eigenvector. We assume that there is no degeneracy. In case of degeneracy it is a simple matter to generalize our notations. We assume that the vectors $\ket{a}$ form a complete set. The completeness condition can be written as
 		\begin{equation}
-			\int da \quad \ket{a}\bra{a} = \hat{\mathbf{1}}
+			\int da \quad \ket{a}\bra{a} = \hat{\mathbb{1}}
 			\label{chapter5.eqn10-completenss-continuous}
 		\end{equation}
 		Where the integral extends over the entire domain in which $a$ varies. Usually this domain is $-\infty$ to $\infty$.\\
@@ -520,7 +520,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		In summary, for continuously varying eigenvalues, the orthogonality (\ref{chapter5.eqn13-orthogonality}) and completeness (\ref{chapter5.eqn13-completenss}) of the eigenvectors of a hermitian operator are written as
 		\begin{eqnarray}
 			\braket{a}{a^\prime} &= \delta(a-a^\prime)  \label{chapter5.eqn13-orthogonality}\\
-			\hat{\mathbf{1}} &= \int da  \ket{a}\bra{a}  \label{chapter5.eqn13-completenss}
+			\hat{\mathbb{1}} &= \int da  \ket{a}\bra{a}  \label{chapter5.eqn13-completenss}
 		\end{eqnarray}
 		
 		
@@ -535,7 +535,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{equation}
 	for continuous eigenvalues. The completeness condition is
 	\begin{equation}
-		\sum_i \ket{a_i}\bra{a_i} + \int da \ket{a\bra{a}} = \hat{\mathbf{1}}
+		\sum_i \ket{a_i}\bra{a_i} + \int da \ket{a\bra{a}} = \hat{\mathbb{1}}
 	\end{equation}
 	and the orthogonality condition are
 	\begin{eqnarray}
@@ -573,7 +573,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\end{equation}
 		The secular equation is then 
 		\begin{eqnarray}
-			\det(M - \lambda \mathbf{1}) &= 0 \nonumber\\
+			\det(M - \lambda \mathbb{1}) &= 0 \nonumber\\
 			\left|\begin{matrix}
 			1-\lambda & 1 \\ 0 & 1-\lambda
 			\end{matrix}\right| &=0 \nonumber \\
@@ -876,7 +876,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\underline{Eigenvector for $\lambda=1$}\\
 	Since $M$ is hermitian, there will be two linearly independent eigenvectors corresponding to $\lambda=1$. We will make the two linearly independent eigenvectors orthogonal. The eigenvalue equation is
 	\begin{align*}
-		\mathbf{A} \left[\begin{matrix}
+		\mathbb{A} \left[\begin{matrix}
 		x_1 \\ x_2 \\ x_3
 		\end{matrix}\right]
 		&= 1 \left[\begin{matrix}
@@ -1013,7 +1013,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{equation}
 	Then the matrix $M^\prime$ is diagonal
 	\begin{equation}
-		\mathbf{M}^\prime = \mathbf{S}\mathbf{M}\mathbf{S}^\dagger = \left[\begin{matrix}
+		\mathbb{M}^\prime = \mathbb{S}\mathbb{M}\mathbb{S}^\dagger = \left[\begin{matrix}
 		1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2
 		\end{matrix}\right]
 	\end{equation}

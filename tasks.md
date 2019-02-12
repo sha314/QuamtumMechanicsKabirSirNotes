@@ -46,7 +46,7 @@ writing by Atik vai - - pending
 
 
 # Chapter12
-
+writing by shahnoor - pending
 
 # Chapter13
 
@@ -61,6 +61,7 @@ writing by Atik vai - - pending
 
 
 # Chapter17
+
 
 # Chapter18
 

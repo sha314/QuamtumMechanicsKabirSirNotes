@@ -3,9 +3,13 @@ Lecture notes on Quantum Mechanics by Dr. Khorshed Kabir, Dhaka University
 
 
 # Packages required
-following commands installs the required package
+following commands installs the required package on Ubuntu
 
+
+sudo apt-get install texlive
 sudo apt-get install texlive-latex-extra
+sudo apt-get install texlive-fonts-extra
+sudo apt-get install psutils
 sudo apt-get install texlive-science
 
 

@@ -92,49 +92,57 @@
 \contentsline {chapter}{\numberline {11}sheet-11 : Quantum Dynamics}{77}{chapter.11}
 \ttl@stoptoc {default@10}
 \ttl@starttoc {default@11}
+\contentsline {section}{\numberline {11.1}Quantum Dynamics}{77}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Schrodinger picture}{77}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Schrodinger equation}{77}{subsection.11.1.2}
 \contentsline {chapter}{\numberline {12}sheet-12 : The Path Integral Formulation of Quantum Theory}{79}{chapter.12}
 \ttl@stoptoc {default@11}
 \ttl@starttoc {default@12}
-\contentsline {chapter}{\numberline {13}sheet-13 : Potential Wells and Barriers}{81}{chapter.13}
+\contentsline {section}{\numberline {12.1}Background Materials}{79}{section.12.1}
+\contentsline {section}{\numberline {12.2}Propagator}{82}{section.12.2}
+\contentsline {section}{\numberline {12.3}Path Integral for the Propagator}{82}{section.12.3}
+\contentsline {section}{\numberline {12.4}Path Integral for a Free Particle}{85}{section.12.4}
+\contentsline {section}{\numberline {12.5}Derivation of the propagator for a free particle without using the path integral formula}{87}{section.12.5}
+\contentsline {chapter}{\numberline {13}sheet-13 : Potential Wells and Barriers}{89}{chapter.13}
 \ttl@stoptoc {default@12}
 \ttl@starttoc {default@13}
-\contentsline {chapter}{\numberline {14}sheet-14 : Particle Motion in 3-Dimension}{83}{chapter.14}
+\contentsline {chapter}{\numberline {14}sheet-14 : Particle Motion in 3-Dimension}{91}{chapter.14}
 \ttl@stoptoc {default@13}
 \ttl@starttoc {default@14}
-\contentsline {chapter}{\numberline {15}sheet-15 : The Hydrogen Atom}{85}{chapter.15}
+\contentsline {chapter}{\numberline {15}sheet-15 : The Hydrogen Atom}{93}{chapter.15}
 \ttl@stoptoc {default@14}
 \ttl@starttoc {default@15}
-\contentsline {chapter}{\numberline {16}sheet-16 : Angular Momentum 1}{87}{chapter.16}
+\contentsline {chapter}{\numberline {16}sheet-16 : Angular Momentum 1}{95}{chapter.16}
 \ttl@stoptoc {default@15}
 \ttl@starttoc {default@16}
-\contentsline {chapter}{\numberline {17}sheet-17 : Angular Momentum 2: spin 1/2 system}{89}{chapter.17}
+\contentsline {chapter}{\numberline {17}sheet-17 : Angular Momentum 2: spin 1/2 system}{97}{chapter.17}
 \ttl@stoptoc {default@16}
 \ttl@starttoc {default@17}
-\contentsline {chapter}{\numberline {18}sheet-18 : Rotations and Angular Momentum}{91}{chapter.18}
+\contentsline {chapter}{\numberline {18}sheet-18 : Rotations and Angular Momentum}{99}{chapter.18}
 \ttl@stoptoc {default@17}
 \ttl@starttoc {default@18}
-\contentsline {chapter}{\numberline {19}sheet-19 : Addition of Angular Momentum}{93}{chapter.19}
+\contentsline {chapter}{\numberline {19}sheet-19 : Addition of Angular Momentum}{101}{chapter.19}
 \ttl@stoptoc {default@18}
 \ttl@starttoc {default@19}
-\contentsline {chapter}{\numberline {20}sheet-20 : Time Independent Perturbation}{95}{chapter.20}
+\contentsline {chapter}{\numberline {20}sheet-20 : Time Independent Perturbation}{103}{chapter.20}
 \ttl@stoptoc {default@19}
 \ttl@starttoc {default@20}
-\contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{97}{chapter.21}
+\contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{105}{chapter.21}
 \ttl@stoptoc {default@20}
 \ttl@starttoc {default@21}
-\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{99}{chapter.22}
+\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{107}{chapter.22}
 \ttl@stoptoc {default@21}
 \ttl@starttoc {default@22}
-\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{101}{chapter.23}
+\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{109}{chapter.23}
 \ttl@stoptoc {default@22}
 \ttl@starttoc {default@23}
-\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{103}{chapter.24}
+\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{111}{chapter.24}
 \ttl@stoptoc {default@23}
 \ttl@starttoc {default@24}
-\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{105}{chapter.25}
+\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{113}{chapter.25}
 \ttl@stoptoc {default@24}
 \ttl@starttoc {default@25}
-\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{107}{chapter.26}
+\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{115}{chapter.26}
 \ttl@stoptoc {default@25}
 \ttl@starttoc {default@26}
 \contentsfinish 
