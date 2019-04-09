@@ -8,8 +8,8 @@
 	\end{align}
 	The states $\{\ket{q}\}$ and $\{\ket{p}\}$ are basis states, i.e., $\mathbbm{1}$
 	\begin{align}
-		\int dq \ket{q}\bra{q} &= \mathbb{1} \\
-		\int dp \ket{p}\bra{p} &= \mathbb{\hat{1}} \\
+		\int \dd{q} \ket{q}\bra{q} &= \mathbb{1} \\
+		\int \dd{p} \ket{p}\bra{p} &= \mathbb{\hat{1}} \\
 	\end{align}
 	where the normalization is chosen as
 	\begin{align}
@@ -19,11 +19,11 @@
 	The operators $\hat{Q}_s$ and $\hat{P}_s$ can be expressed in coordinate representation as follows
 	\begin{align}
 		\bra{q}\hat{Q}_s &= q \bra{q} \\
-		\bra{q}\hat{P}_s &= -\iu \hbar \frac{\partial}{\partial q} \bra{q} 
+		\bra{q}\hat{P}_s &= -\iu \hbar \pdv{q} \bra{q} 
 	\end{align}
 	In momentum representaion
 	\begin{align}
-		\bra{p}\hat{Q}_s &= \iu \hbar \frac{\partial}{\partial p} \bra{p} \\
+		\bra{p}\hat{Q}_s &= \iu \hbar \pdv{p} \bra{p} \\
 		\bra{p}\hat{P}_s &=  \bra{p} 
 	\end{align}
 	The fundamental commutation relation between $\hat{Q}$ and $\hat{P}$ is 
@@ -35,7 +35,7 @@
 	\begin{align}
 		\hat{P}_s \ket{p} &= p\ket{p} \\
 		\bra{q}\hat{P}_s \ket{p} &= p\bra{q}\ket{p} \\
-		-\iu \hbar \frac{\partial}{\partial q} \braket{q}{p} &= p \braket{q}{p}
+		-\iu \hbar \pdv{q} \braket{q}{p} &= p \braket{q}{p}
 	\end{align}
 	This equation is easy to solve for $\braket{q}{p}$. We find
 	\begin{equation}
@@ -44,9 +44,9 @@
 	The constant $C$ is chosen such that we have the normalization $\braket{p}{p^\prime } \delta(p-p^\prime)$. Now
 	\begin{align*}
 		\braket{p}{p^\prime} 
-		&= \int dq \braket{p}{q}\braket{q}{p^\prime} \\
-		&= \int dq C^* e^{-ipq/\hbar} C^{\iu p^\prime q /\hbar} \\
-		&= \left|C\right|^2 \int_{-\infty}^{\infty} dq e^{-\iu(p-p^\prime)q/\hbar} \\
+		&= \int \dd{q} \braket{p}{q}\braket{q}{p^\prime} \\
+		&= \int \dd{q} C^* e^{-ipq/\hbar} C^{\iu p^\prime q /\hbar} \\
+		&= \left|C\right|^2 \int_{-\infty}^{\infty} \dd{q} e^{-\iu(p-p^\prime)q/\hbar} \\
 		&= \left|C\right|^2  2\pi \delta(\frac{p-p^\prime}{\hbar}) \\
 		&= \left|C\right|^2  2\pi \hbar \delta(p-p^\prime)
 	\end{align*}
@@ -91,8 +91,8 @@
 	\end{align}
 	Note that these are equal time relations. And
 	\begin{align}
-		\hat{\mathbb{1}} &= \int dq \ket{q,t}_H\quad {_H}\bra{q,t}\label{chapter12.eqn1-completeness-q}\\
-		\hat{\mathbb{1}} &= \int dp \ket{p,t}_H {_H}\bra{p,t}\label{chapter12.eqn1-completeness-p}
+		\hat{\mathbb{1}} &= \int \dd{q} \ket{q,t}_H \  {_H}\bra{q,t}\label{chapter12.eqn1-completeness-q}\\
+		\hat{\mathbb{1}} &= \int \dd{p} \ket{p,t}_H\ {_H}\bra{p,t}\label{chapter12.eqn1-completeness-p}
 	\end{align}
 	To show the validity of equation (\ref{chapter12.eqn1-completeness-q}), for example, we use the transformation of kets and bras from the schr\"{o}dinger picture to the Heisenberg picture (\ref{chapter12.eqn-schrodinger-to-heisengerg-ket}), i.e., 
 	\begin{equation}
@@ -100,8 +100,8 @@
 	\end{equation}
 	Thus the right hand side of equation (\ref{chapter12.eqn1-completeness-q}) can be written as
 	\begin{align}
-		\int dq \quad \ket{q,t}_H {_H}\bra{q,t} &= \int dq \quad e^{\iu \hat{H}t/\hbar}\ket{q} \bra{q}e^{-\iu \hat{H}t/\hbar} \\
-		&= e^{\iu \hat{H}t/\hbar}\left(\int dq \quad \ket{q} \bra{q}\right)e^{-\iu \hat{H}t/\hbar} \\
+		\int \dd{q}  \ket{q,t}_H {_H}\bra{q,t} &= \int \dd{q} \quad e^{\iu \hat{H}t/\hbar}\ket{q} \bra{q}e^{-\iu \hat{H}t/\hbar} \\
+		&= e^{\iu \hat{H}t/\hbar}\left(\int \dd{q}  \ket{q} \bra{q}\right)e^{-\iu \hat{H}t/\hbar} \\
 		&= e^{\iu \hat{H}t/\hbar}\quad\mathbb{1}\quad e^{-\iu \hat{H}t/\hbar} \\
 		&= \mathbb{1}
 	\end{align}
@@ -111,11 +111,14 @@
 		&= e^{\iu \hat{H}t/\hbar} e^{-\iu \hat{H}t/\hbar} \ket{\psi(0)}_S\\
 		&= \ket{\psi(0)}_S
 	\end{align}
-	Thus the state ket in the Heisenberg picture is independent of time and is same as the initial state ket in the Schr\"{o}dinger picture.\\
+	Thus the state ket in the Heisenberg picture is independent of time and is same as the initial state ket in the Schr\"{o}dinger picture.
 	
 	
 	\section{Propagator}
 	The dynamics of a quantum system is completely specified by the "Feynman Kernel", or the propagator or the transition amplitude defined as
+	%%%%%%%%%%%%%
+	%%%%%%%%%% TODO
+	%%%%%%%%%%%%%
 	\begin{equation}
 		U(q_2, t_2; q_1, t_1) = {\_H}\braket{q_2, t_2}{q_1, t_1}_H
 		\label{chapter12.eqn1-propagator}
@@ -128,11 +131,12 @@
 	\end{align}
 	We see that the propagator is the matrix element in the coordinate basis of the time-evolution operator in the Schr\"{o}dinger picture. The physical meaning of the propagator is that it is the probability amplitude of finding the particle at $q_2$ at time $t_2$ if the particle was at $q_1$ at an earlier time $t_1$. Knowing the propagator is equivalent to solving the Schr\"{o}dinger equation, for it allows us to calculate the Schr\"{o}dinger picture wave function at any moment of time if the wave function is known at an earlier moment. This is shown below:
 	\begin{align}
-		\psi_S(q,t &= \braket{q}{\psi_S(t)} \
+		\psi_S(q,t )
+		&= \braket{q}{\psi_S(t)} \\
 		&= \bra{q}e^{-\iu \hat{H}t/\hbar} \ket{\psi_S(0)} \\
 		&= {\_H}\braket{q,t}{\psi}_H \\
-		&= \int dq^\prime {\_H}\braket{q,t}{q^\prime, t^\prime}_H {\_H}\braket{q^\prime, t^\prime}{\psi}_H \\
-		&= \int dq^\prime U(q,t;q^\prime, t^\prime) \psi_S(q^\prime,t^\prime)
+		&= \int \dd{q^\prime} {\_H}\braket{q,t}{q^\prime, t^\prime}_H {\_H}\braket{q^\prime, t^\prime}{\psi}_H \\
+		&= \int \dd{q^\prime} U(q,t;q^\prime, t^\prime) \psi_S(q^\prime,t^\prime)
 	\end{align}
 	The path integral formalism of quantum dynamics provides a means to construct the transition amplitude ${\_H}\braket{q,t}{q^\prime, t^\prime}_H$ from the classical Hamiltonian or Lagrangian alone, without any reference to non commuting operators or Hilbert space vectors.\\
 	
@@ -155,13 +159,13 @@
 		
 		At each intermediate time a complete set of basis states $\ket{x_i,t_i}$ may be inserted:
 		\begin{equation}
-			\braket{x t}{x_0 t_0} =\int_{-\infty}^{\infty}dx_1 \ldots \int_{-\infty}^{\infty} dx_{N-1} \braket{x t}{x_{N-1} t_{N-1}}\braket{x_{N-1} t_{N-1}}{x_{N-2} t_{N-2}} \ldots \braket{x_2 t_2}{x_{1} t_{1}} \braket{x_1 t_1}{x_{0} t_{0}}
+			\braket{x t}{x_0 t_0} =\int_{-\infty}^{\infty}\dd{x_1} \ldots \int_{-\infty}^{\infty} \dd{x_{N-1}} \braket{x t}{x_{N-1} t_{N-1}}\braket{x_{N-1} t_{N-1}}{x_{N-2} t_{N-2}} \ldots \braket{x_2 t_2}{x_{1} t_{1}} \braket{x_1 t_1}{x_{0} t_{0}}
 			\label{chapter12.eqn4-propagator-path-integral}
 		\end{equation}
 		
 		Here we have omitted the subscript $H$ in the Heisenberg picture basis vectors since there is no scope for confusion. Note that while there are $N$ scalar products in euquation (\ref{chapter12.eqn4-propagator-path-integral}), there are only $N-1$ intermediate points so that the number of integrations is $N-1$. Since $x_N = x$ and $t_N= t$, we can write equation (\ref{chapter12.eqn4-propagator-path-integral}) as
 		\begin{equation}
-			\braket{x t}{x_0 t_0} = \int \prod_{i=1}^{N-1} dq_i \prod_{i=0}^{N-1} \braket{x_{i+1} t_{i+1}}{x_i t_i}
+			\braket{x t}{x_0 t_0} = \int \prod_{i=1}^{N-1} \dd{q_i} \prod_{i=0}^{N-1} \braket{x_{i+1} t_{i+1}}{x_i t_i}
 			\label{chapter12.eqn5-propagator-path-integral}
 		\end{equation}
 		Equation (\ref{chapter12.eqn5-propagator-path-integral}) can be interpreted as follows: A particle that propagates from $x_0$ at time $t_0$ to $x$ at time $t$ can take an arbitrary intermediate trajectory, shown in figure (\ref{chapter12.fig1-propagator-path-integral-trajectory})
@@ -177,7 +181,7 @@
 		\braket{x_{i+1} t_{i+1}}{x_i t_i} &= \bra{x_{i+1}} e^{-\iu \hat{H}t_{i+1}/\hbar}e^{\iu \hat{H}t_{i}/\hbar}\ket{x_i}\\
 		&= \bra{x_{i+1}} e^{-\iu \hat{H}(t_{i+1} - t_i)/\hbar}\ket{x_i}\\
 		&= \bra{x_{i+1}} e^{-\iu \hat{H}\epsilon/\hbar}\ket{x_i}\\
-		&= \bra{x_{i+1}} \left(\mathbb{1} - \frac{\iu \epsilon}{\hbar}\hat{H} + \mathcal{O}(\epsilon^2)\right)\ket{x_i}
+		&= \bra{x_{i+1}} \left(\mathbb{1} - \frac{\iu \epsilon}{\hbar}\hat{H} + \order{\epsilon^2}\right)\ket{x_i}
 	\end{align}
 	We will take $\hat{H}$ to be of the form
 	\begin{equation}
@@ -186,14 +190,14 @@
 	Therefore
 	\begin{align}
 		\braket{x_{i+1} t_{i+1}}{x_i t_i} 
-		&= \bra{x_{i+1}}\left[\mathbb{1} - \frac{\iu \epsilon}{\hbar}\left(\frac{\hat{P}^2}{2 m} + V(\hat{X}) + \right) + \mathcal{O}(\epsilon^2)\right]\ket{x_i}\\
-		&= \int_{-\infty}^{\infty} dp \braket{x_{i+1}}{p} \bra{p} \left[\mathbb{1} - \frac{\iu \epsilon}{\hbar}\left(\frac{\hat{P}^2}{2 m} + V(\hat{X})\right) + \mathcal{O}(\epsilon^2)\right] \ket{x_i} \\
-		&= \int_{-\infty}^{\infty} dp \braket{x_{i+1}}{p} \braket{p}{x_i} \left[\mathbb{1} - \frac{\iu \epsilon}{\hbar}\left(\frac{p^2}{2 m} + V(x_i)\right) + \mathcal{O}(\epsilon^2)\right]  \\
-		&= \int dp \frac{1}{\sqrt{2\pi \hbar}}e^{\iu p x_{i+1}/\hbar}\frac{1}{\sqrt{2\pi \hbar}}e^{-\iu p x_{i}/\hbar} e^{-\iu \epsilon/\hbar \left( \frac{p^2}{2 m} + V(x_i) \right)} \\
-		&= \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty} dp e^{\iu p (x_{i+1} - x_i)/\hbar} e^{-\iu \epsilon/\hbar \left( \frac{p^2}{2 m} + V(x_i) \right)} \\
-		&= \frac{1}{2\pi\hbar} e^{-\iu \epsilon V(x_i)/\hbar} \int_{-\infty}^{\infty} e^{\iu p \epsilon\frac{(x_{i+1} - x_i)}{\epsilon}\frac{1}{\hbar}} e^{-\iu \epsilon/\hbar \left( \frac{p^2}{2 m}\right)} dp\\
-		&= \frac{1}{2\pi\hbar} e^{-\iu \epsilon V(x_i)/\hbar} \int_{-\infty}^{\infty} e^{\iu p \epsilon \dot{x}_i / \hbar} e^{-\iu \epsilon \frac{p^2}{2 m \hbar}} dp \\
-		&= \frac{1}{2\pi\hbar} e^{-\iu \epsilon V(x_i)/\hbar} \int_{-\infty}^{\infty} e^{-\frac{\iu \epsilon}{2 m \hbar} \left(p^2 - 2 m p \dot{x}_i \right)} dp
+		&= \bra{x_{i+1}}\left[\mathbb{1} - \frac{\iu \epsilon}{\hbar}\left(\frac{\hat{P}^2}{2 m} + V(\hat{X}) + \right) + \order{\epsilon^2}\right]\ket{x_i}\\
+		&= \int_{-\infty}^{\infty} \dd{p} \braket{x_{i+1}}{p} \bra{p} \left[\mathbb{1} - \frac{\iu \epsilon}{\hbar}\left(\frac{\hat{P}^2}{2 m} + V(\hat{X})\right) + \order{\epsilon^2}\right] \ket{x_i} \\
+		&= \int_{-\infty}^{\infty} \dd{p} \braket{x_{i+1}}{p} \braket{p}{x_i} \left[\mathbb{1} - \frac{\iu \epsilon}{\hbar}\left(\frac{p^2}{2 m} + V(x_i)\right) + \order{\epsilon^2}\right]  \\
+		&= \int \dd{p} \frac{1}{\sqrt{2\pi \hbar}}e^{\iu p x_{i+1}/\hbar}\frac{1}{\sqrt{2\pi \hbar}}e^{-\iu p x_{i}/\hbar} e^{-\iu \epsilon/\hbar \left( \frac{p^2}{2 m} + V(x_i) \right)} \\
+		&= \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty} \dd{p} e^{\iu p (x_{i+1} - x_i)/\hbar} e^{-\iu \epsilon/\hbar \left( \frac{p^2}{2 m} + V(x_i) \right)} \\
+		&= \frac{1}{2\pi\hbar} e^{-\iu \epsilon V(x_i)/\hbar} \int_{-\infty}^{\infty} e^{\iu p \epsilon\frac{(x_{i+1} - x_i)}{\epsilon}\frac{1}{\hbar}} e^{-\iu \epsilon/\hbar \left( \frac{p^2}{2 m}\right)} \dd{p}\\
+		&= \frac{1}{2\pi\hbar} e^{-\iu \epsilon V(x_i)/\hbar} \int_{-\infty}^{\infty} e^{\iu p \epsilon \dot{x}_i / \hbar} e^{-\iu \epsilon \frac{p^2}{2 m \hbar}} \dd{p} \\
+		&= \frac{1}{2\pi\hbar} e^{-\iu \epsilon V(x_i)/\hbar} \int_{-\infty}^{\infty} e^{-\frac{\iu \epsilon}{2 m \hbar} \left(p^2 - 2 m p \dot{x}_i \right)} \dd{p}
 		\label{chapter12.eqn6-path-integral-propagator}
 	\end{align}
 	In the above we have defined
@@ -212,16 +216,16 @@
 	
 	\begin{align}
 		\braket{x_{i+1} t_{i+1}}{x_i t_i} 
-		&= \frac{1}{2 \pi \hbar} e^{-\iu \epsilon V(x_i)/\hbar} e^{-\iu \epsilon (-m^2 \dot{x}_i^2) / 2 m \hbar}  \int_{-\infty}^{\infty} dp^\prime e^{-\iu \epsilon {p^\prime}^2 / 2 m \hbar} \\
-		&= \frac{1}{2 \pi \hbar} e^{\frac{\iu \epsilon}{\hbar} \left(\frac{1}{2} m \dot{x}_i^2 - V(x_i)\right)} \int_{-\infty}^{\infty} dp^\prime e^{-\iu \epsilon {p^\prime}^2 / 2 m \hbar}
+		&= \frac{1}{2 \pi \hbar} e^{-\iu \epsilon V(x_i)/\hbar} e^{-\iu \epsilon (-m^2 \dot{x}_i^2) / 2 m \hbar}  \int_{-\infty}^{\infty} \dd{p^\prime} e^{-\iu \epsilon {p^\prime}^2 / 2 m \hbar} \\
+		&= \frac{1}{2 \pi \hbar} e^{\frac{\iu \epsilon}{\hbar} \left(\frac{1}{2} m \dot{x}_i^2 - V(x_i)\right)} \int_{-\infty}^{\infty} \dd{p^\prime} e^{-\iu \epsilon {p^\prime}^2 / 2 m \hbar}
 	\end{align}
 	Now we use the standard integral
 	\begin{equation}
-		\int_{-\infty}^{\infty} e^{-\alpha x^2} dx = \sqrt{\frac{\pi}{\alpha}}
+		\int_{-\infty}^{\infty} e^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}}
 	\end{equation}
 	to get
 	\begin{equation}
-		\int_{-\infty}^{\infty} dp^\prime e^{-\iu \epsilon p^\prime / 2 m \hbar} = \left(\frac{\pi}{\iu \epsilon/2 m \hbar}\right)^{1/2} = \left(\frac{2 \pi \hbar m}{\iu \epsilon}\right)^{1/2}
+		\int_{-\infty}^{\infty} \dd{p^\prime} e^{-\iu \epsilon p^\prime / 2 m \hbar} = \left(\frac{\pi}{\iu \epsilon/2 m \hbar}\right)^{1/2} = \left(\frac{2 \pi \hbar m}{\iu \epsilon}\right)^{1/2}
 	\end{equation}
 	Therefore
 	\begin{align}
@@ -233,21 +237,21 @@
 	We now substitute equation (\ref{chapter12.eqn7-path-integral-propagator}) into equation (\ref{chapter12.eqn5-propagator-path-integral}) to get
 	\begin{align}
 		\braket{x t}{x_0 t_0} 
-		&= \int \prod_{i=1}^{N-1} dx_i \prod_{i=0}^{N-1} \braket{x_{i+1} t_{i+1}}{x_i t_i}\\
-		&= \int \prod_{i=1}^{N-1} dx_i \prod_{i=0}^{N-1} \left(\frac{m}{2 \pi \hbar \iu \epsilon}\right)^{1/2} e^{\frac{\iu \epsilon}{\hbar} \left(\frac{1}{2} m \dot{x}_i^2 - V(x_i)\right)} \\
-		&= \left(\frac{m}{2 \pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} dx_i \quad e^{\frac{\iu}{\hbar} \sum_{i=0}^{N-1} \epsilon \left(\frac{1}{2} m \dot{x}_i^2 - V(x_i)\right)}
+		&= \int \prod_{i=1}^{N-1} \dd{x_i} \prod_{i=0}^{N-1} \braket{x_{i+1} t_{i+1}}{x_i t_i}\\
+		&= \int \prod_{i=1}^{N-1} \dd{x_i} \prod_{i=0}^{N-1} \left(\frac{m}{2 \pi \hbar \iu \epsilon}\right)^{1/2} e^{\frac{\iu \epsilon}{\hbar} \left(\frac{1}{2} m \dot{x}_i^2 - V(x_i)\right)} \\
+		&= \left(\frac{m}{2 \pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} \dd{x_i}e^{\frac{\iu}{\hbar} \sum_{i=0}^{N-1} \epsilon \left(\frac{1}{2} m \dot{x}_i^2 - V(x_i)\right)}
 		\label{chapter12.eqn8-path-integral-propagator}
 	\end{align}
 	We now consider a path $x(t^\prime)$ connecting the initial and the final space-time point such that the value of $x(t^\prime)$ at the intermediate times $t_1, t_2, \ldots, t_{N-1}$ are $x(t_i^\prime)=x_i$. Therefore we can write
 	\begin{align}
 		\sum_{i=0}^{N-1} \epsilon \left(\frac{1}{2} m \dot{x}_i^2 - V(x_i)\right) 
-		&= \int_{t_0}^{t} \left[\frac{1}{2} m \dot{x}^2(t^\prime) - V(x(t^\prime))\right] dt^\prime \\
-		&= \int_{t_0}^{t} L\left(x(t^\prime), \dot{x}(t^\prime)\right) dt^\prime \\
+		&= \int_{t_0}^{t} \left[\frac{1}{2} m \dot{x}^2(t^\prime) - V(x(t^\prime))\right] \dd{t^\prime} \\
+		&= \int_{t_0}^{t} L\left(x(t^\prime), \dot{x}(t^\prime)\right) \dd{t^\prime} \\
 		&= S[x(t^\prime)]
 	\end{align}
 	Where $S\left[x(t^\prime)\right]$ is the action calculated along the particular path. Since we are integrating over $x_i\quad (i=1,\ldots,N-1)$, we are effectively summing the exponential in equation (\ref{chapter12.eqn8-path-integral-propagator}) over all conceivable paths connecting $(x_0, t_0)$ to $(x, t)$. We define the path integral as
 	\begin{equation}
-		\mathcal{D}[x(t^\prime)] = \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2 \pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} dx_i 
+		\mathcal{D}[x(t^\prime)] = \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2 \pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} \dd{x_i}
 		\label{chapter12.eqn9-path-integral-propagator}
 	\end{equation}
 	Therefore, we can write equation (\ref{chapter12.eqn8-path-integral-propagator}) as
@@ -266,8 +270,8 @@
 	the path integral formula for the propagator of a free particle is
 	\begin{align}
 		\braket{x, t}{x_0, t_0} 
-		&= \int \mathcal{D}\left[x(t^\prime)\right] e^{\frac{\iu}{\hbar} S\left[x(t^\prime)\right]} \\
-		&= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2 \pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} dx_i \quad e^{\frac{\iu \epsilon}{\hbar} \sum_{i=0}^{N-1} \frac{1}{2} m \dot{x}_i^2}
+		&= \int \mathcal{D}\left[x(t^\prime)\right] \exp\left[\frac{\iu}{\hbar} S\left[x(t^\prime)\right]\right] \\
+		&= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2 \pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} \dd{x_i} \exp\left[\frac{\iu \epsilon}{\hbar} \sum_{i=0}^{N-1} \frac{1}{2} m \dot{x}_i^2\right]
 		\label{chapter12.eqn12-path-integral-free-particle}
 	\end{align}
 	In equation (\ref{chapter12.eqn12-path-integral-free-particle})
@@ -290,8 +294,8 @@
 	Using equation (\ref{chapter12.eqn13-path-integral-free-particle}), equation (\ref{chapter12.eqn12-path-integral-free-particle}) can be written as
 	\begin{align}
 		\braket{x t}{x_0 t_0} 
-		&= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} dx_i e^{\frac{\iu \epsilon}{\hbar} \sum_{i=0}^{N-1} \frac{m}{2} \left(\frac{x_{i+1} - x_i}{\epsilon}\right)^2} \\
-		&= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} dx_i e^{\frac{\iu m}{2\hbar \epsilon} \sum_{i=0}^{N-1} (x_{i+1} - x_i)^2}
+		&= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} \dd{x_i} e^{\frac{\iu \epsilon}{\hbar} \sum_{i=0}^{N-1} \frac{m}{2} \left(\frac{x_{i+1} - x_i}{\epsilon}\right)^2} \\
+		&= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \int \prod_{i=1}^{N-1} \dd{x_i} e^{\frac{\iu m}{2\hbar \epsilon} \sum_{i=0}^{N-1} (x_{i+1} - x_i)^2}
 		\label{chapter12.eqn14-path-integral-free-particle}
 	\end{align}
 	At this stage it is convenient to make a change of variable
@@ -301,14 +305,14 @@
 	In terms of new variables equation (\ref{chapter12.eqn14-path-integral-free-particle}) is written as
 	\begin{equation}
 		\braket{x t}{x_0 t_0} 
-		= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \left(\frac{2\hbar \epsilon}{m}\right)^{(N-1)/2} \int \prod_{i=1}^{N-1} dy_i e^{-\sum_{i=0}^{N-1} \frac{(y_{i+1} - y_i)^2}{i}}
+		= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \left(\frac{2\hbar \epsilon}{m}\right)^{(N-1)/2} \int \prod_{i=1}^{N-1} \dd{y_i} e^{-\sum_{i=0}^{N-1} \frac{(y_{i+1} - y_i)^2}{i}}
 		\label{chapter12.eqn15-path-integral-free-particle}
 	\end{equation}
 	We now have to do the gaussian integral over the variables $y_1, y_2, \ldots, y_{N-1}$.\\
 	
 	\textbf{$y_1$ integral}\\
 	\begin{equation}
-		I_1 = \int_{-\infty}^{\infty} dy_1 \exp\left[-\frac{1}{\iu} \left[(y_1 - y_0)^2 + (y_2 - y_1)^2\right]\right]
+		I_1 = \int_{-\infty}^{\infty} \dd{y_1} \exp\left[-\frac{1}{\iu} \left[(y_1 - y_0)^2 + (y_2 - y_1)^2\right]\right]
 	\end{equation}
 	consider the exponent
 	\begin{equation}
@@ -316,12 +320,12 @@
 	\end{equation}
 	therefore,
 	\begin{equation}
-		I_1 = \exp \left[-\frac{1}{\iu} \left(y_0^2+ y_2^2\right)\right] \int_{-\infty}^{\infty} dy_1 \exp\left[-\frac{1}{\iu} \left(2y_1^2 - 2(y_0 + y_2) y_1\right)
+		I_1 = \exp \left[-\frac{1}{\iu} \left(y_0^2+ y_2^2\right)\right] \int_{-\infty}^{\infty} \dd{y_1} \exp\left[-\frac{1}{\iu} \left(2y_1^2 - 2(y_0 + y_2) y_1\right)
 		\right]
 	\end{equation}
 	Now we use the standard integral
 	\begin{equation}
-		\int_{-\infty}^{\infty} e^{-\alpha x^2 + \beta x} = \left(\frac{\pi}{\alpha}\right)^{1/2} \exp \left(\frac{\beta^2}{4\alpha}\right)
+		\int_{-\infty}^{\infty} e^{-\alpha x^2 + \beta x} \dd{x} = \left(\frac{\pi}{\alpha}\right)^{1/2} \exp \left(\frac{\beta^2}{4\alpha}\right)
 	\end{equation}
 	choosing $\alpha = \frac{2}{\iu}$ and $\beta = \frac{2(y_0 + y_2)}{\iu}$
 	\begin{align*}
@@ -338,9 +342,9 @@
 	Next we do the integral over $y_2$. THe variable $y_2$ occurs in the $i=2$ term in equation (\ref{chapter12.eqn15-path-integral-free-particle}) and also in $I_1$ in equation (\ref{chapter12.eqn16-path-integral-free-particle}). Therefore, the $y_2$ integral is
 	\begin{align*}
 		I_2 
-		&= \int dy_2 \exp \left[-\frac{1}{\iu} \left(y_3 - y_2\right)^2\right] \left(\frac{\iu \pi}{2}\right)^{1/2} \exp \left[-\frac{1}{2 \iu} \left(y_2 - y_0\right)^2\right] \\
-		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \int dy_2 \exp \left[-\frac{1}{\iu} \left(y_3 - y_2\right)^2 -\frac{1}{2 \iu} \left(y_2 - y_0\right)^2\right] \\
-		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \int dy_2 \exp \left[-\frac{1}{\iu} \{\left(y_3 - y_2\right)^2 + \left(y_2 - y_0\right)^2\}\right] \\
+		&= \int \dd{y_2} \exp \left[-\frac{1}{\iu} \left(y_3 - y_2\right)^2\right] \left(\frac{\iu \pi}{2}\right)^{1/2} \exp \left[-\frac{1}{2 \iu} \left(y_2 - y_0\right)^2\right] \\
+		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \int \dd{y_2} \exp \left[-\frac{1}{\iu} \left(y_3 - y_2\right)^2 -\frac{1}{2 \iu} \left(y_2 - y_0\right)^2\right] \\
+		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \int \dd{y_2} \exp \left[-\frac{1}{\iu} \{\left(y_3 - y_2\right)^2 + \left(y_2 - y_0\right)^2\}\right] \\
 	\end{align*}
 	Consider the term in the curly brackets
 	\begin{align*}
@@ -349,9 +353,21 @@
 	\end{align*}
 	where the first term is quadratic in $y_2$, second term is linear in $y_2$ and the last term is independent of $y_2$. We have
 	\begin{equation}
-		I_2 
+		I_2 = \left(\frac{\iu \pi}{2}\right)^{1/2} \exp\left[-\frac{1}{2\iu}\left(2 y_3^2 + y_0^2\right)\right] \int \dd{y} \exp\left[-\frac{1}{2\iu} \left(3 y_2^2 - 2y_2 \left(2 y_3 + y_0\right)\right) \right]
 	\end{equation}
 	
+	We use standard integral (\ref{appendix1.eqn2}) from appendix (\ref{appendix1.Integrals}) and choose
+	\begin{align}
+		\alpha &= \frac{3}{2\iu} \\
+		\beta &= \frac{\left(y_0 2 y_3\right)}{\iu}
+	\end{align}
+	
+	\begin{align}
+		I_2 
+		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \exp\left[-\frac{1}{2\iu} \left(2 y_3^2 + y_0^2\right)\right] \left(\frac{2\pi \iu}{3}\right)^{1/2} \exp\left[-\frac{\left(y_0 + 2 y_3\right)^2}{6/\iu}\right] \\
+		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \left(\frac{2\pi \iu}{3}\right)^{1/2}  \exp\left[-\frac{1}{2\iu} \left(2 y_3^2 + y_0^2\right)\right]  \exp\left[\frac{\left(y_0 + 2 y_3\right)^2}{6\iu}\right] \\
+		&= \expval{32}
+	\end{align}
 	
 	\section{Derivation of the propagator for a free particle without using the path integral formula}
 

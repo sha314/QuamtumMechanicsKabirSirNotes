@@ -102,7 +102,7 @@
 \contentsline {section}{\numberline {12.2}Propagator}{82}{section.12.2}
 \contentsline {section}{\numberline {12.3}Path Integral for the Propagator}{82}{section.12.3}
 \contentsline {section}{\numberline {12.4}Path Integral for a Free Particle}{85}{section.12.4}
-\contentsline {section}{\numberline {12.5}Derivation of the propagator for a free particle without using the path integral formula}{87}{section.12.5}
+\contentsline {section}{\numberline {12.5}Derivation of the propagator for a free particle without using the path integral formula}{88}{section.12.5}
 \contentsline {chapter}{\numberline {13}sheet-13 : Potential Wells and Barriers}{89}{chapter.13}
 \ttl@stoptoc {default@12}
 \ttl@starttoc {default@13}
@@ -145,4 +145,6 @@
 \contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{115}{chapter.26}
 \ttl@stoptoc {default@25}
 \ttl@starttoc {default@26}
+\contentsline {section}{\numberline {.1}List of Standard Integrals}{116}{section.Alph0.1}
+\contentsline {section}{\numberline {.2}Proofs}{116}{section.Alph0.2}
 \contentsfinish 
