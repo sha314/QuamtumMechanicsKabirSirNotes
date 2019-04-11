@@ -113,7 +113,9 @@
 	\end{align}
 	Thus the state ket in the Heisenberg picture is independent of time and is same as the initial state ket in the Schr\"{o}dinger picture.
 	
-	
+	\end{enumerate}
+
+
 	\section{Propagator}
 	The dynamics of a quantum system is completely specified by the "Feynman Kernel", or the propagator or the transition amplitude defined as
 	%%%%%%%%%%%%%
@@ -362,13 +364,286 @@
 		\beta &= \frac{\left(y_0 2 y_3\right)}{\iu}
 	\end{align}
 	
-	\begin{align}
+	\begin{align*}
 		I_2 
 		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \exp\left[-\frac{1}{2\iu} \left(2 y_3^2 + y_0^2\right)\right] \left(\frac{2\pi \iu}{3}\right)^{1/2} \exp\left[-\frac{\left(y_0 + 2 y_3\right)^2}{6/\iu}\right] \\
 		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \left(\frac{2\pi \iu}{3}\right)^{1/2}  \exp\left[-\frac{1}{2\iu} \left(2 y_3^2 + y_0^2\right)\right]  \exp\left[\frac{\left(y_0 + 2 y_3\right)^2}{6\iu}\right] \\
-		&= \expval{32}
+		&= \qty(\frac{\iu^2 \pi^2}{3})^{1/2} \exp\left[-\frac{1}{\iu}\qty{\frac{1}{3} y_3^2 + \frac{1}{3} y_0^2 -\frac{2}{3} y_0 y_3}\right]
+	\end{align*}
+	\begin{equation}
+		I_2 = \qty(\frac{\iu^2 \pi^2}{3})^{1/2} \exp\left[-\frac{(y_3-y_0)^2}{3\iu}\right]
+		\label{chapter12.eqn17-path-integral-free-particle}
+	\end{equation}
+	Now the trend is clear. Finally, integrating $(N-1)$ times we get
+	\begin{equation}
+		I_{N-1} = \frac{\left(\iu \pi\right)^{(N-1)/2}}{N^{1/2}} \exp\left[-\left(y_N - y_0\right)^2/N\iu
+		\right]
+	\end{equation}
+	where $y_N = y$.\\
+
+	Therefore, the path integral formula for the propagator of a free particle is (using the above formula in equation (\ref{chapter12.eqn15-path-integral-free-particle}))
+	\begin{align}
+		\braket{x t}{x_0 t_0}_{free} = U_{free}\left(x, t; x_0, t_0\right) = \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \left(\frac{2\hbar\epsilon}{m}\right)^{(N-1)/2}  \frac{(\iu \pi)^{(N-1)/2}}{N^{1/2}} \exp\left[-\left(y_N - y_0\right)^2 / N\iu
+		\right]
 	\end{align}
+	previously we defined
+	\begin{equation}
+		y = \left(\frac{m}{2\hbar \epsilon}\right)^{1/2} x
+	\end{equation}
+	Therefore
+	\begin{align*}
+		U(x, t; x_0, t_0) 
+		&= \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2\pi\hbar\iu\epsilon}\right)^{N/2} \left(\frac{2\hbar \epsilon}{m}\right)^{(N-1)/2} \frac{(\iu \pi)^{(N-1)/2}}{N^{1/2}} \exp \left[-\frac{m(x_N - x_0)^2}{2\hbar \epsilon N \iu}\right] \\
+		&= \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2\pi\hbar\iu N \epsilon}\right)^{N/2} \left(\frac{2\pi\hbar N \iu \epsilon}{m}\right)^{(N-1)/2} \exp \left[-\frac{m(x_N - x_0)^2}{2\hbar \epsilon N \iu}\right]
+	\end{align*}
+	Now $\lim\limits_{N\rightarrow \infty} N\epsilon = t-t_0 \equiv \Delta t$,
+	also $x_N = x$.\\
+	
+	Hence
+	\begin{equation}
+		U(x,t; x_0 t_0) = \left(\frac{m}{2\pi \hbar \iu (t-t_0)}\right)^{1/2} \exp\left[-\frac{m(x-x_0)^2}{2\hbar\iu (t-t_0)}\right]
+		\label{chapter12.eqn18-path-integral-free-particle}
+	\end{equation}
+	This is the propagator for a free particle obtained using the path integral formula.
+	
+	\subsection{check of calculation}
+	We have
+	\begin{equation}
+		\lim\limits_{ t \rightarrow t_0} \braket{x t}{x_0 t_0} = \delta(x-x_0)
+	\end{equation}
+	Therefore equation (\ref{chapter12.eqn18-path-integral-free-particle}) must reduce to the delta function $\delta(x-x_0)$ when $t=t_0$. Taking $\Delta = \sqrt{\frac{2\hbar \iu (t-t_0)}{m}}$ in equation (\ref{chapter12.eqn18-path-integral-free-particle}) we can write
+	\begin{equation}
+		U_{free}\qty(x, t; x_0 t_0) = \frac{1}{\pi^{1/2} \Delta} \exp\left[-(x-x_0)^2/\Delta^2\right]
+	\end{equation}
+	In the limit $t\rightarrow t_0$, $\Delta \rightarrow 0$. Therefore
+	\begin{align}
+		\lim\limits_{t\rightarrow t_0} U_{free}(x, t; x_0 t_0) &= \lim\limits_{\Delta \rightarrow 0} \frac{1}{\pi^{1/2} \Delta} \exp\left[-(x-x_0)^2 / \Delta^2\right] \\
+		&= \delta\qty(x-x_0)
+	\end{align}
+	Thus, the free particle propagator (equation (\ref{chapter12.eqn18-path-integral-free-particle})) has the correct limiting behavior in the limit $t\rightarrow t_0$.
 	
 	\section{Derivation of the propagator for a free particle without using the path integral formula}
+	Since for a free particle, the Hamiltonian is simple and its eigenvalues and eigenvectors are known, we can find the propagator $U\qty(x, t; x_0, t_0)$ without using the path integral formula. We now calculate the propagator for a free particle directly without using the path integral formula.\\
+	
+	
+	The propagator is 
+	\begin{align}
+		\braket{x t}{x_0 t_0} &\equiv U\qty(x, t; x_0, t_0) \\
+		&= \bra{x} e^{-\iu \hat{H}(t-t_0)/\hbar}\ket{x_0} \\
+		&= \int \dd{p} \bra{x} e^{-\iu \hat{H}(t-t_0)/\hbar}\ket{p}\braket{p}{x_0} \\
+		&= \int \dd{p} \bra{x} e^{-\iu \frac{\hat{p}^2\qty(t-t_0)}{2 m \hbar}}\ket{p}\braket{p}{x_0} \\
+		&= \int \dd{p} e^{-\iu \frac{p^2\qty(t-t_0)}{2 m \hbar}}\braket{x}{p}\braket{p}{x_0} \\
+		&= \int \dd{p} e^{-\iu p^2 \Delta t /2 m \hbar} \frac{1}{\sqrt{2\pi\hbar}} e^{\iu p x/\hbar} \frac{1}{\sqrt{2\pi\hbar}} e^{\iu p x_0/\hbar} \\
+		&= \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty} \dd{p} \exp\qty[-\iu p^2 \Delta t/2 m \hbar + \iu p \qty(x-x_0)/\hbar]
+	\end{align}
+	Using standard integral from appendix (equation \ref{appendix1.eqn2}) and 
+	\begin{align}
+		\alpha &= \frac{\iu \Delta t}{2 m \hbar} \\
+		\beta &= \frac{\iu \qty(x-x_0)}{\hbar}
+	\end{align}
+	\therefore
+	\begin{align*}
+		U\qty(x,t'x_0,t_0) 
+		&= \qty(\frac{1}{2\pi \hbar}) \qty(\frac{\pi}{\iu \Delta t / 2 m \hbar})^{1/2} e^{-\frac{\qty(x-x_0)^2/\hbar^2}{4\qty(\iu \Delta t /2 m \hbar)}} \\
+		&= \frac{1}{2\pi \hbar} \qty(\frac{2\pi \hbar m}{\iu \Delta t})^{1/2} e^{-m\qty(x-x_0)^2/2 \hbar \iu \Delta t} \\
+		&= \qty(\frac{m}{2\pi \hbar \iu \Delta t})^{1/2} e^{-m\qty(x-x_0)^2/2 \hbar \iu \Delta t} 
+	\end{align*}
+	That is,
+	\begin{equation}
+		U\qty(x,t;x_0,t_0) = \qty(\frac{m}{2\pi\hbar \iu \qty(t-t_0)})^{1/2} e^{-\frac{m\qty(x-x_0)^2}{2\hbar \iu \qty(t-t_0)}}
+	\end{equation}
+	Which is the same result we obtained earlier by using the path integral formula.
+	
+	
+	\section{The Classical Action}
+		Suppose a particle propagates from $x_0$ at time $t_0$ to $x$ at a later time $t$. Of all the conceivable paths from $\qty(x_0, t_0)$ to $\qty(x,t)$, there is one path for which the action is minimum. This path is called the classical path and the minimum value of the action along the classical is called the classical action.
+		
+		
+		%%% figure
+		\begin{figure}
+			\caption{Classical action}
+		\end{figure}
+	
+		For a free particle, the classical path is the straight line connecting the points $\qty(t_0, x_0)$ to $\qty(t, x)$ in the space-time diagram.
+		
+		The equation for the classical path is then
+		\begin{equation}
+			x_{cl}\qty(t^\prime) = x_0 + \frac{\qty(x-x_0)}{\qty(t-t_0)} \qty(t^\prime - t_0)
+		\end{equation}
+		Here $t$ and $t_0$ are fixed times and $t$'s is the running variable. From the above equation we have
+		\begin{equation}
+			\dot{x}_{cl}\qty(t^\prime) = \frac{x-x_0}{t-t_0} = constant
+		\end{equation}
+		Therefore, the classical action for a free particle is (for a free particle $V=0$ so we have $L=T-V=T=\frac{1}{2} m \dot{x}^2$)
+		\begin{align}
+			S_{cl} 
+			&= S\qty[x_{cl}\qty(t^\prime)] \\
+			&= \int_{t_0}^{t} L(x_{cl}, \dot{x}_{cl}) \dd{t^\prime} \\
+			&= \int_{t_0}^{t} \frac{1}{2} m \dot{x}_{cl}\qty(t^\prime) \dd{t^\prime} \\
+			&= \frac{1}{2} m \qty(\frac{x-x_0}{t-t_0})^2 \qty(t-t_0) \\
+			&= \frac{m \qty(x-x_0)^2}{2 \qty(t-t_0)}
+		\end{align}
+		Now, the free propagator is
+		\begin{equation}
+			U(x,t;x_0, t_0) = \frac{m}{2\pi \hbar \iu \qty(t-t_0)} e^{-\frac{m\qty(x-x_0)^2}{2\hbar \iu \qty(t-t_0)}}
+		\end{equation}
+		In terms of classical action we can write
+		\begin{equation}
+			U(x,t;x_0,t_0) = \qty(\frac{m}{2\pi \hbar \iu\qty(t-t_0)})^{1/2} e^{\frac{i}{\hbar} S_{cl}}
+		\end{equation}
+		
+		\section{Discussion on Path Integral}
+		\textbf{Reference: Shankar}
+		\subsection{Principle of Least Action}
+		If a particle moves from $x_0$ at time $t_0$ to a different point $x$ at a later time $t$, then of all the paths between the points $\qty(x_0, t_0)$ to $\qty(x,t)$, a classical particle takes the path for which the action is minimum. This is called the principle of least action
+		
+		%%% FIGURE
+		\begin{figure}
+			\caption{least action}
+		\end{figure}
+		Suppose a particle follows the path $x(t^\prime)$. Then the action for this path is
+		\begin{equation}
+			S\qty[x(\qty(t^\prime))] = \int_{t_0}^{t} L(x(t^\prime), \dot{x}(t^\prime)) \dd{t^\prime}
+		\end{equation}
+		Next consider a slightly varied path
+		
+		\begin{equation}
+			x\qty(t^\prime) + \eta\qty(t^\prime)
+		\end{equation}
+		where $\eta$ is very small and 
+		\begin{equation}
+			\eta\qty(t_0) = \eta\qty(t) = 0
+		\end{equation}
+		Then the action for the varied path is 
+		\begin{equation}
+			S\qty[x(t^\prime) + \eta\qty(t^\prime)] = \int_{t_0}^{t} L\qty(x\qty(t^\prime) + \eta\qty(t^\prime), \dot{x}\qty(t^\prime) + \dot{\eta}\qty(t^\prime)) \dd{t^\prime}
+		\end{equation}
+		Then upto first order in $\eta\qty(t^\prime)$, the variation of the action is
+		\begin{align*}
+			\var{S\qty[x\qty(t^\prime)]} 
+			&= S\qty[x\qty(t^\prime) + \eta\qty(t^\prime)] - S\qty[x\qty(t^\prime)] \\
+			&= \int_{t_0}^{t} \qty[\pdv{L\qty(x, \dot{x})}{x} \eta\qty(t^\prime)  + \pdv{L\qty(x, \dot{x})}{\dot{x}} \dot{\eta}\qty(t^\prime)] \dd{t^\prime} \\
+			&= \int_{t_0}^{t} \qty[\pdv{L}{x}\eta\qty(t^\prime) + \dv{t^\prime}\qty(\pdv{L}{\dot{x}} \eta\qty(t^\prime))  - \dv{t^\prime}\qty(\pdv{L}{\dot{x}}) \eta\qty(t^\prime)] \dd{t^\prime} \\
+			&= \int_{t_0}^{t} \qty[\pdv{L}{x}  -
+			 \dv{t^\prime}\qty(\pdv{L}{\dot{x}})] \eta\qty(t^\prime) \dd{t^\prime}
+			 + \int_{t_0}^{t} \qty[
+			 \dv{t^\prime}\qty(\pdv{L}{\dot{x}} \eta\qty(t^\prime))] \dd{t^\prime}
+		\end{align*}
+		The second term on the right hand side of the above equation is zero:
+		\begin{equation}
+			\int_{t_0}^{t} \dv{t^\prime}\qty(\pdv{L}{\dot{x}} \eta\qty(t^\prime)) \dd{t^\prime} = \eval{\pdv{L}{\dot{x}}\eta\qty(t^\prime)}_{t^\prime=t_0}^{t^\prime=t} = 0
+		\end{equation}
+		Since $\eta\qty(t) = \eta\qty(t^\prime) =0$. Thus we have
+		\begin{equation}
+			\var{S\qty[x\qty(t^\prime)]}  = \int_{t_0}^{t} \qty[\pdv{L}{x}  -
+			\dv{t^\prime}\qty(\pdv{L}{\dot{x}})] \eta\qty(t^\prime) \dd{t^\prime} + \order{\eta^2}
+		\end{equation}
+		Now, if the path is the classical path, i.e., $x(t^\prime) = x_{cl}(t^\prime)$, Then $\var{S} = 0$ up to first order in $\eta$. Therefore we must have
+		\begin{equation}
+			\int_{t_0}^{t} \qty[\pdv{L}{x}  -
+			\dv{t^\prime}\qty(\pdv{L}{\dot{x}})]_{cl} \eta\qty(t^\prime) \dd{t^\prime} = 0
+		\end{equation}
+		Since $\eta(t^\prime)$ is arbitrary except at the end times $t_0$ and $t$, we must have
+		\begin{equation}
+			\qty[\pdv{L}{x}  -
+			\dv{t^\prime}\qty(\pdv{L}{\dot{x}})]_{cl} = 0
+		\end{equation}
+		Thus the variation $\var{S}$ from the classical path is 
+		\begin{equation}
+			\var{S} = \order{\eta^2}
+		\end{equation}
+		
+		
+		
+		\section{Discussion on The Phase of the Path Integral}
+		We derived previously
+		\begin{equation}
+			U\qty(x,t;x_0, t_0) = \int \mathcal{D}\qty[x\qty(t^\prime)] e^{\frac{\iu}{\hbar} S\qty[x\qty(t^\prime)]}
+		\end{equation}
+		Every path contributes a phase factor in the path integral, the phase being $\frac{\iu}{\hbar} S\qty[x\qty(t^\prime)]$ where $x\qty(t^\prime)$ is a particular path between the points $\qty(t_0, x_0)$ and $\qty(t,x)$ in the space-time diagram. Historically we can write
+		\begin{equation}
+			U = \sum_{all\ paths} e^{\frac{\iu}{\hbar} S\qty[x\qty(t^\prime)]}
+		\end{equation}
+		The most surprising this about the path integral is that every path, including the classical path $x_{cl}\qty(t^\prime)$ gets the same weight, that is to say a complex number of unit modules.\\
+		
+		
+		Of all the paths, there is a special path, called the classical path for which $S$ is minimum or stationary. A slight change in path from the classical one does not change the action, more precisely the change in action is only of second order in the change of path.
+		
+		
+		%%% figure 
+		\begin{figure}
+			\caption{paths}
+		\end{figure}
+	
+	
+	Consider a path $x_a\qty(t^\prime)$ far away from the classical path. Its contribution to the path integral is
+	\begin{equation}
+		Z_a = e^{\iu S\qty[x_a\qty(t^\prime)] / \hbar}
+	\end{equation}
+	While doing the path integral if we vary the path from $x_a\qty(t^\prime)$ to a neighboring one, there will be slightly change in the action. But, there will be a large change in the phase $S/\hbar$, since $\hbar$ is small. So, for paths well away from the classical path, contributions cancel because of the large change in phase from one path to the next. However, the situation is different for the classical path and the bundle of paths close to it. Here the action is stationary and so the phase of each of the paths near the classical path is about the same. In other words, the paths in the neighborhood of the classical path contribute constructively to the path integral.\\
+	
+	
+	
+	Thus the propagator $U$ is dominated by the paths near the classical path. The classical path is important not because it contributes a lot by itself, but because the paths in the vicinity of the classical path contribute coherently.\\
+	
+	
+	How far from the classical path must we deviate before destructive interference sets in? One may say crudely that coherence would be lost once the phase differs from the stationary value $\frac{1}{\hbar} S\qty[x_{cl}(t^\prime)]$ by about $\pi$, i.e., if the action changes from the classical action by about $\pi \hbar$. For a macroscopic partivle this means a very tight constraint on its path since $S_{cl}$ is typically of the order of $1\ erg\ sec \approx 10^{27} \hbar$[\footnote{$\hbar = 1.0546 \times 10^-27 \ erg\ sec = 1.0546 \times 10^{-34} J s$}]. For a macroscopic particle, a slight change of the path from the classical would change the action by an amount much more than $\pi \hbar$. So, only the classical path contributes to the path integral. Therefore a macroscopic particle has a well defined path, namely the classical path. \\
+	
+	
+	For a microscopic particle like an electron, the action is much smaller. Hence for a large variation of the path from the classical one, the change of action remains less than $\pi \hbar$. It follows that a large number of widely varying paths around the classical path contributes coherently to the propagator $U$. Therefore one cannot say that a microscopic particle follows a definite path as it propagates from one point to another. There is  a lot of --- in the path that a microscopic particle can choose as it propagates between two fixed space time points.\\
+	
+	
+	Consider the following example. A free particle leaves the origin at $t=0$ and arrives at $x=1\ cm$ at $t= 1 \ sec$, the classical path is 
+	\begin{equation}
+		x_{cl}\qty(t) = a t
+	\end{equation}
+	where $a$ is a constant with value $a=1\ cm/sec$. Choose another path
+	\begin{equation}
+		x\qty(t) = b t^2
+	\end{equation}
+	where $b= 1\ cm/sec^2$.
+	
+	
+	%% figure
+	\begin{figure}
+		\caption{alternative paths}
+	\end{figure}
 
-\end{enumerate}
+	We will now calculate the change in action for a macroscopic particle of mass $1 g$ between these two paths. The action for the classical path is
+	\begin{align*}
+		S\qty[x_{cl}] 
+		&= \int_{0}^{1} \frac{1}{2} m \dot{x}_{cl}^2\qty(t) \dd{t} \\
+		&= \frac{1}{2} m a^2 \times 1 sec \\
+		&= \frac{1}{2} \times \qty(1 g) \times \qty(1 cm/sec)^2 \times (1 sec) = 0.5 erg\ sec
+	\end{align*}
+	While the action for the alternative path is 
+	\begin{align*}
+		S\qty[x\qty(t)] 
+		&=\int_{0}^{1}\frac{1}{2} \qty(2 b t)^2 \dd{t} \\
+		&= 2 b^2 m \int_{0}^{1} t^2 \dd{t}\\
+		&= 2 b^2 m \qty(\frac{1}{3} sec^3) \\
+		&= \frac{2 \qty(1 cm\ {sec}^{-1})^2 \qty(1 g)\qty(1\ sec^3)}{3} \\
+		&= 0.67\ erg \ sec
+	\end{align*}
+	Therefore $\Delta S = 0.17 \ erg\ sec \approx 1.7 \times 10^{26} \hbar >> \pi \hbar$.\\
+	We can therefore ignore non classical paths for the macroscopic particle. On the other hand, for an electron whose mass is $m \approx 10^{-27} g$, the change in action is $\Delta S \approx = \frac{1}{6} \hbar < \pi \hbar$ or the phase difference is $\Delta S/\hbar \approx \frac{1}{6} < \pi$. For the electron the classical path and a wide range of paths around the classical path would contribute to $U$. It is in such cases assuming that the particle moves in a well defined trajectory $x_{cl}\qty(t)$, leads to conflict with experiment.
+	
+		
+		
+	%%%% Schrodinger
+	\section{Equivalence to the Schrodinger Equation}
+	%%%% page 43
+	
+	
+	\section{Potentials of the Form $V=a+b x+ c x^2 + d \dot{x} + e x \dot{x}$}
+	
+	\subsection{Special Cases}
+	\begin{enumerate}
+		\item Free Particle\\
+		
+		\item Harmonic Oscillator \\
+		
+		
+	\end{enumerate}
+		
+		

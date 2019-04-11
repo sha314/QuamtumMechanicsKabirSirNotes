@@ -8,5 +8,9 @@ chapter 12: heisengerg picture underscore H for bra vectors
 use differential and partial differential sysmbol from physics package
 
 
+# issue 4
+Schrodinger spelling : chapter 12
+
+
 
 
