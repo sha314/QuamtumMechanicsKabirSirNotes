@@ -441,7 +441,7 @@
 		\alpha &= \frac{\iu \Delta t}{2 m \hbar} \\
 		\beta &= \frac{\iu \qty(x-x_0)}{\hbar}
 	\end{align}
-	\therefore
+	
 	\begin{align*}
 		U\qty(x,t'x_0,t_0) 
 		&= \qty(\frac{1}{2\pi \hbar}) \qty(\frac{\pi}{\iu \Delta t / 2 m \hbar})^{1/2} e^{-\frac{\qty(x-x_0)^2/\hbar^2}{4\qty(\iu \Delta t /2 m \hbar)}} \\
@@ -630,18 +630,225 @@
 	
 		
 		
-	%%%% Schrodinger
-	\section{Equivalence to the Schrodinger Equation}
+
+	\section{Equivalence to the Schr\"{o}dinger Equation}
 	%%%% page 43
+	In the Schr\"{o}dinger formalism, the change in the state vector $\ket{\psi}$ over an infinitesimal time is (upto first order in $\epsilon$)
+	\begin{equation}
+		\ket{\psi\qty(\epsilon)} - 		\ket{\psi\qty(0)} = - \frac{\iu \epsilon}{\hbar} H\qty(t=0)\ket{\psi\qty(0)}
+		\label{chapter12.eqn1-equivalence-schrodinger}
+	\end{equation}
+	which in the coordinate basis becomes
+	\begin{equation}
+		\psi\qty(x, \epsilon) - \psi\qty(x, 0) = - \frac{\iu \epsilon}{\hbar}\qty[-\frac{h^2}{2 m}\pdv[2]{x} + V\qty(x, 0)] \psi\qty(x, 0)
+		\label{chapter12.eqn2-equivalence-schrodinger}
+	\end{equation}
+	To compare this result with the path integral prediction to the same order in $\epsilon$, we begin with
+	\begin{equation}
+		\psi\qty(x, \epsilon) = \int_{-\infty}^{\infty} U(x, \epsilon; x^\prime) \psi\qty(x^\prime, 0) \dd{x^\prime}
+		\label{chapter12.eqn3-equivalence-schrodinger}
+	\end{equation}
+	The calculation of $U\qty(\epsilon)$ is simplified by the fact that there is no need to integrate over intermediate $x$'s since there is one slice of time between start to finish.\\
+	
+	So,
+	\begin{equation}
+		U\qty(x, \epsilon; x^\prime) = \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} e^{\frac{\iu \epsilon}{\hbar}\qty(\frac{1}{2} m \dot{x^\prime}^2 - V\qty(x^\prime, 0))}
+		\label{chapter12.eqn4-equivalence-schrodinger}
+	\end{equation}
+	Since $\epsilon$ is infinitesimal, we can assume that the path from $x^\prime$ to $x$ in the space-time diagram is linear
 	
 	
+	%%%% figure
+	\begin{figure}
+		\caption{space-time diagral}
+	\end{figure}
+	So we can write in equation (\ref{chapter12.eqn4-equivalence-schrodinger})
+	\begin{equation}
+		\dot{x^\prime} = \frac{x-x^\prime}{\epsilon}
+	\end{equation}
+	In equation (\ref{chapter12.eqn4-equivalence-schrodinger}) we can keep $V\qty(x^\prime)$ as it is, or replace $V\qty(x^\prime)$ by $V\qty(\frac{x + x^\prime}{2})$. Replacing $V\qty(x^\prime)$ by $V\qty(\frac{x + x^\prime}{2})$ doesn't change the result in the first order of $\epsilon$.
+	
+	%% page 45
+	We can now write equation (\ref{chapter12.eqn4-equivalence-schrodinger}) as
+	
+	\begin{equation}
+		U(x, \epsilon; x^\prime) = \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \exp\qty(\frac{i}{\hbar} \qty[\frac{m\qty(x-x^\prime)^2}{2 \epsilon}  -\epsilon V(\frac{x+x^\prime}{2}, 0)])
+		\label{chapter12.eqn5-equivalence-schrodinger}
+	\end{equation}
+	If $V$ is time dependent, we take the time argument of $V$ to be zero since there is already a factor $\epsilon$ before it and any variation of $V$ with time is the interval $0$ to $\epsilon$ will produce an effect of second order in $\epsilon$.\\
+	
+	So, substituting equation (\ref{chapter12.eqn5-equivalence-schrodinger}) in euqation (\ref{chapter12.eqn3-equivalence-schrodinger}) we have
+	\begin{equation}
+		\psi\qty(x, \epsilon) = \qty(\frac{m}{2\pi\hbar\iu \epsilon})^{1/2} \int_{-\infty}^{\infty} \dd{x^\prime} \exp\qty[\frac{\iu m \qty(x-x^\prime)^2}{2 \hbar \epsilon}]   \exp\qty[-\frac{\iu \epsilon}{\hbar} V\qty(\frac{x+ x^\prime}{2}, 0)]\psi\qty(x^\prime, 0)
+		\label{chapter12.eqn6-equivalence-schrodinger}
+	\end{equation}
+	Consider the factor $\exp\qty[\frac{\iu m \qty(x-x^\prime)^2}{2 \hbar \epsilon}]$. It oscillates very rapidly as $\qty(x-x^\prime)$ varies since $\epsilon$ is infinitesimal and $\hbar$ is very small. When such a rapidly oscillating function multiplies a smooth function like $\psi\qty(x^\prime, 0)$, the integral vanishes for the most part due to the random phase of the exponential. Just as in the case of path integration, the only substantial contribution comes from the region where the phase is stationary. In this case only stationary point is at $x^\prime = x$ where the phase has the minimum value of zero. In terms of $\eta = x^\prime - x$, the region of coherence is, as before,
+	\begin{align*}
+		\frac{m \eta^2}{2\epsilon	\hbar} &\leq \pi
+	\end{align*}
+	
+	\begin{align}
+		\abs{\eta } \leq \qty(\frac{2 \pi \hbar \epsilon}{m})^{1/2}
+		\label{chapter12.eqn7-equivalence-schrodinger}
+	\end{align}
+	Consider now
+	\begin{equation}
+		\psi(x, \epsilon) = \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \int_{-\infty}^{\infty} \dd{\eta} \exp\qty[\iu m \eta^2/2 \hbar \epsilon] \exp\qty[-\frac{\iu \epsilon}{\hbar} V(x + \frac{\eta}{2}, 0)]  \psi\qty(x + \eta, 0)
+		\label{chapter12.eqn8-equivalence-schrodinger}
+	\end{equation}
+	We will work to first order in $\epsilon$ and therefore second order in $\eta$ (see equation (\ref{chapter12.eqn7-equivalence-schrodinger})). We expand
+	\begin{equation}
+		\psi\qty(x + \eta, 0) = \psi\qty(x, 0) + \eta \pdv{\psi}{x} + \frac{\eta^2}{2} \pdv[2]{\psi}{x} + \ldots
+	\end{equation}
+	
+	and 
+	\begin{align*}
+		\exp\qty[-\frac{\iu \epsilon}{\hbar} V(x + \frac{\eta}{2}, 0)] 
+		&= 1 - \frac{\iu \epsilon}{\hbar} V(x + \frac{\eta}{2}, 0) + \ldots \\
+		&= 1 - \frac{\iu \epsilon}{\hbar} V(x, 0) + \ldots
+	\end{align*}
+	Where the terms of the order of $\eta \epsilon$ are neglected. Equation (\ref{chapter12.eqn8-equivalence-schrodinger}) now becomes
+	
+	\begin{align}
+		\psi\qty(x, \epsilon) 
+		&= \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \int_{-\infty}^{\infty} \exp\qty[\frac{\iu m \eta^2}{2\hbar \epsilon}]  \qty[1 - \frac{\iu \epsilon}{\hbar} V(x, 0)+ \ldots] \left[\psi\qty(x, 0) + \eta \pdv{\psi}{x} + \frac{\eta^2}{2} \pdv[2]{\psi}{x}\right] \dd{\eta}\\
+		&= \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \int_{-\infty}^{\infty} \exp\qty[\frac{\iu m \eta^2}{2\hbar \epsilon}] \left[\qty(1 - \frac{\iu \epsilon}{\hbar} V(x, 0))\psi\qty(x, 0) + \eta \pdv{\psi}{x} + \frac{\eta^2}{2} \pdv[2]{\psi}{x} \right] \dd{\eta}
+	\end{align}
+	where terms of the orders of $\epsilon \eta$ and $\epsilon \eta^2$ are neglected.
+	
+	Using standard integrals (from appendix) (\ref{appendix1.eqn3}) and (\ref{appendix1.eqn4}) we get
+	\begin{align*}
+		\psi\qty(x, \epsilon) 
+		&= \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \qty[\qty(\frac{2\pi \hbar \iu \epsilon}{m})^{1/2}\  qty(1 - \frac{\iu \epsilon}{\hbar} V\qty(x , 0))\psi\qty(x,0)  +  \qty(\frac{2\pi \hbar \iu \epsilon}{m})^{1/2} \frac{\iu \hbar \epsilon}{2 m} \pdv[2]{\psi}{x}] \\
+		&= \psi\qty(x, 0) - \frac{\iu \epsilon}{\hbar} V\qty(x, 0) \psi\qty(x, 0) - \frac{\iu \epsilon}{\hbar} \qty(- \frac{\hbar^2}{2 m}) \pdv[2]{\psi}{x}
+	\end{align*}
+	Where we have used $a = \frac{m}{2\hbar\iu \epsilon}$
+	
+	\begin{equation}
+		\psi\qty(x, \epsilon) - \psi\qty(x, 0) = -\frac{\iu \epsilon}{\hbar} \qty[-\frac{\hbar^2}{2 m} \pdv[2]{x} + V\qty(x,0)] \psi\qty(x, 0)
+		\label{chapter12.eqn9-equivalence-schrodinger}
+	\end{equation}
+	
+	Which agrees with the Schr\"{o}dinger prediction, equation (\ref{chapter12.eqn2-equivalence-schrodinger})
+
+
 	\section{Potentials of the Form $V=a+b x+ c x^2 + d \dot{x} + e x \dot{x}$}
+	We wish to compute
+	\begin{equation}
+		U\qty(x, t; x^\prime) = \int_{x^\prime}^{x} e^{\iu S\qty[x\qty(t^{\prime\prime})] / \hbar}  \mathcal{D}\qty[x\qty(t^{\prime\prime})]
+		\label{chapter12.eqn1-potential}
+	\end{equation}
+	
+	Let us write every path as
+	\begin{equation}
+		x\qty(t^{\prime\prime}) =  x_{cl}\qty(t^{\prime\prime}) + y(t^{\prime\prime})
+		\label{chapter12.eqn2-potential}
+	\end{equation}
+	
+	It follows that
+	\begin{equation}
+		\dot{x}\qty(t^{\prime\prime}) =  \dot{x}_{cl}\qty(t^{\prime\prime}) + \dot{y}(t^{\prime\prime})
+		\label{chapter12.eqn3-potential}
+	\end{equation}
+	Since all paths agree at the end points, $y\qty(0) = y(t) = 0$. When we slice up the time into $N$ parts, we have for intermediate integration variables
+	\begin{equation}
+		x_i = x\qty(t^{\prime\prime}_i) = x_{cl}\qty(t^{\prime\prime}_i) + y\qty(t^{\prime\prime}_i)  = x_{cl}\qty(t^{\prime\prime}_i) \equiv x_{cl}\qty(t^{\prime\prime}_i) + y_i
+	\end{equation}
+	Since $x_{cl}\qty(t^{\prime\prime})$ is just some constant at $t^{\prime\prime}$,
+	\begin{equation}
+		dx_i = dy_i
+	\end{equation}
+	and 
+	\begin{equation}
+		\int_{x^\prime}^{x}  \mathcal{D}\qty[x\qty(t^{\prime\prime})] = \int_{0}^{0}  \mathcal{D}\qty[y\qty(t^{\prime\prime})]
+		\label{chapter12.eqn4-potential}
+	\end{equation}
+	
+	Equation (\ref{chapter12.eqn1-potential}) becomes
+	\begin{equation}
+		U\qty(x,t;x^\prime) = \int_{0}^{0} \mathcal{D}\qty[y\qty(t^{\prime\prime})]  \exp\qty[\frac{\iu}{\hbar} S\qty[x_{cl}\qty(t^{\prime\prime})  +  y\qty(t^{\prime\prime})]]
+		\label{chapter12.eqn5-potential}
+	\end{equation}
+	The next step is to expand the functional $S$ in a Taylor series about $x_{cl}$
+	\begin{align*}
+		S\qty[x_{cl} + y] 
+		&= \int_{0}^{t} L\qty(x_{cl} + y, \dot{x}_{cl} + \dot{y}) \dd{t^\prime\prime} \\
+		&= \int_{0}^{t} \left[
+		L(x_{cl}, \dot{x}_{cl})  + \left(\eval{\pdv{L}{x}}_{x_{cl}} y + \eval{\pdv{L}{\dot{x}}}_{x_{cl}} \dot{y}\right)
+		+ \frac{1}{2} \left(
+		\eval{\pdv[2]{L}{x}}_{x_{cl}} y^2 
+		+ 2 \eval{\pdv[2]{L}{x}{\dot{x}}}_{x_{cl}} y\dot{y} 
+		+ \eval{\pdv[2]{L}{\dot{x}}}_{x_{cl}} \dot{y}^2		\right)
+		\right] \dd{t^{\prime\prime}}
+		\label{chapter12.eqn6-potential}
+	\end{align*}
+	The series terminates since $L$ is a quadratic polynomial.\\
+	The first piece $L\qty(x_{cl}, \dot{x}_{cl})$ integrates to give $S\qty[x_{cl}] \equiv S_{cl}$. The second piece, linear in $y$ and $\dot{y}$ vanishes due to classical equation of motion.\\
+		
+		To show this, first recall the classical equation of motion
+		\begin{equation}
+			\left[
+			\dv{t^{\prime\prime}} \qty(\pdv{L}{\dot{x}}) - \pdv{L}{x}
+			\right]_{x_{cl}} = 0
+		\end{equation}
+		Therefore, the linear term in equation (\ref{chapter12.eqn6-potential}) can be written as
+		\begin{equation}
+			\eval{\dv{t^{\prime\prime}} \left(\pdv{L}{\dot{x}}\right)}_{x_{cl}} y + \eval{\pdv{L}{\dot{x}}}_{x_{cl}} \dot{y} = \dv{t^{\prime\prime}} \qty(\pdv{L}{\dot{x}} y)
+		\end{equation}
+		
+		This term integrated over $t^{\prime\prime}$ gives zero since
+		\begin{equation}
+			y(0) = y(t) = 0
+		\end{equation}
+		To calculate the final piece, note that
+		\begin{equation}
+			L = \frac{1}{2} m \dot{x}^2 - a - b x - c x^2 - d \dot{x} - e x \dot{x}
+			\label{chapter12.eqn7-potential}
+		\end{equation}
+		
+		Hence
+		\begin{align}
+			\frac{1}{2} \pdv[2]{L}{x} &= -c \\
+			\pdv[2]{L}{x}{\dot{x}} &= -e \\
+			\frac{1}{2} \pdv[2]{L}{\dot{x}} &= \frac{m}{2}
+		\end{align}
+		Consequently
+		\begin{equation}
+			S\qty[x_{cl}\qty(t^{\prime\prime}) + y\qty(t^{\prime\prime})] = S_{cl} + \int_{0}^{t} \qty(-c y^2 - e y \dot{y} + \frac{1}{2} m \dot{y}^2) \dd{t^{\prime\prime}}
+		\end{equation}
+		Therefore equation (\ref{chapter12.eqn5-potential}) becomes
+		\begin{equation}
+			U\qty(x, t; x^\prime) = \exp\qty(\frac{\iu S_{cl}}{\hbar}) 
+			\int_{0}^{0} \mathcal{D}\qty[y\qty(t^{\prime\prime})] 
+			\exp\qty[\frac{\iu}{\hbar}  \int_{0}^{t} \qty(\frac{1}{2} m \dot{y}^2 - cy^2 - e y \dot{y}) \dd{t^{\prime\prime}}]
+		\end{equation}
+		Since the path integral has no memory of $x_{cl}$, it can only depend on $t$. So
+		\begin{equation}
+			U\qty(x, t; x^{\prime}) = A\qty(t) \exp\qty(\frac{\iu S_{cl}}{\hbar})
+			\label{chapter12.eqn8a-potential}
+		\end{equation}
+		Where
+		\begin{equation}
+			A\qty(t) = \mathcal{D}\qty[y\qty(t^{\prime\prime})] \int_0^0 \exp\qty[\frac{\iu}{\hbar}  \int_{0}^{t} \qty(\frac{1}{2} m \dot{y}^2 - cy^2 - e y \dot{y}) \dd{t^{\prime\prime}}]
+			\label{chapter12.eqn8b-potential}
+		\end{equation}	
 	
 	\subsection{Special Cases}
 	\begin{enumerate}
 		\item Free Particle\\
-		
+			Put $c=e=0$ in the formula for $A(t)$. In this case we can calculate $A(t)$. We found previously $A(t) = \qty(\frac{m}{2\pi \hbar \iu t})^{1/2}$
+			
 		\item Harmonic Oscillator \\
+			For a harmonic oscillator
+			\begin{equation}
+				V\qty(x) = \frac{1}{2} m \omega^2 x^2
+			\end{equation}
+			So we set $c=\frac{1}{2} m \omega$ and all other coefficient are set to zero. Thus for harmonic oscillator we have
+			\begin{equation}
+				A(t) = \int_{0}^{\infty} \mathcal{D}\qty[y\qty(t^{\prime\prime})]  \exp\qty[\frac{\iu}{\hbar} \int_{0}^{t} \qty(\frac{1}{2} m \dot{y}^2 - \frac{1}{2} m \omega y^2  ) \dd{t}]
+			\end{equation}
+			The evaluation of this integral is difficult.
+			Note that even if the factor $A(t)$ in $\psi(x, t)$ is not known, we can extract all the probabilistic interpretation at time $t$.
 		
 		
 	\end{enumerate}

@@ -46,7 +46,8 @@ writing by Atik vai - - pending
 
 
 # Chapter12
-writing by shahnoor - pending
+writing by shahnoor - completed on 2019.04.13
+pending - images only
 
 # Chapter13
 
