@@ -74,7 +74,8 @@ submitted : ---
 
 
 # Chapter20
-
+texts  - by shahnoor - pending
+images - -pending
 
 # Chapter21
 
