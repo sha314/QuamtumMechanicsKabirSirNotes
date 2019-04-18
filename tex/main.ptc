@@ -1,158 +1,392 @@
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {1}sheet-1 :Dirac Delta Function}{9}{chapter.1}
+\contentsline {chapter}{\numberline {1}sheet-1 :Dirac Delta Function}{13}{chapter.1}
 \ttl@starttoc {default@1}
-\contentsline {section}{\numberline {1.1}Other representation of delta function}{10}{section.1.1}
-\contentsline {section}{\numberline {1.2}Properties of the delta function}{12}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Notes}{14}{subsection.1.2.1}
-\contentsline {section}{\numberline {1.3}Derivatives of the delta function}{15}{section.1.3}
-\contentsline {section}{\numberline {1.4}Integration of the delta function}{16}{section.1.4}
-\contentsline {section}{\numberline {1.5}Three - dimensional delta function}{17}{section.1.5}
-\contentsline {section}{\numberline {1.6}Fourier Transformation}{18}{section.1.6}
-\contentsline {chapter}{\numberline {2}sheet-2 : Linear Vector Space}{21}{chapter.2}
+\contentsline {section}{\numberline {1.1}Other representation of delta function}{15}{section.1.1}
+\contentsline {section}{\numberline {1.2}Properties of the delta function}{16}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Notes}{18}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Derivatives of the delta function}{19}{section.1.3}
+\contentsline {section}{\numberline {1.4}Integration of the delta function}{21}{section.1.4}
+\contentsline {section}{\numberline {1.5}Three - dimensional delta function}{21}{section.1.5}
+\contentsline {section}{\numberline {1.6}Fourier Transformation}{23}{section.1.6}
+\contentsline {section}{\numberline {1.7}Definition of Dirac Delta function and its Representations}{24}{section.1.7}
+\contentsline {paragraph}{}{25}{section*.6}
+\contentsline {paragraph}{}{26}{section*.7}
+\contentsline {paragraph}{}{26}{section*.8}
+\contentsline {subsubsection}{\relax $\@@underline {\hbox {Gaussian Representation}}\mathsurround \z@ $\relax }{26}{section*.9}
+\contentsline {subsubsection}{\relax $\@@underline {\hbox {Damped Sinusoidal Representation of the Delta Function}}\mathsurround \z@ $\relax }{27}{section*.11}
+\contentsline {paragraph}{}{28}{section*.13}
+\contentsline {subsubsection}{\relax $\@@underline {\hbox {Other representation of the Delta Function}}\mathsurround \z@ $\relax }{28}{section*.14}
+\contentsline {section}{\numberline {1.8}Properties of the Delta Function}{28}{section.1.8}
+\contentsline {section}{\numberline {1.9}Derivative of the Delta Function}{32}{section.1.9}
+\contentsline {section}{\numberline {1.10}Integration of the Delta Function}{34}{section.1.10}
+\contentsline {section}{\numberline {1.11}Three dimensional delta function}{35}{section.1.11}
+\contentsline {subsubsection}{A useful formula}{35}{section*.18}
+\contentsline {section}{\numberline {1.12}Fourier transform}{37}{section.1.12}
+\contentsline {paragraph}{}{37}{section*.19}
+\contentsline {subsection}{\numberline {1.12.1}Parseval Identity}{38}{subsection.1.12.1}
+\contentsline {chapter}{\numberline {2}sheet-2 : Linear Vector Space}{17}{chapter.2}
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
-\contentsline {section}{\numberline {2.1}Definition}{21}{section.2.1}
-\contentsline {section}{\numberline {2.2}Example of linear vector space}{22}{section.2.2}
-\contentsline {section}{\numberline {2.3}Inner product space or a unitary vector space}{24}{section.2.3}
-\contentsline {section}{\numberline {2.4}Examples of scalar product}{24}{section.2.4}
-\contentsline {section}{\numberline {2.5}Norm of a vector}{26}{section.2.5}
-\contentsline {section}{\numberline {2.6}Metric included by the scalar product}{26}{section.2.6}
-\contentsline {section}{\numberline {2.7}Schwarz's inequality}{27}{section.2.7}
-\contentsline {section}{\numberline {2.8}Analogy of Schwarz inequlity with vectors in a three-dimensional Euclidean space $\mathbb {R}^3$}{27}{section.2.8}
-\contentsline {section}{\numberline {2.9}Orthogonality and linear independence}{28}{section.2.9}
-\contentsline {subsection}{\numberline {2.9.1}Linear independence}{28}{subsection.2.9.1}
-\contentsline {section}{\numberline {2.10}Orthonormality and linear independence}{28}{section.2.10}
-\contentsline {section}{\numberline {2.11}Schmidt orthonormalization method}{28}{section.2.11}
-\contentsline {section}{\numberline {2.12}Dimension of a vector space}{29}{section.2.12}
-\contentsline {section}{\numberline {2.13}Complete vector space}{29}{section.2.13}
-\contentsline {section}{\numberline {2.14}Convergence of a sequence of vectors in a vector space}{30}{section.2.14}
-\contentsline {subsection}{\numberline {2.14.1}An example of a vector space whose Cauchy sequence does not converse to a vector in the vector space}{30}{subsection.2.14.1}
-\contentsline {section}{\numberline {2.15}Hilbert space}{31}{section.2.15}
-\contentsline {section}{\numberline {2.16}Basis vectors in a Hilbert space}{31}{section.2.16}
-\contentsline {subsection}{\numberline {2.16.1}Finite dimensional space}{31}{subsection.2.16.1}
-\contentsline {subsection}{\numberline {2.16.2}Infinite dimensional vector space}{32}{subsection.2.16.2}
-\contentsline {subsection}{\numberline {2.16.3}Example}{33}{subsection.2.16.3}
-\contentsline {section}{\numberline {2.17}Dirac notation}{33}{section.2.17}
-\contentsline {subsection}{\numberline {2.17.1}Scalar product}{33}{subsection.2.17.1}
-\contentsline {subsection}{\numberline {2.17.2}Dual vector space}{33}{subsection.2.17.2}
-\contentsline {subsection}{\numberline {2.17.3}Bra notation for the vectors of $V^*$}{34}{subsection.2.17.3}
-\contentsline {subsection}{\numberline {2.17.4}Correspondence between kets and bras}{34}{subsection.2.17.4}
-\contentsline {subsection}{\numberline {2.17.5}The correspondence in anti-linear}{34}{subsection.2.17.5}
-\contentsline {subsection}{\numberline {2.17.6}Dirac notation for the scalar product}{34}{subsection.2.17.6}
-\contentsline {chapter}{\numberline {3}sheet-3 : Linear Vector Space (continued)}{37}{chapter.3}
+\contentsline {section}{\numberline {2.1}Definition}{17}{section.2.1}
+\contentsline {section}{\numberline {2.2}Example of linear vector space}{18}{section.2.2}
+\contentsline {section}{\numberline {2.3}Inner product space or a unitary vector space}{20}{section.2.3}
+\contentsline {section}{\numberline {2.4}Examples of scalar product}{21}{section.2.4}
+\contentsline {section}{\numberline {2.5}Norm of a vector}{23}{section.2.5}
+\contentsline {section}{\numberline {2.6}Metric included by the scalar product}{23}{section.2.6}
+\contentsline {section}{\numberline {2.7}Schwarz's inequality}{24}{section.2.7}
+\contentsline {section}{\numberline {2.8}Analogy of Schwarz inequlity with vectors in a three-dimensional Euclidean space $\mathbb {R}^3$}{25}{section.2.8}
+\contentsline {section}{\numberline {2.9}Orthogonality and linear independence}{25}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Linear independence}{25}{subsection.2.9.1}
+\contentsline {section}{\numberline {2.10}Orthonormality and linear independence}{26}{section.2.10}
+\contentsline {section}{\numberline {2.11}Schmidt orthonormalization method}{26}{section.2.11}
+\contentsline {section}{\numberline {2.12}Dimension of a vector space}{27}{section.2.12}
+\contentsline {section}{\numberline {2.13}Complete vector space}{27}{section.2.13}
+\contentsline {section}{\numberline {2.14}Convergence of a sequence of vectors in a vector space}{27}{section.2.14}
+\contentsline {subsection}{\numberline {2.14.1}An example of a vector space whose Cauchy sequence does not converse to a vector in the vector space}{28}{subsection.2.14.1}
+\contentsline {section}{\numberline {2.15}Hilbert space}{29}{section.2.15}
+\contentsline {section}{\numberline {2.16}Basis vectors in a Hilbert space}{29}{section.2.16}
+\contentsline {subsection}{\numberline {2.16.1}Finite dimensional space}{29}{subsection.2.16.1}
+\contentsline {subsection}{\numberline {2.16.2}Infinite dimensional vector space}{30}{subsection.2.16.2}
+\contentsline {subsection}{\numberline {2.16.3}Example}{31}{subsection.2.16.3}
+\contentsline {section}{\numberline {2.17}Dirac notation}{32}{section.2.17}
+\contentsline {subsection}{\numberline {2.17.1}Scalar product}{32}{subsection.2.17.1}
+\contentsline {subsection}{\numberline {2.17.2}Dual vector space}{32}{subsection.2.17.2}
+\contentsline {subsection}{\numberline {2.17.3}Bra notation for the vectors of $V^*$}{32}{subsection.2.17.3}
+\contentsline {subsection}{\numberline {2.17.4}Correspondence between kets and bras}{32}{subsection.2.17.4}
+\contentsline {subsection}{\numberline {2.17.5}The correspondence in anti-linear}{33}{subsection.2.17.5}
+\contentsline {subsection}{\numberline {2.17.6}Dirac notation for the scalar product}{33}{subsection.2.17.6}
+\contentsline {chapter}{\numberline {3}sheet-3 : Linear Vector Space (continued)}{35}{chapter.3}
 \ttl@stoptoc {default@2}
 \ttl@starttoc {default@3}
-\contentsline {section}{\numberline {3.1}Operators in a Hilbert Space}{37}{section.3.1}
-\contentsline {section}{\numberline {3.2}Linear operators}{37}{section.3.2}
-\contentsline {section}{\numberline {3.3}Commutator of two operators}{38}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Some properties of commutators}{38}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Projection operator}{38}{section.3.4}
-\contentsline {section}{\numberline {3.5}Representation of vectors and operators}{39}{section.3.5}
-\contentsline {section}{\numberline {3.6}Matrix representation of ket and bra vectors}{41}{section.3.6}
-\contentsline {section}{\numberline {3.7}Representation of an operator in a basis}{42}{section.3.7}
-\contentsline {section}{\numberline {3.8}Matrix representation of the sum and product of two operators}{43}{section.3.8}
-\contentsline {chapter}{\numberline {4}sheet-4 : Linear Vector Space (continued)}{45}{chapter.4}
+\contentsline {section}{\numberline {3.1}Operators in a Hilbert Space}{35}{section.3.1}
+\contentsline {section}{\numberline {3.2}Linear operators}{35}{section.3.2}
+\contentsline {section}{\numberline {3.3}Commutator of two operators}{36}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Some properties of commutators}{36}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Projection operator}{37}{section.3.4}
+\contentsline {section}{\numberline {3.5}Representation of vectors and operators}{38}{section.3.5}
+\contentsline {section}{\numberline {3.6}Matrix representation of ket and bra vectors}{39}{section.3.6}
+\contentsline {section}{\numberline {3.7}Representation of an operator in a basis}{40}{section.3.7}
+\contentsline {section}{\numberline {3.8}Matrix representation of the sum and product of two operators}{41}{section.3.8}
+\contentsline {section}{\numberline {3.9}Operators in a Hilbert space}{43}{section.3.9}
+\contentsline {paragraph}{}{44}{section*.34}
+\contentsline {subsection}{\numberline {3.9.1}Linear operators}{44}{subsection.3.9.1}
+\contentsline {subsection}{\numberline {3.9.2}Commutator of two operators}{45}{subsection.3.9.2}
+\contentsline {subsection}{\numberline {3.9.3}Some properties of commutators}{45}{subsection.3.9.3}
+\contentsline {section}{\numberline {3.10}Projection operator}{45}{section.3.10}
+\contentsline {section}{\numberline {3.11}Representation of vectors and operators}{46}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Matrix representation of kets}{46}{subsection.3.11.1}
+\contentsline {paragraph}{}{47}{section*.35}
+\contentsline {paragraph}{}{47}{section*.36}
+\contentsline {paragraph}{}{48}{section*.37}
+\contentsline {subsection}{\numberline {3.11.2}Matrix representation of bra vectors}{48}{subsection.3.11.2}
+\contentsline {paragraph}{}{49}{section*.38}
+\contentsline {subsection}{\numberline {3.11.3}Representation of operators}{49}{subsection.3.11.3}
+\contentsline {subsection}{\numberline {3.11.4}Matrix representation of the sum and product of two operators}{50}{subsection.3.11.4}
+\contentsline {subsubsection}{Sum of two operators:}{50}{section*.39}
+\contentsline {subsubsection}{Product of two operators:}{50}{section*.40}
+\contentsline {chapter}{\numberline {4}sheet-4 : Linear Vector Space (continued)}{53}{chapter.4}
 \ttl@stoptoc {default@3}
 \ttl@starttoc {default@4}
-\contentsline {section}{\numberline {4.1}Adjoint operator}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}Hermitian or Self-adjoint operator}{46}{section.4.2}
-\contentsline {section}{\numberline {4.3}Inverse operator}{47}{section.4.3}
-\contentsline {section}{\numberline {4.4}Unitary operator}{47}{section.4.4}
-\contentsline {section}{\numberline {4.5}Function of Operators}{47}{section.4.5}
-\contentsline {chapter}{\numberline {5}sheet-5 : Eigenvalue and Eigenvectors of Operators}{49}{chapter.5}
+\contentsline {section}{\numberline {4.1}Adjoint operator}{53}{section.4.1}
+\contentsline {section}{\numberline {4.2}Hermitian or Self-adjoint operator}{54}{section.4.2}
+\contentsline {section}{\numberline {4.3}Inverse operator}{55}{section.4.3}
+\contentsline {section}{\numberline {4.4}Unitary operator}{55}{section.4.4}
+\contentsline {section}{\numberline {4.5}Function of Operators}{56}{section.4.5}
+\contentsline {section}{\numberline {4.6}Adjoint Operator}{56}{section.4.6}
+\contentsline {paragraph}{}{56}{section*.42}
+\contentsline {subsection}{\numberline {4.6.1} Hermitian or self adjoint operator}{57}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Inverse operator}{58}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.3}Unitary operator}{58}{subsection.4.6.3}
+\contentsline {section}{\numberline {4.7}Functions of operators}{59}{section.4.7}
+\contentsline {paragraph}{}{59}{section*.43}
+\contentsline {section}{\numberline {4.8}Change of basis}{60}{section.4.8}
+\contentsline {paragraph}{}{61}{section*.44}
+\contentsline {paragraph}{}{61}{section*.45}
+\contentsline {subsection}{\numberline {4.8.1}Change of representation for kets}{61}{subsection.4.8.1}
+\contentsline {subsubsection}{To show that $[S]$ is unitary}{62}{section*.46}
+\contentsline {section}{\numberline {4.9}Transformation of the matrix elements of an operator due to a change of basis}{63}{section.4.9}
+\contentsline {chapter}{\numberline {5}sheet-5 : Eigenvalue and Eigenvectors of Operators}{65}{chapter.5}
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
-\contentsline {section}{\numberline {5.1}Eigenvalues and Eigenvectors of a Hermitian Operator}{49}{section.5.1}
-\contentsline {section}{\numberline {5.2}Determination of eigenvalues and eigenvectors of a Hermitian Operator}{50}{section.5.2}
-\contentsline {section}{\numberline {5.3}Non-degenerate roots}{51}{section.5.3}
-\contentsline {section}{\numberline {5.4}Degenerate roots}{52}{section.5.4}
-\contentsline {section}{\numberline {5.5}Digonalization of a Hermitian Operator}{53}{section.5.5}
-\contentsline {section}{\numberline {5.6}Basis independence of the eigenvalues of an Operator}{55}{section.5.6}
-\contentsline {section}{\numberline {5.7}Infinite dimensional vector space}{57}{section.5.7}
-\contentsline {section}{\numberline {5.8}Completeness condition for the eigenvectors of a Hermitian Operator}{57}{section.5.8}
-\contentsline {section}{\numberline {5.9}Hermitian operator with continuous eigenvalue spectrum}{59}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}Continuous Spectrum}{59}{subsection.5.9.1}
-\contentsline {section}{\numberline {5.10}Hermitian operator with continuous and discrete eigenvalue}{60}{section.5.10}
-\contentsline {section}{\numberline {5.11}Problems}{61}{section.5.11}
-\contentsline {chapter}{\numberline {6}sheet-6 : Coordinate and Momentum Representation}{67}{chapter.6}
+\contentsline {section}{\numberline {5.1}Eigenvalues and Eigenvectors of a Hermitian Operator}{65}{section.5.1}
+\contentsline {section}{\numberline {5.2}Determination of eigenvalues and eigenvectors of a Hermitian Operator}{67}{section.5.2}
+\contentsline {section}{\numberline {5.3}Non-degenerate roots}{68}{section.5.3}
+\contentsline {section}{\numberline {5.4}Degenerate roots}{69}{section.5.4}
+\contentsline {section}{\numberline {5.5}Digonalization of a Hermitian Operator}{70}{section.5.5}
+\contentsline {section}{\numberline {5.6}Basis independence of the eigenvalues of an Operator}{73}{section.5.6}
+\contentsline {section}{\numberline {5.7}Infinite dimensional vector space}{74}{section.5.7}
+\contentsline {section}{\numberline {5.8}Completeness condition for the eigenvectors of a Hermitian Operator}{75}{section.5.8}
+\contentsline {section}{\numberline {5.9}Hermitian operator with continuous eigenvalue spectrum}{77}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Continuous Spectrum}{77}{subsection.5.9.1}
+\contentsline {section}{\numberline {5.10}Hermitian operator with continuous and discrete eigenvalue}{79}{section.5.10}
+\contentsline {section}{\numberline {5.11}Problems}{79}{section.5.11}
+\contentsline {chapter}{\numberline {6}sheet-6 : Coordinate and Momentum Representation}{87}{chapter.6}
 \ttl@stoptoc {default@5}
 \ttl@starttoc {default@6}
-\contentsline {chapter}{\numberline {7}sheet-7 : Postulates of Quantum Mechanics}{69}{chapter.7}
+\contentsline {chapter}{\numberline {7}sheet-7 : Postulates of Quantum Mechanics}{89}{chapter.7}
 \ttl@stoptoc {default@6}
 \ttl@starttoc {default@7}
-\contentsline {chapter}{\numberline {8}sheet-8 : Compatibility of Observable}{71}{chapter.8}
+\contentsline {chapter}{\numberline {8}sheet-8 : Compatibility of Observable}{91}{chapter.8}
 \ttl@stoptoc {default@7}
 \ttl@starttoc {default@8}
-\contentsline {chapter}{\numberline {9}sheet-9 : The Uncertainty Principle}{73}{chapter.9}
+\contentsline {section}{\numberline {8.1}Background Materials}{91}{section.8.1}
+\contentsline {paragraph}{}{91}{section*.47}
+\contentsline {paragraph}{}{91}{section*.48}
+\contentsline {paragraph}{}{92}{section*.49}
+\contentsline {paragraph}{}{92}{section*.50}
+\contentsline {paragraph}{}{92}{section*.51}
+\contentsline {paragraph}{}{92}{section*.52}
+\contentsline {paragraph}{}{93}{section*.53}
+\contentsline {section}{\numberline {8.2}Measurement of Two Observables in Quick Succession}{93}{section.8.2}
+\contentsline {paragraph}{}{93}{section*.54}
+\contentsline {paragraph}{}{93}{section*.55}
+\contentsline {paragraph}{}{94}{section*.56}
+\contentsline {paragraph}{}{95}{section*.57}
+\contentsline {paragraph}{}{95}{section*.58}
+\contentsline {paragraph}{}{95}{section*.59}
+\contentsline {paragraph}{}{96}{section*.60}
+\contentsline {section}{\numberline {8.3}Compatible Observables}{96}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Nondegenerate Case}{96}{subsection.8.3.1}
+\contentsline {paragraph}{}{96}{section*.61}
+\contentsline {paragraph}{}{97}{section*.62}
+\contentsline {paragraph}{}{97}{section*.63}
+\contentsline {paragraph}{}{98}{section*.64}
+\contentsline {subsection}{\numberline {8.3.2}Degenerate Case}{98}{subsection.8.3.2}
+\contentsline {paragraph}{}{98}{section*.65}
+\contentsline {paragraph}{}{98}{section*.66}
+\contentsline {paragraph}{}{99}{section*.67}
+\contentsline {paragraph}{}{99}{section*.68}
+\contentsline {paragraph}{}{100}{section*.69}
+\contentsline {paragraph}{}{100}{section*.70}
+\contentsline {paragraph}{}{100}{section*.71}
+\contentsline {paragraph}{}{100}{section*.72}
+\contentsline {section}{\numberline {8.4}Condition for Compatibility of Observables}{101}{section.8.4}
+\contentsline {paragraph}{}{101}{section*.73}
+\contentsline {subsubsection}{Theorem: }{101}{section*.74}
+\contentsline {subsubsection}{Proof:}{101}{section*.75}
+\contentsline {subsubsection}{Non-degenerate case}{102}{section*.76}
+\contentsline {subsubsection}{Degenerate Case}{103}{section*.77}
+\contentsline {paragraph}{}{103}{section*.78}
+\contentsline {paragraph}{}{104}{section*.80}
+\contentsline {paragraph}{}{105}{section*.81}
+\contentsline {paragraph}{}{105}{section*.83}
+\contentsline {paragraph}{}{105}{section*.84}
+\contentsline {paragraph}{}{106}{section*.86}
+\contentsline {paragraph}{}{106}{section*.87}
+\contentsline {section}{\numberline {8.5}Labeling of Quantum Mechanical Basis States}{106}{section.8.5}
+\contentsline {paragraph}{}{107}{section*.88}
+\contentsline {paragraph}{}{107}{section*.89}
+\contentsline {paragraph}{}{108}{section*.90}
+\contentsline {section}{\numberline {8.6}Background Materials}{108}{section.8.6}
+\contentsline {paragraph}{}{108}{section*.91}
+\contentsline {paragraph}{}{108}{section*.92}
+\contentsline {paragraph}{}{109}{section*.93}
+\contentsline {paragraph}{}{109}{section*.94}
+\contentsline {paragraph}{}{109}{section*.95}
+\contentsline {paragraph}{}{109}{section*.96}
+\contentsline {paragraph}{}{110}{section*.97}
+\contentsline {section}{\numberline {8.7}Measurement of Two Observables in Quick Succession}{110}{section.8.7}
+\contentsline {paragraph}{}{110}{section*.98}
+\contentsline {paragraph}{}{110}{section*.99}
+\contentsline {paragraph}{}{111}{section*.100}
+\contentsline {paragraph}{}{111}{section*.101}
+\contentsline {paragraph}{}{111}{section*.102}
+\contentsline {paragraph}{}{112}{section*.103}
+\contentsline {section}{\numberline {8.8}Compatible Observables}{112}{section.8.8}
+\contentsline {subsection}{\numberline {8.8.1}Nondegenerate Case}{112}{subsection.8.8.1}
+\contentsline {paragraph}{}{112}{section*.104}
+\contentsline {paragraph}{}{113}{section*.105}
+\contentsline {paragraph}{}{113}{section*.106}
+\contentsline {subsection}{\numberline {8.8.2}Degenerate Case}{114}{subsection.8.8.2}
+\contentsline {paragraph}{}{114}{section*.107}
+\contentsline {paragraph}{}{114}{section*.108}
+\contentsline {paragraph}{}{115}{section*.109}
+\contentsline {paragraph}{}{115}{section*.110}
+\contentsline {paragraph}{}{115}{section*.111}
+\contentsline {paragraph}{}{116}{section*.112}
+\contentsline {paragraph}{}{116}{section*.113}
+\contentsline {paragraph}{}{116}{section*.114}
+\contentsline {section}{\numberline {8.9}Condition for Compatibility of Observables}{116}{section.8.9}
+\contentsline {paragraph}{}{117}{section*.115}
+\contentsline {subsubsection}{Theorem: }{117}{section*.116}
+\contentsline {subsubsection}{Proof:}{117}{section*.117}
+\contentsline {subsubsection}{Non-degenerate case}{118}{section*.118}
+\contentsline {subsubsection}{Degenerate Case}{119}{section*.119}
+\contentsline {paragraph}{}{119}{section*.120}
+\contentsline {paragraph}{}{119}{section*.122}
+\contentsline {paragraph}{}{120}{section*.123}
+\contentsline {paragraph}{}{121}{section*.125}
+\contentsline {paragraph}{}{121}{section*.126}
+\contentsline {paragraph}{}{122}{section*.128}
+\contentsline {paragraph}{}{122}{section*.129}
+\contentsline {section}{\numberline {8.10}Labeling of Quantum Mechanical Basis States}{122}{section.8.10}
+\contentsline {paragraph}{}{123}{section*.130}
+\contentsline {paragraph}{}{123}{section*.131}
+\contentsline {paragraph}{}{124}{section*.132}
+\contentsline {chapter}{\numberline {9}sheet-9 : The Uncertainty Principle}{125}{chapter.9}
 \ttl@stoptoc {default@8}
 \ttl@starttoc {default@9}
-\contentsline {chapter}{\numberline {10}sheet-10 : Harmonic Oscillator}{75}{chapter.10}
+\contentsline {chapter}{\numberline {10}sheet-10 : Harmonic Oscillator}{127}{chapter.10}
 \ttl@stoptoc {default@9}
 \ttl@starttoc {default@10}
-\contentsline {chapter}{\numberline {11}sheet-11 : Quantum Dynamics}{77}{chapter.11}
+\contentsline {chapter}{\numberline {11}sheet-11 : Quantum Dynamics}{129}{chapter.11}
 \ttl@stoptoc {default@10}
 \ttl@starttoc {default@11}
-\contentsline {section}{\numberline {11.1}Quantum Dynamics}{77}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}Schrodinger picture}{77}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}Schrodinger equation}{77}{subsection.11.1.2}
-\contentsline {chapter}{\numberline {12}sheet-12 : The Path Integral Formulation of Quantum Theory}{79}{chapter.12}
+\contentsline {section}{\numberline {11.1}Quantum Dynamics}{129}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Schrodinger picture}{129}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Schrodinger equation}{130}{subsection.11.1.2}
+\contentsline {chapter}{\numberline {12}sheet-12 : The Path Integral Formulation of Quantum Theory}{131}{chapter.12}
 \ttl@stoptoc {default@11}
 \ttl@starttoc {default@12}
-\contentsline {section}{\numberline {12.1}Background Materials}{79}{section.12.1}
-\contentsline {section}{\numberline {12.2}Propagator}{82}{section.12.2}
-\contentsline {section}{\numberline {12.3}Path Integral for the Propagator}{82}{section.12.3}
-\contentsline {section}{\numberline {12.4}Path Integral for a Free Particle}{85}{section.12.4}
-\contentsline {subsection}{\numberline {12.4.1}check of calculation}{89}{subsection.12.4.1}
-\contentsline {section}{\numberline {12.5}Derivation of the propagator for a free particle without using the path integral formula}{89}{section.12.5}
-\contentsline {section}{\numberline {12.6}The Classical Action}{90}{section.12.6}
-\contentsline {section}{\numberline {12.7}Discussion on Path Integral}{91}{section.12.7}
-\contentsline {subsection}{\numberline {12.7.1}Principle of Least Action}{91}{subsection.12.7.1}
-\contentsline {section}{\numberline {12.8}Discussion on The Phase of the Path Integral}{92}{section.12.8}
-\contentsline {section}{\numberline {12.9}Equivalence to the Schr\"{o}dinger Equation}{94}{section.12.9}
-\contentsline {section}{\numberline {12.10}Potentials of the Form $V=a+b x+ c x^2 + d \mathaccentV {dot}05F{x} + e x \mathaccentV {dot}05F{x}$}{96}{section.12.10}
-\contentsline {subsection}{\numberline {12.10.1}Special Cases}{98}{subsection.12.10.1}
-\contentsline {chapter}{\numberline {13}sheet-13 : Potential Wells and Barriers}{99}{chapter.13}
+\contentsline {section}{\numberline {12.1}Background Materials}{131}{section.12.1}
+\contentsline {section}{\numberline {12.2}Propagator}{134}{section.12.2}
+\contentsline {section}{\numberline {12.3}Path Integral for the Propagator}{135}{section.12.3}
+\contentsline {section}{\numberline {12.4}Path Integral for a Free Particle}{138}{section.12.4}
+\contentsline {subsection}{\numberline {12.4.1}check of calculation}{142}{subsection.12.4.1}
+\contentsline {section}{\numberline {12.5}Derivation of the propagator for a free particle without using the path integral formula}{142}{section.12.5}
+\contentsline {section}{\numberline {12.6}The Classical Action}{143}{section.12.6}
+\contentsline {section}{\numberline {12.7}Discussion on Path Integral}{144}{section.12.7}
+\contentsline {subsection}{\numberline {12.7.1}Principle of Least Action}{144}{subsection.12.7.1}
+\contentsline {section}{\numberline {12.8}Discussion on The Phase of the Path Integral}{146}{section.12.8}
+\contentsline {section}{\numberline {12.9}Equivalence to the Schr\"{o}dinger Equation}{148}{section.12.9}
+\contentsline {section}{\numberline {12.10}Potentials of the Form $V=a+b x+ c x^2 + d \mathaccentV {dot}05F{x} + e x \mathaccentV {dot}05F{x}$}{151}{section.12.10}
+\contentsline {subsection}{\numberline {12.10.1}Special Cases}{152}{subsection.12.10.1}
+\contentsline {chapter}{\numberline {13}sheet-13 : Potential Wells and Barriers}{155}{chapter.13}
 \ttl@stoptoc {default@12}
 \ttl@starttoc {default@13}
-\contentsline {chapter}{\numberline {14}sheet-14 : Particle Motion in 3-Dimension}{101}{chapter.14}
+\contentsline {chapter}{\numberline {14}sheet-14 : Particle Motion in 3-Dimension}{157}{chapter.14}
 \ttl@stoptoc {default@13}
 \ttl@starttoc {default@14}
-\contentsline {chapter}{\numberline {15}sheet-15 : The Hydrogen Atom}{103}{chapter.15}
+\contentsline {chapter}{\numberline {15}sheet-15 : The Hydrogen Atom}{159}{chapter.15}
 \ttl@stoptoc {default@14}
 \ttl@starttoc {default@15}
-\contentsline {chapter}{\numberline {16}sheet-16 : Angular Momentum 1}{105}{chapter.16}
+\contentsline {chapter}{\numberline {16}sheet-16 : Angular Momentum 1}{161}{chapter.16}
 \ttl@stoptoc {default@15}
 \ttl@starttoc {default@16}
-\contentsline {chapter}{\numberline {17}sheet-17 : Angular Momentum 2: spin 1/2 system}{107}{chapter.17}
+\contentsline {paragraph}{}{161}{section*.140}
+\contentsline {paragraph}{}{162}{section*.141}
+\contentsline {paragraph}{}{162}{section*.142}
+\contentsline {section}{\numberline {16.1}Commutation Relations of Angular Momentum Operators}{162}{section.16.1}
+\contentsline {paragraph}{}{163}{section*.143}
+\contentsline {paragraph}{}{163}{section*.144}
+\contentsline {section}{\numberline {16.2}Definition of Angular Momentum Operators}{164}{section.16.2}
+\contentsline {subsection}{\numberline {16.2.1}Square of Angular Momentum}{164}{subsection.16.2.1}
+\contentsline {paragraph}{}{164}{section*.145}
+\contentsline {subsection}{\numberline {16.2.2}Angular Momentum of a System of Particles}{165}{subsection.16.2.2}
+\contentsline {section}{\numberline {16.3}Eigenvalue Spectrum of $\mathaccentV {hat}05E{J}^2$ and $\mathaccentV {hat}05E{J}_z$}{165}{section.16.3}
+\contentsline {paragraph}{}{166}{section*.146}
+\contentsline {paragraph}{}{166}{section*.147}
+\contentsline {paragraph}{}{167}{section*.148}
+\contentsline {paragraph}{}{167}{section*.149}
+\contentsline {paragraph}{}{167}{section*.150}
+\contentsline {paragraph}{}{168}{section*.151}
+\contentsline {section}{\numberline {16.4}Matrix Elements of Angular Momentum Operators in the $|jm\delimiter "526930B $ Basis}{169}{section.16.4}
+\contentsline {paragraph}{}{169}{section*.152}
+\contentsline {subsection}{\numberline {16.4.1}$j=1/2$ Representation}{171}{subsection.16.4.1}
+\contentsline {subsection}{\numberline {16.4.2}$j=1$ Representation}{172}{subsection.16.4.2}
+\contentsline {chapter}{\numberline {17}sheet-17 : Angular Momentum 2: spin 1/2 system}{175}{chapter.17}
 \ttl@stoptoc {default@16}
 \ttl@starttoc {default@17}
-\contentsline {chapter}{\numberline {18}sheet-18 : Rotations and Angular Momentum}{109}{chapter.18}
+\contentsline {section}{\numberline {17.1}The Spin Operators and Spin States of a Spin-1/2 Particle}{175}{section.17.1}
+\contentsline {paragraph}{}{176}{section*.153}
+\contentsline {paragraph}{}{177}{section*.154}
+\contentsline {subsection}{\numberline {17.1.1}Properties of Pauli Matrices}{178}{subsection.17.1.1}
+\contentsline {section}{\numberline {17.2}Matrix Representations of the Eigenstates of $\mathaccentV {hat}05E{S}_x$, $\mathaccentV {hat}05E{S}_y$ and $\mathaccentV {hat}05E{S}_z$}{179}{section.17.2}
+\contentsline {paragraph}{}{179}{section*.155}
+\contentsline {paragraph}{}{180}{section*.156}
+\contentsline {subsubsection}{Summary}{181}{section*.157}
+\contentsline {subsubsection}{Spin Probabilities}{181}{section*.158}
+\contentsline {subsubsection}{Stern-Gerlach Apparatus for Electron Spin}{183}{section*.159}
+\contentsline {paragraph}{}{183}{section*.161}
+\contentsline {section}{\numberline {17.3}Eigenvalues and Eigenvectors of $\mathaccentV {hat}05E{\mathaccentV {vec}17E{S}}. \mathaccentV {hat}05E{n}$ }{184}{section.17.3}
+\contentsline {paragraph}{}{184}{section*.163}
+\contentsline {paragraph}{}{185}{section*.164}
+\contentsline {paragraph}{}{186}{section*.165}
+\contentsline {section}{\numberline {17.4}Non-relativistic Description of a Spin-1/2 Particle}{186}{section.17.4}
+\contentsline {subsection}{\numberline {17.4.1}Basis Vectors}{186}{subsection.17.4.1}
+\contentsline {paragraph}{}{186}{section*.166}
+\contentsline {paragraph}{}{187}{section*.167}
+\contentsline {subsection}{\numberline {17.4.2}State Vector}{188}{subsection.17.4.2}
+\contentsline {subsubsection}{Probabilistic Interpretation of the wavefunctions $\psi _{\pm }(\mathaccentV {vec}17E{r}\tmspace +\thinmuskip {.1667em})$}{189}{section*.168}
+\contentsline {paragraph}{}{190}{section*.169}
+\contentsline {section}{\numberline {17.5}Electron in an External Magnetic Field. Pauli Equation}{190}{section.17.5}
+\contentsline {paragraph}{}{191}{section*.170}
+\contentsline {chapter}{\numberline {18}sheet-18 : Rotations and Angular Momentum}{193}{chapter.18}
 \ttl@stoptoc {default@17}
 \ttl@starttoc {default@18}
-\contentsline {chapter}{\numberline {19}sheet-19 : Addition of Angular Momentum}{111}{chapter.19}
+\contentsline {chapter}{\numberline {19}sheet-19 : Addition of Angular Momentum}{195}{chapter.19}
 \ttl@stoptoc {default@18}
 \ttl@starttoc {default@19}
-\contentsline {chapter}{\numberline {20}sheet-20 : Time Independent Perturbation}{113}{chapter.20}
+\contentsline {chapter}{\numberline {20}sheet-20 : Time Independent Perturbation}{197}{chapter.20}
 \ttl@stoptoc {default@19}
 \ttl@starttoc {default@20}
-\contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{115}{chapter.21}
+\contentsline {section}{\numberline {20.1}Non-degenerate Perturbation Theory}{198}{section.20.1}
+\contentsline {subsection}{\numberline {20.1.1}First-Order correction to energy: $E_n^{(1)}$}{199}{subsection.20.1.1}
+\contentsline {subsection}{\numberline {20.1.2}First-Order correction to eigenstate}{200}{subsection.20.1.2}
+\contentsline {subsection}{\numberline {20.1.3}Second-Order Correction to Energy: $E_n^{(2)}$}{202}{subsection.20.1.3}
+\contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{205}{chapter.21}
 \ttl@stoptoc {default@20}
 \ttl@starttoc {default@21}
-\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{117}{chapter.22}
+\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{207}{chapter.22}
 \ttl@stoptoc {default@21}
 \ttl@starttoc {default@22}
-\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{119}{chapter.23}
+\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{209}{chapter.23}
 \ttl@stoptoc {default@22}
 \ttl@starttoc {default@23}
-\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{121}{chapter.24}
+\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{211}{chapter.24}
 \ttl@stoptoc {default@23}
 \ttl@starttoc {default@24}
-\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{123}{chapter.25}
+\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{213}{chapter.25}
 \ttl@stoptoc {default@24}
 \ttl@starttoc {default@25}
-\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{125}{chapter.26}
+\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{215}{chapter.26}
 \ttl@stoptoc {default@25}
 \ttl@starttoc {default@26}
-\contentsline {section}{\numberline {.1}List of Standard Integrals}{126}{section.Alph0.1}
-\contentsline {section}{\numberline {.2}Proofs}{126}{section.Alph0.2}
+\contentsline {section}{\numberline {26.1}Indistinguishability of identical particles}{215}{section.26.1}
+\contentsline {paragraph}{}{215}{section*.171}
+\contentsline {paragraph}{}{216}{section*.172}
+\contentsline {subsection}{\numberline {26.1.1}The wave function of two identical particles}{216}{subsection.26.1.1}
+\contentsline {paragraph}{}{216}{section*.173}
+\contentsline {subsection}{\numberline {26.1.2}Spin Statistics Theorem}{217}{subsection.26.1.2}
+\contentsline {paragraph}{}{217}{section*.174}
+\contentsline {subsection}{\numberline {26.1.3}Statistics of Composite Particles}{217}{subsection.26.1.3}
+\contentsline {paragraph}{}{217}{section*.175}
+\contentsline {subsection}{\numberline {26.1.4}Operators for s system of identical particles}{218}{subsection.26.1.4}
+\contentsline {paragraph}{}{218}{section*.176}
+\contentsline {paragraph}{}{218}{section*.177}
+\contentsline {section}{\numberline {26.2}States of Noninteracting Identical Particles}{218}{section.26.2}
+\contentsline {paragraph}{}{219}{section*.178}
+\contentsline {paragraph}{}{219}{section*.179}
+\contentsline {subsection}{\numberline {26.2.1}Identical Fermions}{219}{subsection.26.2.1}
+\contentsline {paragraph}{}{220}{section*.180}
+\contentsline {subsection}{\numberline {26.2.2}Identical Bosons}{220}{subsection.26.2.2}
+\contentsline {subsubsection}{Example}{221}{section*.181}
+\contentsline {paragraph}{}{221}{section*.182}
+\contentsline {paragraph}{}{222}{section*.183}
+\contentsline {subsection}{\numberline {26.2.3}Exchange Forces}{222}{subsection.26.2.3}
+\contentsline {subsubsection}{Case 1: Distinguishable Particles.}{222}{section*.184}
+\contentsline {subsubsection}{Case 2: Identical Particles}{223}{section*.185}
+\contentsline {paragraph}{}{224}{section*.186}
+\contentsline {paragraph}{}{224}{section*.187}
+\contentsline {paragraph}{}{224}{section*.188}
+\contentsline {paragraph}{}{225}{section*.190}
+\contentsline {section}{\numberline {26.3}The Helium Atom}{225}{section.26.3}
+\contentsline {paragraph}{}{226}{section*.191}
+\contentsline {subsubsection}{Ground State}{226}{section*.192}
+\contentsline {paragraph}{}{227}{section*.193}
+\contentsline {subsubsection}{Excited State}{227}{section*.194}
+\contentsline {paragraph}{}{228}{section*.195}
+\contentsline {paragraph}{}{229}{section*.197}
+\contentsline {section}{\numberline {26.4}Collision Between Identical Particles}{230}{section.26.4}
+\contentsline {subsection}{\numberline {26.4.1}Scattering of Two Identical Spinless Bosons}{230}{subsection.26.4.1}
+\contentsline {paragraph}{}{231}{section*.200}
+\contentsline {paragraph}{}{232}{section*.201}
+\contentsline {paragraph}{}{233}{section*.202}
+\contentsline {subsection}{\numberline {26.4.2}Partial wave expansion for the scattering amplitude of two spinless bosons}{233}{subsection.26.4.2}
+\contentsline {section}{\numberline {26.5}Scattering of Two Identical Spin-1/2 Fermions}{234}{section.26.5}
+\contentsline {paragraph}{}{234}{section*.203}
+\contentsline {subsection}{\numberline {26.5.1}Partial Wave Expansion of the Scattering Amplitude}{236}{subsection.26.5.1}
+\contentsline {subsubsection}{Note:}{236}{section*.204}
+\contentsline {section}{\numberline {.1}List of Standard Integrals}{237}{section.Alph0.1}
+\contentsline {section}{\numberline {.2}Proofs}{237}{section.Alph0.2}
 \contentsfinish 

@@ -1,0 +1,381 @@
+
+
+\begin{titlepage}
+\begin{center}
+        
+\vspace*{5cm}
+        
+\Huge
+\textbf{DIRAC DELTA FUNCTION \\ FOR \\ STUDENTS IN A HURRY}
+
+\vspace*{1cm}
+
+\large
+\textbf{\textit{by}}
+
+\vspace*{1cm}
+\Large
+\textbf{Prof. Dr. Khorshed Ahmed Kabir}
+
+\end{center}
+
+\end{titlepage}
+
+
+
+\section*{Dirac Delta Function}
+Consider the function $D_\epsilon (x)$ given by 
+\begin{align*}
+D_\epsilon (x) & = \frac{1}{\epsilon} \ \ ;\ for -\frac{\epsilon}{2} \leq x \leq \frac{\epsilon}{2} \\
+& = 0 \ \ \ ;\ for \ |x| > \frac{\epsilon}{2}
+\end{align*}
+where $\epsilon$ is a positive parameter. The plot of the function is shown below.
+
+\vspace{0.2cm}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{DiracDeltaFig1.jpg}
+\end{center}
+
+The integral of the function with respect to x is 1, i.e,
+\begin{equation}
+\int_{-\infty}^\infty D_\epsilon (x) dx = 1 
+\end{equation}
+
+Now imagine making $\epsilon$ smaller. As we decrease $\epsilon$, the function gets narrower and taller, but the integral of the function i.e, the area under the graph remain constant at the value 1. In the limit $\epsilon \to 0$, the function $D_{\epsilon} (x)$ collapses to a single point $x=0$ and gets infinitely tall. So, $\lim_{\epsilon \to 0} D_\epsilon (x)$ is not a function at all and the procedure of taking the limit $\epsilon \to 0$ is not justified.\\
+
+However, we can make the limiting procedure meaningful if multiply $D_\epsilon (x)$ by some well defined function $f(x)$, integrate over x and then take the limit $\epsilon \to 0$. Consider, the integral $$\int_{-\infty}^\infty D_\epsilon (x) f(x) dx $$ where $f(x)$ is a well defined function. If $\epsilon$ is significantly small, the variation of $f(x)$ over the effective integration interval $[-\frac{\epsilon}{2},\frac{\epsilon}{2}]$ is negligible and $f(x)$ remain practically equal to f(0). Therefore,
+\begin{equation}
+\int_{-\infty}^{\infty} D_\epsilon (x) f(x) dx \ \simeq f(0) \int_{-\infty}^{\infty} D_\epsilon (x) dx = f(0)
+\end{equation}
+The smaller the value of $\epsilon$, the better the approximation. in the limit $\epsilon \to 0$, the above equation is exactly
+\begin{equation}
+\lim_{\epsilon \to 0} \int_{-\infty}^{\infty} D_\epsilon (x) f(x) dx = f(0)
+\end{equation} 
+Now, we define the delta function by the relation
+\begin{equation}
+\int_{-\infty}^\infty \delta (x) f(x) dx = \lim_{\epsilon \to 0} \int_{-\infty}^{\infty} D_\epsilon (x) f(x) dx = f(0)
+\end{equation}
+This equation is valid for any function defined at the origin. More generally, $\delta (x-x_0)$ is defined as
+\begin{equation}
+\int_{-\infty}^\infty \delta (x-x_0) f(x) dx = f(x_0)
+\end{equation}
+Actually, the integral notation $\int_{-\infty}^\infty \delta (x) f(x) dx $ is not justified because $\delta(x)$ is not really a function. Physically, there is no problem since it becomes impossible to distinguish between $D_\epsilon (x)$ and $\delta (x)$ as soon as $\epsilon$ becomes negligible compared to all the distances involved in a physical problem. Whenever a mathematical difficulty arise, all we need to do is to assume that $\delta (x)$ is actually $D_\epsilon (x)$ with $\epsilon$ extemely small but not strictly zero.\\
+
+Formally, we can express $\delta(x)$ as a sequence of proper functions $$\lim_{\epsilon \to 0} D_\epsilon (x) \equiv \delta(x) $$ Here, $D_\epsilon (x)$, which is a proper function of x is called the representation of the delta function. One representation is the 'Square Function' given at the beginning. The representation is not unique. There are other functions which approach the delta function when appropriate limits are taken.
+
+\section*{Other Representation Of The Delta Function}
+\subsection*{A}
+Consider the function 
+\begin{equation}
+D_\epsilon (x) = \frac{1}{\epsilon \sqrt{\pi}} e^{-x^2/\epsilon^2} \ \ \ with\ \ \epsilon > 0
+\end{equation}
+For each value of the parameter $\epsilon$, this function satisfies $$\int_{-\infty}^\infty D_\epsilon (x)dx =1$$ 
+
+\vspace{0.2cm}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{DiracDeltaFig2.jpg}
+\end{center}
+When plotted against x, the function has a peak at the origin. The peak has a height $\frac{1}{\epsilon \sqrt{\pi}}$ and a width of order $\epsilon$ (exactly how the width is defined doesn't matter). So, if $\epsilon$ is allowed to become very small, the peak becomes very tall and very narrow. Outside the peak, the function becomes extremely small. Thus we have 
+\begin{equation}
+\delta (x) = \lim_{\epsilon \to 0} \frac{1}{\epsilon \sqrt{\pi}} e^{-x^2/\epsilon^2}
+\end{equation}
+\\\\
+Note: $$\int_{-\infty}^{\infty} e^{-x^2}dx = \sqrt{\pi}$$
+Let, 
+\begin{align*}
+I &= \int_{-\infty}^{\infty} e^{-(b^2 x^2 + ax)} dx \\
+&=e^{a^2/4b^2} \int_{-\infty}^{\infty} e^{-(bx + a/2b)^2} dx \\
+&= e^{a^2/4b^2} \frac{1}{b} \int_{-\infty}^{\infty} e^{-z^2} dz \\
+&= e^{a^2/4b^2} \frac{\sqrt{\pi}}{b}
+\end{align*}
+By using $$ b^2 x^2 + ax = (bx + \frac{a}{2b})^2 - \frac{a^2}{4b^2}$$ and by letting $$ z= bx+\frac{a}{2b}$$
+
+\subsection*{B}
+Consider another function
+\begin{equation}
+D_{\epsilon} (x) = \frac{1}{\pi} \frac{\sin (x/\epsilon)}{x} \ \ \ with\ \epsilon>0
+\end{equation}
+
+\vspace{0.2cm}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{DiracDeltaFig3.jpg}
+\end{center}
+
+For any value of the parameter $\epsilon$ we have 
+\begin{equation}
+\int_{-\infty}^{\infty} D_\epsilon (x) dx = 1
+\end{equation}
+A plot of the function $D_{\epsilon} (x)$ shows that it has the value $\frac{1}{\epsilon \pi}$ at x=0 and it oscillates with decreasing amplitude as $|x|$ increases. The width of the central maxima is of the order of $\epsilon$ and the period of oscillation with respect tox is $2\pi \epsilon$.
+
+Thus the limit of the function as $\epsilon \to 0$ has all the properties of the delta function: it becomes infintely large at x=0, it has unit integral, and infinitely rapid oscillations as $|x|$ increases means that the entire contribution to an integral containing this function comes from an infinitesimal neighbourhood of x=0. We can therefore write 
+\begin{equation}
+\delta (x) = \lim_{\epsilon \to 0} \frac{1}{\pi} \frac{\sin (x/\epsilon)}{x}
+\end{equation}
+
+\subsection*{C}
+We can also show that $$\delta (x) = \lim_{\epsilon \to 0} \frac{1}{2\epsilon} e^{-|x|/\epsilon}$$  $$\delta (x) = \lim_{\epsilon \to 0} \frac{1}{\pi} \frac{\epsilon}{x^2 + \epsilon^2}$$  $$\delta (x) = \lim_{\epsilon \to 0} \frac{\epsilon}{\pi} \frac{\sin^2 (x/\epsilon)}{x^2}$$
+
+
+\section*{Properties Of The Delta Function}
+It is important  to note that, because of its singular character, the delta function can not be the end result of a calculation and has meaning only so long as a subsequent integral over its argument is carried out. With this understanding we can write down some relations between delta functions.
+
+\textbf{1.} The delta function is an even function: $$
+\delta(-x) = \delta(x)$$
+
+\textbf{2.} $$x \delta(x) = 0$$
+
+\textbf{3.} $$\delta (ax) = \frac{1}{|a|} \delta(x) $$
+
+\subsection*{Proof Of 3}
+Consider the integral $$I = \int_{-\infty}^{\infty}\delta(ax) f(x) dx $$
+Since the delta function is even in its argument, it doesn't matter if we replace a by $|a|$ in its argument. Thus $$I = \int_{-\infty}^{\infty}\delta(|a|x) f(x) dx $$.
+Making the change in variable $$y=|a|x$$ we have $$I = \frac{1}{|a|} \int_{-\infty}^{\infty}\delta(y) f \left( \frac{y}{|a|} \right) dy = \frac{1}{|a|} f(0)$$
+Or, $$ \int_{-\infty}^{\infty}\delta(ax) f ( x ) dx = \frac{1}{|a|} \int_{-\infty}^{\infty}\delta(x) f(x)dx$$ 
+Or, $$\delta (ax) = \frac{1}{|a|}\delta(x) $$
+
+\textbf{4.} More generally, $$\delta (\phi(x)) = \sum_i \frac{\delta(x-x_i)}{\left| \frac{\partial \phi}{\partial x} \right|_{x_i}}$$
+where the sum runs over the $x_i$'s which are simple roots of $\phi(x)$.
+
+\subsection*{Proof Of 4}
+Let $x_1, x_2, x_3,..., x_N$ be the simple roots of $\phi(x)$
+
+\vspace{0.2cm}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{DiracDeltaFig4.jpg}
+\end{center}
+In the neighbourhood of any one of the simple roots $x_i$, we can write $$\phi (x) = (x-x_i) \psi(x)$$ where $\psi(x_i) \neq 0$. We have $\psi (x_i) = \left. \frac{\partial \phi(x)}{\partial x} \right|_{x=x_i}$
+Now consider the integral
+\begin{align*}
+&\ \  \int_{-\infty}^{\infty} \delta(\phi(x)) f(x) dx \\
+&=\sum_{i=1}^N \int_{x_i - \epsilon}^{x_i + \epsilon} \delta[(x-x_i) \psi(x_i)] f(x) dx \\
+&=\sum_{i=1}^N \frac{1}{|\psi(x_i)|} \int_{x_i - \epsilon}^{x_i + \epsilon} \delta(x-x_i) f(x) dx \\
+&=\sum_{i=1}^N \frac{1}{|\frac{\partial \phi}{\partial x}|_{x=x_i}} \int_{-\infty}^{\infty} \delta(x-x_i) f(x) dx \\
+&=\sum_{i=1}^N \frac{1}{|\frac{\partial \phi}{\partial x}|_{x=x_i}} f(x_i) \\
+\end{align*}
+The above result is obtained, if we write $$\delta (\phi (x)) = \sum_{i=1}^N \frac{\delta(x-x_i)}{\left| \frac{\partial \phi}{\partial x} \right|_{x=x_i}} $$
+
+\textbf{5.} A frequently used example of the above result is $$\delta (x^2 - a^2) = \frac{1}{2a} \delta(x-a) + \frac{1}{2a} \delta(x+a) \ \ \ \ with a>0$$
+Here $$\phi (x) = x^2 - a^2 = (x+a)(x-a)$$.
+The two simple roots of $\phi(x)$ are at $x=a$ and $x=-a$. Now, $$\left| \frac{\partial \phi}{\partial x} \right|_{x=a} = |2x|_{x=a} = 2a$$ And $$\left| \frac{\partial \phi}{\partial x} \right|_{x=-a} = |2x|_{x=-a} =|-2a|= 2a$$ So, the above result follows.
+
+\textbf{6.} $$f(x) \delta (x-a) = f(a) \delta(x-a)$$
+
+\textbf{7.} $$\int_{-\infty}^{\infty} \delta (x-y) \delta (y-a) dy = \delta (x-a)$$
+
+\underline{Note 1}:
+We have the identity $$x \delta(x) = 0$$. The converse is also true and itcan be shown that the equation $$x u(x) = 0$$ has the general solution $$u(x) = c \delta (x)$$
+
+\underline{Note 2}:
+We will now prove an identity which is particularly useful in quantum mechanics. $$\lim_{\epsilon \to 0^+} \int_{-\infty}^{\infty} \frac{1}{x \pm i\epsilon} f(x) dx = P \int_{-\infty}^{\infty} \frac{dx}{x} f(x) \mp i\pi f(0)$$
+Or in short $$\lim_{\epsilon \to 0^+} \frac{1}{x \pm i\epsilon} = P\left( \frac{1}{x} \right) \mp i \pi \delta (x)$$
+where it is understood that the econd of these two equations have meaning only within an integral. The symbol $P$ means principle part of an integral where the integral has a simple pole. The principle part is defined as $$P \int_A^B \frac{dx}{x} f(x)  = \lim_{n \to 0^+} \left[ \int_A^\eta + \int_\eta^B \right] \frac{dx}{x} f(x)$$
+
+\underline{Proof:}
+\begin{equation}
+\frac{1}{x \pm i\epsilon} = \frac{x \mp i\epsilon}{x^2+\epsilon^2} = \frac{x}{x^2+\epsilon^2} \mp \frac{i\epsilon}{x^2 + \epsilon^2}
+\end{equation}
+Now we have $$\lim_{\epsilon \to 0^+} \frac{1}{\pi} \frac{\epsilon}{x^2+\epsilon^2} = \delta(x)$$
+So, 
+\begin{equation}
+\lim_{\epsilon \to 0^+} (\mp)i  \frac{\epsilon}{x^2+\epsilon^2} = \mp i\pi \delta(x)
+\end{equation}
+Now consider the first term on the right hand side of eqn(11). We multiply this term by a function $f(x)$ which is regular at the origin and then integrate over x. We get,
+\begin{equation}
+\lim_{\epsilon \to 0^+} \int_{-\infty}^{\infty} \frac{x f(x)}{x^2 + \epsilon^2} dx = \lim_{\epsilon \to 0^+} \left[ \lim_{\eta \to 0^+} \int_{-\infty}^{-\eta} \frac{xf(x)dx}{x^2+\epsilon^2} + \int_{-\eta}^{\eta} \frac{xf(x)dx}{x^2+\epsilon^2} + \int_{\eta}^{\infty} \frac{xf(x)dx}{x^2+\epsilon^2} \right]
+\end{equation}
+Note that we take the limit over $\eta$ first and then we take the limit over $\epsilon$. Consider now the second integral above $$\lim_{\eta \to 0^+ } \int_{-\eta}^{+\eta} \frac{xf(x)dx}{x^2 + \epsilon^2} = f(0) \lim_{\eta \to 0^+} \frac{1}{2} [ln(x^2+\epsilon^2)]_{x=-\eta}^{x=\eta} = 0$$
+If we now reverse the order of the evaluation of limits in eqn (13), the $\epsilon \to 0$ limit causes no difficulties in the other two integrals. We thus have
+\begin{align*}
+\lim_{\epsilon \to 0^+} \int_{-\infty}^{\infty} \frac{xf(x)dx}{x^2 + \epsilon^2} & = \lim_{\eta \to 0^+} \lim_{\epsilon \to 0^+} \left[ \int_{-\infty}^{-\eta} + \int_{\eta}^{\infty} \right] \frac{xf(x)dx}{x^2 + \epsilon^2} \\
+&= \lim_{\eta \to 0^+} \left[ \int_{-\infty}^{-\eta} + \int_{\eta}^{\infty} \right] \frac{dx}{x} f(x) \\
+&= P \int_{-\infty}^{\infty} \frac{1}{x} f(x) dx
+\end{align*}
+This establishes the identity.
+
+\section*{Derivatives Of The Delta Function}
+One may define the derivative $\delta^\prime (x)$ of the delta function. When $\epsilon$ is small, the derivative of $D_\epsilon (x)$ has two peaks close to the origin, one peak positive and the other negative as drawn in the figure below.
+\vspace{0.2cm}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{DiracDeltaFig5.jpg}
+\end{center}
+As $\epsilon \to 0$, each of these peaks becomes very narrow and very tall, and two peaks each approach very close to the origin. Now, an integration by parts gives
+\begin{equation}
+\int_{-\infty}^{\infty} dx D_\epsilon^\prime (x) f(x) = [D_\epsilon (x) f(x)]_{-\infty}^{\infty} - \int_{-\infty}^{\infty} dx D_\epsilon (x) f^\prime (x)
+\end{equation}
+Because $D_\epsilon (x)$ tends to zero as $x \to \pm \infty$, the first term on the right hand side vanishes unless f(x) explodes violently at infinity. So by letting $\epsilon \to 0$, we arrive at the definition of $\delta^\prime (x)$: 
+\begin{equation}
+\int_{-\infty}^{\infty} \delta^\prime (x) f(x) dx = - \int_{-\infty}^{\infty} \delta (x) f^\prime(x) dx = - f^\prime (0)
+\end{equation}
+From this, we immediately get 
+\begin{equation}
+x\delta^\prime (x) = - \delta (x)
+\end{equation}
+Conversely, it can be shown that the general solution of the equation $$xu(x)=\delta(x)$$ can be written as $$u(x) = - \delta^\prime (x) + c \delta(x)$$ where the second term arises from the homogeneous equation $$x\delta(x)=0$$
+From eqn(15) it also follows that
+\begin{equation}
+\delta^\prime(-x) = - \delta^\prime(x)
+\end{equation}
+The n-th order derivative of $\delta(x)$ can be defined in the same way. We find
+\begin{equation}
+\int_{-\infty}^{\infty} \delta^{(n)} (x) f(x) dx = (-1)^n f(0)
+\end{equation}
+We can prove following properties:
+
+1.$$\delta^{(m)} (x) = (-1)^m \delta^{(m)} (-x)$$
+
+2.$$x^{m+1} \delta^{(m)} (x) = 0$$
+
+3.$$x \delta^{(m)} (x) = -m \delta^{(m-1)} (x)$$
+
+\section*{Integration Of The Delta Function}
+Comsider the indefinite integral
+\begin{equation}
+\theta_\epsilon (x) = \int_{-\infty}^{x} D_\epsilon (y) dy
+\end{equation}
+A graph of $\theta_\epsilon (x)$ vs x is shown below:
+\vspace{0.2cm}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{DiracDeltaFig6.jpg}
+\end{center}
+As $\epsilon \to 0$, the step in the function $\theta_\epsilon (x)$ gets progressively steeper, until, finally, the function changes abruptly from 0 to 1 at x=0.
+Thus, taking the limit $\epsilon \to 0$ in eqn(19), we have
+\begin{equation}
+\theta (x) = \int_{-\infty}^{x} \delta (x) dx
+\end{equation}
+where 
+\begin{align*}
+\theta (x) &= 1 \ \ \ for \ x>0\\
+&=0 \ \ \ for \ x<0
+\end{align*}
+If we differentiate eqn(20) with respect to x, we get 
+\begin{equation}
+\frac{d\theta (x)}{dx} = \delta (x)
+\end{equation}
+
+\section*{Three Dimesional Delta Function}
+We define $$\delta (\vec{r}) \equiv \delta (x) \delta (y) \delta (z)$$
+In other words, $\delta (\vec{r})$ is zero if any of the coordinates x,y and z is not equal to zero and $\delta (\vec{r})$ tends to infinitely at the origin, i.e, when x=0, y=0 and z=0, such that $$\int_{volume} \delta (\vec{r}) d^3r = 1$$ if the volume of integration contains the origin. We also have $$\int_{volume} \delta (\vec{r}) f(\vec{r}) d^3r = f(0)$$ where again, the volume of integration contains the origin.
+
+Note:
+
+1. $$\delta (\vec{r} - \vec{r}^\prime) = \delta (x-x^\prime) \delta (y-y^\prime) \delta (z-z^\prime)$$
+
+2.$$\delta (\vec{r} - \vec{r}^\prime) d^3r = 1$$ where the volume of integration includes the point $\vec{r}^\prime$, otherwise the integral is zero.
+
+3.$$\int_{volume} \delta (\vec{r} - \vec{r}^\prime) f(\vec{r}) d^3r = f(\vec{r}^\prime)$$ if volume of integration includes the point $\vec{r}^\prime$
+
+\section*{A Useful Formula}
+Consider the integral 
+\begin{align*}
+\int_{-\infty}^{\infty} e^{ikx} dx &= \lim_{L \to \infty} \int_{-L}^{L} e^{ikx}dx \\
+&= \lim_{L \to \infty} \frac{1}{ik} \left( e^{ikL} - e^{-ikL} \right) \\
+&= \lim_{L \to \infty} \frac{2}{k} \left( \frac{e^{ikL} - e^{-ikL}}{2i} \right) \\
+&= \lim_{L \to \infty} \frac{2}{k} \sin kL \\
+&= 2\pi \lim_{L \to \infty} \frac{\sin kL}{\pi k} \\
+&= 2\pi \delta (k) \\
+\end{align*}
+Since
+\begin{align*}
+& \lim_{\epsilon \to 0} \frac{\sin (x/\epsilon)}{\pi x} = \delta (x). \\
+& Let, \ \epsilon = \frac{1}{L} \\
+& So, \ when, \ L \to \infty, \ then \ \epsilon \to 0. \\
+& therefore, \ \lim_{L \to \infty} \frac{\sin kL}{\pi k} = \lim_{\epsilon \to 0} \frac{\sin (k/\epsilon)}{\pi k} 
+\end{align*}
+
+Thus
+\begin{equation}
+\int_{-\infty}^{\infty} e^{ikx} dx = 2\pi \delta (k) 
+\end{equation}
+
+In eqn(22) if we integrated with respect to k, we would have $\delta (x)$ on the right handside
+\begin{equation}
+\int_{-\infty}^{\infty} e^{ikx} dk = 2\pi \delta (x) 
+\end{equation}
+Also note that in eqn(22) we are integrating over x over its full range of values. Making a change of variable $x \to -x$ does not change the value of the integral. Here we also have 
+\begin{equation}
+\int_{-\infty}^{\infty} e^{-ikx} dx = 2\pi \delta (k) 
+\end{equation}
+Similarly in eqn(23), making the change of variable $k \to -k$, doesn't change the value of the integral. So we could also with 
+\begin{equation}
+\int_{-\infty}^{\infty} e^{-ikx} dk = 2\pi \delta (x) 
+\end{equation}
+Thus in summery,
+\begin{align*}
+\int_{-\infty}^{\infty} e^{\pm ikx} dx = 2\pi \delta (k) 
+\end{align*}
+\begin{align*}
+\int_{-\infty}^{\infty} e^{\pm ikx} dk = 2\pi \delta (x) 
+\end{align*}
+In three dimension
+\begin{align*}
+\int_{all \ space} e^{\pm i \vec{k}.\vec{r}} d^3r = (2\pi)^3 \delta (\vec{k}) 
+\end{align*}
+\begin{align*}
+\int_{all \ space} e^{\pm i (\vec{k} - \vec{k}^\prime).\vec{r}} d^3r = (2\pi)^3 \delta (\vec{k} - \vec{k}^\prime) 
+\end{align*}
+\begin{align*}
+\int_{all \ space} e^{\pm i \vec{k}.(\vec{r} - \vec{r}^\prime)} d^3k = (2\pi)^3 \delta (\vec{r} - \vec{r}^\prime) 
+\end{align*}
+
+\section*{Fourier Transform}
+We can always express a function f(x) in the form 
+\begin{equation}
+f(x) = \int_{-\infty}^{\infty} e^{ikx} \tilde{f}(k) dk
+\end{equation}
+where $\tilde{f}(k)$ is a function of k, called the fourier transform of f(x). From eqn(26) we can write 
+\begin{align*}
+\int_{-\infty}^{\infty} e^{-ik^\prime x} f(x) dx &= \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{i(k-k^\prime) x} \tilde{f}(k) dk dx \\
+&= (2\pi) \int_{-\infty}^{\infty} \delta(k - k^\prime) \tilde{f}(k) dk \\
+&= (2\pi) \tilde{f}(k^\prime) 
+\end{align*}
+Thus,
+\begin{equation}
+\tilde{f}(k) = \frac{1}{2 \pi} \int_{-\infty}^{\infty} e^{-ikx} f(x) dx
+\end{equation}
+The function f(x) and $\tilde{f} (k)$ are Fourier transform of each other. We can write eqn(26) and eqn(27) in a more symmetrical fashion as follows
+\begin{equation}
+f(x)= \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} e^{ikx} \tilde{f}(k) dk
+\end{equation}
+\begin{equation}
+\tilde{f}(k) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} e^{-ikx} f(x) dx
+\end{equation}
+In three dimension, we can write
+\begin{equation}
+f(\vec{r})= \frac{1}{(2 \pi)^{3/2}} \int_{all\ k \ space}  e^{i \vec{k}.\vec{r}} \tilde{f}(\vec{k}) d^3k
+\end{equation}
+Multiplying this equation by $e^{-i \vec{k}.\vec{r}}$ and integrating over $\vec{r}$, we have
+\begin{align*}
+\int_{all\ space}  e^{-i \vec{k}^\prime.\vec{r}} f(\vec{r}) d^3r &= \frac{1}{(2 \pi)^{3/2}} \int d^3r \int d^3k e^{i(\vec{k} - \vec{k}^\prime).\vec{r}} \tilde{f}(\vec{k}) \\
+&= \frac{1}{(2 \pi)^{3/2}} \int d^3k (2 \pi)^3 \delta (\vec{k} - \vec{k}^\prime) \tilde{f}(\vec{k}) \\
+&= (2 \pi)^{3/2} \tilde{f}(\vec{k}^\prime)
+\end{align*}
+Therefore,
+\begin{align*}
+\tilde{f}(\vec{k}) = \frac{1}{(2 \pi)^{3/2}} \int e^{-i \vec{k}.\vec{r}} f(\vec{r}) d^3r  
+\end{align*}
+Thus, if we write
+\begin{align*}
+f(\vec{r}) = \frac{1}{(2 \pi)^{3/2}} \int e^{i \vec{k}.\vec{r}} \tilde{f}(\vec{k}) d^3k 
+\end{align*}
+then
+\begin{align*}
+\tilde{f}(\vec{k}) = \frac{1}{(2 \pi)^{3/2}} \int e^{-i \vec{k}.\vec{r}} \tilde{f}(\vec{r}) d^3r 
+\end{align*}
+
+\section*{Parseval Identity}
+We can now prove the important identity
+\begin{align*}
+\int |f(\vec{r})|^2 d^3r = \int |\tilde{f}(\vec{k})|^2 d^3k
+\end{align*}
+\underline{PROOF:}
+\begin{align*}
+\int |f(\vec{r})|^2 d^3r &= \int f(\vec{r}) f^*(\vec{r}) d^3r \\
+&= \int d^3r \ .\ \frac{1}{(2\pi)^{3/2}} \int e^{i \vec{k}.\vec{r}} \tilde{f} (\vec{k}) d^3k \ .\ \frac{1}{(2\pi)^{3/2}} \int e^{-i \vec{k}^\prime.\vec{r}} \tilde{f}^* (\vec{k}^\prime) d^3k^\prime \\
+&= \frac{1}{(2\pi)^3} \int d^3k d^3k^\prime \tilde{f} (\vec{k}) \tilde{f}^* (\vec{k}^\prime) \int d^3r e^{i (\vec{k} - \vec{k}^\prime) . \vec{r}} (2\pi)^3 \delta (\vec{k} - \vec{k}^\prime) \\
+&= \int d^3k d^3k^\prime \tilde{f} (\vec{k}) \tilde{f}^* (\vec{k}^\prime) \delta (\vec{k} - \vec{k}^\prime) \\
+&= \int d^3k \tilde{f} (\vec{k}) \tilde{f}^* (\vec{k}) \\
+&= \int |\tilde{f} (\vec{k})|^2  d^3k  \\
+\end{align*}
+
+
+

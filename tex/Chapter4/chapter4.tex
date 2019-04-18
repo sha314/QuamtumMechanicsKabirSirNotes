@@ -1,114 +1,130 @@
 \chapter{sheet-4 : Linear Vector Space (continued)}
-\section{Adjoint operator}
-Consider the equation
-\begin{equation}\label{eqn:4.1}
-\ket{b} = \hat{K} \ket{a}
-\end{equation}
-The operator $\hat{K}$ carries the ket $\ket{a}$ to the ket $\ket{b}$. The dual of $\ket{a}$ and $\ket{b}$ are the bras $\bra{a}$ and $\bra{b}$ respectively. Then the operator which carries $\bra{a}$ to $\bra{b}$ is called the adjoint of $\hat{K}$ and is denoted by $\hat{K^\dagger}$. Thus in dual space \ref{eqn:4.1} is
-\begin{equation}\label{eqn:4.2}
-\bra{b} = \bra{a} \hat{K^\dagger}
-\end{equation}
-\begin{align}\label{eqn:4.3-4.4}
-	\text{ket space \ } \ket{a} _\rightarrow^{\hat{K}} \ket{b}\\
-	\text{bra space \ } \bra{a} _\rightarrow^{\hat{K^\dagger}} \bra{b}
-\end{align}
-Here bra space is the dual of ket space and
-\begin{align}\label{eqn:4.5-4.6}
-	\ket{a} _\rightarrow^{dc} \bra{a} \\
-	\ket{b} _\rightarrow^{dc} \bra{b}
-\end{align}
-dc $\equiv$ dual correspondence.\\
 
-From equation \ref{eqn:4.1} and \ref{eqn:4.2} it follows that
-\begin{equation}\label{eqn:4.7}
-\braket{c}{b} = \bra{c}\hat{K}\ket{a}
-\end{equation}
-and 
-\begin{equation}\label{eqn:4.8}
-\braket{b}{c} = \bra{a} \hat{K^\dagger} \ket{c}
-\end{equation}	 
-since
-\begin{equation}\label{eqn:4.9}
-\braket{b}{c} = \braket{c}{b}^*
-\end{equation}
-we have
-\begin{equation}\label{eqn:4.10}
-\bra{c} \hat{K} \ket{a} = \bra{a} \hat{K^\dagger} \ket{c}
-\end{equation}
-equation \ref{eqn:4.10} is the defining equation for the adjoint $\hat{K^\dagger}$ of the operator $\hat{K}$. In scalar product notation
-\begin{equation}\label{eqn:4.11}
-\braket{c}{b} \equiv \left(\psi_c, \psi_b \right)
-\end{equation}
-equation \ref{eqn:4.10} can be written as
-\begin{align}\label{eqn:4.12-4.13}
-	\left(\psi_c, \hat{K} \psi_a \right) 
-	&= \left(\psi_a, \hat{K^\dagger} \psi_c\right)^*\\
-	&=	\left(\hat{K^\dagger}\psi_c, \psi_a \right)
-\end{align}
-In particular, if we take $\ket{c}$ and $\ket{a}$ as the basis states $\ket{i}$ and $\ket{j}$, equation \ref{eqn:4.10} becomes
-\begin{align}\label{eqn:4.14-4.18}
-	\bra{i}\hat{K}\ket{j} &= \bra{j}\hat{K^\dagger}\ket{i}^* \\
-	K_{i j} &= \left(K^\dagger\right)_{j i}^* \\
-	K_{j i}^\dagger &= K_{i j}^* \\
-	K_{i j}^\dagger &= \left(K_{j i} \right)^* \\
-	\left[\hat{K^\dagger} \right] &= \left[K \right]^\dagger
-\end{align}
-i.e., The matrix representation of the adjoint operator is the hermitian conjugate of the matrix representation of $\hat{K}$.
+%%% defining graphics path
+\ifpdf
+\graphicspath{{Chapter4/figs/}}
+\else
+\graphicspath{{Chapter4/figs/}}
+\fi
 
-\section{Hermitian or Self-adjoint operator}
-If $\hat{K^\dagger} = \hat{K}$, then $\hat{K}$ is said to be a self-adjoint or a hermitian operator. For a hermitian operator
-\begin{equation}\label{eqn:4.19}
-\left[K\right] = \left[K^\dagger\right] = \left[K\right]^\dagger
-\end{equation}
-or
-\begin{equation}\label{eqn:4.20}
-K_{i j} = K_{j i}^*
-\end{equation}
-i.e., $\left[K\right]$ is a hermitian matrix.
-\begin{enumerate}[label=\textbf{Example \arabic*},start=1]
-	\item 
-	show that
-	\begin{equation}\label{eqn:4.21}
-	\left(A B\right)^\dagger = B^\dagger A^\dagger
-	\end{equation}
-	Answer: \\
-	\begin{equation}\label{eqn:4.22}
-	\left(\psi_a, \hat{A}\hat{B}\psi_b\right) = \left(\left(  \hat{A}\hat{B}\right)^\dagger\psi_a, \psi_b \right)
-	\end{equation}
-	Also
-	\begin{equation}\label{eqn:4.23}
-	\left(\psi_a, \hat{A}\hat{B}\psi_b\right) = \left(  \hat{A}^\dagger\psi_a, \hat{B}\psi_b \right) = \left(  \hat{B}^\dagger\hat{A}^\dagger\psi_a, \psi_b \right)
-	\end{equation}
-	Comparing these equation (equation \ref{eqn:4.22} and \ref{eqn:4.23}) we get,
-	\begin{equation}\label{eqn:4.24}
-	\left(\hat{A}\hat{B}\right)^\dagger = \hat{B}^\dagger \hat{A}^\dagger
-	\end{equation}
-\end{enumerate}
-\section{Inverse operator}
-An operator $\hat{B}$ is said to be the inverse of $\hat{A}$ if
-\begin{equation}\label{eqn:4.25}
-\hat{A}\hat{B} = \hat{B}\hat{A} = \hat{\mathbb{I}}
-\end{equation}
-Obviously, if $\hat{B}$ is the inverse of $\hat{A}$, then $\hat{A}$ is the inverse of $\hat{B}$. We write
-\begin{equation}\label{eqn:4.26}
-\hat{B} = \hat{A} ^{-1}
-\end{equation}
-or
-\begin{equation}\label{eqn:4.27}
-\hat{A} = \hat{B} ^{-1}
-\end{equation}
-If equation \ref{eqn:4.25} is satisfied.
+\input{Chapter4/chapter4-shahnoor.tex}
+\input{Chapter4/chapter4-Lin-Vec-Space-3-kabir-sir.tex}
 
-\section{Unitary operator}
-An operator $\hat{U}$ is said to be unitary if
-\begin{equation}
-\hat{U} \hat{U^\dagger} = \hat{U^\dagger} \hat{U} = \hat{\mathbb{I}}
-\end{equation}
-i.e., if
-\begin{equation}
-\hat{U^\dagger} = \hat{U}^{-1}
-\end{equation}
-Thus, for a unitary operator, its adjoint is $@@@@@@@@@@@@@@@@$
 
-\section{Function of Operators}
 
+
+
+%
+%\section{Adjoint operator}
+%Consider the equation
+%\begin{equation}\label{eqn:4.1}
+%\ket{b} = \hat{K} \ket{a}
+%\end{equation}
+%The operator $\hat{K}$ carries the ket $\ket{a}$ to the ket $\ket{b}$. The dual of $\ket{a}$ and $\ket{b}$ are the bras $\bra{a}$ and $\bra{b}$ respectively. Then the operator which carries $\bra{a}$ to $\bra{b}$ is called the adjoint of $\hat{K}$ and is denoted by $\hat{K^\dagger}$. Thus in dual space \ref{eqn:4.1} is
+%\begin{equation}\label{eqn:4.2}
+%\bra{b} = \bra{a} \hat{K^\dagger}
+%\end{equation}
+%\begin{align}\label{eqn:4.3-4.4}
+%	\text{ket space \ } \ket{a} _\rightarrow^{\hat{K}} \ket{b}\\
+%	\text{bra space \ } \bra{a} _\rightarrow^{\hat{K^\dagger}} \bra{b}
+%\end{align}
+%Here bra space is the dual of ket space and
+%\begin{align}\label{eqn:4.5-4.6}
+%	\ket{a} _\rightarrow^{dc} \bra{a} \\
+%	\ket{b} _\rightarrow^{dc} \bra{b}
+%\end{align}
+%dc $\equiv$ dual correspondence.\\
+%
+%From equation \ref{eqn:4.1} and \ref{eqn:4.2} it follows that
+%\begin{equation}\label{eqn:4.7}
+%\braket{c}{b} = \bra{c}\hat{K}\ket{a}
+%\end{equation}
+%and 
+%\begin{equation}\label{eqn:4.8}
+%\braket{b}{c} = \bra{a} \hat{K^\dagger} \ket{c}
+%\end{equation}	 
+%since
+%\begin{equation}\label{eqn:4.9}
+%\braket{b}{c} = \braket{c}{b}^*
+%\end{equation}
+%we have
+%\begin{equation}\label{eqn:4.10}
+%\bra{c} \hat{K} \ket{a} = \bra{a} \hat{K^\dagger} \ket{c}
+%\end{equation}
+%equation \ref{eqn:4.10} is the defining equation for the adjoint $\hat{K^\dagger}$ of the operator $\hat{K}$. In scalar product notation
+%\begin{equation}\label{eqn:4.11}
+%\braket{c}{b} \equiv \left(\psi_c, \psi_b \right)
+%\end{equation}
+%equation \ref{eqn:4.10} can be written as
+%\begin{align}\label{eqn:4.12-4.13}
+%	\left(\psi_c, \hat{K} \psi_a \right) 
+%	&= \left(\psi_a, \hat{K^\dagger} \psi_c\right)^*\\
+%	&=	\left(\hat{K^\dagger}\psi_c, \psi_a \right)
+%\end{align}
+%In particular, if we take $\ket{c}$ and $\ket{a}$ as the basis states $\ket{i}$ and $\ket{j}$, equation \ref{eqn:4.10} becomes
+%\begin{align}\label{eqn:4.14-4.18}
+%	\bra{i}\hat{K}\ket{j} &= \bra{j}\hat{K^\dagger}\ket{i}^* \\
+%	K_{i j} &= \left(K^\dagger\right)_{j i}^* \\
+%	K_{j i}^\dagger &= K_{i j}^* \\
+%	K_{i j}^\dagger &= \left(K_{j i} \right)^* \\
+%	\left[\hat{K^\dagger} \right] &= \left[K \right]^\dagger
+%\end{align}
+%i.e., The matrix representation of the adjoint operator is the hermitian conjugate of the matrix representation of $\hat{K}$.
+%
+%\section{Hermitian or Self-adjoint operator}
+%If $\hat{K^\dagger} = \hat{K}$, then $\hat{K}$ is said to be a self-adjoint or a hermitian operator. For a hermitian operator
+%\begin{equation}\label{eqn:4.19}
+%\left[K\right] = \left[K^\dagger\right] = \left[K\right]^\dagger
+%\end{equation}
+%or
+%\begin{equation}\label{eqn:4.20}
+%K_{i j} = K_{j i}^*
+%\end{equation}
+%i.e., $\left[K\right]$ is a hermitian matrix.
+%\begin{enumerate}[label=\textbf{Example \arabic*},start=1]
+%	\item 
+%	show that
+%	\begin{equation}\label{eqn:4.21}
+%	\left(A B\right)^\dagger = B^\dagger A^\dagger
+%	\end{equation}
+%	Answer: \\
+%	\begin{equation}\label{eqn:4.22}
+%	\left(\psi_a, \hat{A}\hat{B}\psi_b\right) = \left(\left(  \hat{A}\hat{B}\right)^\dagger\psi_a, \psi_b \right)
+%	\end{equation}
+%	Also
+%	\begin{equation}\label{eqn:4.23}
+%	\left(\psi_a, \hat{A}\hat{B}\psi_b\right) = \left(  \hat{A}^\dagger\psi_a, \hat{B}\psi_b \right) = \left(  \hat{B}^\dagger\hat{A}^\dagger\psi_a, \psi_b \right)
+%	\end{equation}
+%	Comparing these equation (equation \ref{eqn:4.22} and \ref{eqn:4.23}) we get,
+%	\begin{equation}\label{eqn:4.24}
+%	\left(\hat{A}\hat{B}\right)^\dagger = \hat{B}^\dagger \hat{A}^\dagger
+%	\end{equation}
+%\end{enumerate}
+%\section{Inverse operator}
+%An operator $\hat{B}$ is said to be the inverse of $\hat{A}$ if
+%\begin{equation}\label{eqn:4.25}
+%\hat{A}\hat{B} = \hat{B}\hat{A} = \hat{\mathbb{I}}
+%\end{equation}
+%Obviously, if $\hat{B}$ is the inverse of $\hat{A}$, then $\hat{A}$ is the inverse of $\hat{B}$. We write
+%\begin{equation}\label{eqn:4.26}
+%\hat{B} = \hat{A} ^{-1}
+%\end{equation}
+%or
+%\begin{equation}\label{eqn:4.27}
+%\hat{A} = \hat{B} ^{-1}
+%\end{equation}
+%If equation \ref{eqn:4.25} is satisfied.
+%
+%\section{Unitary operator}
+%An operator $\hat{U}$ is said to be unitary if
+%\begin{equation}
+%\hat{U} \hat{U^\dagger} = \hat{U^\dagger} \hat{U} = \hat{\mathbb{I}}
+%\end{equation}
+%i.e., if
+%\begin{equation}
+%\hat{U^\dagger} = \hat{U}^{-1}
+%\end{equation}
+%Thus, for a unitary operator, its adjoint is $@@@@@@@@@@@@@@@@$
+%
+%\section{Function of Operators}
+%

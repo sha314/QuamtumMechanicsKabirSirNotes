@@ -1,0 +1,420 @@
+
+%\setcounter{chapter}{3}
+
+
+\begin{Large}
+\noindent
+{\bf Lecture 3 \newline
+Linear Vector Space 2}
+\end{Large}
+\vspace{1 cm}
+
+
+
+
+
+\section{Operators in a Hilbert space}
+
+An operator $\hat{A}$ is a prescription by which every vector $\psi_a$ in a Hilbert space $H$ is associated with another vector $\psi_b$ in the space:
+\be
+ \hat{A}:\psi_a \rightarrow \psi_b 
+\ee
+for $\psi_a, \psi_b \in H$. We usually employ the notation
+\be
+\psi_b = \hat{A}\psi_a. 
+\ee
+In Dirac notation, we write
+\be
+\ket{b} = \hat{A}\ket{a} 
+\ee
+where both $\ket{a}$ and $\ket{b}$ belong in the ket space i.e., the Hilbert space $H$.
+
+\paragraph{}
+
+An operator can also act on a bra vector (bra-space is also a Hilbert space; it is dual to the ket space) changing it to another bra-vector. The notation we employ is
+\be
+\bra{\psi} = \bra{\phi}\hat{A}.
+\ee
+Here the operator $\hat{A}$ acts on the bra-vector $\bra{\phi}$ to produce the bra vector $\bra{\psi}$. We place the bra-vector on which the operator acts on the left of the operator.
+
+
+
+\subsection{Linear operators}
+An operator $\hat{A}$ is said to be a linear operator if it has the following property: For any vectors $\ket{a}$ and $\ket{b}$ and any complex number $\lambda_1$ and $\lambda_2$, we have
+\be
+\hat{A} (\lambda_1\ket{a} + \lambda_2\ket{b}) = \lambda_1 \hat{A} \ket{a} + \lambda_2\hat{A}\ket{b}.
+\ee
+A linear operator can act on a bra vector also.
+\be
+(\lambda_1\bra{a} + \lambda_2\bra{b}) \hat{A} = \lambda_1 \bra{a} \hat{A} + \lambda_2\bra{b} \hat{A}.
+\ee
+The operator $\hat{A}$ is antilinear if
+\be
+\hat{A} (\lambda_1\ket{a} + \lambda_2\ket{b}) = \lambda_1^\ast \hat{A} \ket{a} + \lambda_2^\ast \hat{A} \ket{b}.
+\ee
+Two operators $\hat{A}$ and $\hat{B}$ are equal if
+\be
+\hat{A} \ket{\psi} = \hat{B} \ket{\psi}
+\ee
+for all $\ket{\psi}$ in the vector space.
+
+\vspace{3mm}
+Sum of two operators $\hat{A}$ and $\hat{B}$ is defined as
+\be
+(\hat{A} + \hat{B})\ket{\psi} = \hat{A}|\ket{\psi} + \hat{B} \ket{\psi}.
+\ee
+
+\vspace{3mm}
+Product of two operators $\hat{A}$ and $\hat{B}$ is defined as
+\be
+(\hat{A}\hat{B})\ket{\psi} = \hat{A}(\hat{B}\ket{\psi}).
+\ee
+This equation says that the operator $\hat{A}\hat{B}$ acting on $\ket{\psi}$ produces the same vector which would be obtained if we first let $\hat{B}$ 
+act on $\ket{\psi}$ and then $\hat{A}$ acts on the result of the previous operation. In general 
+$\hat{A}\hat{B} \neq \hat{B}\hat{A}$, although in exceptional cases we may have $\hat{A}\hat{B} = \hat{B}\hat{A}$.
+
+
+
+\subsection{Commutator of two operators}
+
+The commutator of two operators $\hat{A}$ and $\hat{B}$ is defined as
+\be
+[\hat{A},\hat{B}] \stackrel{def}{\equiv} \hat{A}\hat{B} - \hat{B}\hat{A}.
+\ee
+In general $[\hat{A},\hat{B}] \neq 0$ (null operator). If $[\hat{A},\hat{B}] = 0$, we say that $\hat{A}$ and $\hat{B}$ commute with each other.
+
+
+\subsection{Some properties of commutators}
+We now list some properties of commutators. These properties follow immediately from the definition of the commutator.
+\be 
+[\hat{A},\hat{B}] = -[\hat{B},\hat{A}]. 
+\ee
+\be 
+[\hat{A},\lambda \hat{B}] = \lambda [\hat{A},\hat{B}]. 
+\ee
+\be 
+[\lambda \hat{A},\hat{B}] = \lambda [\hat{A},\hat{B}]. 
+\ee
+\be 
+[\hat{A},\hat{B}\hat{C}] = \hat{B}[\hat{A},\hat{C}] + [\hat{A},\hat{B}]\hat{C}.
+\ee
+\be 
+[\hat{A}\hat{B},\hat{C}] = \hat{A}[\hat{B},\hat{C}] + [\hat{A},\hat{C}]\hat{B} 
+\ee
+
+
+
+
+
+
+
+
+\section{Projection operator}
+\textit{(an important example of a linear operator)}
+
+Consider the operator $\hat{P}_a$ defined as
+\be
+\hat{P}_a = \ket{a}\bra{a}
+\ee
+where $\braket{a}{a}=1$.
+Operating by $\hat{P}_a$ on an arbitrary ket $\ket{\psi}$, we have
+\be
+\hat{P}_a \ket{\psi} = \ket{a}\braket{a}{\psi}
+\ee
+i.e, $\hat{P}_a$ projects the ket $\ket{\psi}$ along $\ket{a}$. The complex number $\braket{a}{\psi}$ is called 
+the component of $\ket{\psi}$ along $\ket{a}$.
+Now, $\hat{P}_a$ is a linear operator. To show this consider
+\begin{eqnarray*}
+\hat{P}_a \left( \lambda_1|\psi_1\rangle + \lambda_2|\psi_2\rangle \right)&= & 
+   |a\rangle\langle a|\left(\lambda_1|\psi_1\rangle + \lambda_2|\psi_2\rangle \right)\\
+	&=& \lambda_1 |a\rangle \langle a|\psi_1\rangle  + \lambda_2 |a\rangle \langle a|\psi_2 \rangle \\
+	&=& \lambda_1 \hat{P}_a|\psi_1\rangle + \lambda_2 \hat{P}_a|\psi_2\rangle.
+\end{eqnarray*}
+Another important property of the projection operator is
+\be
+\hat{P}_{a}^{2} = \hat{P}_a
+\ee
+To prove this allow $\hat{P}_{a}^{2}$ to act on a ket.
+\begin{eqnarray*}
+ \hat{P}_{a}^{2} \ket{\psi} &=& \hat{P}_a \hat{P}_a \ket{\psi}  \\
+                            &=& \hat{P}_a \ket{a}\braket{a}{\psi}  \\
+                            &=& \ket{a} \braket{a}{a} \braket{a}{\psi}  \\
+                            &=& \ket{a} \braket{a}{\psi}  \\
+                            &=& \hat{P}_a \ket{\psi}.
+\end{eqnarray*}
+
+
+
+\vspace{5 mm}
+\underline{\textbf{Ex.}} ~Six operators are defined as follows:
+
+\begin{equation*}
+ \hspace{1 mm} \hat{A}_1 \psi (x) = [\psi (x)]^2      \hspace{10 mm}                  \hat{A}_4 \psi (x) = x^2 \psi (x)    
+\end{equation*}
+\begin{equation*}
+\hat{A}_2 \psi (x) = \frac{d}{dx}\psi (x)       \hspace{11.5 mm}         \hat{A}_5 \psi (x) = \sin[\psi (x)] 
+\end{equation*}
+\begin{equation*}
+\hat{A}_3 \psi (x) = \int_a^x \psi (x^\prime)dx^\prime  \hspace{6 mm} \hat{A}_6 \psi (x) = \frac{d^2}{dx^2} \psi (x).
+\end{equation*}
+Which of the operators $\hat{A}_i$ are linear operators?
+
+
+\section{Representation of vectors and operators}
+\subsection{Matrix representation of kets}
+
+Let $\{\phi_i\}$ be a complete orthonormal basis set in a Hilbert space. Since the basis is orthonormal, we must have
+$$(\phi_i,\phi_j) = \delta_{ij}.$$
+An arbitrary vector $\psi_a$ can be written as a linear combination of the basis vectors.
+We write
+\be
+\psi_a = \sum_{i}a_i \phi_i
+\ee
+where the scalars $a_i$ are the components of the vector $\psi_a$ along the basis vectors $\phi_i$. Using the orthonormality of the basis vectors we immediately have
+\be
+a_i = (\phi_i, \psi_a) .
+\ee
+
+\paragraph{}
+We can arrange these numbers as a column matrix:
+\[
+\begin{pmatrix}
+a_1 \\ a_2 \\ \vdots\end{pmatrix} = \begin{pmatrix} (\phi_1,\psi_a) \\ (\phi_2,\psi_a) \\ \vdots \end{pmatrix}.
+\]
+This column matrix is called the representation of the vector $\psi_a$ with respect to the given basis $\{\phi_i\}$. In Dirac notation we represent the vector $\psi_a$ as $\ket{a}$ and the basis vectors $\phi_i$ are written as $\ket{i}$. We can expand a general ket $\ket{a}$ as a linear combination of the basis kets:
+\be
+|a\rangle = \sum_{i=1}^{\infty} a_i |i\rangle.
+\label{eq:keta}
+\ee
+Orthonormality of the basis kets can be written as
+\be
+\langle i |j \rangle = \delta_{ij} \label{eq:ortho}
+\ee
+The complex scalars $a_i$ are called the components of the ket $\ket{a}$ along the basis kets $\ket{i}$. Using the orthonormality condition of the basis vectors (Eq. \ref{eq:ortho}), we have
+\be
+a_i = \langle i|a \rangle.
+\label{eq:ai}
+\ee
+These scalars $a_1, a_2, \ldots ,$ arranged as a column matrix is called the representation of $\ket{a}$ in the basis
+ $\{ |i\rangle, i=1,2,... \}$.
+Thus
+\be
+ |a\rangle \rightarrow \begin{pmatrix}
+a_1\\a_2\\ \vdots
+\end{pmatrix} \equiv \begin{pmatrix}
+\langle 1|a\rangle \\ \langle 2|a\rangle \\  \vdots
+\end{pmatrix}. 
+\ee
+
+\paragraph{}
+We can write down the representation of any one of the basis vectors in the same basis as
+\be
+|1\rangle \rightarrow \begin{pmatrix}
+1\\  0\\ 0\\  \vdots
+\end{pmatrix} \quad |2\rangle \rightarrow \begin{pmatrix}
+0\\1\\0\\ \vdots
+\end{pmatrix} \quad |3\rangle \rightarrow \begin{pmatrix}
+0\\0\\1\\ \vdots
+\end{pmatrix},
+\ee
+and so on.
+
+
+\paragraph{}
+Now, using Eq. (\ref{eq:ai}) in Eq. (\ref{eq:keta}) we have
+\begin{eqnarray}
+|a\rangle &=& \sum_i a_i \ket{i} \nonumber \\
+         &=& \sum_i \langle i|a\rangle |i\rangle \nonumber  \\
+         &=& \sum_i |i\rangle \langle i|a\rangle \nonumber \\
+         &=& \left( \sum_i \hat{P}_i\right) |a\rangle \label{eq:projection}
+\end{eqnarray}
+where
+\be
+\hat{P}_i = |i\rangle \langle i|
+\ee
+is the projection operator along $\ket{i}$. Since Eq. (\ref{eq:projection}) is true for \underline{all} $\ket{a}$ in the 
+vector space (this is because $\{\ket{i}\}$ for a complete set), we must have
+
+\be
+\sum_i \hat{P}_i = \sum_i |i\rangle \langle i|  = \hat{I} \label{eq:completeness}
+\ee
+where $\hat{I}$ is the identity operator. Eq. (\ref{eq:completeness}) is called the completeness condition for the basis vectors.
+
+
+
+% Done so far
+
+
+\subsection{Matrix representation of bra vectors}
+
+The ket vector $\ket{a}$ is represented by a column matrix 
+\[
+\begin{pmatrix}
+a_1\\a_2\\.\\.\\.
+\end{pmatrix}=\begin{pmatrix}
+\langle 1 |a\rangle\\ \langle 2 |a\rangle  \\.\\.\\.
+\end{pmatrix}
+\]
+in the basis $\{\ket{i}\}$. The dual of ket $\ket{a}$ is the bra $\bra{a}$. What is the matrix representation of the bra $\bra{a}$ in the same basis? To see this we can expand $\langle a|$ as
+\be
+\langle a|= \sum_i \langle a|i\rangle \langle i|.
+\ee
+The bra $\langle a|$ is represented by a row vector:
+\begin{eqnarray}
+\langle a| &\rightarrow &  \begin{pmatrix}
+\langle a|1\rangle & \langle a|2\rangle & \ldots
+\end{pmatrix} \nonumber \\
+ &=& \begin{pmatrix}
+a_1^* & a_2^* & \ldots \end{pmatrix}. 
+\end{eqnarray}
+Then the scalar product $\langle a|a\rangle$ becomes a real number:
+\begin{eqnarray}
+\langle a|a\rangle &=& \begin{pmatrix}
+a_1^* & a_2^* & \ldots
+\end{pmatrix} \begin{pmatrix}
+a_1\\a_2\\ \vdots
+\end{pmatrix} \nonumber \\
+ &=& a_1^*a_1 + a_2^*a_2 + \cdots \nonumber \\
+ &=& \sum_i a_i^* a_i \nonumber \\
+ &=& \sum_i |a_i|^2\;\;\; \text{ (real number).} 
+\end{eqnarray}
+
+
+\paragraph{}
+In general the scalar product $\langle b|a\rangle$ is
+\begin{eqnarray}
+\langle b|a\rangle &=& \sum_i \langle b|i\rangle \langle i|a \rangle \nonumber \\
+&=& \begin{pmatrix} \langle b|1\rangle & \langle b|2\rangle & \ldots \end{pmatrix}
+     \begin{pmatrix} \langle 1|a\rangle \\ \langle 2|a\rangle \\ \vdots \end{pmatrix} \nonumber \\
+&=& 	\begin{pmatrix} b_1^* & b_2^* & \ldots \end{pmatrix}
+     \begin{pmatrix} a_1 \\ a_2 \\ \vdots \end{pmatrix} \nonumber \\	
+&=& \sum_i b_i^*a_i \;\;\; \text{(complex number)}.
+\end{eqnarray}		
+
+
+%done so far
+
+
+\subsection{Representation of operators}
+
+Consider the equation
+\be
+|b\rangle = \hat{A}|a\rangle.
+\label{eq:eq}
+\ee
+Let $\{ |i\rangle, i=1,2,...\}$ be a complete set of orthonormal basis states. Taking the component of 
+Eq. (\ref{eq:eq}) along $\ket{i}$, we have
+\begin{eqnarray}
+\langle i |b\rangle  &=& \langle i|\hat{A}|a\rangle \nonumber \\
+ &=& \sum_j \langle i|\hat{A}|j\rangle \langle j|a\rangle. 
+\end{eqnarray}
+In matrix notation
+\be
+b_i = \sum_j A_{ij}a_j
+\label{eq:matrix}
+\ee
+where
+\begin{eqnarray*}
+b_i &=& \langle i|b\rangle \\
+a_j &=& \langle j|a\rangle \\
+A_{ij} &=& \langle i|\hat{A}|j\rangle
+\end{eqnarray*}
+Writing in full, Eq. (\ref{eq:matrix}) becomes
+\be
+\begin{pmatrix}
+b_1\\b_2\\.\\.\\.
+\end{pmatrix} = \begin{pmatrix}
+\mqty{A_{11}\\A_{21}\\.\\.\\.} & \mqty{A_{12}\\A_{22}\\.\\.\\.} & \mqty{.\\.\\.\\.\\.} & \mqty{.\\.\\.\\.\\.} & \mqty{.\\.\\.\\.\\.}
+\end{pmatrix} \begin{pmatrix}
+\mqty{a_1\\a_2\\.\\.\\.}
+\end{pmatrix} 
+\ee
+The matrix $[A]$ with elements $A_{ij} = \bra{i}\hat{A}\ket{j}$ is called the matrix representation of the operator $\hat{A}$ with respect to the given basis $\{|i\rangle\}$. Using a basis set, the operator $\hat{A}$ can also be written as
+\begin{eqnarray}
+\hat{A} &=& \hat{I}\hat{A}\hat{I} \nonumber \\
+&=& \left( \sum_i |i\rangle \langle i|\right)\hat{A} \left( \sum_j |j\rangle \langle j| \right) \nonumber \\
+&=& \sum_{i,j} |i\rangle \langle i|\hat{A}|j\rangle \langle j| \nonumber \\
+&=& \sum_{i,j} |i\rangle A_{ij}\langle j|
+\end{eqnarray}
+
+
+\subsection{Matrix representation of the sum and product of two operators}
+
+\subsubsection{Sum of two operators:}
+Let \[ \hat{C}=\hat{A}+\hat{B} \]
+Then the matrix representation of $\hat{C}$ is
+\begin{eqnarray}
+C_{ij} &=& \langle i|\hat{C}|j\rangle \nonumber \\
+&=& \langle i|\hat{A}+\hat{B}|j\rangle \nonumber \\
+&=& \langle i|\hat{A}|j\rangle + \langle i|\hat{B}|j\rangle \nonumber \\
+&=& A_{ij}+B_{ij}.
+\end{eqnarray}
+
+\subsubsection{Product of two operators:}
+Next, suppose 
+\[ \hat{C}=\hat{A}\hat{B}. \] 
+The matrix  representation of $\hat{C}$ is then
+\begin{eqnarray}
+C_{ij} &=& \langle i|\hat{C}|j\rangle \nonumber \\
+&=& \langle i|\hat{A}\hat{B}|j\rangle \nonumber \\
+&=& \langle i|\hat{A} \hat{I}\hat{B}|j\rangle \nonumber \\
+&=& \sum_k \langle i|\hat{A}|k\rangle \langle k|\hat{B}|j\rangle \nonumber \\
+&=& \sum_k A_{ik}B_{kj}.
+\end{eqnarray}
+In full matrix form we can write
+\be
+\left[C\right] = \left[A\right] \left[B\right]
+\ee
+where
+\be
+[A] = \begin{pmatrix}
+\mqty{ \langle 1|\hat{A}|1\rangle\\ \langle 2|\hat{A}|1\rangle\\.\\.\\.} & 
+\mqty{ \langle 1|\hat{A}|2\rangle\\\langle 2|\hat{A}|2\rangle\\.\\.\\.} & 
+\mqty{.\\.\\.\\.\\.} & \mqty{.\\.\\.\\.\\.} & \mqty{.\\.\\.\\.\\.}
+\end{pmatrix}
+\ee
+and similarly for $[B]$ and $[C]$. 
+This result shows that the matrix of an operator product is equal to the product of the matrices representing the operators, taken in the same order.
+
+
+\vspace{1mm}
+\noindent
+\underline{\textbf{Example}} \newline
+Using a basis set $\{|i\rangle \}$ write down $\langle b|\hat{A}|a\rangle$ as a matrix product.
+
+\vspace{1mm}
+
+\noindent \underline{\textbf{Ans}} 
+\begin{eqnarray}
+\langle b|\hat{A}|a\rangle &=& \sum_{i,j} \langle b|i\rangle \langle i|\hat{A}|j\rangle\langle j|a\rangle \nonumber \\
+&=& \sum_{i,j}b_i^*A_{ij}a_j \nonumber \\
+&=& [b]^{\dag}[A][a].
+\end{eqnarray}
+where $[b]^{\dag}$ is the matrix representation of $\langle b|$, i.e.,
+\be
+[b]^{\dag} = \begin{pmatrix} b_1^* & b_2^* & \ldots \end{pmatrix},
+\ee
+$[A]$ is the matrix representation of the operator $\hat{A}$:
+\be
+[A] = \begin{pmatrix}
+\mqty{A_{11}\\A_{21}\\.\\.\\.} & \mqty{A_{12}\\A_{22}\\.\\.\\.} & \mqty{.\\.\\.\\.\\.} & \mqty{.\\.\\.\\.\\.} & \mqty{.\\.\\.\\.\\.}
+\end{pmatrix}
+\ee
+and $[a]$ is the matrix representation of the ket $\ket{a}$
+\be
+[a] = \begin{pmatrix}
+\mqty{a_1\\a_2\\.\\.\\.}
+\end{pmatrix}
+\ee
+
+Writing in full, we have
+\be
+\langle b|\hat{A}|a\rangle = \begin{pmatrix}
+\mqty{b_1^\ast} & \mqty{b_2^\ast} & \mqty{.} & \mqty{.} & \mqty{.}
+\end{pmatrix} \begin{pmatrix}
+\mqty{A_{11}\\A_{21}\\.\\.\\.} & \mqty{A_{12}\\A_{22}\\.\\.\\.} & \mqty{.\\.\\.\\.\\.} & \mqty{.\\.\\.\\.\\.} & 
+\mqty{.\\.\\.\\.\\.}
+\end{pmatrix} \begin{pmatrix}
+\mqty{a_1\\a_2\\.\\.\\.}
+\end{pmatrix}.
+\ee

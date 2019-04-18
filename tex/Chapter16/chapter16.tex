@@ -1,1 +1,588 @@
 \chapter{sheet-16 : Angular Momentum 1}
+
+
+%%% defining graphics path
+\ifpdf
+\graphicspath{{Chapter16/figs/}}
+\else
+\graphicspath{{Chapter16/figs/}}
+\fi
+
+
+\setcounter{chapter}{16}
+\noindent
+\begin{Large}
+	{\bf Lecture 16 \newline
+		Angular Momentum 1}
+\end{Large}
+
+
+\vspace{5 mm}
+We know the important role played by angular momentum in classical mechanics. The total angular momentum of an  
+isolated physical system is a constant of motion. Furthermore, this is also true in certain cases in which the system
+is not isolated. For example, if a point particle P, of mass $m$, is moving in a central potential (one which depends only on 
+the distance between P and a fixed point O), the force to which P is subjected is always directed towards O. The torque about O is 
+consequently zero, and the angular momentum theorem implies that
+\be
+\frac{d\vec{L}}{dt} = 0 \,,
+\ee
+where $\vec{L}$ is the angular momentum of P with respect to O. This fact has important consequences: the motion of the
+particle P is confined to a fixed plane passing through the origin O and perpendicular to the angular momentum
+vector $\vec{L}$. Moreover, this motion obeys the law of constant aerial velocity (Kepler's second law).
+
+\paragraph{}
+All these properties have their equivalents in quantum mechanics. With the angular momentum $\vec{L}$ of a 
+classical system is associated an observable $\hat{\vec{L}}$, actually a set of three observables $\hat{L}_x$,
+$\hat{L}_y$ and $\hat{L}_z$, which corresponds to the three components of $\vec{L}$ in a Cartesian frame.  If the
+physical system under consideration is a point particle moving under a central potential, then $\hat{L}_x$,
+$\hat{L}_y$ and $\hat{L}_z$ are constants of motion in the quantum mechanical sense, that is they commute with
+the Hamiltonian $\hat{H}$ describing the particle in the central potential $V(r)$.
+
+\paragraph{}
+We shall denote by the term {\underline {orbital angular momentum}} any angular momentum which has a classical analog and
+$\hat{\vec{L}}$ will denote the corresponding observable. {\underline{Spin angular momentum}} will denote the
+intrinsic angular momentum of an elementary particle. In a complex system, such as an atom, a nucleus or a molecule, the orbital
+angular momenta $\hat{\vec{L}}_i$ of the various elementary particles of the system combine with each other and with the 
+spin angular momenta $\hat{\vec{S}}_i$ of these same particles to form the {\underline {total angular momentum}}
+$\hat{\vec{J}}$ of the system.
+
+\paragraph{}
+Finally, let us add that $\hat{\vec{J}}$ will also be used to denote an arbitrary angular momentum, when it is
+not necessary to specify whether we are dealing with an orbital angular momentum, a spin, or a combination of several angular
+momenta.
+
+
+\section{Commutation Relations of Angular Momentum Operators}
+In classical mechanics, the orbital angular momentum of a particle is defined as
+\be
+\vec{L} = \vec{r} \times \vec{p} \, . 
+\ee
+The corresponding operator $\hat{\vec{L}}$ in quantum mechanics is obtained by replacing $\vec r$ and $\vec p$ by their corresponding
+operators $\hat{\vec{r}}$ and $\hat{\vec{p}}$. Thus
+\be
+\hat{\vec{L}} = \hat{\vec{r}} \times \hat{\vec{p}}\, ,
+\ee
+i.e.,
+\begin{eqnarray}
+\hat{L}_x & = & \hat{y}\hat{p}_z - \hat{z}\hat{p}_y \nonumber \\
+\hat{L}_y & = & \hat{z}\hat{p}_x - \hat{x}\hat{p}_z   \label{eq:l}        \\
+\hat{L}_z & = & \hat{x}\hat{p}_y - \hat{y}\hat{p}_x\, . \nonumber 
+\end{eqnarray}
+In the coordinate representation, the position operators are just multiplicative operators and 
+$\hat{\vec{p}} \rightarrow \, -i\hbar\vec{\nabla}$. Therefore, in the coordinate representation, we get
+\begin{eqnarray}
+\hat{L}_x & = & -i\hbar \left(y \frac{\partial}{\partial z} - z \frac{\partial}{\partial y} \right) \nonumber \\
+\hat{L}_y & = & -i\hbar \left(z \frac{\partial}{\partial x} - x \frac{\partial}{\partial z} \right)           \\
+\hat{L}_z & = & -i\hbar \left(x \frac{\partial}{\partial y} - y \frac{\partial}{\partial x} \right)\, . \nonumber \\ 
+\end{eqnarray}
+Equation (\ref{eq:l}) can be compactly written as
+\be
+\hat{L}_i  = \epsilon_{ijk}\hat{x}_j\hat{p}_k; \, i=1,2,3
+\ee
+where repeated indices are summed and $\epsilon_{ijk}$ is defined as
+\be
+\epsilon_{ijk} = \left \{ \begin{array}{rl}
+	1 & {\rm if\; ijk\; is\; an\; even\; permutation\; of\; 123} \\
+	-1 & {\rm if\; ijk\; is\; an\; odd\; permutation\; of\; 123} \\
+	0 & {\rm otherwise}.
+\end{array} \right.
+\ee			
+
+\paragraph{}
+Now, we have the fundamental	commutation relations between the position operators and their conjugate momentum operators:			
+\be 
+[\hat{x}_i,\hat{x}_j]= [\hat{p}_i,\hat{p}_j]=	0, \quad [\hat{x}_i,\hat{p}_j]=	i\hbar \delta_{ij}\, .
+\ee
+Using the fundamental commutation relations, we can work out the commutation relations between the components of the angular
+momentum operator. We obtain\, .
+\be
+[\hat{L}_i,\hat{L}_j]=i\hbar \epsilon_{ijk}\hat{L}_k\, .
+\label{eq:cr}
+\ee
+Equation (\ref{eq:cr}) can be written in a more elaborate form as
+\be
+[\hat{L}_x,\hat{L}_y] = i\hbar \hat{L}_z, \quad [\hat{L}_y,\hat{L}_z] = i\hbar \hat{L}_x,\quad [\hat{L}_z,\hat{L}_x] = i\hbar \hat{L}_y
+\label{eq:cr2}
+\ee
+The commutation relations (\ref{eq:cr}) and (\ref{eq:cr2}) can also be written in the following alternative form:
+\be
+\hat{\vec{L}} \times \hat{\vec{L}} = i \hbar \hat{\vec{L}}\, .
+\label{eq:cr3}
+\ee
+Next, we can also easily prove
+\be
+[\hat{L}_i,\hat{x}_j]=i\hbar\epsilon_{ijk}\hat{x}_k
+\ee
+and
+\be
+[\hat{L}_i,\hat{p}_j]=i\hbar\epsilon_{ijk}\hat{p}_k\, .
+\ee
+
+
+\paragraph{}
+Now, we define the operator corresponding to the square of the angular momentum as
+\be
+\hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2 \, .
+\ee
+It can be shown that $\hat{L}^2$ commutes with all the components $\hat{L}_x$, $\hat{L}_y$ and $\hat{L}_z$, i.e.,
+\be
+[\hat{L}^2,\hat{L}_i]=0; \; i=1,2,3
+\ee
+i.e.,
+\be
+[\hat{L}^2,\hat{\vec{L}}]=0 \, .
+\ee
+As will be shown later, the commutation relations between the components of the angular momentum operator determine the
+quantum properties of angular momentum. That is, eigenvalues and eigenvectors of the angular momentum operators are completely determined by the commutation relations and the general properties of the Hilbert space. Therefore, the commutation relations themselves are
+taken as the definition of angular momentum operators in quantum mechanics.
+
+
+
+\section{Definition of Angular Momentum Operators}
+A vector operator $\hat{\vec{J}}$ having three components $\hat{J}_x$, $\hat{J}_y$ and $\hat{J}_z$ is called an
+angular momentum operator if the components are observables (and hence Hermitian) and obey the commutation relations
+\be
+[\hat{J}_x,\hat{J}_y]  =  i\hbar\hat{J}_z, \quad [\hat{J}_y,\hat{J}_z]  =  i\hbar\hat{J}_x, \quad
+[\hat{J}_z,\hat{J}_x]  =  i\hbar\hat{J}_y \, .
+\label{eq:cr4}
+\ee
+This definition enables us to treat entities which have no classical analog, such as spin, on the same footing as
+orbital angular momentum.
+
+\subsection{Square of Angular Momentum}
+We introduce the operator
+\be
+\hat{J}^2 = \hat{J}_x^2 + \hat{J}_y^2 + \hat{J}_z^2\, ,
+\ee
+the square of the angular momentum operator $\hat{\vec{J}}$. This operator is Hermitian
+since $\hat{J}_x$, $\hat{J}_y$ and $\hat{J}_z$ are Hermitian. Using Eqs. (\ref{eq:cr4}) we can show that
+\be
+[\hat{J}^2,\hat{\vec{J}}\,]=0\, 
+\ee
+i.e., the square of the angular momentum operator commutes with any of the three operators corresponding to the three
+components.
+
+\paragraph{}
+Angular momentum theory in quantum mechanics is founded entirely on the commutation relations (\ref{eq:cr4}). Note that, the commutation 
+relations imply that it is impossible to have a state in which the three components of an angular momentum operator have 
+definite values, i.e., they are incompatible observables. However, $\hat{J}^2$ and any component of $\hat{\vec{J}}$
+are compatible.
+
+\subsection{Angular Momentum of a System of Particles}
+Let us consider a system of particles. The particles are labeled by Greek indices; $\alpha, \beta = 1,2, 3, \cdots, N$, where
+$N$ is the number of particles of the system. The angular momentum operators referring to different particles
+commute, i.e., 
+\be
+[\hat{\vec{J}}_{\alpha}, \hat{\vec{J}}_{\beta}] = 0 , \;\;\; \alpha \neq \beta;
+\ee
+where $\alpha$ and $\beta$ refer to particles. The operator corresponding to the total angular momentum of the system of
+particles is given by 
+\be
+\hat{\vec{J}} = \sum_{\alpha =1}^{N}\hat{\vec{J}}_{\alpha}\, .
+\ee
+It is easy to verify that $\hat{\vec{J}}$ is an angular momentum operator. We proceed as follows:
+\begin{eqnarray} 
+\hat{\vec{J}} \times \hat{\vec{J}} & = & \sum_{\alpha}\sum_{\beta}\left( \hat{\vec{J}}_{\alpha}\times \hat{\vec{J}}_{\beta} \right)\nonumber \\
+& = & \sum_{\alpha}\sum_{\beta} i\hbar \hat{\vec{J}}_{\alpha}\delta_{\alpha \beta} \nonumber \\
+& = & \sum_{\alpha} i \hbar \hat{\vec{J}}_{\alpha} \nonumber \\
+&= & i \hbar \hat{\vec{J}}\, , 
+\end{eqnarray}
+i.e., $\hat{\vec{J}}$ is indeed an angular momentum operator.																	
+
+
+
+\section{Eigenvalue Spectrum of $\hat{J}^2$ and $\hat{J}_z$}
+The components of angular momentum operator do not commute with each other; therefore, they do not have simultaneous eigenvectors.
+In other words, we cannot find a basis set for which all the components of the angular momentum operator are diagonal.
+However, since $\hat{J}^2$ commutes with $\hat{\vec{J}}$, we can find simultaneous eigenvectors for $\hat{J}^2$ and any one
+of the components, say $\hat{J}_z$. Let $|\lambda m\rangle$ be such an eigenvector such that
+\be
+\hat{J}^2 |\lambda m\rangle = \lambda \hbar^2 |\lambda m \rangle 
+\ee 
+\be
+\hat{J}_z |\lambda m\rangle = m \hbar |\lambda m \rangle .
+\ee 
+Here $\lambda$ labels the eigenvalues of $\hat{J}^2$ and $m$ those of $\hat{J}_z$. Now $\hat{J}^2 = \hat{J}_x^2 +
+\hat{J}_y^2 + \hat{J}_z^2$, being the sum of squares of Hermitian operators, is positive semi-definite, i.e., the eigenvalues
+$\lambda$ of $\hat{J}^2$ are non-negative:
+\be
+\lambda = \frac{ \langle \lambda m|\hat{J}^2|\lambda m \rangle}{\hbar^2} \geq 0\, .
+\ee
+Furthermore,
+\be
+\langle \lambda m|\hat{J}^2|\lambda m \rangle \equiv \langle \hat{J}^2 \rangle = \langle \hat{J}_x^2 \rangle 
++ \langle \hat{J}_y^2 \rangle + \langle \hat{J}_z^2 \rangle \geq \langle \hat{J}_z^2 \rangle 
+\ee
+i.e.,
+\be
+\lambda \geq m^2\, .
+\label{eq:in}
+\ee
+It is convenient at this stage to introduce two non-Hermitian operators $\hat{J}_{+}$ and $\hat{J}_{-}$ defined by
+\be
+\hat{J}_{\pm} = \hat{J}_x \pm i \hat{J}_y \, . 
+\ee
+We can now derive the following commutation relations involving $\hat{J}_{\pm}$:
+\be 
+[\hat{J}^2,\hat{J}_{\pm}]=0 \quad {\rm and}\quad  [\hat{J}_z,\hat{J}_{\pm}] = \pm \hbar \hat{J}_{\pm} \, .
+\label{eq:cr6}
+\ee
+Furthermore, we also have the following useful relations:
+\be
+\hat{J}_{-}\hat{J}_{+} = \hat{J}^2-\hat{J}_z^2-\hbar \hat{J}_z
+\ee
+and
+\be
+\hat{J}_{+}\hat{J}_{-} = \hat{J}^2-\hat{J}_z^2+\hbar \hat{J}_z\, .
+\ee
+Now, since $\hat{J}^2$ commutes with both $\hat{J}_{+}$ and $\hat{J}_{-}$, it follows immediately that
+\be
+\hat{J}^2 \left( \hat{J}_{\pm}|\lambda m\rangle \right) = \lambda \hbar^2 \left( \hat{J}_{\pm}|\lambda m\rangle \right)\, ,
+\ee
+that is, if $|\lambda m\rangle$ is an eigenket of $\hat{J}^2$ with eigenvalue $\lambda \hbar^2$, then 
+$\hat{J}_{\pm}|\lambda m\rangle$ are also eigenvectors of $\hat{J}^2$ with the same eigenvalue.
+
+\paragraph{}
+
+Next, using the second of the commutation relations in Eq. (\ref{eq:cr6}), we obtain
+\begin{eqnarray}
+\hat{J}_z\left( \hat{J}_{\pm}|\lambda m\rangle \right) & = & (\hat{J}_{\pm}\hat{J}_z \pm \hbar \hat{J}_{\pm})|\lambda m\rangle
+\nonumber \\
+&= & (m\pm1)\hbar \left(\hat{J}_{\pm}|\lambda m\rangle \right)\, .
+\end{eqnarray}
+Thus, $\hat{J}_{\pm}|\lambda m\rangle$ are eigenvectors of $\hat{J}_z$ with eigenvalues $(m\pm 1)\hbar$. The operator 
+$\hat{J}_{+}$ is therefore called the raising operator, while $\hat{J}_{-}$ is called the lowering operator.
+
+\paragraph{}	
+Now, by successively applying the raising operator $\hat{J}_{+}$ on the state $|\lambda m\rangle$ we can increase the
+value of $m$ in steps of one, keeping $\lambda$ fixed. However, this process cannot go on indefinitely, for, otherwise, the inequality (\ref{eq:in}), 
+i.e., $\lambda \geq m^2$, will be violated. Thus, there exists a maximum value of $m$ for a given $\lambda$. Call this maximum value $j$. Similarly, 
+by successively applying $\hat{J}_{-}$ on the state $|\lambda m\rangle$ we can lower the value of $m$ in steps of one. Again this process cannot be continued indefinitely since we cannot violate the inequality (\ref{eq:in}). Therefore, we must have a minimum value of $m$. Call this minimum
+value $j^{\prime}$.
+
+\paragraph{}
+From the above discussions it is apparent that, starting from the ket $|\lambda j\rangle$, we can reach the ket $|\lambda j^{\prime}\rangle$ by successive application of the lowering operator $\hat{J}_{-}$. Thus, it follows that
+\be
+j-j^{\prime}={\rm positive\; integer\; or\; zero}.
+\label{eq:positiveinteger}
+\ee
+
+\paragraph{}
+Next, we will determine the values of $j$ and $j^{\prime}$ for a given $\lambda$. Since $j$ is the greatest value of $m$, application of the raising operator $\hat{J}_{+}$ to the eigenstate $|\lambda j\rangle$ should not lead to
+a new eigenket. We must therefore have
+\be
+\hat{J}_{+} |\lambda j\rangle = 0\, .
+\label{eq:j}
+\ee
+Similarly, since $j^{\prime}$ is the minimum value of $m$,
+\be 
+\hat{J}_{-}|\lambda j^{\prime}\rangle = 0 \, .
+\label{eq:jp}
+\ee
+As the next step we apply $\hat{J}_{-}$ on Eq. (\ref{eq:j}) to get
+\[ \hat{J}_{-}\hat{J}_{+} |\lambda j\rangle = 0 \, , \]
+i.e.,
+\[ \left( \hat{J}^2-\hat{J}_z^2 - \hbar\hat{J}_z\right)|\lambda j\rangle = 0 \, , \]
+or
+\be
+(\lambda-j^2-j)\hbar^2 |\lambda j\rangle = 0 \, .
+\ee
+Hence
+\[ \lambda - j^2-j =0\, , \]
+i.e.,
+\be
+\lambda = j(j+1) \, .
+\label{eq:lambda1}
+\ee
+
+\paragraph{}
+Similarly, by applying $\hat{J}_{+}$ on Eq. (\ref{eq:jp}), we obtain
+\[ \hat{J}_{+}\hat{J}_{-} |\lambda j^{\prime}\rangle = 0 \, , \]
+i.e.,
+\[ \left( \hat{J}^2-\hat{J}_z^2 + \hbar\hat{J}_z\right)|\lambda j^{\prime}\rangle = 0 \, , \]
+or
+\be
+(\lambda-j^{\prime 2}+j^{\prime})\hbar^2 |\lambda j^{\prime}\rangle = 0 \, .
+\ee
+Hence
+\[ \lambda - j^{\prime 2}+j^{\prime} =0\, , \]
+i.e.,
+\be
+\lambda = j^{\prime}(j^{\prime}-1) \, .
+\label{eq:lambda2}
+\ee
+Comparing Eqs. (\ref{eq:lambda1}) and (\ref{eq:lambda2}) we can write
+\[ j(j+1) = j^{\prime}(j^{\prime}-1) \, . \]
+Thus, either $j^{\prime}=-j$ or $j^{\prime}=j+1$. The second solution is meaningless since $j$ is the greatest value of $m$.
+Hence, the only possibility is that
+\be
+j^{\prime}=-j \, .
+\label{eq:jpeqminusj}
+\ee
+Using Eq. (\ref{eq:jpeqminusj}) in Eq. (\ref{eq:positiveinteger}) we obtain
+\[ 2j= {\rm positive\; integer\; or\; zero}, \]
+i.e.,
+\be
+\boxed{
+	j=0, \; \frac{1}{2},\;  1, \; \frac{3}{2},\; 2, \cdots .
+}
+\label{eq:possiblej}
+\ee
+In summary, we have shown that if $|\lambda m\rangle$ is a simultaneous eigenket of $\hat{J}^2$ and $\hat{J}_z$ with eigenvalues $\lambda \hbar^2$ and $m\hbar$, respectively, then $\lambda$ can be expressed as $j(j+1)$ and the possible values of $j$
+are given as in Eq. (\ref{eq:possiblej}). Furthermore, for a given $j$, $m$ can assume values from a maximum of $j$ to a minimum of $-j$ in steps of unity, i.e.,
+\be
+\boxed{
+	m=-j,\; -j+1,\; -j+2,\; \cdots , j-1,\; j.
+}
+\ee
+
+\paragraph{}
+It is customary to label the simultaneous eigenkets of $\hat{J}^2$ and $\hat{J}_z$ by $j$ and $m$ rather than by $\lambda$ 
+and $m$. Thus the eigenkets are written as $|jm\rangle$ and the eigenvalue equations are
+\be
+\hat{J}^2|jm\rangle = j(j+1)\hbar^2|jm\rangle \, ,
+\ee
+and
+\be
+\hat{J}_z|jm\rangle = m \hbar |jm\rangle\, . 
+\ee
+For a given $j$, there are $(2j+1)$ eigenkets with $m$ varying from $-j$ to $j$ in steps of one.
+
+\section{Matrix Elements of Angular Momentum Operators in the $|jm\rangle$ Basis}
+For a given value of $j$, we can form $(2j+1)$ linearly independent angular momentum states since $m$ can
+vary from $-j$ to $j$ in steps of 1, i.e.,
+\[ m=-j,\; -j+1,\; \cdots , j-1,\; j\, .\]
+Thus in the  basis $\{ |jm\rangle, \; (j\; {\rm fixed})\}$ all the operators will be $(2j+1)\times(2j+1)$ matrices.
+
+\paragraph{}
+The matrices for $\hat{J}^2$ and $\hat{J}_z$ will be diagonal, since the basis kets are simultaneous eigenkets of these two operators. Thus
+\be 
+\left( \hat{J}^2\right)_{mm^{\prime}}^{(j)} = \langle jm|\hat{J}^2|jm^{\prime}\rangle = j(j+1)\hbar^2\,\delta_{mm^{\prime}}
+\ee
+and
+\be
+\left( \hat{J}_z\right)_{mm^{\prime}}^{(j)} = \langle jm|\hat{J}_z|jm^{\prime}\rangle = m\hbar \, \delta_{mm^{\prime}}\, .
+\ee
+To find the matrices for $\hat{J}_x$ and $\hat{J}_y$, it is convenient to find the matrices for
+$\hat{J}_{+}$ and $\hat{J}_{-}$ first. To start, we note that
+\begin{equation*}
+\hat{J}_{+} |jm\rangle \propto |j\, m+1\rangle 
+\end{equation*}
+\begin{equation*}
+\hat{J}_{-} |jm\rangle \propto |j\, m-1\rangle
+\end{equation*}
+Therefore, we write
+\be
+\hat{J}_{+} |jm\rangle =c_{+} |j\, m+1\rangle 
+\label{eq:plus}
+\ee
+and
+\be
+\hat{J}_{-} |jm\rangle = c_{-} |j\, m-1\rangle 
+\label{eq:minus}
+\ee
+where the constants $c_+$ and $c_-$ are chosen so that all states $|jm\rangle$, $|jm+1\rangle$ and $|jm-1\rangle$
+are normalized. Now the adjoints of Eqs. (\ref{eq:plus}) and (\ref{eq:minus}) are written as
+\be
+\langle j\, m|\hat{J}_- = c_+^* \langle j\, m+1|
+\label{eq:plusadjoint}
+\ee
+and
+\be
+\langle j\, m|\hat{J}_+ = c_-^* \langle j\, m-1| \,,
+\label{eq:minusadjoint}
+\ee
+since
+\[ \hat{J}_+^{\dagger} =\hat{J}_- \quad {\rm and} \quad \hat{J}_-^{\dagger} =\hat{J}_+\, . \]
+Now, combining Eqs. (\ref{eq:plus}) and (\ref{eq:plusadjoint}) we have
+\[ \langle j\, m|\hat{J}_- \hat{J}_+ |j\, m\rangle = |c_+|^2 \langle j\, m+1|j\, m+1\rangle \, , \]
+or,
+\[ \langle j\, m|\hat{J}^2 - \hat{J}_z^2 - \hbar \hat{J}_z |j\, m\rangle = |c_+|^2 \langle j\, m+1|j\, m+1\rangle \, , \]
+or,
+\[ \hbar^2 \left( j(j+1)-m^2-m \right) \langle j\, m|j\, m \rangle = |c_+|^2 \langle j\, m+1|j\, m+1\rangle \, . \]
+Since the states $|j\,m\rangle$ and $|j\, m+1\rangle$ are normalized, we have
+\[ \hbar^2 \left( j(j+1)-m^2-m\right) = |c_+|^2 \, . \]
+If $c_+$ is taken to be real and positive, we have
+\[ c_+ = \sqrt{j(j+1)-m(m+1)}\, \hbar \]
+or,
+\be
+c_+ = \sqrt{(j-m)(j+m+1)}\, \hbar\, .
+\ee
+Similarly, combining eqs. (\ref{eq:minus}) and (\ref{eq:minusadjoint}) we have
+\[ \langle j\, m|\hat{J}_+ \hat{J}_-|j\, m\rangle = |c_-|^2 \langle j\, m-1|j\, m-1\rangle \, , \]
+or,
+\[ \langle j\, m|\hat{J}^2-\hat{J}_z^2 +\hbar \hat{J}_z|j\, m \rangle = |c_-|^2 \]
+or,
+\[ |c_-|^2 = \left( j(j+1)-m(m-1) \right) \hbar^2\, . \]
+Taking $c_-$ to be real and positive, we have
+\[ c_- = \sqrt{j(j+1)-m(m-1)}\,\, \hbar \, , \]
+or,
+\be
+c_-=\sqrt{(j+m)(j-m+1)}\,\, \hbar\, . 
+\ee
+
+
+Summarizing, we have shown
+\begin{eqnarray}
+\hat{J}_+ |j\, m\rangle &=& \sqrt{(j-m)(j+m+1)}\,\, \hbar |j\, m+1\rangle \label{eqnarray:1} \\ 
+\hat{J}_-|j\,m\rangle & = & \sqrt{(j+m)(j-m+1)}\,\, \hbar |j\, m-1\rangle \, .
+\label{eqnarray:2}
+\end{eqnarray}
+Note that
+\[ \hat{J}_+ |j\, j\rangle = 0 \]
+and
+\[ \hat{J}_-|j\, -j\rangle = 0 \, . \]
+Using Eqs. (\ref{eqnarray:1}) and (\ref{eqnarray:2}) we can find the matrix elements of $\hat{J}_+$ and $\hat{J}_-$ in the $|j\,m\rangle$ representation
+with a fixed value of $j$. Thus
+\begin{eqnarray}
+\left( \hat{J}_+\right)_{mm^{\prime}}^{(j)} & = & \langle j\, m|\hat{J}_+|j\, m^{\prime}\rangle \nonumber \\
+& = & \sqrt{(j-m^{\prime})(j+m^{\prime}+1)}\,\, \hbar \langle j\, m|j\, m^{\prime}+1 \rangle \nonumber \\
+& = & \sqrt{(j-m^{\prime})(j+m^{\prime}+1)}\,\, \hbar \, \delta_{m,\, m^{\prime}+1}\, .
+\end{eqnarray}	
+Similarly,
+\begin{eqnarray}
+\left( \hat{J}_-\right)_{mm^{\prime}}^{(j)} & = & \langle j\, m|\hat{J}_-|j\, m^{\prime}\rangle \nonumber \\
+& = & \sqrt{(j+m^{\prime})(j-m^{\prime}+1)}\,\, \hbar \langle j\, m|j\, m^{\prime}-1 \rangle \nonumber \\
+& = & \sqrt{(j+m^{\prime})(j-m^{\prime}+1)}\,\, \hbar \, \delta_{m,\, m^{\prime}-1}\, .
+\end{eqnarray}	
+The matrices for $\hat{J}_x$ and $\hat{J}_y$ can be obtained from the relations
+\be
+\hat{J}_x = \frac{1}{2}(\hat{J}_+ + \hat{J}_-)\, , 
+\ee
+and
+\be
+\hat{J}_y = \frac{1}{2i}(\hat{J}_+ - \hat{J}_-)\, .
+\ee
+Now, let us consider a few examples with definite values of $j$.
+
+
+\subsection{$j=1/2$ Representation}
+Suppose $j=1/2$, then $m=\pm 1/2$ and, therefore, the dimension of the reprsentation is $2\times2$. The basis states are
+$|1/2\;\, 1/2\rangle$ and  $|1/2\; -1/2\rangle$.  In the $j=1/2$ representation we have (with the basis taken
+in the order $|1/2\; 1/2\rangle,\; |1/2\; -1/2\rangle$):
+\be
+{\underline{\hat{J}}}^{\,2} = \frac{3}{4}\,\,\hbar^2 \begin{pmatrix}
+	1 & 0 \\
+	0 & 1 
+\end{pmatrix}
+\ee
+and
+\be
+{\underline{\hat{J}}}_z = \hbar \begin{pmatrix}
+	1 & 0 \\
+	0 & -1 
+\end{pmatrix}.
+\ee				
+We also have
+\be 
+{\underline{\hat{J}}}_+ = \hbar \begin{pmatrix}
+	0 & 1 \\
+	0 & 0 
+\end{pmatrix}
+\ee
+and
+\be					
+{\underline{\hat{J}}}_{\; -} = \hbar \begin{pmatrix}
+	0 & 0 \\
+	1 & 0 
+\end{pmatrix}.
+\ee																
+\noindent
+Therefore
+\be
+{\underline{\hat{J}}}_{\; x} = \frac{ \underline{\hat{J}}_+ + \underline{\hat{J}}_-}{2} = \frac{1}{2}\, \hbar 
+\begin{pmatrix}
+	0 & 1 \\
+	1 & 0
+\end{pmatrix}\, ,
+\ee
+and
+\be
+{\underline{\hat{J}}}_{\;y} = \frac{ \underline{\hat{J}}_+ - \underline{\hat{J}}_-}{2i} = \frac{1}{2}\, \hbar 
+\begin{pmatrix}
+	0 & -i \\
+	i & 0
+\end{pmatrix}\, .
+\ee
+In a more compact notation, we can write
+\be
+\hat{J}_i \stackrel{.}{=} \frac{1}{2}\, \hbar \,  \sigma_i , \;\;\; i=1,2,3
+\ee
+where
+\begin{eqnarray}
+\sigma_1=\sigma_x& = &\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},  \\
+\sigma_2=\sigma_y & = & \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \\
+\sigma_3=\sigma_z & = & \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}, 
+\end{eqnarray}
+are the Pauli matrices. 
+
+
+\subsection{$j=1$ Representation}
+
+In this case $j=1$ and the basis states are:
+\[ \{|j=1,\; m\rangle, \; m=1,\, 0,\, -1 \}. \]
+Taking the basis states in the order $|1\, 1\rangle,\, |1\, 0\rangle, \, |1\, -1\rangle$, the matrices corresponding to 
+$\hat{J}^2$ and $\hat{J}_z$ are diagonal:
+\begin{eqnarray}
+\hat{J}^2 & \stackrel{.}{=} & 2\hbar^2 \begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}, \\
+\hat{J}_z & \stackrel{.}{=} & \hbar \begin{pmatrix}1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1\end{pmatrix}, 
+\end{eqnarray}
+The matrix representation of other operators are
+\begin{eqnarray}
+\hat{J}_+ & \stackrel{.}{=} & \sqrt{2}\, \hbar \begin{pmatrix}0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0\end{pmatrix}, \\
+\hat{J}_- & \stackrel{.}{=} & \sqrt{2}\, \hbar \begin{pmatrix}0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 1 & 0\end{pmatrix}, \\
+\hat{J}_x & = & \frac{1}{2}(\hat{J}_+ + \hat{J}_-) \stackrel{.}{=}
+\frac{\hbar}{\sqrt{2}} \begin{pmatrix}0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0\end{pmatrix}, \\
+\hat{J}_y & = & \frac{1}{2i}(\hat{J}_+ - \hat{J}_-) \stackrel{.}{=}
+\frac{\hbar}{\sqrt{2}} \begin{pmatrix}0 & -i & 0 \\ i & 0 & -i \\ 0 & i & 0\end{pmatrix}. 
+\end{eqnarray}
+In this way we can write down the matrix representations of the various angular momentum operators corresponding to any value 
+of $j$.
+
+\vspace{5 mm}
+\begin{center}
+	\large{END}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

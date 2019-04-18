@@ -1,20 +1,23 @@
 # Chapter1
 writing done by shahnoor
-
+also completed by kabir sir
 figure ... pending
 
 # Chapter2
 writing done by shahnoor
+also completed by kabir sir
 
 figure ... pending
 
 # Chapter3
 writing done by shahnoor
+also completed by kabir sir
 
 figure ... pending
 
 # Chapter4
 writing done by shahnoor
+also completed by kabir sir
 
 figure ... pending
 
@@ -25,12 +28,11 @@ writing by shahnoor - done on 2019.01.25
 
 
 # Chapter7
-writing by Asif - forked -pending
 
-branch - "by-asif"
 
 # Chapter8
-
+completed by kabir sir ? 2019.04.18
+two different version
 
 # Chapter9
 writing by Nowrin - forked - pending
@@ -47,6 +49,7 @@ writing by Atik vai - - pending
 
 # Chapter12
 writing by shahnoor - completed on 2019.04.13
+
 pending - images only
 
 # Chapter13
@@ -57,15 +60,18 @@ pending - images only
 
 # Chapter15
 Hydrogen Atom
+
 writing by Sohag vai
+
 assigned : 2019.04.10
+
 submitted : ---
 
 # Chapter16
-
+completed by kabir sir ? 2019.04.18
 
 # Chapter17
-
+completed by kabir sir ? 2019.04.18
 
 # Chapter18
 
@@ -75,6 +81,7 @@ submitted : ---
 
 # Chapter20
 texts  - by shahnoor - pending
+
 images - -pending
 
 # Chapter21
@@ -93,5 +100,5 @@ images - -pending
 
 
 # Chapter26
-
+completed by kabir sir ? 2019.04.18
 

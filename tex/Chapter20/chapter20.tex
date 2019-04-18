@@ -1,11 +1,277 @@
+%%%%%%%%%%%%%%%
+% tensor package is used for index management
+%
+%
+%
+
 \chapter{sheet-20 : Time Independent Perturbation}
 
 The major task in any practical application of quantum mechanics is to solve the eigenvalue equation of the Hamiltonian $H$ of the system. Considering the bound states, the eigenvalues of $H$ are discrete and corresponding to each eigenvalue there may be one or several linearly independent eigengectors. The eigenvalue equation, i.e., the time independent Schr\"{o}dinger equation is 
 \begin{equation}
 	H \ket{E_n} = E_n \ket{E_n}
-	\label{chapter20.eqn1-intro
+	\label{chapter20.eqn1-intro}
 \end{equation}
 
 Except for few special cases the eigenvalue equation cannot be solved exactly. The eqaution then has to be solved numerically, or approximate methods have to be devised to solve the equation to any desired order of accuracy.
 
 %%% page 2
+Time dependent perturbation theory applies when $H$ is of the form
+\begin{equation}
+	H = H_0 + V
+	\label{chapter20.eqn2-intro}
+\end{equation}
+where the eigenvalues and eigenvectors of $H_0$ are completely known and $V$ is an additional time-independent potential called the perturbation.\\
+
+
+Let us denote the eigenvalues of $H_0$ as $E_n^{(0)}$ and the corresponding eigenvectors as $\ket{E_n^{(0)}}$  so that the eigenvalue equation for $H_0$ is written as
+\begin{equation}
+	H_0 \ket{E_n^{(0)}} = E_n^{(0)} \ket{E_n^{(0)}}
+	\label{chapter20.eqn3-intro}
+\end{equation}
+
+We assume that all the eigenvalues and the eigenvectors of $H_0$ are already calculated.
+
+\section{Non-degenerate Perturbation Theory}
+We assume that the eigenvalues $E_n^{(0)}$ of $H_0$ are non-degenerate, i.e., there is only one linearly independent eigenvector $\ket{E_n^{(0)}}$ corresponding to $E_n^{(0)}$. Since the eigenvectors $\ket{E_n^{(0)}}$ form a complete set of vectors, we can express any vector in the Hilbert space as a linear combination of the eigenvectors of $H_0$. Further, eigenvectors belonging to different eigenvalues are orthogonal. We also normalize each of the eigenvectors of $H_0$. So these eigenvectors form a complete orthonormal set, i.e.,
+\begin{equation}
+	\braket{E_n^{(0)}}{E_m^{(0)}} = \delta_{n m}
+	\label{chapter20.eqn4-non-degenerate}
+\end{equation}
+and
+\begin{equation}
+	\hat{1} = \sum_{k} \ket{E_k^{(0)}} \bra{E_k^{(0)}}
+	\label{chapter20.eqn5-non-degenerate}
+\end{equation}
+Now we modify the eigenvalue equation for the full Hamiltonian $H$ (equation (\ref{chapter20.eqn1-intro})) as
+\begin{equation}
+	(H_0 + \lambda V) \ket{E_n}_\lambda = E_{n\lambda} \ket{E_n}_\lambda
+	\label{chapter20.eqn6-non-degenerate}
+\end{equation}
+Where we have introduced a real parameter $\lambda$ whose value lies in the range $(0,1)$. The eigenvalue $E_{n \lambda}$ and the eigenvector $\ket{E_n}_\lambda$  in equation (\ref{chapter20.eqn6-intro}) are not quite the same as the corresponding quantities in equation (\ref{chapter20.eqn1-intro}). It is only in the limit the limit $\lambda\rightarrow 1$ would $E_{n\lambda}$ and  $\ket{E_n}_\lambda$ in equation (\ref{chapter20.eqn6-non-degenerate}) coincide with actual values. Furthermore,
+\begin{align}
+	\lim\limits_{\lambda \rightarrow 0} E_{n \lambda} &= E_n^{(0)} \\
+	\lim\limits_{\lambda \rightarrow 0} \ket{E_n}_\lambda &= \ket{E_{n}^{(0)}}
+\end{align}
+Thus, as $\lambda \rightarrow 0$, the perturbation is switched off and as $\lambda \rightarrow 1$, the full perturbation $V$ is operative.\\
+
+We will now set up a perturbative scheme for solving $E_{n,\lambda}$ and $\ket{E_n}_\lambda$ and at the end set $\lambda = 1$. First, we write $E_{n,\lambda}$ and $\ket{E_n}_\lambda$ as power series in $\lambda$
+\begin{align}
+\label{chapter20.eqn7-non-degenerate}
+E_{n\lambda} &= E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \ldots \\
+\label{chapter20.eqn8-non-degenerate}
+\ket{E_n}_\lambda &= \ket{E_n^{(0)}} + \lambda \ket{E_n^{(1)}} + \lambda^2 E_n^{(2)} + \ldots
+\end{align}
+
+Substituting equation (\ref{chapter20.eqn7-non-degenerate}) and (\ref{chapter20.eqn8-non-degenerate}) in equation (\ref{chapter20.eqn6-non-degenerate}) we have
+\begin{equation}
+\qty(H_0 + \lambda V)\qty(\ket{E_n^{(0)}} + \lambda \ket{E_n^{(1)}} + \lambda^2 E_n^{(2)} + \ldots) 
+= \qty(E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \ldots)\qty(\ket{E_n^{(0)}} + \lambda \ket{E_n^{(1)}} + \lambda^2 E_n^{(2)} + \ldots)
+\end{equation}
+or
+\begin{align*}
+H_0 \ket{E_n^{(0)}} + \lambda \qty(H_0 \ket{E_n^{(1)}}  + V\ket{E_n^{(0)}})  + &\lambda^2(H_0 \ket{E_n^{(2)}} + V\ket{E_n^{(1)}}) + \ldots  \\
+= E_n^{(0)} \ket{E_n^{(0)}} + \lambda\qty(E_n^{(1)}\ket{E_n^{(0)}} + E_n^{(0)}\ket{E_n^{(1)}})  
+&+ \lambda^2 \qty(E_n^{(2)} \ket{E_n^{(0)}}  + E_n^{(1)}\ket{E_n^{(1)}}  +  E_n^{(0)}\ket{E_n^{(2)}}) + \ldots
+\end{align*}
+We will solve this equation order by order in $\lambda$. So we equate the coefficient of equal power of $\lambda$ on both sides of the above equation. We  have up to order $\lambda^2$
+\begin{align}
+\label{chapter20.eqn8b-non-degenerate}
+\lambda^0 : \quad &  H_0 \ket{E_{n}^{(0)}} = E_n^{(0)}\ket{E_{n}^{(0)}} \\
+\label{chapter20.eqn9-non-degenerate}
+\lambda^1 : \quad & H_0\ket{E_{n}^{(1)}} + V\ket{E_{n}^{(0)}} = E_n^{(0)}\ket{E_{n}^{(1)}} + E_n^{(1)}\ket{E_{n}^{(0)}} \\
+\label{chapter20.eqn10-non-degenerate}
+\lambda^2 : \quad & H_0\ket{E_n^{(2)}} + V\ket{E_{n}^{(1)}} = E_n^{(0)}\ket{E_{n}^{(2)}} + E_{n}^{(1)}\ket{E_{n}^{(1)}}  + E_{n}^{(2)}\ket{E_{n}^{(0)}}
+\end{align}
+Equation (\ref{chapter20.eqn8b-non-degenerate}) is considered solved because we have assumed that we know fully the eigenvalues and eigenvectors of $H_0$.
+
+\subsection{First-Order correction to energy: $E_n^{(1)}$}
+The first order correction to the unperturbed energy of the $n$-th level is $E_n^{(1)}$. This can be found from equation (\ref{chapter20.eqn9-non-degenerate}). We start by taking the product of equation (\ref{chapter20.eqn9-non-degenerate}) with $\bra{E_n^{(0)}}$. We get
+
+\begin{equation}
+\bra{E_n^{(0)}} H_0 \ket{E_n^{(1)}} + \bra{E_n^{(0)}} V \ket{E_{n}^{(0)}} = E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(1)}} + E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(0)}}
+\label{chapter20.eqn11-non-degenerate}
+\end{equation}
+Now 
+\begin{equation}
+H_0 \ket{E_{n}^{(0)}} = E_n^{(0)} \ket{E_{n}^{(0)}}
+\end{equation}
+Since $H_0$ is hermitian
+\begin{equation}
+	\bra{E_n^{(0)}} H_0 = E_n^{(0)} = E_n^{(0)} \bra{E_n^{(0)}}
+\end{equation}
+Also
+\begin{equation}
+\braket{E_n^{(0)}}{E_n^{(0)}} = 1
+\end{equation}
+Therefore equation (\ref{chapter20.eqn11-non-degenerate}) becomes
+\begin{align}
+E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(1)}} + \bra{E_n^{(0)}} V \ket{E_{n}^{(0)}} 
+&= E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(1)}} + E_n^{(1)} \nonumber \\
+E_n^{(1)} &= \bra{E_n^{(0)}} V \ket{E_{n}^{(0)}} =\equiv V_{n n}
+\end{align}
+This is a fundamental result of time independent perturbation theory of non-degenerate levels. The first order correction to the $n$-th energy level is the expectation value of the perturbation potential in the unperturbed state.
+
+
+
+\subsection{First-Order correction to eigenstate}
+The ket $\ket{E_{n}^{(1)}}$ is the first-order correction to the zeroth-order eigenket $\ket{E_{n}^{(0)}}$. The ket $\ket{E_{n}^{(1)}}$ is also found from equation (\ref{chapter20.eqn9-non-degenerate}). First we write $\ket{E_{n}^{(1)}}$ as a linear combination of $\ket{E_{n}^{(0)}}$
+\begin{align}
+\label{chapter20.eqn13-non-degenerate}
+\ket{E_{n}^{(1)}} 
+&= \sum_{m} \ket{E_{m}^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}} \\
+\label{chapter20.eqn14-non-degenerate}
+&= \sum_{m} \ket{E_{m}^{(0)}} C^(1)_{m n}
+\end{align}
+Where we have defined
+\begin{equation}
+C^(1)_{m n} = \braket{E_m^{(0)}}{E_n^{(1)}}
+\label{chapter20.eqn15-non-degenerate}
+\end{equation}
+Using equation (\ref{chapter20.eqn14-non-degenerate}) we write equation (\ref{chapter20.eqn9-non-degenerate}) as
+\begin{align*}
+	\sum_{m} H_0 \ket{E_{m}^{(0)}} C^{(1)}_{m n} + V \ket{E_{n}^{(0)}} 
+	&= \sum_{m} E_n \ket{E_{m}^{(0)}} C^{(1)}_{m n} + E_{n}^{(1)} \ket{E_{n}^{(0)}} \\
+	or, \quad 
+	\sum_{m} \qty(E_{n}^{(0)}  -  E_{m}^{(0)}) \ket{E_{m}^{(0)}} C^{(1)}_{m n} 
+	&= V \ket{E_n^{(0)}} - E_{n}^{(1)} \ket{E_{n}^{(0)}}
+\end{align*}
+Taking the scalar product with $\bra{E_k^{(0)}}$ we have
+\begin{equation}
+\qty(E_n^{(0)} - E_k^{(0)}) C^{(1)}_{k n} = \bra{E_k^{(0)}} V \ket{E_n^{(0)}} - E_n^{(1)} \delta_{k n}
+\label{chapter20.eqn16-non-degenerate}
+\end{equation}
+If $k=n$, the left side is zero and we recover the result
+\begin{equation}
+E_n^{(1)}  = \bra{E_n^{(0)}} V \ket{E_n^{(0)}} , \quad k = n
+\end{equation}
+Thus, we cannot determine $C^{(1)}_{n n}$ from equation (\ref{chapter20.eqn16-non-degenerate}). This coefficient has to be determined from siderations of normalization of the eigenvectors as discussed later.\\
+
+Next, if $k \neq n$, then equation (\ref{chapter20.eqn16-non-degenerate})ecomes
+\begin{equation}
+\qty(E_n^{(0)} -  E_{k}^{(0)}) C_{k n}^{(1)} = \bra{E_k^{(0)}} V \ket{E_n^{(0)}} , \quad k \neq n
+\end{equation}
+or
+\begin{equation}
+	C_{k n}^{(1)} =  \frac{\bra{E_k^{(0)}} V \ket{E_n^{(0)}}}{E_n^{(0)} -  E_{k}^{(0)}} , \quad k \neq n
+	\label{chapter20.eqn17-non-degenerate}
+\end{equation}
+Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-non-degenerate}) the first order correction to the state is
+\begin{align}
+	\ket{E_{n}^{(1)}} 
+	&= \sum_{k} \ket{E_k^{(0)}} C^{(1)}_{k n} \\
+	\label{chapter20.eqn18-non-degenerate}
+	&= C^{(1)}_{n n} \ket{E_{n}^{(0)}}  + \sum_{\substack{k \\ k \neq n}} \frac{\bra{E_k^{(0)}} V \ket{E_n^{(0)}}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_k^{(0)}} \\
+	\label{chapter20.eqn19-non-degenerate}
+	&= C^{(1)}_{n n} \ket{E_{n}^{(0)}}  + \sum_{\substack{k \\ k \neq n}} \frac{V_{k n}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_k^{(0)}}
+\end{align}
+	Where
+	\begin{equation}
+		V_{k n} \equiv \bra{E_k^{(0)}} V \ket{E_n^{(0)}}
+	\end{equation}
+	Therefo, upto first order in $\lambda$, the eigenstate $\ket{E_{n}}_\lambda$ is (see equation (\ref{chapter20.eqn8-non-degenerate}))
+	\begin{align}
+		\ket{E_n}_\lambda 
+		&= \ket{E_n^{(0)}} + \lambda \ket{E_n^{(1)}} + \order{\lambda^2} \\
+		\label{chapter20.eqn20-non-degenerate}
+		&= \ket{E_n^{(0)}} + \lambda C^{(1)}_{n n} \ket{E_n^{(0)}} + \lambda \sum_{\substack{k \\ k \neq n}} \frac{V_{k n}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_n^{(0)}} + \order{\lambda^2}
+	\end{align}
+	We want to normalize $\ket{E_n}_\lambda$ up to first order 
+%	\begin{equation}
+%		{}_{\lambda}\braket{E_n}{E_n}_{\lambda} = 1 + \order{\lambda^2}
+%	\end{equation}
+	\begin{equation}
+		\tensor*[_{\lambda}]{\braket{E_n}{E_n}}{_{\lambda}} = 1 + \order{\lambda^2}
+	\end{equation}
+	using equation (\ref{chapter20.eqn20-non-degenerate}), the normalization condition can be written as (noting $\lambda$ is real)
+	\begin{align}
+		1 + \lambda C^{(1)}_{n n} + \lambda C^{(1)*}_{n n} + \order{\lambda^2}
+		&= 1 + \order{\lambda^2} \\
+		or, \quad C^{(1)}_{n n} +  C^{(1)*}_{n n} &= 0  \\
+	i.e., \quad		\Re{C^{(1)}_{n n}} &= 0
+	\end{align}
+	Thus $C^{(1)}_{n n}$ is a purely imaginary number. We write
+	\begin{equation}
+		C^{(1)}_{n n} = \iu \alpha \quad (\alpha \in \real)
+	\end{equation}
+
+%%%% page 13
+	Hence equation (\ref{chapter20.eqn20-non-degenerate}) can be written as
+	\begin{align}
+		\ket{E_n}_{\lambda} 
+		&= \qty(1 + \iu \lambda \alpha) \ket{E_n^{(0)}} + \lambda \sum_{\substack{k \\ k \neq n}} \frac{V_{k n}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_n^{(0)}} + \order{\lambda^2} \\
+		&= e^{\iu \lambda \alpha} \ket{E_n^{(0)}} + \lambda \sum_{\substack{k \\ k \neq n}} \frac{V_{k n}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_n^{(0)}} + \order{\lambda^2} \\
+		e^{-\iu \lambda \alpha} \ket{E_n}_{\lambda}  &= \ket{E_n^{(0)}} + \lambda \sum_{\substack{k \\ k \neq n}} \frac{V_{k n}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_n^{(0)}} + \order{\lambda^2}
+	\end{align}
+	Now $e^{-\iu \lambda \alpha}$ is an overall phase factor which does not affect the normalization of $\ket{E_n}_\lambda$ up to first order. This factor can be set equal to $1$ without loss of generality. So we take $\alpha = 0$, i.e.,
+	\begin{equation}
+		\braket{E^{(0)}_n}{E^{(1)}_n} \equiv C^{(1)}_{n n} = \iu \alpha = 0
+	\end{equation}
+	i.e., we can choose $\ket{E_n^{(1)}}$ to be orthonormal to $\ket{E_n^{(0)}}$.\\
+	
+	Thus, up to first order
+	\begin{equation}
+		\ket{E_n}_{\lambda}  = \ket{E_n^{(0)}} + \lambda \sum_{\substack{k \\ k \neq n}} \frac{V_{k n}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_n^{(0)}} + \order{\lambda^2}
+	\end{equation}
+	Setting $\lambda = 1$ we get the desired eigenket of  the full Hamiltonian $H$ up to first order in the perturbing potential, i.e.,
+	\begin{align}
+		\ket{E_n}  
+		&= \ket{E_n^{(0)}} + \ket{E_n^{(1)}} \\
+		&= \ket{E_n^{(0)}} +  \sum_{\substack{k \\ k \neq n}} \frac{V_{k n}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_n^{(0)}}
+		\label{chapter20.eqn21-non-degenerate}
+	\end{align}
+	
+	
+	\subsection{Second-Order Correction to Energy: $E_n^{(2)}$}
+	
+	We can find the second order correction to the energy, i.e., $E^{(2)}_n$ from equation (\ref{chapter20.eqn10-non-degenerate}). First, multiply equation (\ref{chapter20.eqn10-non-degenerate}) by $\bra{E_n^{(0)}}$ 
+	\begin{equation}
+		\bra{E_n^{(0)}} H_0 \ket{E_n^{(2)}} + \bra{E_n^{(0)}} V \ket{E_n^{(1)}} = E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(2)}} + E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(1)}} + e_n^{(2)}
+		\label{chapter20.eqn22-non-degenerate}
+	\end{equation}
+	Since
+	\begin{equation}
+		\bra{E_n^{(0)}} H_0 = E_n^{(0)} \bra{E_n^{(0)}}
+	\end{equation}
+	The first term on the left hand side of equation (\ref{chapter20.eqn22-non-degenerate}) cancels the first term on the right. Therefore, we have
+	\begin{align}
+		\bra{E_n^{(0)}} V \ket{E_n^{(1)}} 
+		&=  E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(1)}} + E_n^{(2)}\\
+		i.e., \quad E_n^{(2)} =  \bra{E_n^{(0)}} V \ket{E_n^{(1)}}  - E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(1)}}
+		\label{chapter20.eqn23-non-degenerate}
+	\end{align}
+	Writing
+	\begin{equation}
+		\ket{E_n^{(1)}} = \sum_{m} \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}
+	\end{equation}
+	we have
+	\begin{equation}
+		E_n^{(2)} = \sum_{m} \bra{E_n^{(0)}} V \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}  -  E_n^{(1)} \braket{E_m^{(0)}}{E_n^{(1)}}
+	\end{equation}
+	We now isolate the term with $m=n$ in the summation.
+	
+	$\therefore$ we have
+	\begin{equation}
+		E_n^{(2)} = \bra{E_n^{(0)}} V \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}} + \sum_{\substack{m\\ m \neq n}} \bra{E_n^{(0)}} V \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}  -  E_n^{(1)} \braket{E_m^{(0)}}{E_n^{(1)}}
+		\label{chapter20.eqn24-non-degenerate}
+	\end{equation}
+	But
+	\begin{equation}
+		\bra{E_n^{(0)}} V \ket{E_m^{(0)}} = E_n^{(1)}
+	\end{equation}
+	So the first term cancels the third term in equation (\ref{chapter20.eqn24-non-degenerate}). We then have
+	\begin{equation}
+		E_n^{(2)} = \sum_{\substack{m\\ m \neq n}} \bra{E_n^{(0)}} V \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}
+		\label{chapter20.eqn25-non-degenerate}
+	\end{equation}
+	Where the 
+	%prime on the summation symbol means that the 
+	term $m=n$ is excluded from the sum.
+
+	Now, we have found previously (\ref{chapter20.eqn17-non-degenerate}) 
+	\begin{equation}
+		\braket{E_m^{(0)}}{E_n^{(1)}} \equiv C^{(1)}_{m n}
+	\end{equation}
+	%% page 17
+	
+
+
