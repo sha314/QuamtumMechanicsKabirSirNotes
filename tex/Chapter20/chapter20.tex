@@ -269,9 +269,235 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 
 	Now, we have found previously (\ref{chapter20.eqn17-non-degenerate}) 
 	\begin{equation}
-		\braket{E_m^{(0)}}{E_n^{(1)}} \equiv C^{(1)}_{m n}
+		\braket{E_m^{(0)}}{E_n^{(1)}} \equiv C^{(1)}_{m n} = \frac{\bra{E_m^{(0)}} V \ket{E_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}
 	\end{equation}
-	%% page 17
+	substituting this in equation (\ref{chapter20.eqn25-non-degenerate}) we have
+	\begin{equation}
+		E_n^{(2)} = \sum_{\substack{m\\ m \neq n}} \frac{\bra{E_n^{(0)}} V \ket{E_m^{(0)}}\bra{E_m^{(0)}} V \ket{E_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}
+		\label{chapter20.eqn26-non-degenerate} 
+	\end{equation}
+	This is the final expression for the second order correction $E_n^{(2)}$ for the $n-th$ level.
+	
+	Next, introducing the notation
+	\begin{equation}
+		V_{n m} \equiv \bra{E_n^{(0)}} V \ket{E_m^{(0)}}
+	\end{equation}
+	we can write equation (\ref{chapter20.eqn26-non-degenerate}) as 
+	\begin{equation}
+		E_N^{(2)} = \sum_{\substack{m\\ m \neq n}} \frac{V_{n m} V_{m n}}{E_n^{(0)} - E_m^{(0)}}
+	\end{equation}
+	Since $V$ is a hermitian operator
+	\begin{equation}
+		V_{m n} = V_{n m}^*
+	\end{equation}
+	So,
+	\begin{equation}
+		E_n^{(2)} = \sum_{\substack{m\\ m \neq n}} \frac{\abs{V_{nm}}^2}{E_n^{(0)} - E_m^{(0)}}
+		\label{chapter20.eqn27-non-degenerate} 
+	\end{equation}
+	Note that the second order correction to the ground state energy is negative. Also, in the second order, the effect of an energy level above the $n$-th level is to push down the energy of the $n$-th level. The effect of a level below the $n$-th level is to push up the energy of the $n$-th level. It is as if, the levels are repelling each other in the $2$nd order perturbation
+
+\section{Degenerate Perturbation Theory}
+	%% page 19
+	In perturbation theory we seek a solution of the eigenvalue equation of the Hamiltonian $H$, where
+	\begin{equation}
+		H = H_0 + H^\prime
+		\label{chapter20.eqn1-degenerate} 
+	\end{equation}
+	We assume that the eigenvalues and eigenfunctions of the unperturbed Hamiltonian $H_0$ are known. We then ask how the energy and the wave function of the $n$-th level of the $H_0$ are modified when the perturbation $H^\prime$ is turned on.
+	
+	Suppose that the $n^{th}$ level of $H_0$ is $g_n$-fold degenerate. Therefore
+	\begin{equation}
+		H_0 \psi^{(0)}_{n \alpha} = E_n^{(0)} \psi^{(0)}_{n \alpha} \quad ; \alpha = 1,2,\ldots, g_n
+		\label{chapter20.eqn2-degenerate} 
+	\end{equation}
+	The $g_n$ wave functions $\{\psi^{(0)}_{n \alpha}\ ; \alpha=1,2,\ldots, g_n\}$ are the linearly independent of each other and they are all orthogonal to the unperturbed wave functions belonging to other energy levels.
+	
+	% page 20
+	We note that any linear combination of the vectors $\qty{\psi^{(0)}_{n \alpha}; \ \alpha=1,\ldots,g_n}$ is also an eigenvector of $H_0$ with the same eigenvalue $E_n^{(0)}$. Thus if we construct a vector $\chi^{(0)}_{n \beta}$ as
+	\begin{equation}
+		\chi^{(0)}_{n \beta} = \sum_{\alpha = 1}^{g_n} C_{\alpha \beta} \psi^{(0)}_{n\alpha}
+		\label{chapter20.eqn3-degenerate} 
+	\end{equation}
+	
+	Then $\chi^{(0)}_{n \beta}$ is also an eigenvector of $H_0$ with eigenvalue $E_n^{(0)}$:
+	\begin{equation}
+		H_0 \chi^{(0)}_{n \beta} = E_n^{(0)} \chi^{(0)}_{n \beta}
+		\label{chapter20.eqn4-degenerate} 
+	\end{equation}
+	Now the vectors $\qty{\psi^{(0)}_{n \alpha}; \ \alpha=1,\ldots,g_n}$ need not be orthogonal. However, by using the Schmidt procedure, we can make the degenerate eigenvectors orthonormal by taking suitable linear combinations if they are not orthogonal to start with. This procedure can be applied to all vectors belonging to every level.
+	
+	% page 20a
+	Thus, we will assume that all vectors whether belonging to the same leel or not are normalized and orthogonal to each other, i.e.,
+	\begin{equation}
+		\braket{\psi^{(0)}_{n\alpha}}{\psi^{(0)}_{m\beta}} = \delta_{n m}\delta_{\alpha \beta}
+		\label{chapter20.eqn5-degenerate} 
+	\end{equation}
+	Further, the eigenvectors of $H_0$ space the entire Hilbert space, i.e., they form a complete set of states. The completeness condition can be written as
+	\begin{equation}
+		\hat{1} = \sum_{k} \sum_{\alpha = 1}^{g_k} \ket{\psi^{(0)}_{k\alpha}} \bra{\psi^{(0)}_{k\alpha}}
+		\label{chapter20.eqn6-degenerate} 
+	\end{equation}
+	The "full" eigenvalue equation for the $n^{th}$ level is written as
+	\begin{equation}
+		H \psi_{n \alpha} = E_{n \alpha} \psi_{n \alpha} \quad ; \quad \alpha = 1,2,\ldots,g_n
+		\label{chapter20.eqn7-degenerate} 
+	\end{equation}
+	In order to facilitate counting of different orders, we may write
+	\begin{equation}
+		H = H_0 + \lambda H^\prime
+	\end{equation}
+	Where $\lambda$ is a real parameter which we set equal to one at the end of our calculations.
+	% page 20b
+	The eigenvalues $E_{n \alpha}$ and the eigenvector $\psi_{n\alpha}$ are now functions of $\lambda$. In the limit $\lambda \rightarrow 0$ $E_{n\alpha}$ tends to $E_n^{(0)}$, i.e.,
+	\begin{equation}
+		\lim\limits_{\lambda \rightarrow 0} E_{n\alpha} = E_n^{(0)}
+		\label{chapter20.eqn8-degenerate} 
+	\end{equation}
+	However, there is a difficulty in taking the corresponding limits for $\psi_{n\alpha}$. Since there are $g_n$ linearly independent unperturbed eigenfunctions corresponding to $E_n^{(0)}$, we do not know to which particular eigenfunction will $\psi_{n\alpha}$ tend to when $\lambda \rightarrow 0$. Suppose
+	
+	\begin{equation}
+		\psi_{n\alpha} \quad \substack{\rightarrow \\ \lambda=0} \quad \chi_{n\alpha}^{(0)}
+	\end{equation}
+	Where $\chi_{n\alpha}^{(0)}$ is some linear combination of $\qty{\psi_{n \alpha}^{(0)}, \alpha=1,2,\ldots,g_n}$.
+	
+	Now we write
+	\begin{equation}
+		\psi_{n \alpha} = \chi_{n\alpha}^{(0)} + \lambda \psi_{n \alpha}^{(1)} + \lambda^2 \psi_{n \alpha}^{(2)}
+		\label{chapter20.eqn9-degenerate} 
+	\end{equation}
+	where $\chi_{n\alpha}^{(0)}$ is as yet some undetermined linear combination of $\qty{\psi_{n \alpha}^{(0)}, \alpha=1,2,\ldots,g_n}$. We also write the perturbed energy $E_{n\alpha}$ as 
+	\begin{equation}
+		E_{n\alpha} = E_n^{(0)} + \lambda E_{n\alpha}^{(1)} + \lambda^2 E_{n\alpha}^{(2)}
+		\label{chapter20.eqn10-degenerate}
+	\end{equation}
+	where we have used the fact that $E_{n\alpha}^{(0)} = E_n^{(0)}$ for all $\alpha$.\\
+	
+	Next, we substitute (\ref{chapter20.eqn9-degenerate}) and (\ref{chapter20.eqn10-degenerate}) in equation (\ref{chapter20.eqn7-degenerate}). We have
+
+	\begin{equation}
+		\qty(H_0 + \lambda H^\prime) \qty(\chi_{n\alpha}^{(0)} + \lambda \psi_{n \alpha}^{(1)} + \ldots) 
+		= \qty(E_n^{(0)} + \lambda E_{n\alpha}^{(1)} + \ldots) \qty(\chi_{n\alpha}^{(0)} + \lambda \psi_{n \alpha}^{(1)} + \ldots) 
+	\end{equation}
+	Equating the coefficient of equal powers of $\lambda$ on both sides of this equation we obtain the zeroth order equation
+	\begin{equation}
+		H_0 \chi_{n\alpha}^{(0)} = E_n^{(0)} \chi_{n\alpha}^{(0)}
+	\end{equation}
+	which is equation (\ref{chapter20.eqn4-degenerate}) written earlier. In the first order we have
+	
+	%%	page 22
+	
+	
+	\begin{equation}
+		\qty(H_0 - E_n^{(0)}) \psi_{n \alpha}^{(1)} = \qty(E_{n\alpha}^{(1)} - H^\prime) \chi_{n\alpha}^{(0)}
+		\label{chapter20.eqn11-degenerate}
+	\end{equation}
+	
+	Now, we write
+	\begin{equation}
+		\psi_{n \alpha}^{(1)} = \sum_{k\beta} C_{k\beta, n\alpha} \psi_{k \beta}^{(0)}
+		\label{chapter20.eqn12-degenerate}
+	\end{equation}
+	and
+	\begin{equation}
+		\chi_{n\alpha}^{(0)} = \sum_{\beta=1}^{g_n} a_{\beta\alpha} \psi_{n\beta}^{(0)}
+		\label{chapter20.eqn13-degenerate}
+	\end{equation}
+	
+	where the indices $\alpha$ and $\beta$ refer explicitly to degeneracy. Substituting (\ref{chapter20.eqn12-degenerate}) and(\ref{chapter20.eqn13-degenerate}) in equation (\ref{chapter20.eqn11-degenerate}) we find
+	\begin{align}
+		\qty(H_0 - E_n^{(0)}) \sum_{k,\beta} C_{k\beta, n\alpha} \psi_{k \beta}^{(0)} 
+		&= \qty(E_{n\alpha}^{(1)} - H^\prime) \sum_{\beta=1}^{g_n} a_{\beta\alpha} \psi_{n\beta}^{(0)} \\
+		or,\ \sum_{k,\beta} C_{k\beta, n\alpha} \qty(E_k^{(0)} - E_n^{(0)}) \psi_{k \beta}^{(0)} 
+		&= \sum_{\beta=1}^{g_n} a_{\beta\alpha} \qty(E_{n\alpha}^{(1)} - H^\prime) \psi_{n\beta}^{(0)} 
+	\end{align}
+	Taking the scalar product with $\psi_{m\gamma}^{(0)}$ and using orthogonality $\braket{\psi_{m\gamma}^{(0)}}{\psi_{k\beta}^{(0)}} = \delta_{m k} \delta_{\gamma \beta}$, we have
+	
+	\begin{equation}
+		C_{m\gamma, n\alpha} \qty(E_m^{(0)} - E_n^{(0)}) = \sum_{\beta=1}^{g_n} a_{\beta\alpha} \qty(E_{n\alpha}^{(1)}\delta_{mn}\delta_{\gamma\beta}  -  H^\prime_{m\gamma,n\beta})
+		\label{chapter20.eqn14-degenerate}
+	\end{equation}
+	where we have written
+	\begin{equation}
+		H^\prime_{m\gamma,n\beta} = \bra{\psi_{m\gamma}^{(0)}} H^\prime \ket{\psi_{n\beta}^{(0)}}
+		\label{chapter20.eqn15-degenerate}
+	\end{equation}
+	
+	\subsubsection{First Order Correction to Energy}
+	%% page 25 (pdf) or 23(hand written)
+	
+	First, let us choose $m=n$ in equation (\ref{chapter20.eqn14-degenerate}). Then the left hand side of this equation is zero. We then have
+	\begin{equation}
+		\sum_{\beta=1}^{g_n} \qty(H^\prime_{n\gamma,n \beta}  -  E_{n\alpha}^{(1)}\delta_{\gamma \beta}) a_{\beta \alpha} = 0
+		\label{chapter20.eqn16-degenerate}
+	\end{equation}
+	Simplifying the notation by writing
+	\begin{equation}
+		H^\prime_{n\gamma, n\beta} = H^{\prime (n)}_{\gamma\beta}
+	\end{equation}
+	We write equation (\ref{chapter20.eqn16-degenerate}) as
+	% page 26
+	
+	\begin{equation}
+		\sum_{\beta=1}^{g_n} \qty(H^{\prime (n)}_{\gamma \beta}  -  E_{n\alpha}^{(1)}\delta_{\gamma \beta}) a_{\beta \alpha} = 0
+		\label{chapter20.eqn17-degenerate}
+	\end{equation}
+	Equation (\ref{chapter20.eqn16-degenerate}) is a set of $g_n$ linear equations for unknowns $\qty{a_{1\alpha}, a_{2\alpha}, \ldots, a_{g_n \alpha}}$ corresponding to $E_{n\alpha}^{(1)}$. The value of $E_{n\alpha}^{(1)}$ are not known a priori.\\
+		
+		However, we note that, for a solution of equation (\ref{chapter20.eqn17-degenerate}) to exist, the determinant formed by the coefficient of $a_{\beta\alpha}$ must vanish, i.e.,
+		\begin{equation}
+			\det \qty[H^{\prime (n)}_{\gamma \beta}  -  E^{(1)}_{n\alpha} \delta_{\gamma \beta}] = 0
+			\label{chapter20.eqn18-degenerate}
+		\end{equation}
+		This is called the secular equation, which is a polynomial of degree $g_n$ in $E_{n\alpha}^{(1)}$. It has $g_n$ real roots $E_{n 1}^{(1)}, E_{n 2}^{(1)}, \ldots, E_{n, g_n}^{(1)}$. If all these roots are distinct, the degeneracy is completely removed to first order in the perturbation. On the other hand, if some or all roots of equation (\ref{chapter20.eqn18-degenerate}) are identical, the degeneracy is only partially (or not at all) removed. The residual degeneracy may then either be removed in higher order perturbation theory, or it may persist in all orders.\\
+		
+		Next, substituting each of the roots $E_{n\alpha}^{(1)}, \ \alpha=1,2,\ldots,g_n$ in equation (\ref{chapter20.eqn17-degenerate}) we can solve for coefficients $a_{1\alpha}, a_{2 \alpha}, \ldots, a_{g_n \alpha}$. In fact, one of the coefficients remain undetermined and the other coefficients are found in terms of the undetermined one. This is because the set of equation given by equation (\ref{chapter20.eqn17-degenerate}) are homogeneous. The undetermined coefficient is then obtained up to a phase by requiring that the eigenvector $a_{\beta\alpha}; \beta = 1,2,\ldots, g_n$ be normalized to unity.
+		\begin{equation}
+			a^{*}_{1\alpha} a{1\alpha}  +  a^{*}_{2\alpha} a{2\alpha} + \ldots + a^{*}_{g_n\alpha} a{g_n\alpha} = 1
+		\end{equation}
+		that is,
+		\begin{equation}
+			\sum_{\beta = 1}^{g_n}	a^{*}_{2\alpha} a{2\alpha} = 1 \quad ; \alpha=1,2,\ldots, g_n
+		\end{equation}
+		The correct zeroth order wave function is then found using equation (\ref{chapter20.eqn13-degenerate}), i.e.,
+		\begin{equation}
+			\chi_{n\alpha}^{(0)} = \sum_{\beta = 1}^{g_n} a_{\beta\alpha} \psi_{n\beta}^{(0)}
+		\end{equation}
+		The functions $\chi_{n\alpha}^{(0)}$ are eigenvectors of $H^\prime$ in the eigen subspace of $E_n^{(0)}$ with eigenvalue $E_{n\alpha}^{(1)}$, i.e.,
+		\begin{equation}
+			H^\prime \chi_{n\alpha}^{(0)}= E_{n\alpha}^{(1)} \chi_{n\alpha}^{(0)} \quad ; \alpha = 1,2,\ldots, g_n
+		\end{equation}
+		and the coefficients $a_{\beta \alpha}\ , \beta=1,2, \ldots, g_n$ form the $g_n$ component representation of the eigenvector $\chi_{n\alpha}^{(0)}$ using the basis $\qty{\psi_{n\beta}^{(0)}\ , \beta =1,2, \ldots,g_n}$.
+		
+		Thus
+		\begin{align}
+			\chi_{n\alpha}^{(0)} &= \mqty[a_{1\alpha} \\ a_{2\alpha} \\ \vdots \\ a_{g_n\alpha}] 
+		\end{align}
+		
+		Thus, in summary, the first-order corrections to the $n^{th}$ degenerate level of $H_0$ with energy $E_n^{(0)}$ are obtained by diagonalizing $H^\prime$ in the eigen subspace of $E_n^{(0)}$. The eigenvalues of $H^\prime$ are the corrections to the energy and the corresponding eigenvectors of $H^\prime$ are the zeroth order approximation of the wavefunction.\\
+		
+		Once the correct zeroth-order wavefunctions $\chi_{n\alpha}^{(0)}\ , \alpha=1,2, \ldots, g_n$, have been determined, the first order correction $\psi_{n \alpha}^{(1)}$ to the wavefunction and second-order energy correction $E_{n\alpha}^{(2)}$ can be obtained in a way similar to non-degenerate perturbation theory.
+		
+		
+		
+		%% page 31 Ex
+		\section{Examples}
+		\begin{enumerate}
+			\item 
+			Calculate the first order energy shifts for the first three states of the infinite square well of width $a$ in one dimension due to the perturbation $V(x) = V_0 \frac{x}{a}$.\\
+			
+			\underline{Ans}\\
+			
+			
+			
+			\item 
+			This is new
+			
+			
+			
+			
+		\end{enumerate}
+	
 	
 
 
