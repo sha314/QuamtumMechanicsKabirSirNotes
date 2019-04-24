@@ -39,7 +39,7 @@ We assume that the eigenvalues $E_n^{(0)}$ of $H_0$ are non-degenerate, i.e., th
 \end{equation}
 and
 \begin{equation}
-	\hat{1} = \sum_{k} \ket{E_k^{(0)}} \bra{E_k^{(0)}}
+	\hat{1} = \sum_{k} \ketbra{E_k^{(0)}}{E_k^{(0)}}
 	\label{chapter20.eqn5-non-degenerate}
 \end{equation}
 Now we modify the eigenvalue equation for the full Hamiltonian $H$ (equation (\ref{chapter20.eqn1-intro})) as
@@ -63,14 +63,16 @@ E_{n\lambda} &= E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \ldots \\
 \end{align}
 
 Substituting equation (\ref{chapter20.eqn7-non-degenerate}) and (\ref{chapter20.eqn8-non-degenerate}) in equation (\ref{chapter20.eqn6-non-degenerate}) we have
-\begin{equation}
-\qty(H_0 + \lambda V)\qty(\ket{E_n^{(0)}} + \lambda \ket{E_n^{(1)}} + \lambda^2 E_n^{(2)} + \ldots) 
-= \qty(E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \ldots)\qty(\ket{E_n^{(0)}} + \lambda \ket{E_n^{(1)}} + \lambda^2 E_n^{(2)} + \ldots)
-\end{equation}
+\begin{align*}
+\qty(H_0 + \lambda V)\qty(\ket{E_n^{(0)}} + \lambda \ket{E_n^{(1)}} + \lambda^2 E_n^{(2)} + \ldots)& \\
+= \qty(E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \ldots)
+&\qty(\ket{E_n^{(0)}} + \lambda \ket{E_n^{(1)}}
++ \lambda^2 E_n^{(2)} + \ldots)
+\end{align*}
 or
 \begin{align*}
-H_0 \ket{E_n^{(0)}} + \lambda \qty(H_0 \ket{E_n^{(1)}}  + V\ket{E_n^{(0)}})  + &\lambda^2(H_0 \ket{E_n^{(2)}} + V\ket{E_n^{(1)}}) + \ldots  \\
-= E_n^{(0)} \ket{E_n^{(0)}} + \lambda\qty(E_n^{(1)}\ket{E_n^{(0)}} + E_n^{(0)}\ket{E_n^{(1)}})  
+H_0 \ket{E_n^{(0)}} + &\lambda \qty(H_0 \ket{E_n^{(1)}}  + V\ket{E_n^{(0)}})  + \lambda^2(H_0 \ket{E_n^{(2)}} + V\ket{E_n^{(1)}}) + \ldots  \\
+&= E_n^{(0)} \ket{E_n^{(0)}} + \lambda\qty(E_n^{(1)}\ket{E_n^{(0)}} + E_n^{(0)}\ket{E_n^{(1)}})  \\
 &+ \lambda^2 \qty(E_n^{(2)} \ket{E_n^{(0)}}  + E_n^{(1)}\ket{E_n^{(1)}}  +  E_n^{(0)}\ket{E_n^{(2)}}) + \ldots
 \end{align*}
 We will solve this equation order by order in $\lambda$. So we equate the coefficient of equal power of $\lambda$ on both sides of the above equation. We  have up to order $\lambda^2$
@@ -88,7 +90,8 @@ Equation (\ref{chapter20.eqn8b-non-degenerate}) is considered solved because we 
 The first order correction to the unperturbed energy of the $n$-th level is $E_n^{(1)}$. This can be found from equation (\ref{chapter20.eqn9-non-degenerate}). We start by taking the product of equation (\ref{chapter20.eqn9-non-degenerate}) with $\bra{E_n^{(0)}}$. We get
 
 \begin{equation}
-\bra{E_n^{(0)}} H_0 \ket{E_n^{(1)}} + \bra{E_n^{(0)}} V \ket{E_{n}^{(0)}} = E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(1)}} + E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(0)}}
+\matrixel{E_n^{(0)}}{H_0}{E_n^{(1)}}
+ + \matrixel{E_n^{(0)}}{V}{E_{n}^{(0)}} = E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(1)}} + E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(0)}}
 \label{chapter20.eqn11-non-degenerate}
 \end{equation}
 Now 
@@ -105,9 +108,9 @@ Also
 \end{equation}
 Therefore equation (\ref{chapter20.eqn11-non-degenerate}) becomes
 \begin{align}
-E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(1)}} + \bra{E_n^{(0)}} V \ket{E_{n}^{(0)}} 
+E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(1)}} + \matrixel{E_n^{(0)}}{ V}{E_{n}^{(0)}} 
 &= E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(1)}} + E_n^{(1)} \nonumber \\
-E_n^{(1)} &= \bra{E_n^{(0)}} V \ket{E_{n}^{(0)}} =\equiv V_{n n}
+or, \quad E_n^{(1)} &= \matrixel{E_n^{(0)}}{V}{E_{n}^{(0)}} \equiv V_{n n}
 \end{align}
 This is a fundamental result of time independent perturbation theory of non-degenerate levels. The first order correction to the $n$-th energy level is the expectation value of the perturbation potential in the unperturbed state.
 
@@ -137,22 +140,22 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) we write equation (\ref{ch
 \end{align*}
 Taking the scalar product with $\bra{E_k^{(0)}}$ we have
 \begin{equation}
-\qty(E_n^{(0)} - E_k^{(0)}) C^{(1)}_{k n} = \bra{E_k^{(0)}} V \ket{E_n^{(0)}} - E_n^{(1)} \delta_{k n}
+\qty(E_n^{(0)} - E_k^{(0)}) C^{(1)}_{k n} = \matrixel{E_k^{(0)}} {V} {E_n^{(0)}} - E_n^{(1)} \delta_{k n}
 \label{chapter20.eqn16-non-degenerate}
 \end{equation}
 If $k=n$, the left side is zero and we recover the result
 \begin{equation}
-E_n^{(1)}  = \bra{E_n^{(0)}} V \ket{E_n^{(0)}} , \quad k = n
+E_n^{(1)}  = \matrixel{E_n^{(0)}} {V} {E_n^{(0)}} , \quad k = n
 \end{equation}
 Thus, we cannot determine $C^{(1)}_{n n}$ from equation (\ref{chapter20.eqn16-non-degenerate}). This coefficient has to be determined from siderations of normalization of the eigenvectors as discussed later.\\
 
 Next, if $k \neq n$, then equation (\ref{chapter20.eqn16-non-degenerate})ecomes
 \begin{equation}
-\qty(E_n^{(0)} -  E_{k}^{(0)}) C_{k n}^{(1)} = \bra{E_k^{(0)}} V \ket{E_n^{(0)}} , \quad k \neq n
+\qty(E_n^{(0)} -  E_{k}^{(0)}) C_{k n}^{(1)} = \matrixel{E_k^{(0)}} {V} {E_n^{(0)}} , \quad k \neq n
 \end{equation}
 or
 \begin{equation}
-	C_{k n}^{(1)} =  \frac{\bra{E_k^{(0)}} V \ket{E_n^{(0)}}}{E_n^{(0)} -  E_{k}^{(0)}} , \quad k \neq n
+	C_{k n}^{(1)} =  \frac{\matrixel{E_k^{(0)}} {V}{E_n^{(0)}}}{E_n^{(0)} -  E_{k}^{(0)}} , \quad k \neq n
 	\label{chapter20.eqn17-non-degenerate}
 \end{equation}
 Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-non-degenerate}) the first order correction to the state is
@@ -160,13 +163,13 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 	\ket{E_{n}^{(1)}} 
 	&= \sum_{k} \ket{E_k^{(0)}} C^{(1)}_{k n} \\
 	\label{chapter20.eqn18-non-degenerate}
-	&= C^{(1)}_{n n} \ket{E_{n}^{(0)}}  + \sum_{\substack{k \\ k \neq n}} \frac{\bra{E_k^{(0)}} V \ket{E_n^{(0)}}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_k^{(0)}} \\
+	&= C^{(1)}_{n n} \ket{E_{n}^{(0)}}  + \sum_{\substack{k \\ k \neq n}} \frac{\matrixel{E_k^{(0)}} {V}{E_n^{(0)}}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_k^{(0)}} \\
 	\label{chapter20.eqn19-non-degenerate}
 	&= C^{(1)}_{n n} \ket{E_{n}^{(0)}}  + \sum_{\substack{k \\ k \neq n}} \frac{V_{k n}}{E_n^{(0)} -  E_{k}^{(0)}} \ket{E_k^{(0)}}
 \end{align}
 	Where
 	\begin{equation}
-		V_{k n} \equiv \bra{E_k^{(0)}} V \ket{E_n^{(0)}}
+		V_{k n} \equiv \matrixel{E_k^{(0)}} {V} {E_n^{(0)}}
 	\end{equation}
 	Therefo, upto first order in $\lambda$, the eigenstate $\ket{E_{n}}_\lambda$ is (see equation (\ref{chapter20.eqn8-non-degenerate}))
 	\begin{align}
@@ -225,7 +228,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 	
 	We can find the second order correction to the energy, i.e., $E^{(2)}_n$ from equation (\ref{chapter20.eqn10-non-degenerate}). First, multiply equation (\ref{chapter20.eqn10-non-degenerate}) by $\bra{E_n^{(0)}}$ 
 	\begin{equation}
-		\bra{E_n^{(0)}} H_0 \ket{E_n^{(2)}} + \bra{E_n^{(0)}} V \ket{E_n^{(1)}} = E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(2)}} + E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(1)}} + e_n^{(2)}
+		\matrixel{E_n^{(0)}} {H_0} {E_n^{(2)}} + \matrixel{E_n^{(0)}} {V} {E_n^{(1)}} = E_n^{(0)} \braket{E_n^{(0)}}{E_n^{(2)}} + E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(1)}} + e_n^{(2)}
 		\label{chapter20.eqn22-non-degenerate}
 	\end{equation}
 	Since
@@ -234,9 +237,9 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 	\end{equation}
 	The first term on the left hand side of equation (\ref{chapter20.eqn22-non-degenerate}) cancels the first term on the right. Therefore, we have
 	\begin{align}
-		\bra{E_n^{(0)}} V \ket{E_n^{(1)}} 
+		\matrixel{E_n^{(0)}} {V} {E_n^{(1)}} 
 		&=  E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(1)}} + E_n^{(2)}\\
-		i.e., \quad E_n^{(2)} =  \bra{E_n^{(0)}} V \ket{E_n^{(1)}}  - E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(1)}}
+		i.e., \quad E_n^{(2)} &=  \matrixel{E_n^{(0)}} {V} {E_n^{(1)}}  - E_n^{(1)} \braket{E_n^{(0)}}{E_n^{(1)}}
 		\label{chapter20.eqn23-non-degenerate}
 	\end{align}
 	Writing
@@ -245,22 +248,22 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 	\end{equation}
 	we have
 	\begin{equation}
-		E_n^{(2)} = \sum_{m} \bra{E_n^{(0)}} V \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}  -  E_n^{(1)} \braket{E_m^{(0)}}{E_n^{(1)}}
+		E_n^{(2)} = \sum_{m} \matrixel{E_n^{(0)}} {V} {E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}  -  E_n^{(1)} \braket{E_m^{(0)}}{E_n^{(1)}}
 	\end{equation}
 	We now isolate the term with $m=n$ in the summation.
 	
-	$\therefore$ we have
+	Therefore we have
 	\begin{equation}
-		E_n^{(2)} = \bra{E_n^{(0)}} V \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}} + \sum_{\substack{m\\ m \neq n}} \bra{E_n^{(0)}} V \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}  -  E_n^{(1)} \braket{E_m^{(0)}}{E_n^{(1)}}
+		E_n^{(2)} = \matrixel{E_n^{(0)}} {V} {E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}} + \sum_{\substack{m\\ m \neq n}} \matrixel{E_n^{(0)}} {V} {E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}  -  E_n^{(1)} \braket{E_m^{(0)}}{E_n^{(1)}}
 		\label{chapter20.eqn24-non-degenerate}
 	\end{equation}
 	But
-	\begin{equation}
-		\bra{E_n^{(0)}} V \ket{E_m^{(0)}} = E_n^{(1)}
-	\end{equation}
+	\begin{align}
+		\matrixel{E_n^{(0)}} {V} {E_m^{(0)}} &= E_n^{(1)}
+	\end{align}
 	So the first term cancels the third term in equation (\ref{chapter20.eqn24-non-degenerate}). We then have
 	\begin{equation}
-		E_n^{(2)} = \sum_{\substack{m\\ m \neq n}} \bra{E_n^{(0)}} V \ket{E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}
+		E_n^{(2)} = \sum_{\substack{m\\ m \neq n}} \matrixel{E_n^{(0)}} {V} {E_m^{(0)}} \braket{E_m^{(0)}}{E_n^{(1)}}
 		\label{chapter20.eqn25-non-degenerate}
 	\end{equation}
 	Where the 
@@ -269,18 +272,18 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 
 	Now, we have found previously (\ref{chapter20.eqn17-non-degenerate}) 
 	\begin{equation}
-		\braket{E_m^{(0)}}{E_n^{(1)}} \equiv C^{(1)}_{m n} = \frac{\bra{E_m^{(0)}} V \ket{E_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}
+		\braket{E_m^{(0)}}{E_n^{(1)}} \equiv C^{(1)}_{m n} = \frac{\matrixel{E_m^{(0)}} {V} {E_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}
 	\end{equation}
 	substituting this in equation (\ref{chapter20.eqn25-non-degenerate}) we have
 	\begin{equation}
-		E_n^{(2)} = \sum_{\substack{m\\ m \neq n}} \frac{\bra{E_n^{(0)}} V \ket{E_m^{(0)}}\bra{E_m^{(0)}} V \ket{E_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}
+		E_n^{(2)} = \sum_{\substack{m\\ m \neq n}} \frac{\matrixel{E_n^{(0)}} {V} {E_m^{(0)}} \matrixel{E_m^{(0)}} {V} {E_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}
 		\label{chapter20.eqn26-non-degenerate} 
 	\end{equation}
 	This is the final expression for the second order correction $E_n^{(2)}$ for the $n-th$ level.
 	
 	Next, introducing the notation
 	\begin{equation}
-		V_{n m} \equiv \bra{E_n^{(0)}} V \ket{E_m^{(0)}}
+		V_{n m} \equiv \matrixel{E_n^{(0)}} {V} {E_m^{(0)}}
 	\end{equation}
 	we can write equation (\ref{chapter20.eqn26-non-degenerate}) as 
 	\begin{equation}
@@ -335,7 +338,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 	\end{equation}
 	Further, the eigenvectors of $H_0$ space the entire Hilbert space, i.e., they form a complete set of states. The completeness condition can be written as
 	\begin{equation}
-		\hat{1} = \sum_{k} \sum_{\alpha = 1}^{g_k} \ket{\psi^{(0)}_{k\alpha}} \bra{\psi^{(0)}_{k\alpha}}
+		\hat{1} = \sum_{k} \sum_{\alpha = 1}^{g_k} \ketbra{\psi^{(0)}_{k\alpha}}{\psi^{(0)}_{k\alpha}}
 		\label{chapter20.eqn6-degenerate} 
 	\end{equation}
 	The "full" eigenvalue equation for the $n^{th}$ level is written as
@@ -419,7 +422,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 	\end{equation}
 	where we have written
 	\begin{equation}
-		H^\prime_{m\gamma,n\beta} = \bra{\psi_{m\gamma}^{(0)}} H^\prime \ket{\psi_{n\beta}^{(0)}}
+		H^\prime_{m\gamma,n\beta} = \matrixel{\psi_{m\gamma}^{(0)}} {H^\prime} {\psi_{n\beta}^{(0)}}
 		\label{chapter20.eqn15-degenerate}
 	\end{equation}
 	
@@ -487,11 +490,129 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			Calculate the first order energy shifts for the first three states of the infinite square well of width $a$ in one dimension due to the perturbation $V(x) = V_0 \frac{x}{a}$.\\
 			
 			\underline{Ans}\\
+			\begin{equation*}
+				H = H_0 + V
+			\end{equation*}
+			where
+			\begin{equation*}
+				H_0 = \frac{p^2}{2m} + V_0(x)
+			\end{equation*}
+			and
+			\begin{equation*}
+				V_0(x) = \begin{cases}
+				0 \quad 0 \leq x \leq a \\
+				\infty \quad \text{otherwise}
+				\end{cases}
+			\end{equation*}
 			
+			
+			\begin{figure}
+				
+				%%%%%%% TODO
+				\caption{Infinite Square Well}
+			\end{figure}
+			
+			\underline{Unperturbed states}
+			\begin{equation*}
+				H_0 \ket{E^{(0)}} = E^{(0)} \ket{E^{(0)}}
+			\end{equation*}
+			In the coordinate representation
+			\begin{equation*}
+				-\frac{\hbar^2}{2 m} \dv[2]{\psi^{(0)}\qty(x)}{x} + V\qty(x) \psi^{(0)}\qty(x) = E^{(0)} \psi^{(0)}\qty(x)
+			\end{equation*}
+			In the region $0 < x < a,\quad V(x) = 0$. Therefore
+			\begin{align}
+				-\frac{\hbar^2}{2 m} \dv[2]{\psi^{(0)}\qty(x)}{x} 
+				&= E^{(0)} \psi^{(0)}\qty(x) \nonumber\\
+		or\quad		\dv[2]{\psi^{(0)}\qty(x)}{x} + k^2 \psi^{(0)}\qty(x) &= 0 \quad (0 < x < a)
+			\label{chapter20.ex1.eqn1}
+			\end{align}
+			where
+			\begin{equation*}
+				k = \sqrt{\frac{2 m E_0}{\hbar^2}}
+			\end{equation*}
+			The wave function must be zero at the boundaries of the potential and outside the potential.\\
+			
+			The general solution of the interior wave function $\psi^{(0)}\qty(x)$ is
+			\begin{equation*}
+				\psi^{(0)}\qty(x) = A \sin k x + B \cos k x
+			\end{equation*}
+			since $\psi^{(0)}\qty(x=0)=0$, we must have $B=0$. Thus
+			\begin{equation*}
+				\psi^{(0)}\qty(x) = A \sin k x 
+			\end{equation*}
+			And since $\psi^{(0)}\qty(x=a)$ is also zero, we must also have
+			\begin{align}
+				\sin k a &= 0 \nonumber\\
+				or, \quad k a &= \pi, 2\pi, 3\pi, \ldots \nonumber\\
+				i.e.,\quad k a &= n \pi, \quad n = 1,2,3,\ldots
+				\label{chapter20.ex1.eqn2}
+			\end{align}
+			Equation (\ref{chapter20.ex1.eqn2}) is the quantization condition. The unperturbed energy levels are
+			\begin{equation}
+				E^{(0)}_n = \frac{\hbar^2 k^2}{2 m} = \frac{\hbar^2}{2 m \qty(\frac{n^2 \pi^2}{a^2})} = \frac{\pi^2 \hbar^2}{2 m a^2} n^2
+				\label{chapter20.ex1.eqn3}
+			\end{equation}
+			The first three energy levels are
+			\begin{align*}
+				E_1^{(0)} &= \frac{\pi^2 \hbar^2}{2 m a^2} \\
+				E_2^{(0)} &= 4 \frac{\pi^2 \hbar^2}{2 m a^2} \\
+				E_3^{(0)} &= 9 \frac{\pi^2 \hbar^2}{2 m a^2}
+			\end{align*}
+			
+			Now we will normalize the unperturbed wave functions. For an arbitrary level $n$,
+			\begin{align*}
+				\psi_n^{(0)}\qty(x) &= A_n \sin k_n x \\
+				\therefore \ \int \psi_n^{(0)*}\qty(x) \psi_n^{(0)}\qty(x) \dd{x} &= 1 \\
+				or,\ \abs{A_n}^2 \int \sin^2 k_n x \dd{x} &= 1 \\
+				or,\ \abs{A_n}^2 \int_{0}^{a} \frac{1}{2} \qty(1 - \cos 2 k_n x) &= 1 \\
+				or,\ \frac{\abs{A_n}^2}{2} \qty[a - \int_{0}^{a} \cos 2 k_n x \dd{x}] &= 1 \\
+				or, \ \abs{A_n}^2 \frac{a}{2} &= 1
+			\end{align*}
+			Therefore we can choose
+			\begin{equation}
+				A_n = \sqrt{\frac{2}{a}}
+			\end{equation}
+			Therefore, normalized unperturbed wave functions for the first three levels are
+			\begin{align*}
+				\psi_1^{(0)} \qty(x) &=  \sqrt{\frac{2}{a}} \sin \frac{\pi x }{a} \\
+				\psi_2^{(0)} \qty(x) &=  \sqrt{\frac{2}{a}} \sin \frac{2\pi x }{a} \\
+				\psi_3^{(0)} \qty(x) &=  \sqrt{\frac{2}{a}} \sin \frac{3\pi x }{a} 
+			\end{align*}
+			
+			\underline{First order correction to energy}\\
+			The first-order energy corrections are then
+			\begin{align*}
+				E_1^{(1)} = \expval{V}{\psi_1^{(0)}} &= \frac{2}{a} \frac{V_0}{a} \int_{0}^{a} x \sin^2 \frac{\pi x}{a} \dd{x} = \frac{V_0}{2} \\
+				E_2^{(1)} = \expval{V}{\psi_2^{(0)}} &= \frac{2}{a} \frac{V_0}{a} \int_{0}^{a} x \sin^2 \frac{2\pi x}{a} \dd{x} = \frac{V_0}{2} \\
+				E_3^{(1)} = \expval{V}{\psi_3^{(0)}} &= \frac{2}{a} \frac{V_0}{a} \int_{0}^{a} x \sin^2 \frac{3\pi x}{a} \dd{x} = \frac{V_0}{2} \\
+			\end{align*}
+			Therefore, to first order, the perturbed energies are
+			\begin{align}
+				E_1 = E_1^{(0)} + E_1^{(1)} &= \frac{\pi^2 \hbar^2}{2 m a^2} + \frac{V_0}{2} \\
+				E_2 = E_2^{(0)} + E_2^{(1)} &= 4\frac{\pi^2 \hbar^2}{2 m a^2} + \frac{V_0}{2} \\
+				E_3 = E_3^{(0)} + E_3^{(1)} &= 9\frac{\pi^2 \hbar^2}{2 m a^2} + \frac{V_0}{2} \\
+			\end{align}
 			
 			
 			\item 
-			This is new
+			A particle of mass $m$ moves in a $1$-dimensional oscillatior potential
+			\begin{equation}
+				V(x) = \frac{1}{2} m \omega^2 x^2
+			\end{equation}
+			In the nonrelativistic limit, where the kinetic energy and momentum are related by
+			\begin{equation}
+				T = \frac{p^2}{2 m}
+			\end{equation}
+			The ground state energy is well-known to be $E_0=\frac{1}{2} \hbar \omega$. Relativistically, the kinetic energy and the momentum are related by
+			\begin{equation}
+				T = E - m c^2 = \sqrt{m^2 c^4 + p^2 c^2} - m c^2
+			\end{equation}
+			(a) Determine the lowest order correction to the kinetic energy due to relativistic effects.\\
+			(b) Considering the correction to the kinetic energy as a perturbation, compute the relativistic correction to the ground state energy.\\
+			
+			\underline{Ans}\\
+			
 			
 			
 			

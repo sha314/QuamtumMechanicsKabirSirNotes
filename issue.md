@@ -13,7 +13,10 @@ Schrodinger spelling : chapter 12
 
 # issue 5
 for <m| A |n> symbol use command from physics.sty package
-chapter 20, 12, 
+unresolved chapters = 12, 
+resolved chapters = 20
+
+
 
 
 
