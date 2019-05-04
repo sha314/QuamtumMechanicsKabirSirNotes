@@ -1,3 +1,10 @@
 *.aux
 *.log
 *.out
+*.idx
+*.toc
+*.ist
+*.out
+*.ptc
+main.synctex.gz
+

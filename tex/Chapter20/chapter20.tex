@@ -484,8 +484,8 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 		
 		
 		%% page 31 Ex
-		\section{Examples}
-		\begin{enumerate}
+		\section{Examples of Non-Degenerate Perturbation Theory}
+		\begin{enumerate}[label=Problem.\arabic*,start=1]
 			\item 
 			Calculate the first order energy shifts for the first three states of the infinite square well of width $a$ in one dimension due to the perturbation $V(x) = V_0 \frac{x}{a}$.\\
 			
@@ -507,8 +507,9 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			
 			
 			\begin{figure}
-				
 				%%%%%%% TODO
+				\centering
+				\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
 				\caption{Infinite Square Well}
 			\end{figure}
 			
@@ -596,11 +597,11 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			
 			
 			\item 
-			A particle of mass $m$ moves in a $1$-dimensional oscillatior potential
+			A particle of mass $m$ moves in a $1$-dimensional oscillator potential
 			\begin{equation}
 				V(x) = \frac{1}{2} m \omega^2 x^2
 			\end{equation}
-			In the nonrelativistic limit, where the kinetic energy and momentum are related by
+			In the non-relativistic limit, where the kinetic energy and momentum are related by
 			\begin{equation}
 				T = \frac{p^2}{2 m}
 			\end{equation}
@@ -612,12 +613,921 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			(b) Considering the correction to the kinetic energy as a perturbation, compute the relativistic correction to the ground state energy.\\
 			
 			\underline{Ans}\\
+			(a) We have
+			\begin{align*}
+				T = E - mc^2 &= \sqrt{m^2 c^4 + p^2 c^2} - m c^2 \\
+				&= mc^2 \sqrt{1 + \frac{p^2c^2}{m^2 c^4}} - mc^2 \\
+				&= mc^2 \qty(1 + \frac{p^2 c^2}{2 m^2 c^4} - \frac{p^4 c^4}{8 m^4 c^8} + \ldots) - mc^2 \\
+				&= mc^2 \qty(1 + \frac{p^2}{2 m^2 c^2} - \frac{p^4 }{8 m^4 c^4} + \ldots) - mc^2 \\
+				&\approx \frac{p^2}{2 m} - \frac{p^4}{8 m^3 c^2}
+			\end{align*}
+			where we have used the binomial expansion of $(1+x)^n$ (appendix (\ref{appendix2.series}))
+			
+			
+			(b) The unperturbed Hamiltonian is
+			\begin{equation}
+				H_0 = \frac{p^2}{2 m} + \frac{1}{2} m \omega^2 x^2
+			\end{equation}
+			$H_0$ represents a one-dimensional harmonic oscillator. The eigenstates and the eigenvalues are 
+			\begin{equation*}
+				H_0 \ket{n^{(0)}} = E_n^{(0)} \ket{n^{(0)}}
+			\end{equation*}
+			where,
+			\begin{equation*}
+				E_n^{(0)} = \qty(n + \frac{1}{2}) \hbar \omega; \quad n=0,1,2,\ldots
+			\end{equation*}
+			We take the perturbation to be
+			\begin{equation*}
+				V = - \frac{p^4}{8 m^3 c^2}
+			\end{equation*}
+			The energy correction for the ground state is then
+			\begin{align*}
+				E_0^{(1)} 
+				&= \expval{V}{0};\quad \ket{0} = \text{unperturbed ground state}\\
+				&= - \expval{\frac{p^4}{8 m^3 c^2}}{0} \\
+				&= - \frac{1}{8 m^3 c^2} \expval{p^4}{0}
+			\end{align*}
+			where
+			\begin{equation*}
+				p = \iu p_0 \qty(a^{\dagger} - a),\quad p_0 = \sqrt{\frac{\hbar m \omega}{2}}
+			\end{equation*}
+			Thus
+			\begin{align*}
+				E_0^{(1)} 
+				&= - \frac{1}{8 m^3 c^2} \frac{\hbar^2 m^2 \omega^2}{4} \expval{\qty(a^{\dagger} - a)^4}{0} \\
+				&= - \frac{\hbar^2 \omega^2}{32 m c^2} \expval{\qty(a^{\dagger} - a)^4}{0} \\
+				&= - \frac{\hbar^2 \omega^2}{32 m c^2} \expval{\qty(a^{\dagger} - a)\qty(a^{\dagger} - a)\qty(a^{\dagger} - a)\qty(a^{\dagger} - a)}{0} \\
+				&= + \frac{\hbar^2 \omega^2}{32 m c^2} \expval{a\qty(a^{\dagger} - a)\qty(a^{\dagger} - a)a^{\dagger}}{0} \\
+				&= + \frac{\hbar^2 \omega^2}{32 m c^2} \expval{\qty(a^{\dagger} - a)\qty(a^{\dagger} - a)}{1} \\
+			\end{align*}
+			Two ways to solve from here
+			\begin{align*}
+				E_0^{(1)}  
+				&= + \frac{\hbar^2 \omega^2}{32 m c^2} \expval{\qty(a^{\dagger} - a)\qty(a^{\dagger} - a)}{1} \\
+				&= \frac{\hbar^2 \omega^2}{32 m c^2} \bra{1}\qty(a^\dagger - a) \qty(\sqrt{2}\ket{2} - \ket{0}) \\
+				&= \frac{\hbar^2 \omega^2}{32 m c^2} \bra{1} \qty(\sqrt{6}\ket{3} -\ket{1} - 2 \ket{1}) \\
+				&= -\frac{3\hbar^2 \omega^2}{32 m c^2}
+			\end{align*}
+			or,
+			\begin{align*}
+				E_0^{(1)}  
+				&= + \frac{\hbar^2 \omega^2}{32 m c^2} \expval{\qty(a^{\dagger} - a)\qty(a^{\dagger} - a)}{1} \\
+				&= \frac{\hbar^2 \omega^2}{32 m c^2}\expval{\qty(a^{\dagger}a^{\dagger} -a^{\dagger} a - a a^{\dagger} + a a)}{1} \\
+				&= - \frac{\hbar^2 \omega^2}{32 m c^2} \expval{a^{\dagger} a + a a^{\dagger}}{1} \\
+				&= - \frac{\hbar^2 \omega^2}{32 m c^2} \bra{1} \qty(a^\dagger \ket{0} + a \sqrt{2}\ket{2}) \\
+				&= - \frac{\hbar^2 \omega^2}{32 m c^2} \bra{1} \qty(\ket{1} + 2\ket{1}) \\
+				&= - \frac{\hbar^2 \omega^2}{32 m c^2} \bra{1} 3\ket{1}\\
+				&= - \frac{3 \hbar^2 \omega^2}{32 m c^2}
+			\end{align*}
+			
+			Where we have used the ladder operator for Harmonic oscillator, defined by
+			\begin{align*}
+				a\ket{n} = \sqrt{n} \ket{n - 1} \\
+				a^\dagger\ket{n} = \sqrt{n+1} \ket{n+1} \\
+			\end{align*}
+			
+			
+			
+			
+			\item Find the first order correction to the $n^{th}$ level of a one-dimensional harmonic oscillator perturbed by the potential
+			\begin{equation*}
+				H^\prime \qty(x) = \epsilon_3 x^3 + \epsilon_4 x^4
+			\end{equation*}
+			\underline{Ans}\\
+			For an unperturbed one-dimensional harmonic oscillator, the Hamiltonian is
+			\begin{equation*}
+				H_0 = - \frac{\hbar^2}{2 m} \dv[2]{}{x} + \frac{1}{2 } m \omega^2 x^2
+			\end{equation*}
+			The eigenvalue equation $H_0$ is completely solved. We have
+			\begin{equation}
+				H_0 \ket{n} = E_n \ket{n}
+			\end{equation}
+			where
+			\begin{equation}
+				E_n = \qty(n + \frac{1}{2}) \hbar \omega \ ;\quad n=0,1,2,\ldots
+			\end{equation}
+			Now the first-order correction to energy is 
+			\begin{equation}
+				E_n^{(1)} = \expval{H^\prime}{n} = \expval{\epsilon_3 x^3}{n} + \expval{\epsilon_4 x^4}{n}
+			\end{equation}
+			The expectation value of $x^3$ is any unperturbed state of the harmonic oscillator is zero, because the wave function corresponding to an unperturbed state is either even or odd. So
+			\begin{equation}
+				\expval{x^3}{n} = \int u_n^*\qty(x) x^3 u_m\qty(x) \dd{x} = 0
+			\end{equation}
+			because the integrand is odd. Therefore
+			\begin{equation}
+				E_n^{(1)} = \epsilon_4 \expval{x^4}{n}
+				\label{chapter20.ex3.eqn1}
+			\end{equation}
+			At this state, we can work out the expectation value of $x^4$ in the $n^{th}$ unperturbed state, i.e., the right hand side of equation (\ref{chapter20.ex3.eqn1}), by using the wave function of the $n^{th}$ unperturbed state:
+			\begin{equation}
+				E_n^{(1)} = \epsilon_4 \expval{x^4}{n} = \int u_n^*\qty(x) x^4 u_m\qty(x) \dd{x}
+			\end{equation}
+			The wave function $u_n\qty(x)$ involve the Hermite polynomial $H_n\qty(x)$ and the integration in the above equation is non trivial. It is easier to find the expectation value $\expval{x^4}{n}$ using the creation ($a^\dagger$) and destruction ($a$) operator
+			We define
+			\begin{align}
+				a &= \frac{1}{\sqrt{2 m \hbar \omega}} \qty(m \omega x + \iu p) \\
+				a^\dagger &= \frac{1}{\sqrt{2 m \hbar \omega}} \qty(m \omega x + \iu p)
+			\end{align}
+			In terms of $a$ and $a^\dagger$, the unperturbed Hamiltonian is 
+			\begin{equation}
+				H_0 = \frac{\hat{p}^2}{2 m} + \frac{1}{2} m \omega \hat{x}^2 = \qty(a^\dagger a + \frac{1}{2}) \hbar \omega
+			\end{equation}
+			We can write the operators $\hat{x}$ and $\hat{p}$ in terms of $a$ and $a^\dagger$
+			\begin{align}
+				\hat{x} &= \qty(\frac{\hbar}{2 m \omega})^{1/2} \qty(a + a^\dagger)\\
+				\hat{p} &= \frac{1}{\iu}\qty(\frac{\hbar}{2 m \omega})^{1/2} \qty(a - a^\dagger)
+			\end{align}
+			We also have
+			\begin{align}
+				a\ket{n} &= \sqrt{n} \ket{n - 1} \\
+				a^\dagger \ket{n} &= \sqrt{n+1} \ket{n+1}
+			\end{align}
+			The perturbing Hamiltonian is
+			\begin{align}
+				H^\prime 
+				&= \epsilon_3 x^3 + \epsilon_4 x^4 \\
+				&= \epsilon_3 \qty(\frac{\hbar}{2 m \omega})^{3/2} \qty(a + a^\dagger)^3 + \epsilon_4 \qty(\frac{\hbar}{2 m \omega})^2 \qty(a + a^\dagger)^4
+			\end{align}
+			
+			%% page 45
+			The first order correction to energy is 
+			\begin{equation}
+				E_n^{(1)} = \epsilon_3 \expval{x^3}{n} + \epsilon_4 \expval{x^4}{n}
+			\end{equation}
+			The first term is zero, as we have argued previously. 
+			%% <<< by shahnoor
+			
+			In terms of the operators $a$ and $a^\dagger$, we will have odd number of $a$ or $a^\dagger$ in each terms if we compute $(a+a^\dagger)^3$. Thus when sandwiched with $\ket{n}$ the orthogonality will yield zero.
+			%% >>>
+			So,
+			\begin{align*}
+				E_n^{(1)} &=  \epsilon_4 \expval{x^4}{n} \\
+				&= \epsilon_4 \frac{\hbar^2}{4 m^2 \omega^2} \expval{\qty(a+a^\dagger)^4}{n}\\
+				&= \epsilon_4 \frac{\hbar^2}{4 m^2 \omega^2} \expval{\qty(a+a^\dagger)\qty(a+a^\dagger)\qty(a+a^\dagger)\qty(a+a^\dagger)}{n}
+			\end{align*}
+			This expression on the right hand side has sixteen terms, each term having four factors $a$ or $a^\dagger$ in a variety of different orders. Only terms containing two $a$'a and two $a^\dagger$'s yield non-zero contributions. These terms are
+						\begin{align*}
+			E_n^{(1)} 
+			&= \epsilon_4 \frac{\hbar^2}{4 m^2 \omega^2} \expval{a a a^\dagger a^\dagger + a a^\dagger a a^\dagger +  a^\dagger a a a^\dagger + a a^\dagger a^\dagger a + a^\dagger a a^\dagger a + a^\dagger a^\dagger a a}{n}
+			\end{align*}
+			The six expectation values in the above expression can be calculated in a straight forward manners.
+			\begin{align*}
+				\expval{a a a^\dagger a^\dagger}{n} = \matrixelement{n}{a a a^\dagger}{n+1} \sqrt{n + 1} \\
+				&= \mel{n}{a a }{n+2} \sqrt{n+2} \sqrt{n+1} \\
+				&= \mel{n}{a}{n+1} \sqrt{n+2} \sqrt{n+2} \sqrt{n+1} \\
+				&= \braket{n}{n} \sqrt{n+1} \sqrt{n+2} \sqrt{n+2} \sqrt{n+1} \\
+				&= (n+1) (n+2)
+			\end{align*}
+			\begin{align*}
+				\expval{a a^\dagger a a^\dagger}{n} &= \mel{n}{a a^\dagger a}{n+1} \sqrt{n+1} \\
+				&= \mel{n}{a a^\dagger}{n} \qty(n+1) \\
+				&= \braket{n}{n} \qty(n+1) \qty(n+1)\\
+				&= \qty(n+1)^2
+			\end{align*}
+			\begin{align*}
+				\expval{a a^\dagger a^\dagger a}{n} &= \mel{n}{a a^\dagger a^\dagger}{n-1} \sqrt{n} \\
+				&= \mel{n}{a a^\dagger}{n} \sqrt{n} \sqrt{n} \\
+				&= \mel{n}{a}{n+1} \sqrt{n+1} n \\
+				&= \braket{n}{n} \sqrt{n+1}  \sqrt{n+1}  n \\
+				&= n \qty(n+1)
+			\end{align*}
+			\begin{align*}
+				\expval{a^\dagger a a a^\dagger}{n} = n \qty(n+1)
+			\end{align*}
+			\begin{align*}
+				\expval{a^\dagger a a^\dagger a}{n} = n^2
+			\end{align*}
+			\begin{align*}
+				\expval{a^\dagger a^\dagger a a}{n} &= \mel{n}{a^\dagger a^\dagger a}{n-1} \sqrt{n} \\
+				&= \mel{n}{a^\dagger a^\dagger}{n-2} \sqrt{n-1} \sqrt{n} \\
+				&= \mel{n}{a^\dagger}{n-1} \sqrt{n-1}\sqrt{n-1}\sqrt{n} \\
+				&= \braket{n}{n} \sqrt{n}\sqrt{n-1}\sqrt{n-1}\sqrt{n} \\
+				&= n (n-1)
+			\end{align*}
+			Putting everything together
+			\begin{align*}
+				E_n^{(1)} &= \frac{\epsilon_4 \hbar^2}{4 m^2 \omega^2} \qty[(n+1)(n+2)  +  (n+1)^2  + n(n+1)  +  n(n+1)  +  n^2  + n(n-1)]\\
+				&= \frac{\epsilon_4 \hbar^2}{4 m^2 \omega^2} \qty(6 n^2 + 6 n + 3)
+			\end{align*}
+			
+			
+			
+			
+			\item Linear harmonic oscillator of charge $q=+e$ ($e$ is positive) and mass $m$ perturbed by a uniform electric field $E$ in the $x$ direction.\\
+			
+			\underline{Ans.}\\
+			%% page 48
+			\begin{figure}
+				%% TODO
+				\centering
+				\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+				\caption{Linear harmonic oscillator in electric field $E$}
+			\end{figure}
+		\begin{equation}
+			V(x) = V(0) - q E x
+		\end{equation}
+		Assuming $V(0) = 0$
+		\begin{equation}
+			V(x) =  - q E x
+		\end{equation}
+			Here $V(x)$ is the electric potential energy of the oscillator. We will take this as a perturbation. The full Hamiltonian of the system is then
+			\begin{equation}
+				H = H_0 + V(x) = - \frac{\hbar^2}{2 m} \dv[2]{}{x} + \frac{1}{2} m \omega x^2 - q E x
+			\end{equation}
+			The first order correction to the energy of the $n^{th}$ level of the harmonic oscillator due to its interaction with the electric field is then
+			\begin{equation}
+				E_n^{(1)} = \expval{V}{n} = -e E \expval{x}{n} = 0
+			\end{equation}
+			because the integral is odd in the coordinate representation.\\
+			
+			We now calculate the energy correction in the $2nd$ order.
+			\begin{equation}
+				E_n^{(2)} = \sum_{\substack{m \\ m \neq n}} \frac{\abs{V_{m n} }^2}{E_n^{(0)} - E_m^{(0)}}
+			\end{equation}
+			Here
+			\begin{equation}
+				V_{m n} = \mel{m}{V}{n} = - e E \mel{m}{x}{n}
+			\end{equation}
+			Therefore
+			\begin{equation}
+				E_n^{(2)} = \left(-e E\right)^2 \sum_{\substack{m \\ m \neq n}} \frac{\abs{\mel{m}{x}{n}}^2}{E_n^{(0)} - E_m^{(0)}}
+			\end{equation}
+			Next
+			\begin{equation}
+				x = \left(\frac{\hbar}{2 m \omega}\right)^{1/2} \qty(a + a^\dagger)
+			\end{equation}
+			\begin{align*}
+			\therefore \mel{m}{x}{n} 
+			&= \left(\frac{\hbar}{2 m \omega}\right)^{1/2} \mel{m}{a + a^\dagger}{n} \\
+			&= \left(\frac{\hbar}{2 m \omega}\right)^{1/2} \left[\sqrt{n} \braket{m}{n-1}  +  \sqrt{n+1}\braket{m}{n+1}\right] \\
+			&= \left(\frac{\hbar}{2 m \omega}\right)^{1/2} \left[\sqrt{n} \delta_{m,n-1} + \sqrt{n+1} \delta_{m, n+1}\right]
+			\end{align*}
+			Hence
+			\begin{align*}
+				E_n^{(2)} 
+				&= e^2 E^2 \sum_{\substack{m \\ m \neq n}} \frac{\abs{\mel{m}{x}{n}}^2}{E_n^{(0)} - E_m^{(0)} }\\
+				&= e^2 E^2 \left[
+				\frac{\abs{\mel{n-1}{x}{n}}^2}{E_n^{(0)}-E_{n-1}^{(0)}}
+				+
+				\frac{\abs{\mel{n+1}{x}{n}}^2}{E_n^{(0)}-E_{n+1}^{(0)}}
+				\right]\\
+				&= e^2 E^2 \left[\frac{n}{\hbar \omega} + \frac{n+1}{-\hbar\omega}\right] \left(\frac{\hbar}{2 m \omega}\right)\\
+				&= - \frac{e^2 E^2}{2 m \omega^2}
+			\end{align*}
+			The correction to the energy of the $n^{th}$ level up to second order is then
+			\begin{align*}
+				E_n &=	E_n^{(0)}  + E_n^{(1)} + E_n^{(2)} \\
+				&= \qty(n + \frac{1}{2}) \hbar\omega + 0 - \frac{e^2 E^2}{2 m \omega^2}\\
+				&= \qty(n + \frac{1}{2}) \hbar\omega - \frac{e^2 E^2}{2 m \omega^2}
+			\end{align*}
+			
+			%% page 50
+			In the present situation the problem can be solved exactly merely by shifting the origin. This can be easily seen as follows:
+			\begin{align*}
+				H = H_0 + V 
+				&= - \frac{\hbar^2}{2 m} \dv[2]{}{x} + \frac{1}{2} m \omega^2 x^2 - e E x\\
+				&= -\frac{\hbar^2}{2 m}\dv[2]{}{x} + \frac{1}{2} m \omega^2 \qty(x^2 - \frac{2 e E}{m \omega^2}x)
+			\end{align*}
+			Now, we can write $\qty(x^2 - \frac{2 e E}{m \omega^2}x)$ as follows
+			\begin{align*}
+				\qty(x^2 - \frac{2 e E}{m \omega^2}x) 
+				= x^2 - 2 \frac{e W}{m \omega^2} x + \qty(\frac{e E}{m \omega^2})^2 - \qty(\frac{e E}{m \omega^2})^2
+				= \qty(x - \frac{e E}{m \omega^2})^2 - \qty(\frac{e E}{m \omega^2})^2
+			\end{align*}
+			Therefore, the Hamiltonian $H$ can be written as
+			\begin{align*}
+				H &= -\frac{\hbar^2}{2 m} \dv[2]{}{x}  + \frac{1}{2} m \omega^2 \qty(x - \frac{e E}{m \omega^2})^2 - \frac{1}{2} m \omega^2 \frac{e^2 E^2}{m^2 \omega^4} \\
+				&= -\frac{\hbar^2}{2 m} \dv[2]{}{x} +  \frac{1}{2} m \omega^2 \qty(x - \frac{e E}{m \omega^2})^2 - \frac{e^2 E^2}{2 m \omega^2}
+			\end{align*}
+			Let $\xi = x - \frac{e E}{m \omega^2}$
+			\begin{equation*}
+				\therefore H = -\frac{\hbar^2}{2 m} \dv[2]{}{\xi} +  \frac{1}{2} m \omega^2 \xi^2 - \frac{e^2 E^2}{2 m \omega^2}
+			\end{equation*}
+			Thus, the exact eigenvalue spectrum is
+			\begin{equation}
+				E_n = \qty(n + \frac{1}{2}) \hbar \omega - \frac{e^2 E^2}{2 m \omega^2}\ ;\quad n=0,1,2,\ldots
+			\end{equation}
+			In the present problem, the second order perturbation theory to give the correct result.
+			
+			
+			\item Calculate the shift in energy of the $1 s$ state (i.e. the ground state) of hydrogen if the proton is assumed to be a uniformly charged spherical shell of radius $10^{-15} m$ rather than a point charge. Use first order perturbation theory.\\
+			
+			\underline{Ans.}\\
+			%% page 52
+			\begin{figure}
+				%%% TODO
+				\centering
+				\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+				\caption{hydrogen atom}
+			\end{figure}
+			Unperturbed system: proton is a point charge. The Hamiltonian  of the unperturbed system is
+			\begin{equation}
+				H_0 = - \frac{\hbar^2}{2 m} \nabla^2 + V_0(r) = - \frac{\hbar^2}{2 m} \nabla^2 - \frac{e^2}{4 \pi \epsilon_0 r}
+			\end{equation}
+			Perturbed system:\\
+			
+			\begin{figure}
+				%%% TODO
+				\centering
+				\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+				\caption{hydrogen atom}
+			\end{figure}
+		The proton is a very thin shell of radius $a$. The value of $a$ is $10^{-15}m$. The potential for the perturbed system is
+		\begin{equation}
+			V(r) = \begin{cases}
+			-\frac{e^2}{4 \pi \epsilon_0 r},\ r > a \\
+			\frac{e^2}{4 \pi \epsilon_0 a}, \ r < a
+			\end{cases}
+		\end{equation}
+			Therefore
+			
+			%% page 53
+			\begin{align*}
+				H &= - \frac{\hbar^2}{2 m} \nabla^2 + V(r) \\
+				&= \begin{cases}
+					- \frac{\hbar^2}{2 m} \nabla^2 - \frac{e^2}{4 \pi \epsilon_0 a} \quad \text{for} \ r<a \\
+					- \frac{\hbar^2}{2 m} \nabla^2 - \frac{e^2}{4 \pi \epsilon_0 r} \quad \text{for} \ r>a \\
+				\end{cases}
+			\end{align*}
+			The unperturbed Hamiltonian
+			\begin{equation*}
+				H_0 = - \frac{\hbar^2}{2 m} \nabla^2 - \frac{e^2}{4 \pi \epsilon_0 r} \quad \ \forall r
+			\end{equation*}
+			Therefore, perturbation $H^\prime$ is 
+			\begin{align*}
+				H^\prime 
+				&= H - H_0 \\
+				&= \begin{cases}
+					- \frac{e^2}{4 \pi \epsilon_0 a} + \frac{e^2}{4 \pi \epsilon_0 r} \quad    &\text{for}\ r < a \\
+					0 &\text{for}\ r > a
+				\end{cases}
+			\end{align*}
+			Now, the ground state energy of the Hydrogen atom (taking the proton to be a point charge) is 
+			\begin{equation*}
+				E_0 = - \frac{e^2}{\qty(4 \pi \epsilon_0) 2 a_0} = - 16.6 eV
+			\end{equation*}
+			where
+			\begin{equation*}
+				a_0 = \frac{4\pi \epsilon_0 \hbar^2}{m e^2} = \text{Bohr radius} = 0.5 \times 10^{-10} m
+			\end{equation*}
+			
+			The ground state wave function is
+			\begin{equation*}
+				\psi_{1s}^{(0)}\qty(r) = \frac{2}{\qty(4\pi)^{1/2} a_0^{3/2}} e^{-r / a_0}
+			\end{equation*}
+			The first-order correction is
+			\begin{align*}
+				E^{(1)} \equiv \Delta E
+				&= \expval{H^\prime}{\psi_{1s}^{(0)}} \\
+				&= \int \psi_{1s}^{(0)*}\qty(r) H^\prime \psi_{1s}^{(0)}\qty(r) \dd[3]{r}\\
+				&= \frac{4}{4\pi a_0^3} 4\pi \int_0^a e^{-2r/a_0} \qty(\frac{e^2}{4\pi \epsilon_0 r} - \frac{e^2}{3\pi \epsilon_0 a}) r^2 \dd{r} \\
+				&= \frac{4 e^2}{a_0^3 4\pi \epsilon_0} \int_{0}^{a} e^{-2 r/a_0} \qty(\frac{1}{r} - \frac{1}{a}) r^2 \dd{r}
+			\end{align*}
+			Here $a=10^{-15} m$. In the integral above
+			\begin{equation*}
+				\qty(\frac{r}{a_0})_{max} = \frac{a}{a_0} = \frac{10^{-15}}{0.5 \times 10^{-10}} = 2 \times 10^{-5} << 1
+			\end{equation*}
+			Therefore we can safely set $e^{-2 r/a_0} \approx 1$. The first order correction to the energy is then
+			\begin{align*}
+				\Delta E
+				&= \frac{4 e^2}{4\pi \epsilon_0 a_0^3} \int_{0}^{a} \qty(\frac{1}{r} - \frac{1}{a}) r^2 \dd{r}\\
+				&= \frac{4 e^2}{4\pi \epsilon_0 a_0^3} \qty(\frac{a^2}{2} - \frac{a^2}{3}) \\
+				&= \frac{4 e^2 a^2}{4\pi \epsilon_0 a_0^3} \frac{1}{6}\\
+				&= \frac{4}{3} \qty(\frac{e^2}{\qty(4\pi \epsilon_0 2 a_0)}) \frac{a^2}{a_0^2}
+			\end{align*}
+			\begin{equation*}
+				\Delta E = \frac{4}{3} E_H \frac{a^2}{a_0^2}
+			\end{equation*}
+			with
+			\begin{equation*}
+				E_H \equiv \frac{e^2}{\qty(4\pi \epsilon_0) 2 a} = 13.6 eV
+			\end{equation*}
+			Numerically
+			\begin{equation}
+				\Delta E = \frac{4}{3} \qty(13.6 eV) \qty(\frac{10^{-15}}{0.5 \times 10^{-10}})^2 \sim 7 \times 10^{-9} eV
+			\end{equation}
+			The ground state has increased in energy, but the increase is very small.
+			
+			
+			\item Calculate the shift in the ground state energy of the hydrogen atom if the proton is considered as a uniform sphere of radius $R$ instead than a point charge. \\
+			
+			\underline{Ans.}\\
+			%% page 59
+			
+			\begin{figure}
+				%%%% TODO figure
+				\centering
+				\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+				\caption{Hydrogen atom}
+			\end{figure}
+		
+			\begin{align*}
+				E_{1 s}^{(0)} = -\frac{e^2}{4\pi \epsilon_0 2 a_0} = - E_H = - 13.6 eV \\
+				\psi_{1 s}^{(0)} = \frac{2}{\sqrt{4 \pi a_0^3} } e^{-r/a_0}\\
+				a_0 = \frac{4 \pi \epsilon_0 \hbar^2}{m e^2}
+			\end{align*}
+			\underline{Perturbed system}
+			
+			\begin{figure}
+				%%%% TODO figure. page 60
+				\centering
+				\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+				\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+				\caption{Hydrogen atom}
+			\end{figure}
+		
+			\begin{align*}
+				V\qty(r) = - \frac{e^2}{4 \pi \epsilon_0 r} \quad \text{for}\ r \geq R
+			\end{align*}
+			Let us calculate the potential (not the potential energy) of the electric field of the proton charge distribution for $r<R$
+			
+			Using Gauss's law for the sphere of radius $r<R$
+			%% page 61
+			\begin{align*}
+				E 4 \pi r^2 = \frac{q_{enclosed}}{\epsilon_0} = \frac{1}{\epsilon_0} \frac{4}{3} \pi r^3 \rho = \frac{1}{\epsilon_0} \frac{4}{3} \pi r^3 \frac{e}{\frac{4}{3} \pi R^3} = \frac{e r^3}{\epsilon_0 R^3}
+			\end{align*}
+			\begin{align*}
+				\therefore E = \frac{e r}{4\pi \epsilon_0 R^3}
+			\end{align*}
+			Let $v(r)$ be the potential. Therefore 
+			\begin{align*}
+				\vec{E} &= - \grad{ v} \\
+				or, \ \dv{v}{r} &= -\frac{e r}{4 \pi \epsilon_0 R^3} \\
+				\therefore v = - \frac{e r^2}{2 \qty(4 \pi \epsilon_0) R^3} + c
+			\end{align*}
+			Since $v(R) = \frac{e}{4 \pi \epsilon_0 R}$
+			\begin{align*}
+				\frac{e}{4\pi \epsilon_0 R} = - \frac{e}{2 \qty(4 \pi \epsilon_0) R}  + c \\
+				\therefore c = \frac{3 e}{2 \qty(4 \pi \epsilon_0) R}
+			\end{align*}
+			
+			\begin{align*}
+				v(r) 
+				&= \frac{- e r^2}{2 \qty(4 \pi \epsilon_0) R^3} + \frac{3 e}{2 \qty(4 \pi \epsilon_0) R} \\
+				&= \frac{e}{2 \qty(4 \pi \epsilon_0) R} \qty(3 - \frac{r^2}{R^2}) \quad (r < R)
+			\end{align*}
+			Therefore, potential energy of the electron for $r<R$ is
+			\begin{align*}
+				V(r) = - e v(r) = - \frac{e^2}{2 \qty(4 \pi \epsilon_0) R} \qty(3 - \frac{r^2}{R^2}) \quad (r < R)
+			\end{align*}
+			Thus
+			\begin{equation*}
+				V(r) = \begin{cases}
+				- \frac{e^2}{2 \qty(4 \pi \epsilon_0) R} \qty(3 - \frac{r^2}{R^2}) \quad (r < R) \\- \frac{e^2}{4 \pi \epsilon_0 r} \quad (r > R)
+				\end{cases}
+			\end{equation*}
+			
+			%% page 63
+			Also
+			\begin{align*}
+				V_0 = - \frac{e^2}{4 \pi \epsilon_0 r} \ \forall r
+			\end{align*}
+			The perturbation is then
+			\begin{align*}
+				H^\prime 
+				&= V - V_0 \\
+				&= \begin{cases}
+				- \frac{e^2}{2 \qty(4 \pi \epsilon_0) R} \qty(3 - \frac{r^2}{R^2}) + \frac{e^2}{4 \pi \epsilon_0 r} \quad (r < R) \\ 0 \quad (r > R)
+				\end{cases}\\
+				&= \begin{cases}
+				\frac{e^2}{2 \qty(4 \pi \epsilon_0) R} \qty(-\frac{3}{2} + \frac{r^2}{2 R^2}  + \frac{R}{r}) \quad (r \leq R)
+				\\ 0 \quad (r \geq R)
+				\end{cases}
+			\end{align*}
+			Using this perturbation we can calculate the first order correction to the ground state energy in the previous problem.
+			
+			%% page 64
+			\begin{align*}
+				E^{(1)} = \delta E^{(1)} = \expval{H^\prime}{\psi_{1 s}^{(1)}}
+			\end{align*}
+			The ground state unperturbed wave function is
+			\begin{align*}
+				\psi_{1 s}^{(0)}\qty(r) = \frac{1}{\sqrt{r a_0^3}} e^{-r/a_0}
+			\end{align*}
+			which is independent of $\theta, \phi$. Here $a_0$ is the Bohr radius.
+			
+			\begin{align*}
+				\therefore \delta E^{(1)} = \frac{4 \pi}{\pi a_0^3} \qty(\frac{e^3}{4 \pi \epsilon_0 R^3}) \int_{0}^{R} \qty(-\frac{3}{2} + \frac{r^2}{2 R}  +  \frac{R}{r}) e^{-2 r / a_0} r^2 \dd{r}
+			\end{align*}
+			Now $r_{max} = R = 10^{-15} m$ and $a_0 \approx 10^{-10} m$. Therefore $2 r  / a_0$ is very small, so $e^{-2 r / a_0} \approx 1$.\\
+			
+			The first order correction is then
+			\begin{equation*}
+				\delta E^{(1)} = \frac{4 \pi}{\pi a_0^3} \qty(\frac{e^2}{4\pi \epsilon_0 R}) \int_{0}^{R} \qty(-\frac{3}{2} + \frac{r^2}{2 R}  +  \frac{R}{r}) e^{-2 r / a_0} r^2 \dd{r}
+			\end{equation*}
+			Carrying out the integral and simplifying we get
+			\begin{align*}
+				\delta E^{(1)} 
+				&= \frac{4}{5} \qty(\frac{e^2}{4\pi \epsilon_0 2 a_0}) \frac{R^2}{a_0^2} \\
+				&= \frac{4}{5} E_H \qty(\frac{R^2}{a_0^2})
+			\end{align*}
+			where $E_H =\frac{e^2}{4\pi \epsilon_0 2 a_0}= 13.6 eV$
+		
+		
+	
+			
+			\item Ground state of helium-type atoms.
+			\begin{figure}
+				%%%% TODO figure
+				\centering
+				\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+				\caption{Helium atom}
+			\end{figure}
+			The nucleus is taken to be a point charge with charge of $Z e$ ($e=+1.6 \times 10^{-19} C$).\\
+			The Hamiltonian of the system is taken as
+			\begin{align}
+				H &= -\frac{\hbar^2}{2 m} \qty(\nabla_1^2  +  \nabla_2^2) - \frac{Z e^2}{4 \pi \epsilon_0} \qty(\frac{1}{r_1} + \frac{1}{r_2}) + \frac{e^2}{4 \pi \epsilon_0 \abs{\vec{r_1} - \vec{r_2}}}\\
+				&= H_0 + V
+			\end{align}
+			Here 
+			\begin{equation}
+			 	V = \frac{e^2}{4 \pi \epsilon_0 \abs{\vec{r_1} - \vec{r_2}}}
+			\end{equation}
+			
+			%% page 66
+			where the unperturbed Hamiltonian is
+			\begin{align*}
+				H_0 &= \qty(-\frac{\hbar^2}{2 m} \nabla_1^2 - \frac{Z e^2}{4\pi \epsilon_0 r_1}) + \qty(-\frac{\hbar^2}{2 m} \nabla_2^2 - \frac{Z e^2}{4\pi \epsilon_0 r_2})\\
+			i.e., \	H_0 &= H_0(1) + H_0(2)
+			\end{align*}
+			The perturbing potential $V$ is
+			\begin{equation*}
+				V = \frac{e^2}{4 \pi \epsilon_0 \abs{\vec{r_1} - \vec{r_2}}} = \frac{e^2}{4 \pi \epsilon_0 r_{1 2}}
+			\end{equation*}
+			The unperturbed ground state energy is
+			\begin{align*}
+				E_0 
+				&= - \frac{Z^2 e^2}{\qty(4 \pi \epsilon_0) 2 a_0} - \frac{Z^2 e^2}{\qty(4 \pi \epsilon_0) 2 a_0}\\
+				&= - 2 Z^2 E_H
+			\end{align*}
+			Where $E_H = \frac{e^2}{\qty(4 \pi \epsilon_0) 2 a_0} = 13.6 eV$ and $a_0 = \frac{4 \pi \epsilon_0  \hbar^2}{m e^2}$ is the Bohr radius.\\
+			
+			
+			The corresponding unperturbed eigen function is the product of the eigenfunctions of each electron (neglecting anti-symmetry):
+			\begin{align*}
+				\ket{E_0^{(0)}} \doteq \psi_0 = \psi_{1 s}(1) \psi_{1 s}(2) 
+				= \frac{1}{\sqrt{\pi}} \qty(\frac{Z}{a_0})^{3/2} e^{- Z r_1 / a_0} 
+				\frac{1}{\sqrt{\pi}} \qty(\frac{Z}{a_0})^{3/2} e^{- Z r_2 / a_0}
+			\end{align*}
+			\begin{align*}
+			i.e., \psi_0 = \frac{1}{\pi} \qty(\frac{Z}{a_0})^{3} e^{-Z\qty(r_1 + r_2) / a_0}
+			\end{align*}
+			
+			The first-order correction to energy is
+			
+			%%% page 68
+			\begin{align*}
+				E^{(1)} 
+				&= \expval{V}{E_0^{(0)}} \\
+				&= \int \psi_0^{*}\qty(r_1 r_2) V \psi_0\qty(r_1 r_2) \dd[3]{r_1} \dd[3]{r_2} \\
+				&= \frac{1}{\pi^2} \qty(\frac{Z}{a_0})^6 \int e^{-Z (r_1 + r_2)/a_0} \frac{e^2}{4\pi \epsilon_0 r_{1 2}} e^{-Z (r_1 + r_2)/a_0} \dd[3]{r_1} \dd[3]{r_2}\\
+				&= \frac{e^2}{\qty(4\pi \epsilon_0) \pi^2} \qty(\frac{Z}{a_0})^6 \int e^{- 2 Z r_1/a_0} \frac{1}{r_{1 2}} e^{- 2 Z r_2/a_0} \dd[3]{r_1} \dd[3]{r_2}
+			\end{align*}
+			Let us now make changes in the variables of the integration in the following manner
+			\begin{align*}
+				\vec{\rho}_1 = \frac{2 Z}{a_0} \vec{r}_1 \\
+				\vec{\rho}_2 = \frac{2 Z}{a_0} \vec{r}_2
+			\end{align*}
+			Therefore
+			\begin{align*}
+				r_{1 2} &= \abs{\vec{r}_1 - \vec{r}_2} = \frac{a_0}{2 Z} \abs{\vec{\rho}_1 - \vec{\rho}_2} = \frac{a_0}{2 Z} \rho_{1 2}\\
+				\dd[3]{r_1} &= \qty(\frac{a_0}{2 Z})^3 \dd[3]{\rho_1} \\
+				\dd[3]{r_2} &= \qty(\frac{a_0}{2 Z})^3 \dd[3]{\rho_2}
+			\end{align*}
+			With these change of variables $E^{(1)}$ can be written as
+			\begin{align*}
+				E^{(1)} = \frac{e^2}{\qty(4 \pi \epsilon_0) \pi^2} \qty(\frac{Z}{a_0})^6 \frac{2 Z}{a_0} \qty(\frac{a_0}{2 Z})^6  \int e^{-\rho_1} \frac{1}{\rho_{1 2}} e^{-\rho_2} \dd[3]{\rho_1} \dd[3]{\rho_2}
+			\end{align*}
+			Simplifying
+			\begin{align*}
+				E^{(1)} = \frac{e^2}{\qty(4 \pi \epsilon_0) \pi^2} \frac{2 Z}{a_0} \frac{1}{2^6} \int e^{-\qty(\rho_1 + \rho_2)} \frac{1}{\rho_{1 2}}  \dd[3]{\rho_1} \dd[3]{\rho_2}
+			\end{align*}
+			Now, we can show
+			\begin{equation*}
+				\int e^{-\qty(\rho_1 + \rho_2)} \frac{1}{\rho_{1 2}}  \dd[3]{\rho_1} \dd[3]{\rho_2} = 20 \pi^2
+			\end{equation*}
+			Therefore, $E^{(1)}$ becomes
+			\begin{align*}
+				E^{(1)} 
+				&= \frac{e^2}{\qty(4 \pi \epsilon_0) \pi^2} \frac{2 Z}{a_0} \frac{1}{2^6} 20 \pi^2 \\
+				&= \frac{e^2}{\qty(4 \pi \epsilon_0)} \cdot \frac{2 Z}{ a_0} \cdot \frac{1}{64} \cdot 20 \\
+				&= \frac{5}{4} \cdot \frac{Z e^2}{\qty(4 \pi \epsilon_0) 2 a_0} \\
+			\therefore E^{(1)}	&= \frac{5}{4} Z E_H
+			\end{align*}
+			Hence, upto first order in perturbation theory
+			\begin{equation*}
+				E = E_0 + E^{(1)} = - 2 Z^2 E_H + \frac{5}{4} Z E_H = - \qty(Z - \frac{5}{8}) 2 Z E_H
+			\end{equation*}
 			
 			
 			
 			
 			
 		\end{enumerate}
+	
+	\section{Examples of Degenerate Perturbation Theory}
+	\subsection{Stark Effect in Hydrogen Atom}
+	%% page 71
+	Stark effect is the splitting of atomic energy levels due to an applied electric field. Let the electric field be uniform and along the $z$-axis.
+	\begin{figure}
+		%% TODO
+		\centering
+		\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+		\caption{stark effect}
+	\end{figure}
+	The perturbation is 
+	\begin{equation}
+		H^\prime = \abs{\vec{F}} Z = \abs{q_e} E Z = e E Z
+	\end{equation}
+	Here $q_e = - e$ and $e= + 1.6\times 10^{-19} C$. The unperturbed Hamiltonian is
+	\begin{align}
+		H_0 = - \frac{\hbar^2}{2 m}\nabla^2 - \frac{e^2}{4\pi \epsilon_0 r}
+	\end{align}
+	The eigenvalues and eigenfunctions of $H_0$ are known.
+	\begin{equation}
+		H_0 \psi_{n l m}^{(0)}\qty(\vec{r}) = E_n^{(0)} \psi_{n l m}^{(0)}\qty(\vec{r})
+	\end{equation}
+	%% 72
+	with
+	\begin{align*}
+		E_n^{(0)} = - \frac{e^2}{\qty(4 \pi \epsilon_0) 2 a_0} \frac{1}{n^2} \ ; \ n = 1,2,3, \ldots \\
+		a_0 = \frac{\qty(4 \pi \epsilon_0) h^2}{m e^2} \quad \qty(m=\text{mass of electron})
+	\end{align*}
+	
+	All levels (except the ground level) are degenerate \footnote{We neglect the spin degrees of freedom}. This is because for a given $n$
+	\begin{align*}
+		l &= 0,1,2,\ldots,(n-1) \\
+		and\quad m &= -l,-l+1. \ldots, l-1, l
+	\end{align*}
+	The ground state wave function is 
+	\begin{equation*}
+		\psi_{1 0 0}^{(0)}\qty(r) = \frac{1}{\sqrt{\pi a_0^3}} e^{-r / a_0}
+	\end{equation*}
+	Which is independent of $\theta$ and $\phi$.\\
+	
+	The first-order correction to the ground state energy is
+	\begin{equation*}
+		E_{100}^{(1)} = \expval{H^\prime}{\psi_{100}} = 0
+	\end{equation*}
+	
+	\underline{Level $n=2$}\\
+	The first excited state of the unperturbed hydrogen atom is four-fold degenerate. For $n=2$, $l$ can have values $l=0,1$. For $l=0$, $m=0$, while for $l=1$, $m=1,0,-1$. The degenerate unperturbed eigenfunctions are
+	$\psi^{(0)}_{2 0 0},  \psi^{(0)}_{2 1 0}, \psi^{(0)}_{2 1 1}, \psi^{(0)}_{2 1 -1}$  . A general unperturbed wave function is of the form
+	\begin{equation}
+		\psi_{n l m}^{(0)} = R_{n l}\qty(r) Y_{l m}\qty(\theta, \phi)
+	\end{equation}
+	We now have to diagonalize $H^\prime$ in the four dimensional eigen subspace of $E_2^{(0)}$. The eigenvalues of $H^\prime$ are the first order correction to the energy and the eigenvectors of $H^\prime$ are the correct zero-order approximation of the perturbed wave function.\\
+	
+	\underline{Matrix representation of $H^\prime$}\\
+	Using the degenerate zeroth-order wave functions $\psi^{(0)}_{2 0 0},  \psi^{(0)}_{2 1 0}, \psi^{(0)}_{2 1 1}$ and $\psi^{(0)}_{2 1 -1}$  as basis we can work out the matrix element of $H^\prime$. We use the four wave functions in the following order
+	\begin{align}
+	\begin{aligned}
+		\ket{1} &\equiv \ket{200} \doteq \psi_{200}^{(0)} \\
+		\ket{2} &\equiv \ket{210} \doteq \psi_{210}^{(0)} \\
+		\ket{3} &\equiv \ket{211} \doteq \psi_{211}^{(0)} \\
+		\ket{4} &\equiv \ket{21-1} \doteq \psi_{21-1}^{(0)}
+	\end{aligned}
+		\label{chapter20.ex.degenerate.eqn1}
+	\end{align}
+	A general matrix element of $H^\prime$ is of the form 
+	\begin{equation*}
+		\mel{n l m}{H^\prime}{n^\prime l^\prime m^\prime}\quad \text{with}\ n=2
+	\end{equation*}
+	Before working out the matrix elements, consider the following:
+	\begin{enumerate}
+		\item 	Suppose $l=l^\prime$. This case includes all the diagonal elements $(m=m^\prime)$ and some non-diagonal elements $(m\neq m^\prime)$. In this case, the parity of the integrand of the matrix element is
+		\begin{equation*}
+			\qty(-1)^{2l + 1} = -1 \quad \text{odd}
+		\end{equation*}
+		since $H^\prime = e E Z = e E r \cos\theta \sim Y_{21}$ has parity $(-1)$. Therefore, the integral, i.e., the matrix element is zero.
+		
+		
+		\item Next, note that $H^\prime = e E r\cos\theta$ is invariant under a rotation about the $z$-axis which only changes the azimuthal angle $\phi$ keeping $r$ and $\theta$ unchanged. Therefore
+		\begin{equation*}
+		\comm{H^\prime}{L_z} = 0
+		\end{equation*}
+	\end{enumerate}
+	%% page 76
+	Now, consider the matrix element of the commutator above
+	\begin{align*}
+		\mel{n l m}{\comm{H^\prime}{L_z}}{n l^\prime m^\prime} &= 0 \\
+		\mel{n l m}{H^\prime L_z - L_z H^\prime}{n l^\prime m^\prime} &= 0 \\
+		\qty(m^\prime - m)\mel{n l m}{H^\prime }{n l^\prime m^\prime} &= 0 
+	\end{align*}
+	i.e., if $m^\prime \neq m$, Then
+	\begin{equation*}
+		\mel{n l m}{H^\prime}{n l^\prime m^\prime} = 0
+	\end{equation*}
+	The upshot of the argument above is that $\mel{n l m}{H^\prime}{n l^\prime m^\prime} = 0$ if $l=l^\prime$ and if $m^\prime \neq m$. Thus all the matrix elements of $H^\prime$ except two are non-zero. These are $\mel{2 0 0}{H^\prime}{2 1 0}$ and $\mel{2 1 0}{H^\prime}{2 0 0}$ and these elements are complex conjugates of each other since $H^\prime$ is Hermitian.\\
+	
+	Using the order of the unperturbed wave function indicated above (eqn (\ref{chapter20.ex.degenerate.eqn1})), The matrix representation of $H^\prime$ in the eigen subspace of $E_2^{(0)}$ is
+	
+	\begin{equation}
+	H^\prime = 
+	\begin{blockarray}{ccccc}
+	\ & \ket{1} & \ket{2} & \ket{3} & \ket{4}  \\
+	\begin{block}{c[cccc]}
+	\bra{1} & 0 & \mel{2 0 0}{H^\prime}{2 1 0} & 0 & 0  \\
+	\bra{2} & \mel{2 1 0}{H^\prime}{2 0 0} & 0 & 0 & 0  \\
+	\bra{3} & 0 & 0 & 0 & 0  \\ 
+	\bra{4} & 0 & 0 & 0 & 0 \\
+	\end{block}
+	\end{blockarray}
+	\end{equation}
+	
+	
+	
+	
+	\subsubsection{calculation of $\mel{2 0 0}{H^\prime}{2 1 0}$}
+	We have to calculate
+	\begin{align*}
+		\mel{2 0 0}{H^\prime}{2 1 0} 
+		&= \int \psi_{2 0 0}^{(0)*} \qty(\vec{r}) e E Z \psi_{2 1 0}^{(0)}\qty(\vec{r})  \dd[3]{r} \\
+		&= e E \int \psi_{2 0 0}^{(0)*} \qty(\vec{r}) r \cos \theta \psi_{2 1 0}^{(0)}\qty(\vec{r})  \dd[3]{r}
+	\end{align*}
+	Now
+	\begin{align*}
+		\psi_{2 0 0}^{(0)} 
+		&= R_{2 0}\qty(r) Y_{0 0}\qty(\theta \phi) \\
+		&= \frac{1}{\sqrt{4 \pi}} R_{2 0}\qty(r) \\
+		&= \frac{1}{\sqrt{4 \pi}} \qty(\frac{1}{2 a_0})^{3/2} \qty(2 - r/a_0) e^{-r/2 a_0}
+	\end{align*}
+	
+	\begin{align*}
+		\psi_{2 1 0}^{(0)} 
+		&= R_{2 1}\qty(r) Y_{1 0}\qty(\theta \phi) \\
+		&= \frac{1}{\sqrt{3}} \qty(\frac{1}{2 a_0})^{3/2} \qty(\frac{r}{a_0}) e^{-r/2 a_0} Y_{1 0}\qty(\theta \phi)\\
+		&= \frac{1}{\sqrt{3}} \qty(\frac{1}{2 a_0})^{3/2} \qty(\frac{r}{a_0}) e^{-r/2 a_0} \sqrt{\frac{3}{4 \pi}} \cos \theta\\
+		&= \frac{1}{\sqrt{4\pi}} \qty(\frac{1}{2 a_0})^{3/2} \qty(\frac{r}{a_0}) e^{-r / 2 a_0} \cos\theta
+	\end{align*}
+	%% page 79
+	\begin{align*}
+		\mel{2 0 0}{H^\prime}{2 1 0} = e E \frac{1}{4 \pi} \frac{1}{\qty(2 a_0)^3 a_0} \int_{0}^{\infty} r^4 \qty(2 - r/a_0) e^{-r/a_0} \dd{r} \int_{\Omega} \cos^2\theta \sin\theta \dd{\theta} \dd{\phi}
+	\end{align*}
+	Now
+	\begin{align*}
+		\int_{0}^{2 \pi} \dd{\phi} &= 2 \pi \\
+		\int_{0}^{\pi} \cos^2 \theta \sin \theta\dd{\theta} = \int_{-1}^{+1} \mu^2 \dd{\mu} = \frac{2}{3} \quad (\text{substituting } \mu=\cos\theta )
+	\end{align*}
+	Therefore
+	\begin{align*}
+		\mel{2 0 0}{H^\prime}{2 1 0} 
+		&=  \frac{e E}{4 \pi \qty(8 a_0^3) a_0} \qty(2\pi) \frac{2}{3} \int_{0}^{\infty} r^4 \qty(2 - r/a_0) e^{-r/a_0} \dd{r} \\
+		&= \frac{e E}{24 a_0^4} \int_{0}^{\infty} r^4 \qty(2 - r/a_0) e^{-r / a_0} \dd{r}
+	\end{align*}
+	Let $r/a_0 = x$
+	\begin{align*}
+		\mel{2 0 0}{H^\prime}{2 1 0} 
+		&= \frac{e E}{24 a_0^4} \int_{0}^{\infty} a_0^4 x^4 \qty(2 - x) e^{-x} a_0\dd{x} \\
+		&= \frac{e E a_0}{24} \int_{0}^{\infty}  x^4 \qty(2 - x) e^{-x} \dd{x} \\
+		&= \frac{e E a_0}{24} \left[
+		2 \int_{0}^{\infty} x^4 e^{-x} \dd{x}
+		- \int_{0}^{\infty} x^5 e^{-x} \dd{x}
+		\right]
+		&= \frac{e E a_0}{24} \left[ 2 \times 4! - 5!\right] \\
+		&= -3 e E a_0
+	\end{align*}
+	The gamma integral from appendix (\ref{appendix1.Integrals}) is used.
+	
+	Hence
+	%% page 81
+	
+	\begin{equation}
+		H^\prime \doteq 
+		\left[
+		\begin{matrix}
+		0 & -3 e E a_0 & 0 & 0 \\
+		-3 e E a_0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 
+		\end{matrix}
+		\right]
+	\end{equation}
+	The eigenvalues of $H^\prime$ are the first-order corrections to energy of the unperturbed $n=2$ levels of the hydrogen atom.
+
+
+
+
+	\subsubsection{Eigenvalues of $H^\prime$}
+		
+	The seculer equation is
+	\begin{align*}
+		\det [H^\prime - E I] &= 0 \\
+		\mdet{-E & -3 e E a_0 & 0 & 0 \\
+			-3 e E a_0 & -E & 0 & 0 \\
+			0 & 0 & -E & 0\\
+			0 & 0 & 0 & -E
+	} &= 0 \\
+	or,\ E^2 \qty(E^2 - q e^2 E^2 a_0^2) &= 0
+	\end{align*}
+	There are four roots of $E$, they are
+	\begin{align*}
+		E = - 3 e E a_0,\ 3 e E a_0,\ 0,\ 0
+	\end{align*}
+	Thus, the first-order corrections to the energy- level are
+	\begin{align*}
+		E_{2 1}^{(1)} &= - 3 e E a_0 \\		
+		E_{2 2}^{(1)} &=  3 e E a_0 \\
+		E_{2 3}^{(1)} &=  0 \\
+		E_{2 4}^{(1)} &=  0 \\
+	\end{align*}
+	
+	%%% page  82
+	
+	\begin{figure}
+		%% TODO figure
+		\centering
+		\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+		\caption{Splitting of the energy levels}
+	\end{figure}
+
+	\subsubsection{Eigenvectors of $H$ in the zeroth order}
+		The zeroth order eigen functions of $H$ are the eigenvectors of $H^\prime$. There are four eigenvalues of $H^\prime$ (two of them are equal, namely zero). We have to find each eigenvector.\\
+		
+		\underline{Eigenvalue $E_{n 1}^{(1)} = - 3 e E a_0 \ (n=2)$}\\
+		Let the eigenvector be $(a_1, a_2, a_3, a_4)$. These components satisfy the equation
+		\begin{equation*}
+			\mqty[3 e E a_0 & - 3 e E a_0 & 0 & 0 \\
+			-3 e E a_0 & 3 e E a_0 & 0 & 0\\
+			0 & 0 & 3 e E a_0 & 0\\
+			0 & 0 & 0 & 3 e E a_0
+			]\mqty[a_1 \\ a_2 \\ a_3 \\ a_4] = 0
+		\end{equation*}
+		Therefore we have
+		\begin{equation*}
+			a_1 = a_2 \\
+			a_3 = a_4 = 0\\
+		\end{equation*}
+		The normalization condition gives us $a_1 = a_2 = \frac{1}{\sqrt{2}}$.\\
+		
+		The components $(a_1, a_2, a_3, a_4)$ form the matrix representation of $\chi_{n 1}^{(0)}$ in the basis $\{\ket{1}, \ket{2}, \ket{3}, \ket{4}\}$ where
+		\begin{align*}
+			\ket{1} = \ket{2 0 0} = \psi_{2 0 0}^{(0)}\\
+			\ket{2} = \ket{2 1 0} = \psi_{2 1 0}^{(0)}\\
+			\ket{3} = \ket{2 1 1} = \psi_{2 1 1}^{(0)}\\
+			\ket{4} = \ket{2 1 -1} = \psi_{2 1 -1}^{(0)}
+		\end{align*}
+		\begin{align*}
+		\therefore \ \chi_{n 1}^{(0)} &= a_1 \psi_{2 0 0}^{(0)} + a_2 \psi_{2 1 0}^{(0)} \\		
+		i.e., \ \chi_{n 1}^{(0)} &= \frac{1}{2} \qty(\psi_{2 0 0}^{(0)} + \psi_{2 1 0}^{(0)})
+		\end{align*}
+		
+		
+		
+		\underline{Eigenvalue $E_{n 2}^{(1) = + 3 e E a_0}\ (n=2)$}\\
+		The eigenvalue equation is
+		\begin{equation*}
+		\mqty[-3 e E a_0 & - 3 e E a_0 & 0 & 0 \\
+		-3 e E a_0 & -3 e E a_0 & 0 & 0\\
+		0 & 0 & -3 e E a_0 & 0\\
+		0 & 0 & 0 & -3 e E a_0
+		]\mqty[a_1 \\ a_2 \\ a_3 \\ a_4] = 0
+		\end{equation*}
+		We have
+		\begin{align*}
+		 a_3 = a_4 = 0 \\
+		 a_1 = - a_2 = \frac{1}{\sqrt{2}}
+		\end{align*}
+		\begin{align*}
+		\therefore \ \chi_{n 2}^{(0)} &= \frac{1}{2} \qty(\psi_{2 0 0}^{(0)} + \psi_{2 1 0}^{(0)})
+		\end{align*}
+		
+		
+		
+		\underline{Eigenvalue $E_{n 3}^{(1)} = E_{n 4}^{(1)= 0} \ (n=2)$}\\
+		The eigenvalue equation is
+		\begin{equation*}
+			\mqty[0 & - 3 e E a_0 & 0 & 0 \\
+			-3 e E a_0 & 0 & 0 & 0\\
+			0 & 0 & -3 e 0 & 0\\
+			0 & 0 & 0 & 0
+			]\mqty[a_1 \\ a_2 \\ a_3 \\ a_4] = 0
+		\end{equation*}
+		We have $ a_1 = a_2 = 0$ and $a_3$ and $a_4$ are arbitrary. Since we have two linearly independent eigenvectors, we can choose either
+		\begin{align*}
+			a_3 = 1 \quad \text{and} &\quad a_4 = 0 \\
+			or\quad 			a_3 = 0 \quad \text{and} &\quad a_4 = 1
+		\end{align*}
+		Thus, the two linearly independent eigenvectors with degenerate eigenvalue $0$ are
+		\begin{equation*}
+			\mqty[0 \\ 0 \\ 1 \\ 0] \quad \text{and} \quad \mqty[0 \\ 0 \\ 0 \\ 1]
+		\end{equation*}
+		These two linearly independent eigenvectors are normalized and orthogonal. In the Hilbert space the eigenvectors are
+		\begin{align*}
+		\chi_{2 3}^{(0)} = \psi_{2 1 1}^{(0)}			\\
+		\chi_{2 4}^{(0)} = \psi_{2 1 -1}^{(0)}
+		\end{align*}
+		Thus finally
+		
+		\begin{figure}
+			%%% TODO figure
+			\centering
+			\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+			\caption{Hamiltonian and splitting of energy states}
+		\end{figure}
+
+
 	
 	
 
