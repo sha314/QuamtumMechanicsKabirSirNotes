@@ -9,25 +9,27 @@
 \fi
 
 \section{List of Standard Integrals}
-\begin{equation}
-\int_{-\infty}^{\infty} e^{-x^2} \dd{x} = \sqrt{\pi} 
+\begin{align}
 \label{appendix1.eqn1}
-\end{equation}
+\int_{-\infty}^{\infty} e^{-x^2} \dd{x} &= \sqrt{\pi} \\
+\label{appendix1.eqn2}
+\int_{-\infty}^{\infty} e^{-ax^2} \dd{x} &=  \sqrt{\frac{\pi}{a}} \\
+\label{appendix1.eqn3}
+\int_{-\infty}^{\infty} x^2 e^{-ax^2}  \dd{x} &= \frac{1}{2 a} \sqrt{\frac{\pi}{a}} \\
+\label{appendix1.eqn4}
+\int_{-\infty}^{\infty} x^4 e^{-ax^2}  \dd{x} &= \frac{3}{4 a^2} \sqrt{\frac{\pi}{a}} \\
+\label{appendix1.eqn5}
+\int_{-\infty}^{\infty} x^{2 n} e^{-ax^2}  \dd{x} &=  \frac{1\cdot 2 \cdot 3 \cdots \qty(2n - 1)}{2^n a^n}\sqrt{\frac{\pi}{a}} \quad n=0,1,\ldots
+\end{align}
+
+
+
 
 \begin{equation}
 \int_{-\infty}^{\infty} e^{-\alpha x^2 + \beta x} \dd{x} = \left(\frac{\pi}{2}\right)^{1/2} \exp\left[\frac{\beta^2}{4\alpha}\right]
-\label{appendix1.eqn2}
+\label{appendix1.eqn6}
 \end{equation}
 
-\begin{equation}
-\int_{-\infty}^{\infty} e^{-ax^2} \dd{x} =  \sqrt{\frac{\pi}{a}} 
-\label{appendix1.eqn3}
-\end{equation}
-
-\begin{equation}
-\int_{-\infty}^{\infty} e^{-ax^2} x^2 \dd{x} = \frac{1}{2 a} \sqrt{\frac{\pi}{a}} 
-\label{appendix1.eqn4}
-\end{equation}
 
 \section{Proofs}
 \begin{equation}
@@ -81,3 +83,14 @@ I
 \begin{equation}
 	\Gamma\qty(n+1) = \int_0^\infty x^n e^{-x} \dd{x} = n!
 \end{equation}
+\begin{align}
+\int_{0}^{\infty} x^n e^{-\beta x} \dd{x} = \frac{\Gamma\qty(n+1)}{\beta^{n+1}} = \frac{n!}{\beta^{n+1}}
+\end{align}
+
+
+\section{From Chapter 21}
+\begin{align}
+	\int e^{-x} \dd{x} &= - e^{-x} \\
+	\int x e^{-x} \dd{x} &= - \qty(1 + x) e^{-x} \\
+	\int x^2 e^{-x} \dd{x} &= -\qty(2 + 2 x + x^2)  e^{-x}
+\end{align}

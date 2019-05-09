@@ -22,7 +22,7 @@ also completed by kabir sir
 figure ... pending
 
 # Chapter5
-writing by shahnoor - done on 2019.01.25
+writing by shahnoor - completed on 2019.01.25
 
 # Chapter6
 
@@ -80,12 +80,14 @@ completed by kabir sir ? 2019.04.18
 
 
 # Chapter20
-texts  - by shahnoor - pending
+texts  - by shahnoor - completed - date 2019.05.04
 
 images - -pending
 
 # Chapter21
+texts  - by shahnoor - started - date 2019.05.04 - completed - date 2019.05.09
 
+images - pending
 
 # Chapter22
 

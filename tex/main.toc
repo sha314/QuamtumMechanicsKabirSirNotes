@@ -294,59 +294,71 @@
 \contentsline {subsubsection}{Eigenvalues of $H^\prime $}{235}{section*.181}
 \contentsline {subsubsection}{Eigenvectors of $H$ in the zeroth order}{235}{section*.183}
 \contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{239}{chapter.21}
-\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{241}{chapter.22}
-\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{243}{chapter.23}
-\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{245}{chapter.24}
-\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{247}{chapter.25}
-\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{249}{chapter.26}
-\contentsline {section}{\numberline {26.1}Indistinguishability of identical particles}{249}{section.26.1}
-\contentsline {paragraph}{}{249}{section*.185}
-\contentsline {paragraph}{}{250}{section*.186}
-\contentsline {subsection}{\numberline {26.1.1}The wave function of two identical particles}{250}{subsection.26.1.1}
-\contentsline {paragraph}{}{250}{section*.187}
-\contentsline {subsection}{\numberline {26.1.2}Spin Statistics Theorem}{251}{subsection.26.1.2}
-\contentsline {paragraph}{}{251}{section*.188}
-\contentsline {subsection}{\numberline {26.1.3}Statistics of Composite Particles}{251}{subsection.26.1.3}
-\contentsline {paragraph}{}{251}{section*.189}
-\contentsline {subsection}{\numberline {26.1.4}Operators for s system of identical particles}{252}{subsection.26.1.4}
-\contentsline {paragraph}{}{252}{section*.190}
-\contentsline {paragraph}{}{252}{section*.191}
-\contentsline {section}{\numberline {26.2}States of Noninteracting Identical Particles}{252}{section.26.2}
-\contentsline {paragraph}{}{253}{section*.192}
-\contentsline {paragraph}{}{253}{section*.193}
-\contentsline {subsection}{\numberline {26.2.1}Identical Fermions}{253}{subsection.26.2.1}
-\contentsline {paragraph}{}{254}{section*.194}
-\contentsline {subsection}{\numberline {26.2.2}Identical Bosons}{254}{subsection.26.2.2}
-\contentsline {subsubsection}{Example}{255}{section*.195}
-\contentsline {paragraph}{}{255}{section*.196}
-\contentsline {paragraph}{}{256}{section*.197}
-\contentsline {subsection}{\numberline {26.2.3}Exchange Forces}{256}{subsection.26.2.3}
-\contentsline {subsubsection}{Case 1: Distinguishable Particles.}{256}{section*.198}
-\contentsline {subsubsection}{Case 2: Identical Particles}{257}{section*.199}
-\contentsline {paragraph}{}{258}{section*.200}
-\contentsline {paragraph}{}{258}{section*.201}
-\contentsline {paragraph}{}{258}{section*.202}
-\contentsline {paragraph}{}{259}{section*.204}
-\contentsline {section}{\numberline {26.3}The Helium Atom}{259}{section.26.3}
-\contentsline {paragraph}{}{260}{section*.205}
-\contentsline {subsubsection}{Ground State}{260}{section*.206}
-\contentsline {paragraph}{}{261}{section*.207}
-\contentsline {subsubsection}{Excited State}{261}{section*.208}
-\contentsline {paragraph}{}{262}{section*.209}
-\contentsline {paragraph}{}{263}{section*.211}
-\contentsline {section}{\numberline {26.4}Collision Between Identical Particles}{264}{section.26.4}
-\contentsline {subsection}{\numberline {26.4.1}Scattering of Two Identical Spinless Bosons}{264}{subsection.26.4.1}
-\contentsline {paragraph}{}{265}{section*.214}
-\contentsline {paragraph}{}{266}{section*.215}
-\contentsline {paragraph}{}{267}{section*.216}
-\contentsline {subsection}{\numberline {26.4.2}Partial wave expansion for the scattering amplitude of two spinless bosons}{267}{subsection.26.4.2}
-\contentsline {section}{\numberline {26.5}Scattering of Two Identical Spin-1/2 Fermions}{268}{section.26.5}
-\contentsline {paragraph}{}{268}{section*.217}
-\contentsline {subsection}{\numberline {26.5.1}Partial Wave Expansion of the Scattering Amplitude}{270}{subsection.26.5.1}
-\contentsline {subsubsection}{Note:}{270}{section*.218}
-\contentsline {section}{\numberline {.1}List of Standard Integrals}{271}{section.Alph0.1}
-\contentsline {section}{\numberline {.2}Proofs}{271}{section.Alph0.2}
-\contentsline {section}{\numberline {.3}Gamma Beta functions}{272}{section.Alph0.3}
-\contentsline {section}{\numberline {.1}Binomial expansion}{273}{section.Alph0.1}
-\contentsline {section}{\numberline {.2}Taylor expansion}{273}{section.Alph0.2}
+\contentsline {section}{\numberline {21.1}Principles of the Method}{239}{section.21.1}
+\contentsline {section}{\numberline {21.2}Variational Method for Excited States}{241}{section.21.2}
+\contentsline {section}{\numberline {21.3}Examples}{242}{section.21.3}
+\contentsline {subsection}{\numberline {21.3.1}One-dimensional Harmonic Oscillator}{242}{subsection.21.3.1}
+\contentsline {subsubsection}{Ground State}{242}{section*.185}
+\contentsline {subsubsection}{First excited state}{244}{section*.186}
+\contentsline {subsection}{\numberline {21.3.2}Hydrogen Atom}{247}{subsection.21.3.2}
+\contentsline {subsubsection}{Ground State}{247}{section*.187}
+\contentsline {subsection}{\numberline {21.3.3}Helium Atom}{250}{subsection.21.3.3}
+\contentsline {section}{\numberline {21.4}Note}{254}{section.21.4}
+\contentsline {section}{\numberline {21.5}Appendix}{255}{section.21.5}
+\contentsline {chapter}{\numberline {22}sheet-22 : WKB approximation}{259}{chapter.22}
+\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{261}{chapter.23}
+\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{263}{chapter.24}
+\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{265}{chapter.25}
+\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{267}{chapter.26}
+\contentsline {section}{\numberline {26.1}Indistinguishability of identical particles}{267}{section.26.1}
+\contentsline {paragraph}{}{267}{section*.190}
+\contentsline {paragraph}{}{268}{section*.191}
+\contentsline {subsection}{\numberline {26.1.1}The wave function of two identical particles}{268}{subsection.26.1.1}
+\contentsline {paragraph}{}{268}{section*.192}
+\contentsline {subsection}{\numberline {26.1.2}Spin Statistics Theorem}{269}{subsection.26.1.2}
+\contentsline {paragraph}{}{269}{section*.193}
+\contentsline {subsection}{\numberline {26.1.3}Statistics of Composite Particles}{269}{subsection.26.1.3}
+\contentsline {paragraph}{}{269}{section*.194}
+\contentsline {subsection}{\numberline {26.1.4}Operators for s system of identical particles}{270}{subsection.26.1.4}
+\contentsline {paragraph}{}{270}{section*.195}
+\contentsline {paragraph}{}{270}{section*.196}
+\contentsline {section}{\numberline {26.2}States of Noninteracting Identical Particles}{270}{section.26.2}
+\contentsline {paragraph}{}{271}{section*.197}
+\contentsline {paragraph}{}{271}{section*.198}
+\contentsline {subsection}{\numberline {26.2.1}Identical Fermions}{271}{subsection.26.2.1}
+\contentsline {paragraph}{}{272}{section*.199}
+\contentsline {subsection}{\numberline {26.2.2}Identical Bosons}{272}{subsection.26.2.2}
+\contentsline {subsubsection}{Example}{273}{section*.200}
+\contentsline {paragraph}{}{273}{section*.201}
+\contentsline {paragraph}{}{274}{section*.202}
+\contentsline {subsection}{\numberline {26.2.3}Exchange Forces}{274}{subsection.26.2.3}
+\contentsline {subsubsection}{Case 1: Distinguishable Particles.}{274}{section*.203}
+\contentsline {subsubsection}{Case 2: Identical Particles}{275}{section*.204}
+\contentsline {paragraph}{}{276}{section*.205}
+\contentsline {paragraph}{}{276}{section*.206}
+\contentsline {paragraph}{}{276}{section*.207}
+\contentsline {paragraph}{}{277}{section*.209}
+\contentsline {section}{\numberline {26.3}The Helium Atom}{277}{section.26.3}
+\contentsline {paragraph}{}{278}{section*.210}
+\contentsline {subsubsection}{Ground State}{278}{section*.211}
+\contentsline {paragraph}{}{279}{section*.212}
+\contentsline {subsubsection}{Excited State}{279}{section*.213}
+\contentsline {paragraph}{}{280}{section*.214}
+\contentsline {paragraph}{}{281}{section*.216}
+\contentsline {section}{\numberline {26.4}Collision Between Identical Particles}{282}{section.26.4}
+\contentsline {subsection}{\numberline {26.4.1}Scattering of Two Identical Spinless Bosons}{282}{subsection.26.4.1}
+\contentsline {paragraph}{}{283}{section*.219}
+\contentsline {paragraph}{}{284}{section*.220}
+\contentsline {paragraph}{}{285}{section*.221}
+\contentsline {subsection}{\numberline {26.4.2}Partial wave expansion for the scattering amplitude of two spinless bosons}{285}{subsection.26.4.2}
+\contentsline {section}{\numberline {26.5}Scattering of Two Identical Spin-1/2 Fermions}{286}{section.26.5}
+\contentsline {paragraph}{}{286}{section*.222}
+\contentsline {subsection}{\numberline {26.5.1}Partial Wave Expansion of the Scattering Amplitude}{288}{subsection.26.5.1}
+\contentsline {subsubsection}{Note:}{288}{section*.223}
+\contentsline {section}{\numberline {.1}List of Standard Integrals}{289}{section.Alph0.1}
+\contentsline {section}{\numberline {.2}Proofs}{289}{section.Alph0.2}
+\contentsline {section}{\numberline {.3}Gamma Beta functions}{290}{section.Alph0.3}
+\contentsline {section}{\numberline {.4}From Chapter 21}{290}{section.Alph0.4}
+\contentsline {section}{\numberline {.1}Binomial expansion}{291}{section.Alph0.1}
+\contentsline {section}{\numberline {.2}Taylor expansion}{291}{section.Alph0.2}
 \contentsfinish 
