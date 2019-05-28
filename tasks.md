@@ -90,9 +90,12 @@ texts  - by shahnoor - started - date 2019.05.04 - completed - date 2019.05.09
 images - pending
 
 # Chapter22
-texts - by shahnoor - started - date 2019.05.09
+texts - by shahnoor - started - date 2019.05.09 - completed - date 2019.05.29
+
+images - pending
 
 # Chapter23
+texts - by shahnoor - started - date 2019.05.29
 
 
 # Chapter24

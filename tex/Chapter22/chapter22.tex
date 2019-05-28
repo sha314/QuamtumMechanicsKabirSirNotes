@@ -450,14 +450,403 @@ Thus, we see that unless we have assumed ourselves properly of the absence  of t
 	\label{chapter22.fig4}
 \end{figure}
 
+The WKB approximation can be applied to derive an equation for energies of bound sates. Consider a simple well-shaped potential with two classical turning points as shown in figure (\ref{chapter22.fig4}). The WKB approximation will be used in region $1,2$ and $3$ away from the turning points and connection formulas would serve near $x=a$ and $x=b$. The usual requirement that $\psi(x)$ must be finite dictates that solutions which increase exponentially as one moves outwards from the turning points must vanish rigorously.\\
+%% page 26
+
+In region $1$, i.e., $x<a$, the wavefunction is exponentially decaying, i.e., 
+\begin{equation}
+	\psi_1(x) = \frac{A}{\sqrt{\abs{k(x)}}} \exp[-\int_{x}^{a} \abs{k(x)} 
+	\dd{x}]
+	\label{chapter22.eqn1-bound-states}
+\end{equation}
+where we have used the wave number 
+\begin{equation}
+	k(x) = \frac{p(x)}{\hbar}
+\end{equation}
+Using the connection formulas, the wavefunction in region $2$ is
+\begin{align*}
+\psi_2(x) 
+&= A \frac{2}{\sqrt{k(x)}} \sin \qty[\int_{a}^{x} k(x) \dd{x} + \pi/4] \\
+&= \frac{2 A}{\sqrt{k(x)}} \sin \qty[\int_{a}^{b}k(x) \dd{x} - \int_{x}^{b} k(x) \dd{x}+ \pi/4 ] \\
+&= \frac{2 A}{\sqrt{k(x)}} \cos \qty[\int_{a}^{b}k(x) \dd{x} - \int_{x}^{b} k(x) \dd{x} - \pi/4 ] 
+\end{align*}
+defining
+\begin{equation}
+	\theta = \int_{a}^{b}k(x) \dd{x}
+\end{equation}
+we get
+\begin{equation}
+\label{chapter22.eqn2-bound-states}
+	\psi_2(x) = \frac{2 A}{\sqrt{k(x)}} \cos \qty[\theta - \int_{x}^{b} k(x) \dd{x} - \pi/4 ]
+\end{equation}
+Note that $\theta$ is a positive number. We can now expand Eq. (\ref{chapter22.eqn2-bound-states}) to get
+\begin{equation}
+\label{chapter22.eqn3-bound-states}
+	\psi_2(x) = \frac{2 A}{\sqrt{k(x)}} \cos \theta \cos \qty[\int_{x}^{b} k(x) \dd{x} + \pi/4 ] +
+	 \frac{2 A}{\sqrt{k(x)}} \sin\theta \sin \qty[\int_{x}^{b} k(x) \dd{x} + \pi/4 ]
+\end{equation}
+%%% page 27
+Now, in region $3$, the wave function is exponentially decreasing. But the $\cos \qty[\int_{x}^{b} k(x) \dd{x} + \pi/4 ]$ term in $\psi_2$ goes over to an exponentially increasing function in region $3$. Hence the term in $\psi_2$ which involves the cosine function must be made exactly zero. We therefore put
+\begin{align*}
+	\cos \theta &= 0 \\
+	i.e., \ \theta = (n + \frac{1}{2}) \pi \ ; \ n = 0,1,2,\ldots
+\end{align*}
+Therefore
+\begin{equation}
+\label{chapter22.eqn4-bound-states}
+	\int_{a}^{b} k(x) \dd{x} = (n + \frac{1}{2}) \pi \ ; \ n = 0,1,2,\ldots
+\end{equation}
+In terms of $p(x)$ we can write
+\begin{equation}
+\label{chapter22.eqn5-bound-states}
+	\int_{a}^{b} p(x) \dd{x} = (n + \frac{1}{2}) \pi\hbar \ ; \ n = 0,1,2,\ldots
+\end{equation}
+
+%%% page 28
+Equations (\ref{chapter22.eqn4-bound-states}) and (\ref{chapter22.eqn5-bound-states}) are called Bohr-Sommerfeld quantization condition. Using this we can find the energy of the bound states of a particle in a potential well.
+
+\subsection{Transmission Through a Barrier}
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{Transmission Through a Barrier}
+	\label{chapter22.fig5}
+\end{figure}
+We assume that the particle is incident on the barrier from the left. In region $3$, i.e., $x>b$, we have only the transmitted wave, so, the wavefunction in this region is of the form
+\begin{equation}
+	\label{chapter22.eqn1-transmission}
+	\psi_3\qty(x) = \frac{A}{\sqrt{k(x)}} \exp[\iu \int_{b}^{x} k(x) \dd{x} + \pi/ 4]
+\end{equation}
+where $A$ is a constant and the phase factor $\pi/4$
+has been included to facilitate the application of the connection formulas. In terms of trigonometric functions, Eq. (\ref{chapter22.eqn1-transmission}) can be written as
+\begin{equation}
+\label{chapter22.eqn2-transmission}
+\psi_3\qty(x) = \frac{A}{\sqrt{k(x)}} \left[\iu \cos(\int_{b}^{x} k(x) \dd{x} + \pi/ 4) + \iu \sin(\int_{b}^{x} k(x) \dd{x} + \pi/ 4)\right]
+\end{equation}
+Using the connection formulas, the WKB wave function in region $2$ is
+\begin{equation}
+\label{chapter22.eqn3-transmission}
+\psi_2(x) = \frac{A}{\sqrt{\abs{k(x)}}} \left[
+\exp(\int_{x}^{b} \abs{k(x)} \dd{x}) + \frac{\iu}{2} \exp(-\int_{x}^{b} \abs{k(x)} \dd{x})
+\right]
+\end{equation}
+In order to find the appropriate wave function in region $1$, we rewrite the integrals in the last expression using
+
+\begin{equation}
+\label{chapter22.eqn4-transmission}
+\int_{x}^{b} \abs{k(x)} \dd{x} = \int_{a}^{b} \abs{k(x)} \dd{x} - \int_{a}^{x} \abs{k(x)} \dd{x}
+\end{equation}
+Thus
+\begin{equation}
+\label{chapter22.eqn5-transmission}
+\psi_2(x) = \frac{A}{\sqrt{\abs{k(x)}}} \left[
+\exp(\int_{a}^{b} \abs{k(x)} \dd{x})\exp(-\int_{a}^{x} \abs{k(x)} \dd{x})
+ +
+  \frac{\iu}{2} \exp(-\int_{a}^{b} \abs{k(x)} \dd{x})\exp(\int_{a}^{x} \abs{k(x)} \dd{x})
+\right]
+\end{equation}
+
+%%% page 31
+Using the connection formulas across the turning point $a$, we can now write the WKB wavefunction in region $1$. We have 
+\begin{align}
+\label{chapter22.eqn6-transmission}
+\begin{split}
+\psi_1\qty(x) =
+\frac{A}{\sqrt{k(x)}} 
+\left[
+\exp(\int_{a}^{b} \abs{k(x)} \dd{x}) 2 \sin(\int_{x}^{a} k(x) \dd{x} + \pi/4) \right.\\
+\left.
++ 
+\frac{\iu}{2} \exp(-\int_{a}^{b} \abs{k(x)}\dd{x}) \cos(\int_{x}^{a}k(x) \dd{x} + \pi/4)
+\right]
+\end{split}
+\end{align}
+Let
+\begin{equation}
+\label{chapter22.eqn7-transmission}
+\theta = \exp(-\int_{a}^{b} \abs{k(x)} \dd{x})
+\end{equation}
+Therefore,
+\begin{align}
+\label{chapter22.eqn8-transmission}
+\psi_1\qty(x) =
+\frac{A}{\sqrt{k(x)}} 
+\left[
+2\theta^{-1} \sin(\int_{x}^{a} k(x) \dd{x} + \pi/4) 
++ 
+\frac{\iu}{2} \theta \cos(\int_{x}^{a}k(x) \dd{x} + \pi/4)
+\right]
+\end{align}
+We now express $\psi_1\qty(x)$ in terms of exponential functions using the identities
+\begin{align*}
+	\sin\alpha &= \frac{e^{\iu \alpha} - e^{-\iu \alpha}}{2\iu}\\
+	\cos\alpha &= \frac{e^{\iu \alpha} + e^{-\iu \alpha}}{2}
+\end{align*}
 
 
+%%% page 32
+We get
+\begin{align}
+\label{chapter22.eqn9-transmission}
+\begin{split}
+\psi_1\qty(x) = \frac{A}{\iu \sqrt{k(x)}} \left[
+(\theta^{-1} - \frac{\theta}{4}) \exp[\iu \left(\int_{x}^{a} k(x) \dd{x} + \pi/4\right)]
+\right. 
+\\
+\left.
+- (\theta^{-1} + \frac{\theta}{4}) \exp[-\iu \left(\int_{x}^{a} k(x) \dd{x} + \pi/4\right)]
+\right]
+\end{split}
+\end{align}
+%%% page 32
+
+
+The first term of this equation identified with the reflected wave and  the second term is the identified with the incident wave. Now the incident flux is
+\begin{equation}
+\label{chapter22.eqn10-transmission}
+S_i = \frac{\abs{A}^2}{k(x)} \left(\theta^{-1} + \frac{\theta}{4}\right)^2 \frac{\hbar k(x)}{m} = \abs{A}^2 \left(\theta^{-1} + \frac{\theta}{4}\right)^2 \frac{\hbar}{m}
+\end{equation}
+The transmitted flux is obtained from $\psi_3(x)$ given in Eq. (\ref{chapter22.eqn1-transmission}). We have
+\begin{equation}
+\label{chapter22.eqn11-transmission}
+S_t  = \frac{\abs{A}^2}{k(x)} \frac{\hbar k(x)}{m} = \abs{A}^2 \frac{\hbar}{m}
+\end{equation}
+
+Thus, the transmission probability is
+\begin{align}
+\label{chapter22.eqn12-transmission}
+T &= \frac{\text{transmitted flux}}{\text{Incident flux}} = \frac{S_t}{S_i} \nonumber \\
+ &= \frac{1}{\left(\theta^{-1} + \frac{\theta}{4}\right)^2} \nonumber \\
+ &= \qty(\frac{\theta}{1 + \theta^2/4})^2
+\end{align}
+Now, from Eq. (\ref{chapter22.eqn7-transmission})
+ $\theta$ is small, since for WKB approximation to be valid $\abs{k(x)}$ must be large. We can therefore neglect all powers of $\theta$ higher than the first, so that
+ \begin{align}
+ \label{chapter22.eqn13-transmission}
+	 T &= \theta^2 \nonumber \\
+	 &= \left[\exp\left(-\int_{a}^{b} \abs{k(x)} \dd{x}\right)\right]^2 \nonumber\\
+\therefore T	 &= \exp\qty[-2\int_{a}^{b} \abs{k(x)} \dd{x}]
+ \end{align}
 
 
 \section{Examples}
 %% page 35
 \begin{enumerate}
-	\item 
+	\item Determine the energy levels of the potential
+	\begin{equation*}
+		V(x) = \frac{1}{2} m \omega^2 x^2
+	\end{equation*}
+	using the WKB method. \\
+	\textbf{Ans.}\\
 	
+	\begin{figure}
+		%%%%%%% TODO
+		\centering
+		\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+		\caption{energy levels of the potential}
+		\label{chapter22.fig6}
+	\end{figure}
+	
+	The turning point are at $x=\pm a$. At the turning points
+	
+	\begin{align*}
+		E = \frac{1}{2} m \omega^2 a^2 \\
+		i.e.,\ a = \sqrt{\frac{2 E}{m \omega^2}}
+	\end{align*}
+	Now the quantization condition is
+	\begin{equation}
+	 \label{chapter22.ex1-eqn1}
+		\int_{-a}^{a} k(x) \dd{x} = \qty(n + \frac{1}{2}) \pi ; \ n=0,1,2,\ldots
+	\end{equation}
+	where
+	\begin{equation*}
+		k(x) = \sqrt{\frac{2 m}{\hbar^2} \qty(E - V(x))}
+	\end{equation*}
+	%% page 36
+	Therefore
+	\begin{align*}
+		\sqrt{\frac{2 m}{\hbar^2}} \int_{-a}^{a} \qty(E - \frac{1}{2}m\omega^2 x^2)^{1/2} \dd{x} &= \qty(n + \frac{1}{2})\pi \\
+		or, \ \sqrt{\frac{2 m E}{\hbar^2}} \int_{-a}^{a} \qty(1 - \frac{m\omega^2 x^2}{2 E})^{1/2} \dd{x} &= \qty(n + \frac{1}{2})\pi \\
+		or, \ \sqrt{\frac{2 m E}{\hbar^2}} \int_{-a}^{a} \qty(1 - \frac{x^2}{a^2})^{1/2} \dd{x} &= \qty(n + \frac{1}{2})\pi \\
+		or, \ \sqrt{\frac{2 m E}{\hbar^2}} \cdot \frac{\pi a}{2} &= \qty(n + \frac{1}{2})\pi \\
+		or, \ \sqrt{\frac{2 m E}{\hbar^2}} \cdot \frac{\pi}{2} \cdot \sqrt{\frac{2 E}{m \omega^2}} &= \qty(n + \frac{1}{2})\pi \\
+		or, \ \frac{2 E \pi}{2 \hbar \omega} = \qty(n + 1/2) \pi
+	\end{align*}
+	where, $a = \sqrt{\frac{2 E}{m \omega^2}}$
+	\begin{equation}
+		\therefore E = \qty(n + \frac{1}{2}) \hbar\omega; \ n = 0,1,2,\ldots
+	\end{equation}
+	
+	The integral is
+	\begin{align*}
+	 I &\equiv \int_{-a}^{a} \qty(1 - \frac{x^2}{a^2}) \dd{x} ;\quad x = a \cos\theta \\
+	 &=  a \int_{\pi}^{0} \qty(1 - \cos[2](\theta))^{1/2} \dd{\cos\theta} \\
+	 &= - a \int_{\pi}^{0} \sin [2] \theta \dd{\theta} \\
+	 &= a \int_{0}^{\pi} \sin [2] \theta \dd{\theta} \\
+	 &= \frac{a}{2} \int_{0}^{\pi} \qty(1 - \cos 2 \theta) \dd{\theta} \\
+	 \therefore\ I = \frac{\pi a}{2}
+	\end{align*}
+	
+	
+
+	
+	\item Determine the energy levels of the potential
+	\begin{equation*}
+	V(x) = \lambda x^4 \quad (\lambda > 0)
+	\end{equation*}
+	using the WKB method. 
+	%%% page 38
+	\begin{figure}
+		%%%%%%% TODO
+		\centering
+		\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+		\caption{energy levels of the potential}
+		\label{chapter22.fig7}
+	\end{figure}
+	The turning points are at $x=\pm a$, where
+	\begin{align*}
+		\lambda a^4 &= E \\
+or,\		a &= \qty(\frac{E}{\lambda})^{1/4}
+	\end{align*}
+	%%% page 38
+	Now, the Bohr-Sommerfeld quantization condition Eq. (\ref{chapter22.eqn4-bound-states}) gives us
+	\begin{align*}
+		\sqrt{\frac{2 m E}{\hbar^2}} \int_{-a}^{a} \sqrt{1 - \frac{\lambda x^4}{E}} \dd{x} &= \qty(n + 1/2) \pi \\
+		\sqrt{\frac{2 m E}{\hbar^2}} I &= \qty(n + 1/2) \pi \\
+		\sqrt{\frac{2 m E}{\hbar^2}} \qty(\frac{E}{\lambda})^{1/4} 2 \cdot \frac{1}{4} B\qty(\frac{1}{4}, \frac{3}{2}) &= \qty(n + 1/2) \pi \\
+		\qty(\frac{2 m E}{\hbar^2})^2 \frac{E}{\lambda} \cdot \frac{1}{16} B^4\qty(\frac{1}{4}, \frac{3}{2}) &= \qty(n + 1/2)^4 \pi^4 \\
+		E^3 &= \frac{16 \lambda \hbar^4 \pi^4}{4 m^2 B^4(1/4,3/2)} \qty(n + 1/2)^4 \\
+	\end{align*}
+	Therefore
+	\begin{equation}
+		E = \qty[\frac{4 \lambda \hbar^4 \pi^4}{m^2 B^4(1/4,3/2)}]^{1/3} \qty(n + 1/2)^{4/3} ; \quad  n = 0,1,2,\ldots
+	\end{equation}
+	Here the integral $I$ is evaluated as follows
+	\begin{align*}
+		I &= \int_{-a}^{a} \sqrt{1 - \frac{\lambda x^4}{E}} \dd{x} \\
+		&= \int_{-a}^{a} \sqrt{1 - \frac{x^4}{a^4}} \dd{x} \\
+		&= a \int_{-1}^{1} \sqrt{1 - y^4} \dd{y} \\
+		&= 2 a \int_{0}^{1} \sqrt{1 - y^4} \dd{y} \\
+	\end{align*}
+	using $a^4 = E/\lambda$ and then $y=x/a$.
+	Let  so that .
+	\begin{align*}
+		let,\		y^4 &= z \\
+or,\		4 y^3 \dd{y} &= \dd{z} \\
+or,\ \dd{y} &= \frac{\dd{z}}{4 z^{3/4}}
+	\end{align*}
+	\begin{align*}
+	I 
+	&= 2 a \frac{1}{4}\int_{0}^{1} \qty(1 - z)^{1/2} z^{-3/4} \dd{z} \\
+	&= 2 a \frac{1}{4}\int_{0}^{1} \qty(1 - z)^{3/2-1} z^{1/4 - 1} \dd{z} \\
+	&= 2 a \frac{1}{4} B\qty(\frac{1}{4}, \frac{3}{2})
+	\end{align*}
+	$B(\alpha,\beta)$ is the beta function appendix (\ref{appendix3.gamma-beta}).
+
+
+	
+	
+	\item Find the bound state eigenvalues for a particle of mass $m$ in the potential
+	\begin{equation}
+		V(x) = \begin{cases}
+			F x \text{ for } x> 0 \quad (F > 0) \\
+			\infty \text{ for } x \leq 0
+		\end{cases}
+	\end{equation}
+	%%% page 42
+		\begin{figure}
+		%%%%%%% TODO
+		\centering
+		\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+		\caption{particle in a potential}
+		\label{chapter22.fig8}
+	\end{figure}
+	
+	
+	There are two turning points, one at $x=0$ and the other at $x=b$. Since at the turning point $x=0$, $V$ goes to infinity, the wave function goes to zero. So the Bohr-Sommerfeld Quantization condition has to be modified. 
+	
+	At the turning point $x=b$, we have $E= F b$, i.e., $b=\frac{E}{F}$.
+	
+	Now, to the far right of the turning point, the wavefunction must be exponentially decaying. Therefore, we can write
+	\begin{equation*}
+		\psi_2(x) = \frac{A}{\sqrt{\abs{k(x)}}} \exp[-\int_{b}^{x} \abs{k(x)} \dd{x}]
+	\end{equation*}
+	By using the connection formulas, the WKB wavefunction in region $1$ can be written as
+	\begin{equation}
+		\psi_1(x) = \frac{2 A}{\sqrt{k(x)}} \sin\qty[\int_{x}^{b} k(x) \dd{x} + \pi/4]
+	\end{equation}
+	Now, $\psi_1(x=0) = 0$.  Therefore, we must have
+	\begin{align*}
+		\sin\qty[\int_{}^{b} k(x) \dd{x} + \pi/4] &= 0\\
+		i.e., \ \int_{0}^{b} k(x) \dd{x} + \pi/4 &= m \pi;\ m = 1,2,3,\ldots \\
+		or, \ \int_{0}^{b} k(x) \dd{x} = \qty(m - 1/4) \pi ;\ m = 1,2,3,\ldots
+	\end{align*}
+	We can write this equation as
+	\begin{equation}
+		\int_{0}^{b} k(x) \dd{x} = \qty(n + 3/4) \pi ;\ n = 0,1,2,3,\ldots
+	\end{equation}
+	This is the Bohr-Sommerfeld quantization condition modified for the situation when the wave function tends to zero at a turning point.
+	
+	For out particular problem we have
+	\begin{align*}
+		\int_{0}^{b} \sqrt{\frac{2 m}{\hbar^2} (E - F x)} \dd{x} &= \qty(n + 3/4) \pi \\
+		or,\ \sqrt{\frac{2 m F}{\hbar^2}} \int_{0}^{b} \sqrt{\frac{E}{F} - x} \dd{x} &= \qty(n + 3/4) \pi \\
+		or,\ \sqrt{\frac{2 m F}{\hbar^2}} \frac{2}{3} \eval{-(b-x)^{3/2}}_{0}^{b} &= \qty(n + 3/4) \pi \\
+		or,\ \sqrt{\frac{2 m F}{\hbar^2}} \frac{2}{3} b^{3/2} &= \qty(n + 3/4) \pi \\
+		or,\ \sqrt{\frac{2 m F}{\hbar^2}} \frac{2}{3} \qty(\frac{E}{F})^{3/2} &= \qty(n + 3/4) \pi \\
+		or,\ E^{3/2} = \frac{3 \hbar F}{2 \sqrt{2 m}} \qty(n + 3/4) \pi
+		or,\ E^{3} = \frac{9 \hbar^2 \pi^2 F^2}{8 m} \qty(n + 3/4)^2;\ n=0,1,2,\ldots 
+	\end{align*}
+	The positive cube root of this equation gives the required eigenvalues.
+	
+	
+	
+	\item Cold emission of electrons from a metal surface in an electric field. (Bransden and Joachain p400).
+	%% page 46
+	Let us suppose that the electrons in the metal are bound in a square well potential.
+	\begin{figure}
+		%%%%%%% TODO
+		\centering
+		\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+		\caption{Potential without the electric field.}
+		\label{chapter22.fig9}
+	\end{figure}
+	Let us impose an electric field $\varepsilon$ perpendicular to the metal surface as shown in the first figure. The potential energy function for $x>0$ is now
+	\begin{equation}
+		V(x) = V(x=0) - \abs{\vec{F}} x = V_0 - e \varepsilon x
+	\end{equation}
+
+	$e$ is the magnitude of charge of an electron (+ve). The new potential energy graph is shown in Fig. (\ref{chapter22.fig10})
+	
+	\begin{figure}
+		%%%%%%% TODO
+		\centering
+		\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+		\caption{Potential energy of an electron after the electic field is imposed.}
+		\label{chapter22.fig10}
+	\end{figure}
+	Therefore the turning point at $x=b$ is
+	\begin{align}
+	V(x=b) = E \\
+	V_0 - e \varepsilon b = V_0 - W\\
+	b = \frac{W}{e E}
+	\end{align}
+	Here $W$ is the work function of the metal. Also
+	\begin{equation}
+		V(x) - E = V_0 - e \varepsilon x - E = W - e \varepsilon x
+	\end{equation}
+
+	Now the potential barriers has a finite width, and the electrons are able to escape. The transmission coefficient for the most energetic electron is
+	\begin{align*}
+		T &= \exp[-2 \int_{0}^{b} \abs{k(x)} \dd{x}] \\
+		 &= \exp[-2 \int_{0}^{b} \sqrt{\frac{2 m}{\hbar^2} \qty(v(x) - E)} \dd{x}] \\
+		 &= \exp[- \frac{2}{\hbar} \sqrt{2 m} \int_{0}^{W / e \varepsilon} \sqrt{W - e \varepsilon x} \dd{x}]
+	\end{align*}
+	That is,
+	\begin{equation}
+		T = \exp[- \frac{4}{3} \frac{\sqrt{2 m}}{\hbar e \varepsilon} W^{3/2}]
+	\end{equation}
+	This expression, known as the Fowler-Nordheim formula, is in qualitative agreement with experiment.
 \end{enumerate}
 

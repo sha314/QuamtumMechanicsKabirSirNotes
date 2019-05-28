@@ -1,0 +1,27 @@
+%\chapterimage{head2.png} % Chapter heading image
+\appendix{Gamma and Beta function}
+\label{appendix3.gamma-beta}
+
+\section{Gamma Function}
+\begin{equation}
+	\Gamma(n) = \int_{min}^{max} t^{n-1} e^{-t}\dd{t}
+\end{equation}
+
+\subsection{Properties of Gamma function}
+\begin{align}
+	\Gamma (n + 1) &= n \Gamma(n)\\
+	\Gamma(n+1) &= n! \\
+	\Gamma(1) &= \Gamma(2) = 1\\
+	\Gamma(3/2) &= \sqrt{\pi}/2\\
+	\Gamma(1/2) &= \sqrt{\pi}
+\end{align}
+
+
+\section{Beta Function}
+\begin{equation}
+	B(\alpha, \beta) = \int_{0}^{1} x^{\alpha - 1} \qty(1 - x)^{\beta - 1} \dd{x}
+\end{equation}
+The beta function is related to gamma function as
+\begin{equation}
+B(\alpha, \beta) = \frac{\Gamma(\alpha) \Gamma(\beta)}{\Gamma(\alpha + \beta)}
+\end{equation}
