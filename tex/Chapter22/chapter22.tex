@@ -540,11 +540,16 @@ In order to find the appropriate wave function in region $1$, we rewrite the int
 Thus
 \begin{equation}
 \label{chapter22.eqn5-transmission}
+\begin{split}
 \psi_2(x) = \frac{A}{\sqrt{\abs{k(x)}}} \left[
 \exp(\int_{a}^{b} \abs{k(x)} \dd{x})\exp(-\int_{a}^{x} \abs{k(x)} \dd{x})
+ \right.
+ \\
+ \left.
  +
   \frac{\iu}{2} \exp(-\int_{a}^{b} \abs{k(x)} \dd{x})\exp(\int_{a}^{x} \abs{k(x)} \dd{x})
 \right]
+\end{split}
 \end{equation}
 
 %%% page 31

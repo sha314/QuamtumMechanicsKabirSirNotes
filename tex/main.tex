@@ -53,6 +53,10 @@
 \usepackage{kbordermatrix}% http://www.hss.caltech.edu/~kcb/TeX/kbordermatrix.sty
 \usepackage{blkarray} % for block matrix with labels
 \usepackage{tensor}  %% included here on 15th April 2019
+
+\usepackage[toc,page]{appendix} %% for appendix facilities
+\usepackage{makeidx} %% for indexing at the end of the document
+
 % Bibliography
 %\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
 %\addbibresource{bibliography.bib} % BibTeX bibliography file
@@ -60,6 +64,7 @@
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
 \input{commands}
+\makeindex
 \begin{document}
 \title{Quantum Mechanics}
 
@@ -165,10 +170,15 @@ Muhammad Shahnoor Rahman, Department of Physics, University of Dhaka.\\}
 \include{Chapter26/chapter26}
 
 
+\begin{appendices} % Using appendices environment for more functunality
+
 \include{Appendix1/appendix1}
 \include{Appendix2/appendix2}
 \include{Appendix3/appendix3}
+	
+\end{appendices}
 
 
 
+\clearpage\printindex
 \end{document}

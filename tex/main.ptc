@@ -1,29 +1,29 @@
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {1}sheet-1 :Dirac Delta Function}{13}{chapter.1}
+\contentsline {chapter}{\numberline {1}sheet-1 :Dirac Delta Function}{15}{chapter.1}
 \ttl@starttoc {default@1}
-\contentsline {section}{\numberline {1.1}Other representation of delta function}{15}{section.1.1}
-\contentsline {section}{\numberline {1.2}Properties of the delta function}{16}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Notes}{18}{subsection.1.2.1}
-\contentsline {section}{\numberline {1.3}Derivatives of the delta function}{19}{section.1.3}
-\contentsline {section}{\numberline {1.4}Integration of the delta function}{21}{section.1.4}
-\contentsline {section}{\numberline {1.5}Three - dimensional delta function}{21}{section.1.5}
-\contentsline {section}{\numberline {1.6}Fourier Transformation}{23}{section.1.6}
-\contentsline {section}{\numberline {1.7}Definition of Dirac Delta function and its Representations}{24}{section.1.7}
-\contentsline {paragraph}{}{25}{section*.6}
-\contentsline {paragraph}{}{26}{section*.7}
-\contentsline {paragraph}{}{26}{section*.8}
-\contentsline {subsubsection}{\relax $\@@underline {\hbox {Gaussian Representation}}\mathsurround \z@ $\relax }{26}{section*.9}
-\contentsline {subsubsection}{\relax $\@@underline {\hbox {Damped Sinusoidal Representation of the Delta Function}}\mathsurround \z@ $\relax }{27}{section*.11}
-\contentsline {paragraph}{}{28}{section*.13}
-\contentsline {subsubsection}{\relax $\@@underline {\hbox {Other representation of the Delta Function}}\mathsurround \z@ $\relax }{28}{section*.14}
-\contentsline {section}{\numberline {1.8}Properties of the Delta Function}{28}{section.1.8}
-\contentsline {section}{\numberline {1.9}Derivative of the Delta Function}{32}{section.1.9}
-\contentsline {section}{\numberline {1.10}Integration of the Delta Function}{34}{section.1.10}
-\contentsline {section}{\numberline {1.11}Three dimensional delta function}{35}{section.1.11}
-\contentsline {subsubsection}{A useful formula}{35}{section*.18}
-\contentsline {section}{\numberline {1.12}Fourier transform}{37}{section.1.12}
-\contentsline {paragraph}{}{37}{section*.19}
-\contentsline {subsection}{\numberline {1.12.1}Parseval Identity}{38}{subsection.1.12.1}
+\contentsline {section}{\numberline {1.1}Other representation of delta function}{17}{section.1.1}
+\contentsline {section}{\numberline {1.2}Properties of the delta function}{18}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Notes}{20}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Derivatives of the delta function}{21}{section.1.3}
+\contentsline {section}{\numberline {1.4}Integration of the delta function}{23}{section.1.4}
+\contentsline {section}{\numberline {1.5}Three - dimensional delta function}{23}{section.1.5}
+\contentsline {section}{\numberline {1.6}Fourier Transformation}{25}{section.1.6}
+\contentsline {section}{\numberline {1.7}Definition of Dirac Delta function and its Representations}{26}{section.1.7}
+\contentsline {paragraph}{}{27}{section*.6}
+\contentsline {paragraph}{}{28}{section*.7}
+\contentsline {paragraph}{}{28}{section*.8}
+\contentsline {subsubsection}{\relax $\@@underline {\hbox {Gaussian Representation}}\mathsurround \z@ $\relax }{28}{section*.9}
+\contentsline {subsubsection}{\relax $\@@underline {\hbox {Damped Sinusoidal Representation of the Delta Function}}\mathsurround \z@ $\relax }{29}{section*.11}
+\contentsline {paragraph}{}{30}{section*.13}
+\contentsline {subsubsection}{\relax $\@@underline {\hbox {Other representation of the Delta Function}}\mathsurround \z@ $\relax }{30}{section*.14}
+\contentsline {section}{\numberline {1.8}Properties of the Delta Function}{30}{section.1.8}
+\contentsline {section}{\numberline {1.9}Derivative of the Delta Function}{34}{section.1.9}
+\contentsline {section}{\numberline {1.10}Integration of the Delta Function}{36}{section.1.10}
+\contentsline {section}{\numberline {1.11}Three dimensional delta function}{37}{section.1.11}
+\contentsline {subsubsection}{A useful formula}{37}{section*.18}
+\contentsline {section}{\numberline {1.12}Fourier transform}{39}{section.1.12}
+\contentsline {paragraph}{}{39}{section*.19}
+\contentsline {subsection}{\numberline {1.12.1}Parseval Identity}{40}{subsection.1.12.1}
 \contentsline {chapter}{\numberline {2}sheet-2 : Linear Vector Space}{17}{chapter.2}
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
@@ -357,67 +357,82 @@
 \contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{281}{chapter.23}
 \ttl@stoptoc {default@22}
 \ttl@starttoc {default@23}
-\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{283}{chapter.24}
+\contentsline {section}{\numberline {23.1}Perturbation Scheme for Solving Eq. (\ref {chapter23.eqn17})}{283}{section.23.1}
+\contentsline {section}{\numberline {23.2}Examples}{285}{section.23.2}
+\contentsline {subsection}{\numberline {23.2.1}Constant perturbation}{285}{subsection.23.2.1}
+\contentsline {subsection}{\numberline {23.2.2}Oscillating Electric Field}{288}{subsection.23.2.2}
+\contentsline {subsection}{\numberline {23.2.3}Harmonic Perturbation}{288}{subsection.23.2.3}
+\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{289}{chapter.24}
 \ttl@stoptoc {default@23}
 \ttl@starttoc {default@24}
-\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{285}{chapter.25}
+\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{291}{chapter.25}
 \ttl@stoptoc {default@24}
 \ttl@starttoc {default@25}
-\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{287}{chapter.26}
+\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{293}{chapter.26}
 \ttl@stoptoc {default@25}
 \ttl@starttoc {default@26}
-\contentsline {section}{\numberline {26.1}Indistinguishability of identical particles}{287}{section.26.1}
-\contentsline {paragraph}{}{287}{section*.216}
-\contentsline {paragraph}{}{288}{section*.217}
-\contentsline {subsection}{\numberline {26.1.1}The wave function of two identical particles}{288}{subsection.26.1.1}
-\contentsline {paragraph}{}{288}{section*.218}
-\contentsline {subsection}{\numberline {26.1.2}Spin Statistics Theorem}{289}{subsection.26.1.2}
-\contentsline {paragraph}{}{289}{section*.219}
-\contentsline {subsection}{\numberline {26.1.3}Statistics of Composite Particles}{289}{subsection.26.1.3}
-\contentsline {paragraph}{}{289}{section*.220}
-\contentsline {subsection}{\numberline {26.1.4}Operators for s system of identical particles}{290}{subsection.26.1.4}
-\contentsline {paragraph}{}{290}{section*.221}
-\contentsline {paragraph}{}{290}{section*.222}
-\contentsline {section}{\numberline {26.2}States of Noninteracting Identical Particles}{290}{section.26.2}
-\contentsline {paragraph}{}{291}{section*.223}
-\contentsline {paragraph}{}{291}{section*.224}
-\contentsline {subsection}{\numberline {26.2.1}Identical Fermions}{291}{subsection.26.2.1}
-\contentsline {paragraph}{}{292}{section*.225}
-\contentsline {subsection}{\numberline {26.2.2}Identical Bosons}{292}{subsection.26.2.2}
-\contentsline {subsubsection}{Example}{293}{section*.226}
-\contentsline {paragraph}{}{293}{section*.227}
-\contentsline {paragraph}{}{294}{section*.228}
-\contentsline {subsection}{\numberline {26.2.3}Exchange Forces}{294}{subsection.26.2.3}
-\contentsline {subsubsection}{Case 1: Distinguishable Particles.}{294}{section*.229}
-\contentsline {subsubsection}{Case 2: Identical Particles}{295}{section*.230}
-\contentsline {paragraph}{}{296}{section*.231}
-\contentsline {paragraph}{}{296}{section*.232}
-\contentsline {paragraph}{}{296}{section*.233}
-\contentsline {paragraph}{}{297}{section*.235}
-\contentsline {section}{\numberline {26.3}The Helium Atom}{297}{section.26.3}
-\contentsline {paragraph}{}{298}{section*.236}
-\contentsline {subsubsection}{Ground State}{298}{section*.237}
-\contentsline {paragraph}{}{299}{section*.238}
-\contentsline {subsubsection}{Excited State}{299}{section*.239}
-\contentsline {paragraph}{}{300}{section*.240}
-\contentsline {paragraph}{}{301}{section*.242}
-\contentsline {section}{\numberline {26.4}Collision Between Identical Particles}{302}{section.26.4}
-\contentsline {subsection}{\numberline {26.4.1}Scattering of Two Identical Spinless Bosons}{302}{subsection.26.4.1}
-\contentsline {paragraph}{}{303}{section*.245}
-\contentsline {paragraph}{}{304}{section*.246}
-\contentsline {paragraph}{}{305}{section*.247}
-\contentsline {subsection}{\numberline {26.4.2}Partial wave expansion for the scattering amplitude of two spinless bosons}{305}{subsection.26.4.2}
-\contentsline {section}{\numberline {26.5}Scattering of Two Identical Spin-1/2 Fermions}{306}{section.26.5}
-\contentsline {paragraph}{}{306}{section*.248}
-\contentsline {subsection}{\numberline {26.5.1}Partial Wave Expansion of the Scattering Amplitude}{308}{subsection.26.5.1}
-\contentsline {subsubsection}{Note:}{308}{section*.249}
-\contentsline {section}{\numberline {.1}List of Standard Integrals}{309}{section.Alph0.1}
-\contentsline {section}{\numberline {.2}Proofs}{309}{section.Alph0.2}
-\contentsline {section}{\numberline {.3}Gamma Beta functions}{310}{section.Alph0.3}
-\contentsline {section}{\numberline {.4}From Chapter 21}{310}{section.Alph0.4}
-\contentsline {section}{\numberline {.1}Binomial expansion}{311}{section.Alph0.1}
-\contentsline {section}{\numberline {.2}Taylor expansion}{311}{section.Alph0.2}
-\contentsline {section}{\numberline {.1}Gamma Function}{312}{section.Alph0.1}
-\contentsline {subsection}{\numberline {.1.1}Properties of Gamma function}{312}{subsection.Alph0.1.1}
-\contentsline {section}{\numberline {.2}Beta Function}{312}{section.Alph0.2}
+\contentsline {section}{\numberline {26.1}Indistinguishability of identical particles}{293}{section.26.1}
+\contentsline {paragraph}{}{293}{section*.218}
+\contentsline {paragraph}{}{294}{section*.219}
+\contentsline {subsection}{\numberline {26.1.1}The wave function of two identical particles}{294}{subsection.26.1.1}
+\contentsline {paragraph}{}{294}{section*.220}
+\contentsline {subsection}{\numberline {26.1.2}Spin Statistics Theorem}{295}{subsection.26.1.2}
+\contentsline {paragraph}{}{295}{section*.221}
+\contentsline {subsection}{\numberline {26.1.3}Statistics of Composite Particles}{295}{subsection.26.1.3}
+\contentsline {paragraph}{}{295}{section*.222}
+\contentsline {subsection}{\numberline {26.1.4}Operators for s system of identical particles}{296}{subsection.26.1.4}
+\contentsline {paragraph}{}{296}{section*.223}
+\contentsline {paragraph}{}{296}{section*.224}
+\contentsline {section}{\numberline {26.2}States of Noninteracting Identical Particles}{296}{section.26.2}
+\contentsline {paragraph}{}{297}{section*.225}
+\contentsline {paragraph}{}{297}{section*.226}
+\contentsline {subsection}{\numberline {26.2.1}Identical Fermions}{297}{subsection.26.2.1}
+\contentsline {paragraph}{}{298}{section*.227}
+\contentsline {subsection}{\numberline {26.2.2}Identical Bosons}{298}{subsection.26.2.2}
+\contentsline {subsubsection}{Example}{299}{section*.228}
+\contentsline {paragraph}{}{299}{section*.229}
+\contentsline {paragraph}{}{300}{section*.230}
+\contentsline {subsection}{\numberline {26.2.3}Exchange Forces}{300}{subsection.26.2.3}
+\contentsline {subsubsection}{Case 1: Distinguishable Particles.}{300}{section*.231}
+\contentsline {subsubsection}{Case 2: Identical Particles}{301}{section*.232}
+\contentsline {paragraph}{}{302}{section*.233}
+\contentsline {paragraph}{}{302}{section*.234}
+\contentsline {paragraph}{}{302}{section*.235}
+\contentsline {paragraph}{}{303}{section*.237}
+\contentsline {section}{\numberline {26.3}The Helium Atom}{303}{section.26.3}
+\contentsline {paragraph}{}{304}{section*.238}
+\contentsline {subsubsection}{Ground State}{304}{section*.239}
+\contentsline {paragraph}{}{305}{section*.240}
+\contentsline {subsubsection}{Excited State}{305}{section*.241}
+\contentsline {paragraph}{}{306}{section*.242}
+\contentsline {paragraph}{}{307}{section*.244}
+\contentsline {section}{\numberline {26.4}Collision Between Identical Particles}{308}{section.26.4}
+\contentsline {subsection}{\numberline {26.4.1}Scattering of Two Identical Spinless Bosons}{308}{subsection.26.4.1}
+\contentsline {paragraph}{}{309}{section*.247}
+\contentsline {paragraph}{}{310}{section*.248}
+\contentsline {paragraph}{}{311}{section*.249}
+\contentsline {subsection}{\numberline {26.4.2}Partial wave expansion for the scattering amplitude of two spinless bosons}{311}{subsection.26.4.2}
+\contentsline {section}{\numberline {26.5}Scattering of Two Identical Spin-1/2 Fermions}{312}{section.26.5}
+\contentsline {paragraph}{}{312}{section*.250}
+\contentsline {subsection}{\numberline {26.5.1}Partial Wave Expansion of the Scattering Amplitude}{314}{subsection.26.5.1}
+\contentsline {subsubsection}{Note:}{314}{section*.251}
+\contentsline {chapter}{Appendices}{315}{section*.252}
+\contentsline {chapter}{\numberline {A}Standard Integrals}{317}{Appendix.a.A}
+\ttl@stoptoc {default@26}
+\ttl@starttoc {default@27}
+\contentsline {section}{\numberline {A.1}List of Standard Integrals}{317}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Proofs}{317}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Gamma Beta functions}{318}{section.a.A.3}
+\contentsline {section}{\numberline {A.4}From Chapter 21}{319}{section.a.A.4}
+\contentsline {chapter}{\numberline {B}Series}{321}{Appendix.a.B}
+\ttl@stoptoc {default@27}
+\ttl@starttoc {default@28}
+\contentsline {section}{\numberline {B.1}Binomial expansion}{321}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Taylor expansion}{321}{section.a.B.2}
+\contentsline {chapter}{\numberline {C}Gamma Beta Functions}{323}{Appendix.a.C}
+\ttl@stoptoc {default@28}
+\ttl@starttoc {default@29}
+\contentsline {section}{\numberline {C.1}Gamma Function}{323}{section.a.C.1}
+\contentsline {subsection}{\numberline {C.1.1}Properties of Gamma function}{323}{subsection.a.C.1.1}
+\contentsline {section}{\numberline {C.2}Beta Function}{323}{section.a.C.2}
 \contentsfinish 

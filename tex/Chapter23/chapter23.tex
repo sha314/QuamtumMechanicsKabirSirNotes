@@ -8,3 +8,305 @@
 \fi
 
 
+Suppose that a quantum mechanical system is described by a Hamiltonian $H_0$. Then we proceed to act on the system by a time-dependent external force described by a potential $V(t)$ added to $H_0$. The new Hamiltonian is
+\begin{equation}
+\label{chapter23.eqn1}
+H = H_0 + V(t)
+\end{equation}
+The problem with $V(t) = 0$ is assumed to be solved exactly. In other words, the energy eigenvalues $E_n$ and eigenkets $\ket{n}$ defined by Eq. (\ref{chapter23.eqn2}) are known exactly.
+\begin{equation}
+\label{chapter23.eqn2}
+H_0 \ket{n} = E_n \ket{n}
+\end{equation}
+
+We are interested in situations where the system is initially in an eigenstate of $H_0$, say $\ket{i}$. The time-dependent potential $V(t)$ can cause transitions to states other than $\ket{i}$. The basis question we ask is : what is the probability at some later time $t$, for the system to be found in the state $\ket{n}$ with $n\neq i$. As an example we might shine light on an atom and ask what are the chances that light ionizes the atom. \\
+
+To formulate the problem, we have to solve the time-dependent Schr\"{o}dinger equation (\ref{chapter23.eqn3}) with the initial condition (\ref{chapter23.eqn4}).
+\begin{align}
+\label{chapter23.eqn3}
+\iu \hbar \pdv{}{t}\ket{\psi(t)} &= \qty[H_0 + V(t)] \ket{\psi(t)} \\
+\label{chapter23.eqn4}
+\ket{\psi(t_0)} &= \ket{i} \qq{(initial condition)}
+\end{align}
+
+where $t_0$ is some earlier time. Then the probability that at some later time $t\ (t > t_0)$ the system makes a transition to the state $\ket{n}$ is given by Eq. (\ref{chapter23.eqn5}).
+\begin{equation}
+\label{chapter23.eqn5}
+P_{i \rightarrow n}(t) = \norm{\braket{n}{\psi(t)}}^2
+\end{equation}
+%% page 3
+
+To solve the problem, it is convenient to work in the interaction picture defined by Eqs. (\ref{chapter23.eqn6})
+\begin{align}
+\label{chapter23.eqn6}
+\begin{split}
+\ket{\psi_I(t)} &= e^{\iu H_0 (t-t_0)/\hbar} \ket{\psi(t)} \\
+\hat{A}_I(t) &= e^{\iu H_0 (t-t_0)/\hbar} A e^{-\iu H_0 (t-t_0)/\hbar}
+\end{split}
+\end{align}
+In the interaction picture we have
+\begin{equation}
+\label{chapter23.eqn7}
+\iu \hbar \pdv{}{t} \ket{\psi_I(t)} = V_I(t) \ket{\psi_I(t)}
+\end{equation}
+i.e., the time evolution of the state vector in the interaction picture is determined by the time-dependent potential $V_I(t)$ expressed in the interaction picture
+\begin{equation}
+\label{chapter23.eqn8}
+	V_I(t) = e^{\iu H_0 (t-t_0)/\hbar} V(t) e^{-\iu H_0 (t-t_0)/\hbar}
+\end{equation}
+Note that the state vector in the interaction picture coincides with the state vector in the Schr\"{o}dinger picture at the initial time $t_0$, i.e.,
+\begin{equation}
+\label{chapter23.eqn9}
+\ket{\psi_I(t_0)} = \ket{\psi(t_0)} = \ket{i}
+\end{equation}
+
+Now, from Eq. (\ref{chapter23.eqn5}), the probability for transition from state $\ket{i}$ to state $\ket{n}$ can be written as
+\begin{align}
+P_{i\rightarrow n}(t) 
+&= \norm{\mel{n}{e^{-\iu H_0(t - t_0)/\hbar}}{\psi_I(t)}}^2 \nonumber \\
+&= \norm{\mel{n}{e^{-\iu E_n(t - t_0)/\hbar}}{\psi_I(t)}}^2 \nonumber \\
+&= \norm{\braket{n}{\psi_I(t)}}^2
+\label{chapter23.eqn10}
+\end{align}
+We can now solve Eq. (\ref{chapter23.eqn7}) for $\ket{\psi_I(t)}$ with the initial condition (\ref{chapter23.eqn9}) and the final transition probability using Eq. (\ref{chapter23.eqn10}).
+
+%% page 5
+
+In the interaction picture we can continue using $\{\ket{n}\}$ as our base kets and expand
+\begin{equation}
+\label{chapter23.eqn11}
+	\ket{\psi_I(t)} = \sum_{n} a_n(t) \ket{n}
+\end{equation}
+where $a_n(t) = \braket{n}{\psi_I(t)}$. The expansion coefficient satisfy the initial conditions
+\begin{equation}
+\label{chapter23.eqn12}
+a_n(t_0) = \begin{cases}
+0 \quad if \ n\neq i \\
+1 \quad if \ n = i 
+\end{cases}
+\end{equation}
+In our subsequent discussion we will take $t_0 = 0$ without any loss of generality. Now, taking the scalar product of Eq. (\ref{chapter23.eqn7}) with $\ket{n}$ we obtain
+\begin{equation}
+\label{chapter23.eqn13}
+\iu \hbar \pdv{}{t} \braket{n}{\psi_I(t)} = \sum_{m} \mel{n}{V_I(t)}{m} \braket{m}{\psi_I(t)}
+\end{equation}
+where we have used the completeness relation $\sum_{m} \ketbra{m}{m} = 1$ on the right side of Eq. (\ref{chapter23.eqn13}). Next, we express the matrix element $\mel{n}{V_I(t)}{m}$ as
+
+\begin{align}
+\mel{n}{V_I(t)}{m} 
+&= \mel{n}{e^{\iu H_0 (t-t_0)/\hbar} V(t) e^{-\iu H_0 (t-t_0)/\hbar}}{m} \nonumber\\
+&= e^{\iu (E_n - E_m) t/\hbar} \mel{n}{V(t)}{m} \ (\text{with } t_0 = 0) \nonumber\\
+&= e^{\iu \omega_{n m} t} V_{n m}(t)
+\label{chapter23.eqn14}
+\end{align}
+
+Where we have defined
+\begin{align}
+\label{chapter23.eqn15}
+\omega_{n m} &= \frac{E_n - E_m}{\hbar} \\
+\label{chapter23.eqn16}
+V_{n m}(t) &= \mel{n}{V(t)}{m}
+\end{align}
+
+Thus, Eq. (\ref{chapter23.eqn3}) can be written as
+\begin{equation}
+\label{chapter23.eqn17}
+\iu \hbar \dv{a_n(t)}{t} = \sum_{m} V_{n m}(t) e^{\iu \omega_{n m} t} a_m(t)
+\end{equation}
+Explicitly this equation is
+\begin{equation}
+\label{chapter23.eqn18}
+\iu \hbar \pdv{}{t}
+\mqty[a_1(t) \\ a_2(t) \\ \vdots] = 
+\mqty[V_{11}(t) & V_{12}(t) e^{\iu\omega_{12}t} & \ldots\\
+V_{21}(t)e^{\omega_{21}t} & V_22(t) & \ldots \\
+\vdots & \vdots & \vdots
+]
+\mqty[a_1(t) \\ a_2(t) \\ \vdots]
+\end{equation}
+
+%% page 7
+This is the basic coupled differential equation we must solve, with the boundary condition (\ref{chapter23.eqn12}). So far no approximation has been made.
+
+
+\section{Perturbation Scheme for Solving Eq. (\ref{chapter23.eqn17})}
+The exact solutions of the coupled differential Eqs. (\ref{chapter23.eqn17}) is very difficult. We can derive a perturbation scheme by writing
+\begin{equation}
+V_{n m}(t) = \lambda V_{n m}(t)
+\end{equation}
+and then expanding $a_n(t)$ in a power series in $\lambda$
+\begin{equation}
+\label{chapter23.eqn19}
+a_n(t) = a_n^{(0)}(t) + \lambda a^{(1)}_n (t) + \lambda^2 a^{(2)}_n (t) + \ldots
+\end{equation}
+The parameter $\lambda$ is introduced just to count the order of perturbation and $\lambda$ will be set equal to $1$ at the end. Substituting Eq. (\ref{chapter23.eqn19}) in Eq. (\ref{chapter23.eqn17}) and equating the coefficient of equal powers of $\lambda$ we find
+
+\begin{align}
+\label{chapter23.eqn20}
+\begin{split}
+\dot{a}_n^{(0)}(t) &= 0 \\
+\dot{a}_n^{(1)}(t) &= \frac{1}{\iu \hbar} \sum_{m} V_{n m}(t) e^{\iu \omega_{n m} t} a_{m}^{(0)} \\
+\dot{a}_n^{(2)}(t) &= \frac{1}{\iu \hbar} \sum_{m} V_{n m}(t) e^{\iu \omega_{n m} t} a_{m}^{(1)}(t) \\
+\vdots & \quad \vdots \\
+\dot{a}_n^{(s+1)}(t) &= \frac{1}{\iu \hbar} \sum_{m} V_{n m}(t) e^{\iu \omega_{n m} t} a_{m}^{(s)}(t) \\
+\end{split}
+\end{align}
+These equations can now, in principle, be integrated successively to any given order in perturbation. The first Eq. (\ref{chapter23.eqn20}) simply confirms that $a_n^{(0)}$ is independent of time. We take
+\begin{equation}
+\label{chapter23.eqn21}
+a_n^{(0)} = 
+\begin{cases}
+1 \qq{if} n = i \\
+0 \qq{if} n \neq i
+\end{cases}
+\end{equation}
+In order to satisfy the initial condition (\ref{chapter23.eqn12}). The higher order corrections $a_n^{(1)}(t), a_n^{(2)}(t), \ldots$ have to be evaluated by solving Eq. (\ref{chapter23.eqn20}) with the initial conditions
+\begin{equation}
+\label{chapter23.eqn22}
+	a_n^{(1)}(t_0), a_n^{(2)}(t_0) = \ldots = 0
+\end{equation}
+%%% page 10
+Now, substituting Eq. (\ref{chapter23.eqn21})  in the second of Eqs. (\ref{chapter23.eqn20}), we obtain first order
+\begin{equation}
+\label{chapter23.eqn23}
+\dot{a}_n^{(1)}(t) = \frac{1}{\iu \hbar} V_{n i}(t) e^{\iu \omega_{n i} t} \qq{for all n}
+\end{equation}
+Integrating this we get
+\begin{equation}
+\label{chapter23.eqn24}
+a_n^{(1)}(t) = \frac{1}{\iu \hbar} \int_{t_0}^{t} V_{n i}(t^\prime) e^{\iu \omega_{n i} t^\prime} \dd{t^\prime}
+\end{equation}
+The initial condition $a_n^{(1)}(t_0) = 0$ is automatically satisfied in the above equation.
+
+%% page 11
+
+Next, substituting Eq. (\ref{chapter23.eqn24}) into the third of Eqs. (\ref{chapter23.eqn20}), we obtain in second order
+\begin{align*}
+	\dot{a}_n^{(2)}(t) &= \frac{1}{\iu \hbar} \sum_{m} V_{n m}(t) e^{\iu \omega_{n m} t} a_m^{(1)}(t) \\
+	or,\ a_n^{(2)}(t) &= \frac{1}{\iu \hbar} \sum_{m} \int_{t_0}^{t} \dd{t^\prime} V_{n m}(t^\prime) e^{\iu \omega_{n m} t^\prime} a_m^{(1)}(t^\prime) \\
+	&=\frac{1}{\iu \hbar} \sum_{m} \int_{t_0}^{t} \dd{t^\prime} V_{n m}(t^\prime) e^{\iu \omega_{n m} t^\prime} 
+	\frac{1}{\iu \hbar} \int_{t_0}^{t^\prime} \dd{t^{\prime\prime}} V_{m i}(t^{\prime\prime}) e^{\iu \omega_{m i} t^{\prime\prime}}
+\end{align*}
+Therefore
+\begin{equation}
+\label{chapter23.eqn25}
+a_n^{(2)}(t) = \frac{1}{(\iu \hbar)^2} \sum_{m} \int_{t_0}^{t} \dd{t^\prime} \int_{t_0}^{t^\prime} \dd{t^{\prime\prime}} V_{n m}(t^\prime) e^{\iu \omega_{n m} t^\prime} V_{m i}(t^{\prime\prime}) e^{\iu \omega_{m i} t^{\prime\prime}}
+\end{equation}
+Continuing in this fashion we can obtain the higher order correction to $a_n(t)$. \\
+
+We have now completed the formalism for time-dependent perturbation theory. We will now apply the formalism to some specific problems.
+
+
+
+\section{Examples}
+\subsection{Constant perturbation}
+%% page 12
+A constant perturbation switched on at $t=0$. As an application of the time-dependent perturbation theory, let us consider a constant perturbation suddenly turned on at $t=0$
+\begin{equation}
+\label{chapter23.eqn26}
+V(t) = \begin{cases}
+0 \qq{for} t<0 \\
+V \qq{for} t \geq 0
+\end{cases}
+\end{equation}
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{Step potential}
+	\label{chapter23.fig1}
+\end{figure}
+we have
+\begin{equation}
+a_n^{(0)} = \delta_{n i}
+\end{equation}
+and with $t_0 = 0$
+\begin{align*}
+a_n^{(1)}(t) 
+&= \frac{1}{\iu \hbar} V_{n i} \int_{0}^{t} e^{\iu \omega_{n i} t^\prime} \dd{t^\prime}\\
+&= \frac{1}{\iu \hbar} V_{n i} \eval{\frac{e^{\iu \omega_{n i} t^\prime}}{\iu \omega_{n i}}}{0}{t} \\
+&= \frac{1}{\iu \hbar} V_{n i} \left(\frac{e^{\iu \omega_{n i} t} - 1}{\iu \omega_{n i}}\right)
+\end{align*}
+Therefore
+\begin{equation}
+\label{chapter23.eqn27}
+	a_n^{(1)}(t) = \frac{1}{\iu \hbar} V_{n i} e^{\iu \omega_{n i} t/2}\frac{\sin \omega_{n i} t/2}{\omega_{n i} t/2}
+\end{equation}
+Therefore, in first order, the probability of transition from an initial state $\ket{i}$ to a final state $\ket{n}$ s.t. $(n \neq i)$
+\begin{align}
+\label{chapter23.eqn28}
+P_{i \rightarrow n}(t) = \abs{a_n^{(1)}(t)}^2 = \frac{1}{\hbar^2} \abs{V_{n i}}^2 \frac{\sin[2]{\omega_{n i}t/2}}{\qty(\omega_{n i}/2)^2}
+\end{align}
+The probability of transition of the state $n$ depends not only on $\abs{V_{n i}}^2$ but also on $\omega_{n i}$, i.e., on the energy difference $E_n - E_i$. Note that if $V_{n i} = 0$, there would be no transition to the state $\ket{n}$. In other words, to have a transition to the final state $\ket{n}$, the potential $V$ should have a spatial dependence such that $V_{n i} = \mel{n}{V}{i} \neq 0$. The transition probability is shown in Fig. (\ref{chapter23.fig2}).
+
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{Transition probability $P_{i\rightarrow n}$ as a function of $E_n$.}
+	\label{chapter23.fig2}
+\end{figure}
+We see that $P_{i \rightarrow n}(t)$ exhibits a sharp peak about $E_n = E_i$. The height of the peak is proportional to $t^2$ while its width is approximately $2 \pi \hbar / t$. Thus the probability of transition to a state $n$ is large when its energy lies under the bump around $E_i$. The final energy will lie under the bump if $(E_n - E_i) < \frac{2 \pi \hbar}{t}$. This means that transition $i \rightarrow n$ will occur mainly towards those final states whose energy is located in a band of width $\delta E \approxeq \frac{2 \pi \hbar}{t}$ about the initial energy $E_i$, so that energy of the system is conserved within $\frac{2 \pi \hbar}{t}$. This result can be related to the time-energy uncertainly relation 
+\begin{equation}
+\Delta E \cdot \Delta t \sim \hbar
+\end{equation}
+where $\Delta t (=t)$ is the length of time the perturbation has acted and $\Delta E \sim \delta E$. If $\Delta t$ is small we have a broader peak, and as a result we tolerate a fair amount of energy non-conservation. On the other hand, if the perturbation has been on for very long time, we have a narrow peak, and approximate energy conservation is required for a transition with appreciable probability.
+
+%% page 17
+In practice, we are interested to find the transition probability to a group of final states $[n]$ whose energy is roughly degenerate with the initial state energy and lies within the range $E_n - \varepsilon/2, E_n + \varepsilon/2)$ centered about the value $E_n$. This is the case, for example, when one studies transitions to states belonging to the continuous spectra.
+
+
+In such a case we are interested in the total probability, that is transition probabilities summed over final states with $E_n \simeq E_i$. 
+\begin{equation}
+\label{chapter23.eqn29}
+P_{i \rightarrow [n]} = \sum_{\substack{n \\ E_n\simeq E_i}} \abs{a_n^{(1)}(t)}^2
+\end{equation}
+
+Let us now define by $\rho(E_n)$ the density of levels on the energy scale, so that $\rho(E_n) \dd{E_n}$  is the number of final states within the energy interval $(E_n, E_n + \dd{E_n})$, thus Eq. (\ref{chapter23.eqn29}) can be written as
+\begin{equation}
+\label{chapter23.eqn30}
+	P_{i \rightarrow [n]}(t) = \int \dd{E_n} \rho(E_n) \abs{a_n^{(1)}(t)}^2
+\end{equation}
+where the spread in the final state energy is $\varepsilon$. Using Eq. (\ref{chapter23.eqn28}) in (\ref{chapter23.eqn30}) we obtain
+\begin{equation}
+\label{chapter23.eqn31}
+P_{i \rightarrow [n]}(t) = 4 \int \dd{E_n} \rho(E_n) \sin[2]{\frac{(E_n - E_i)t}{2 \hbar}} \frac{\abs{V_{n i}}^2}{(E_n - E_i)^2}
+\end{equation}
+Now, as $t$ becomes large, we take advantage of the fact that
+\begin{equation}
+\lim\limits_{t \rightarrow \infty} \frac{1}{(E_n - E_i)^2} \sin[2]{\frac{(E_n - E_i)t}{2 \hbar}} = \frac{\pi t}{2 \hbar} \delta(E_n - E_i)
+\end{equation}
+which follows from
+\begin{equation}
+\lim\limits_{t \rightarrow \infty} \frac{1}{(\pi} \frac{\sin[2]{\alpha x}}{\alpha x^2} =  \delta(x)
+\end{equation}
+Thus, for large times the contribution to the integral in Eq. (\ref{chapter23.eqn31}) comes from a small band of energy around $E_i$. It is now possible to take $\abs{V_{n i}}^2$ outside the integral and perform the integration with the $\delta$-function. Thus
+\begin{align}
+P_{i \rightarrow [n]}(t) &= \abs{V_{n i}}^2 \frac{4\pi t}{2 \hbar} \int \dd{E_n} \delta(E_n - E_i)\rho(E_n)  \nonumber\\
+P_{i \rightarrow [n]}(t) &= \abs{V_{n i}}^2 \frac{2\pi t}{\hbar} \eval{\rho(E_n)}_{E_n=E_i}
+\label{chapter23.eqn32}
+\end{align}
+Thus the total probability is proportional to $t$ for large values of $t$. Notice that linearity in $t$ is a consequence of the fact that the total transition probability to the area under the peak in Fig. (\ref{chapter23.fig1}) where the height varies as $t^2$ and the width as $1/t$.
+
+It is convenient to consider the transition rate - that is the transition probability per unit time. The transition rate to a group of final state is
+\begin{align}
+W_{i \rightarrow [n]} &= \dv{}{t} P_{i \rightarrow [n]}(t) \nonumber\\
+&= \abs{V_{n i}}^2 \frac{2\pi}{\hbar} \eval{\rho(E_n)}_{E_n=E_i}
+\label{chapter23.eqn33}
+\end{align}
+This formula, which is of great practical importance, is called \textbf{Fermi's golden rule}\index{Fermi's golden rule}. We sometimes write Eq. (\ref{chapter23.eqn33}) as
+\begin{equation}
+\label{chapter23.eqn34}
+W_{i \rightarrow [n]} \frac{2 \pi}{\hbar} \abs{V_{n i}}^2 \delta(E_n - E_i)
+\end{equation}
+where it must be understood that the expression is integrated with $\int \dd{E_n} \rho(E_n)$.
+We should also understand what is meant by $\abs{V_{n i}}^2$. There may be several different groups of final states $n_1, n_2, \ldots$ all of which have about the same energy $E_i$ but for which the perturbation matrix elements $\abs{V_{n i}}^2$ and the density of states $\rho(E_n)$ although nearly constant within each group, differs from one group to another. In such cases we must treat each group separately even though they are degenerate in energy.
+
+
+\subsection{Oscillating Electric Field}
+%Hydrogen atoms in between the plates of a parallel plate capacitor
+%% page 22
+
+\subsection{Harmonic Perturbation}
+%% page 29
+
