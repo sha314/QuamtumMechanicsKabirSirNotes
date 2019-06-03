@@ -85,6 +85,13 @@ a_n(t_0) = \begin{cases}
 1 \quad if \ n = i 
 \end{cases}
 \end{equation}
+Therefore the transition probability in Eq. () can be written as
+\begin{equation}
+\label{chapter23.eqn12-transition-proba}
+P_{i\rightarrow n}(t) = \abs{a_n(t)}^2
+\end{equation}
+
+
 In our subsequent discussion we will take $t_0 = 0$ without any loss of generality. Now, taking the scalar product of Eq. (\ref{chapter23.eqn7}) with $\ket{n}$ we obtain
 \begin{equation}
 \label{chapter23.eqn13}
@@ -306,7 +313,189 @@ We should also understand what is meant by $\abs{V_{n i}}^2$. There may be sever
 \subsection{Oscillating Electric Field}
 %Hydrogen atoms in between the plates of a parallel plate capacitor
 %% page 22
+A system of hydrogen atoms in the ground state is contained between the plates of a parallel plate capacitor. A voltage pulse is applied to the capacitor so as to produce a homogeneous electric field
+\begin{equation}
+\varepsilon = 
+\begin{cases}
+0 \qq{for} t < 0 \\
+\varepsilon_0 e^{-t / \tau} \qq{for} t > 0
+\end{cases}
+\end{equation}
+\begin{enumerate}
+	\item Show that after a long time, the fraction of atoms in the $2 p (m=0)$ state $(\ket{n l m} = \ket{2 1 0})$ is, to first-order $\frac{2^15}{3^10} \frac{a_0 ^2 e^2 \varepsilon^2}{\hbar^2 \qty(\omega^2 + \frac{1}{\tau^2})}$. Where $a_0$ is the Bohr radius and $\hbar \omega$ is the energy difference between the $2p$ and the ground state.
+	
+	\item What is the fraction of atoms in the $2s$ state?
+\end{enumerate}
+Given:
+\begin{align*}
+\psi_{1 0 0}(\vec{r}) &= R_{1 0}(r) Y_{0 0} = \frac{2}{\sqrt{4 \pi}} \frac{1}{a^{3/2}} e^{-r / a_0} \\
+\psi_{2 1 0}(\vec{r}) &= R_{2 1}(r) Y_{1 0}(\theta,\phi) = \frac{1}{4\pi} \frac{1}{(2 a_0)^{3/2}} \qty(\frac{r}{r_0}) e^{-r / 2 a_0} \cos\theta \\
+\int_{0}^{\infty} r^n e^{-\beta r} \dd{r} &= \frac{n!}{\beta^{n + 1}} \qq{($\beta > 0$, $n$=positive integers)}
+\end{align*}
+Solution:\\
+
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.4\linewidth]{Pictures/not-found.jpg}
+	\includegraphics[width=0.4\linewidth]{Pictures/not-found.jpg}
+	\caption{Parallel electric field}
+	\label{chapter23.fig4}
+\end{figure}
+
+The electric filed is homogeneous but time varying. Suppose $\vec{\varepsilon}$ points along the $z$-axis. Therefore
+\begin{equation}
+\vec{\varepsilon} = (0, 0, \varepsilon_z)
+\end{equation}
+with
+\begin{equation}
+\varepsilon_z = \varepsilon_0 e^{-t / \tau} \qq{for} t>\tau
+\end{equation}
+The force on the electron has only $z$-component. We have
+\begin{equation}
+F_z = q_e \varepsilon_z = - e \varepsilon_0 e^{-t/\tau}
+\end{equation}
+where $q_e = -e = \qq{charge of electron}$
+Now $F_z = - \pdv{V}{z}$ gives
+\begin{equation}
+\label{chapter23.eqn1-oscillating}
+V = e \varepsilon_0 z e^{-t/\tau} \quad (t > 0)
+\end{equation}
+The hydrogen atom is in the ground state $\ket{100}$ at $t=0$. The perturbation is switched on at $t=0$. In the first-order perturbation theory, the probability of transition from state $i$ to state $n$ is 
+\begin{equation}
+P_{i \rightarrow n}(t) = \abs{a_n^{(1)}(t)}^2
+\end{equation}
+where
+\begin{equation}
+a_n^{(1)}(t) = \frac{1}{\iu \hbar} \int_{0}^{t} \mel{n}{V(t^\prime)}{i} e^{\iu \omega_{n i} t^\prime} \dd{t^\prime}
+\end{equation}
+where $\omega_{n i} = \frac{E_n - E_i}{\hbar}$. Writing $\omega \equiv \omega_{n i}$, we find in the present example
+\begin{equation}
+a_n^{(1)}(t) = \frac{1}{\iu \hbar} e \varepsilon_0 \mel{n}{z}{i} \int_{0}^{t} e^{(\iu \omega - 1/\tau) t^\prime} \dd{t^\prime}
+\end{equation}
+For $t (t >> t^\prime)$ we have
+\begin{align}
+a_n^{(1)}(t) 
+&= \frac{e \varepsilon_0}{\iu \hbar}  \mel{n}{z}{i} \left[- \frac{1}{(\iu \omega - 1/\tau)}\right] \nonumber\\
+&= \frac{e \varepsilon_0}{\hbar(\omega - \iu/\tau)}  \mel{n}{z}{i}
+\label{chapter23.eqn2-oscillating}
+\end{align}
+Now, states of the hydrogen atoms (disregarding spin) are denoted by $\ket{n l m}$. The initial state is the ground state, i.e., $\ket{i} = \ket{1 0 0}$ while the final state $\ket{n}$ is $2 p (m=0)$, i.e., $\ket{n} = \ket{2 1 0}$
+Also
+\begin{align*}
+\braket{\vec{r}}{1 0 0} &= \psi_{1 0 0}(\vec{r})
+\braket{\vec{r}}{2 1 0} &= \psi_{2 1 0}(\vec{r})
+\end{align*}
+Therefore
+\begin{align*}
+\mel{2 1 0}{z}{1 0 0}
+&= \int \psi^*_{2 1 0}(\vec{r}) r\cos\theta \psi_{1 0 0}(\vec{r}) \\
+&= \frac{2}{4\pi} \frac{1}{2^{3/2} a_0^4} \int e^{- r / 2 a_0} \cos\theta r^2 \cos\theta e^{-r/a_0} r^2 \dd{r}\dd{\Omega} \\
+&= \frac{2}{4\pi} \frac{1}{2^{3/2} a_0^4} \int_0^\infty r^4 e^{-3 r/2 a_0} \int_{0}^{\pi/2} \cos[2]{\theta} \sin\theta\dd{\theta} \int_{0}^{2 \pi} \dd{\phi} \\
+&= \frac{2}{4\pi} \frac{1}{2^{3/2} a_0^4} \cdot 2\pi \cdot \frac{2}{3} \int_{0}^{\infty} r^4 e^{-3 r/2 a_0} \dd{r} \\
+&= \frac{2}{2^{3/2} 3 a_0} \frac{4!}{\qty(\frac{2}{2 a_0})^5} \\
+&= \frac{4!}{2^{3/2}} \qty(\frac{2}{3})^6 a_0
+\end{align*}
+Therefore the probability of transition from the state $\ket{1 0 0}$ to the state $\ket{2 1 0}$ is 
+\begin{align*}
+P_{i \rightarrow n}(t) 
+&= \abs{a_n^{(1)}(t)}^2 \\
+&= \frac{e^2 \varepsilon_0^2}{\hbar^2 (\omega^2 + \frac{1}{\tau^2})} \cdot \frac{(4!)^2 2^{12}}{2^3 3^12} a_0 ^2 \\
+&= \qty(\frac{2^15}{3^10}) \frac{e^2 \varepsilon_0^2 a_0^2}{\hbar^2 (\omega^2 + \frac{1}{\tau^2})} 
+\end{align*}
+This is the fraction of atoms in the state $\ket{2 1 0}$ for large times $(t >> \tau)$.\\
+
+(b) Probability of transition to $2 s = \ket{2 0 0}$ state is zero. Because the matrix  element of $z$ between the initial and final states is $\mel{2 0 0}{z}{1 0 0} = 0$. Because the integrand is odd. So there is no transition to the $\ket{2 0 0}$ state from the ground state.
+
+
+
 
 \subsection{Harmonic Perturbation}
 %% page 29
+We now consider a sinusoidally varying time-dependent potential, commonly referred to as harmonic perturbation:
+\begin{equation}
+\label{chapter23.eqn1-harmonic}
+V(t) = V e^{i \omega t} + V^\dagger e^{-i \omega t}
+\end{equation}
+where $V$ may still depend on $\hat{\vec{r}}, \hat{\vec{p}}$ and $\hat{\vec{s}}$. 
 
+We assume that only one of the eigenstates of $H_0$ is populated initially. The perturbation is turned on at $t=0$. So, in first order, the transition amplitude from state $i$ to state $n$ is
+\begin{align}
+	a_n^{(1)} 
+	&= \frac{1}{\iu\hbar} \int_{0}^{t} \qty(V_{n i} e^{\iu \omega t^\prime} + V_{n i}^\dagger e^{-\iu \omega t^\prime}) e^{\iu \omega_{n i} t^\prime} \dd{t^\prime} \nonumber\\
+	\label{chapter23.eqn2-harmonic}
+	&= \frac{1}{\hbar} \left[\frac{1 - e^{\iu(\omega - \omega_{n i})t}}{\omega + \omega_{n i}} V_{n i} 
+	+ \frac{1 - e^{\iu(\omega_{n i} - \omega )t}}{-\omega + \omega_{n i}} V_{n i}^\dagger\right]
+\end{align}
+
+It is clear from the above equation that if $t$ is large enough, the probability of finding the system will be appreciable if the denominator of the one or the other of the two terms on the right of Eq. (\ref{chapter23.eqn2-harmonic}) is close to zero. Moreover, assuming that $E_n \neq E_i$ (so that the levels $E_n$ and $E_i$ are not degenerate), both the denominator cannot simultaneously close to zero. A good approximation is therefore to neglect the interference between the two terms in calculating the transition probabilities.
+\begin{enumerate} [start=0,label={(case \arabic*):}]
+	\item suppose $\omega_{n i} + \omega \simeq 0$ which means $E_n \simeq E_i - \hbar \omega$.
+	Then
+\begin{align*}
+	P_{i \rightarrow n}(t) 
+	&= \abs{a_n^{(1)}(t)}^2 \\
+	&\simeq \frac{\abs{V_{n i}}^2}{\hbar^2} \abs{\frac{1 - e^{\iu (\omega + \omega_{n i})t}}{\omega + \omega_{n i}}}^2 \\
+	&= \frac{\abs{V_{n i}}^2}{\hbar^2} \frac{\sin[2]{(\omega + \omega_{n i})t/2}}{[(\omega + \omega_{n i})t/2]^2} \\
+	&= \frac{\abs{V_{n i}}^2}{\hbar^2} \cdot 2 \pi t \delta(\omega + \omega_{n i})
+\end{align*}
+	The transition rate is than
+	\begin{align*}
+	W_{i \rightarrow n}(t) 
+	&= \dv{}{t} P_{i \rightarrow n}(t) \\
+	&= \frac{2 \pi}{\hbar^2}  \abs{V_{n i}}^2 \delta(\omega + \omega_{n i}) \\
+	&= \frac{2 \pi}{\hbar^2}  \abs{V_{n i}}^2 \delta(\omega + \frac{E_n - E_i}{\hbar}) \\
+	&= \frac{2 \pi}{\hbar}  \abs{V_{n i}}^2 \delta(E_n - E_i + \hbar\omega)
+	\end{align*}
+	Therefore the transition rate to a group of final state is
+	\begin{align}
+		W_{i \rightarrow [n]}(t)
+		&= \frac{2 \pi}{\hbar}  \abs{V_{n i}}^2 \int \delta(E_n - E_i + \hbar\omega)\rho(E_n) \dd{E_n} \nonumber\\
+		\label{chapter23.eqn5-harmonic}
+		&= \frac{2 \pi}{\hbar}  \abs{V_{n i}}^2 \eval{\rho(E_n)}_{}^{E_n = E_i - \hbar\omega}
+	\end{align}
+	
+	\item Next suppose that the denominator of the second term of Eq. (\ref{chapter23.eqn2-harmonic}) is close to zero. Therefore $-\omega + \omega_{n i} = 0$, i.e., $E_n = E_i + \hbar\omega$. Then proceeding exactly as in case $1$, we have
+	\begin{equation}
+	\label{chapter23.eqn6-harmonic}
+	W_{i \rightarrow [n]}(t)
+	= \frac{2 \pi}{\hbar}  \abs{V_{n i}}^2 \eval{\rho(E_n)}_{}^{E_n = E_i + \hbar\omega}
+	\end{equation}
+\end{enumerate}
+We see from Eqs.(\ref{chapter23.eqn5-harmonic}) and (\ref{chapter23.eqn6-harmonic}) that, in case of harmonic perturbation, we do not have energy conservation satisfied by the quantum-mechanical system above. Rather, the apparent lack of energy conservation is compensated by the energy given out to or energy taken from the external potential $V(t)$.
+
+In case of Eq. (\ref{chapter23.eqn5-harmonic}) we have stimulated emission\index{stimulated emission, absorption}. The quantum mechanical system gives up energy $\hbar\omega$ to $V$ Fig. (\ref{chapter23.fig3}). Clearly, Stimulated emission is possible if the quantum mechanical system is in an excited state.
+
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.4\linewidth]{Pictures/not-found.jpg}
+	\includegraphics[width=0.4\linewidth]{Pictures/not-found.jpg}
+	\caption{Stimulated emission: system gives up energy $\hbar\omega$ to $V$ and the initial state $i$ is an excited state.}
+	\label{chapter23.fig3}
+\end{figure}
+
+
+Next, 
+in case of Eq. (\ref{chapter23.eqn5-harmonic}) we have absorption\index{stimulated emission, absorption}. The quantum mechanical system receives energy $\hbar\omega$ from $V$ and ends up in an excited state Fig. (\ref{chapter23.fig3}). Thus a time-dependent perturbation can be regarded as an inexhaustible source or sink of energy.
+
+
+Now, note that
+\begin{equation}
+V_{n i} = \mel{n}{V}{i} = \mel{i}{V^\dagger}{n}^* = V_{i n}^{\dagger *}
+\end{equation}
+Therefore
+\begin{equation}
+\label{chapter23.eqn7-harmonic}
+	\abs{V_{i n}^\dagger}^2 = \abs{V_{i n}}^2
+\end{equation}
+
+Combining Eq. (\ref{chapter23.eqn7-harmonic}) with (\ref{chapter23.eqn5-harmonic}) and (\ref{chapter23.eqn6-harmonic}) we have
+\begin{equation}
+\label{chapter23.eqn8-harmonic}
+\frac{\qq{emission rate for} i \rightarrow [n]}{\qq{density of final states for} [n]} = \frac{2 \pi}{\hbar} \abs{V_{n i}}^2 = \frac{2 \pi}{\hbar} \abs{V_{n i}^\dagger}^2 = \frac{\qq{Absorption rate for} n \rightarrow [i]}{\qq{density of final states for} [i]}
+\end{equation}
+where in the absorption case we let $i$ stand for the final states. Eq. (\ref{chapter23.eqn8-harmonic}) which expresses symmetry between absorption and emission is known as detailed balancing\index{detailed balancing}.
+
+To summarize:\\
+	For constant perturbation, we obtain appreciable transition probability for $\ket{i} \rightarrow \ket{n}$ only if $E_n \simeq E_i$. In contrast, for harmonic perturbation we have appreciable transition probability only if $E \simeq E_i \pm \hbar\omega$ for stimulated emission or absorption \index{stimulated emission, absorption}.

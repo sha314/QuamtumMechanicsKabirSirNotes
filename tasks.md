@@ -74,7 +74,9 @@ completed by kabir sir ? 2019.04.18
 completed by kabir sir ? 2019.04.18
 
 # Chapter18
+texts - by shahnoor - started - date 2019.05.29 - completed - data ???
 
+images - pending
 
 # Chapter19
 
@@ -95,7 +97,9 @@ texts - by shahnoor - started - date 2019.05.09 - completed - date 2019.05.29
 images - pending
 
 # Chapter23
-texts - by shahnoor - started - date 2019.05.29
+texts - by shahnoor - started - date 2019.05.29 - completed - date 2019.06.03
+
+images - pending
 
 
 # Chapter24

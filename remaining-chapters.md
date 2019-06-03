@@ -37,9 +37,6 @@ submitted : ---
 # Chapter19
 
 
-# Chapter23
-
-
 # Chapter24
 
 
