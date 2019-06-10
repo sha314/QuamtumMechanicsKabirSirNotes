@@ -1,1 +1,159 @@
+%% writing by shahnoor
+
 \chapter{sheet-18 : Rotations and Angular Momentum}
+
+\ifpdf
+\graphicspath{{Chapter23/figs/}}
+\else
+\graphicspath{{Chapter23/figs/}}
+\fi
+
+reference : Sakurai, Cohen-Tanondgi\\
+
+A rotation of a physical system is specified by the angle of rotation and the axis of rotation. The rotation can be either positive or negative. If a right-handed screw turned in the direction of rotation proceeds along the positive direction of the axis, the rotation is said to be positive. Thus, for examp, $\phi\hat{z}$ denotes a positive rotation by an angle $\phi$ about the z-axis Fig. (\ref{chapter18.fig1})
+
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{A positive rotation of the physical system by an angle $\phi$ about the $z$-axis.}
+	\label{chapter18.fig1}
+\end{figure}
+In our subsequent discussions we will consider active rotation\index{active and passive rotation}, i.e., rotation of the physical system rather than the rotation of the coordinates.\\
+
+Now, finite rotations about different axes do not commute, i.e., the change in the coordinate of a point in the physical system depends on the order the rotations are performed. To work out quantitatively the extent in which rotations about different axes fail to commute, we have to construct the matrices corresponding to rotations in the three-dimensional real space $(x,y,z)$.\\
+
+In each rotation a vector $\vec{r}$ with coordinates $(x, y, z)$ changes to a new vector $\vec{r^\prime}$ with coordinate $(x^\prime,y^\prime,z^\prime)$. The matrix connecting $(x^\prime,y^\prime,z^\prime)$ with $(x,y,z)$ is the matrix corresponding to the rotation.
+
+%% page 3
+Thus
+\begin{equation}
+\label{chapter18.eqn1}
+\mqty[x^\prime\\ y^\prime \\ z^\prime] = \mqty[R]  \mqty[x\\ y \\ z]
+\end{equation}
+Where $R$ is the $3\times3$ square matrix corresponding to the rotation. In a rotation, the length of the vector $\vec{r}$ remains unchanged, i.e.,
+\begin{equation}
+\norm{\vec{r^\prime}} = \sqrt{{x^{\prime}}^2 + {y^{\prime}}^2 + {z^{\prime}}^2} = \sqrt{x^2 + y^2 + z^2} =\norm{\vec{r}}
+\end{equation}
+Therefore, the matrix $R$ must be orthogonal, i.e.,
+\begin{equation}
+R^T R = R R^T = \mathcal{1}
+\end{equation}
+Next, we will construct explicitly the rotation matrices $R$ in the three-dimensional space corresponding to positive rotations about the $x$-axis, $y$-axis and $z$-axis.
+
+First, consider a finite rotation by an angle $\phi$ in a positive sense about the $z$-axis (Fig. \ref{chapter18.fig2})
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{A positive rotation by an angle $\phi$ about the $z$-axis.}
+	\label{chapter18.fig2}
+\end{figure}
+We have
+\begin{align*}
+x^\prime = \cos\phi x - \sin\phi y \\
+y^\prime = \sin\phi x + \cos\phi y
+z^\prime = z
+\end{align*}
+In matrix form
+\begin{equation*}
+	\mqty[x^\prime\\ y^\prime \\ z^\prime] = \mqty[\cos\phi & - \sin\phi& 0 \\
+		\sin\phi & \cos\phi & 0 \\
+		0& 0& 1]  
+	\mqty[x\\ y \\ z]
+\end{equation*}
+Thus, the rotation matrix corresponding to a positive rotation by an angle $\phi$ about the $z$-axis is 
+\begin{equation}
+\label{chapter18.eqn4}
+R_z\qty(\phi) = \mqty[\cos\phi & - \sin\phi& 0 \\
+\sin\phi & \cos\phi& 0 \\
+0& 0& 1]
+\end{equation}
+Next, consider a rotation about the $x$-axis. The corresponding matrix is
+\begin{equation}
+\label{chapter18.eqn5}
+R_x\qty(\phi) = \mqty[1& 0& 0 \\
+0& \cos\phi & - \sin\phi\\
+0& \sin\phi & \cos\phi]
+\end{equation}
+
+Similarly
+\begin{equation}
+\label{chapter18.eqn6}
+R_y\qty(\phi) = \mqty[\cos\phi& 0& \sin\phi \\
+0& 1& 0 \\
+-\sin\phi& 0 &\cos\phi]
+\end{equation}
+
+%% page 6
+For infinitesimal rotation, i.e., $\phi=\epsilon$, the rotation matrices, up to second order in $\epsilon$ are
+\begin{align}
+\label{chapter18.eqn7}
+\begin{split}
+R_x\qty(\epsilon) = \mqty[1 & 0 & 0 \\ 0 & 1-\frac{\epsilon^2}{2} &- \epsilon \\ 0 & \epsilon & 1 - \frac{\epsilon^2}{2}] \\
+R_y\qty(\epsilon) = \mqty[1 - \frac{\epsilon^2}{2} & 0 & \epsilon \\ 0 & 1 & 0 \\ -\epsilon & 0 & 1 - \frac{\epsilon^2}{2}] \\
+R_z\qty(\epsilon) = \mqty[1 - \frac{\epsilon^2}{2} & -\epsilon & 0 \\ \epsilon & 1 - \frac{\epsilon^2}{2} & 0 \\ 0 & 0 & 1]
+\end{split}
+\end{align}
+Now the multiplication leads to (up to $\order{\epsilon^2}$)
+\begin{equation}
+\label{chapter18.eqn8a}
+R_x\qty(\epsilon) R_y\qty(\epsilon) = \mqty[1-\frac{\epsilon^2}{2} & 0 & \epsilon\\ \epsilon^2 & 1- \frac{\epsilon^2}{2} & -\epsilon\\ -\epsilon & \epsilon & 1-\epsilon^2] + \order{\epsilon^3}
+\end{equation}
+and
+\begin{equation}
+\label{chapter18.eqn8b}
+R_y\qty(\epsilon) R_x\qty(\epsilon) = \mqty[1-\frac{\epsilon^2}{2} & \epsilon^2 & \epsilon\\ 0 & 1- \frac{\epsilon^2}{2} & -\epsilon\\ -\epsilon & \epsilon & 1-\epsilon^2] + \order{\epsilon^3}
+\end{equation}
+From (\ref{chapter18.eqn8a}) and (\ref{chapter18.eqn8b}) we have
+\begin{equation}
+\label{chapter18.eqn9}
+R_x(\epsilon) R_y(\epsilon) - R_y(\epsilon)  R_x(\epsilon) = \mqty[0 & -\epsilon^2 & 0 \\ \epsilon^2 & 0 & 0 \\ 0 & 0 & 0] = R_z(\epsilon^2) - 1
+\end{equation}
+In these calculations all terms higher than $\epsilon^2$ have been ignored. Eq. (\ref{chapter18.eqn9}) leads to the import result that infinitesimal rotations about different axes do commute up to first order. Now, we have
+\begin{equation}
+\label{chapter18.eqn10}
+1 = R_{any}(0)
+\end{equation}
+where $any$ stands for any rotation axis. Thus Eq. (\ref{chapter18.eqn9}) can be written as
+\begin{equation}
+\label{chapter18.eqn11}
+\comm{R_x(\epsilon)}{R_y(\epsilon)} = R_z(\epsilon^2) - R_{any}(0)
+\end{equation}
+
+\begin{align}
+\label{chapter18.eqn12}
+\comm{R_y(\epsilon)}{R_z(\epsilon)} = R_x(\epsilon^2) - R_{any}(0)\\
+\label{chapter18.eqn13}
+\comm{R_z(\epsilon)}{R_x(\epsilon)} = R_y(\epsilon^2) - R_{any}(0)
+\end{align}
+
+Eqs. (\ref{chapter18.eqn11}) to (\ref{chapter18.eqn13}) are examples of the commutation relations between rotational matrices in three dimensional real space. These commutation relations will be used later to derived the angular momentum commutation relations.
+
+
+
+\section{Rotations in Hilbert Space}
+%% page 9
+
+
+
+
+
+\section{Commutation relations of $J_x,J_y,J_z$}
+%% page 14
+
+
+\section{Rotation operator applied to a spinless particle}
+%%% page 21
+
+
+\section{Rotation operator in spin space}
+%% page 27
+\subsection{Matrix Representation}
+%% page 32
+
+\subsection{Rotation of two component spinors}
+%% page 39
+
+
+
