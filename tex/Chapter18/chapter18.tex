@@ -135,16 +135,155 @@ Eqs. (\ref{chapter18.eqn11}) to (\ref{chapter18.eqn13}) are examples of the comm
 \section{Rotations in Hilbert Space}
 %% page 9
 
+Consider a physical system with state vector $\ket{\psi}$ in Hilbert space.
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{rotation in Hilbert space}
+	\label{chapter18.fig3}
+\end{figure}
+If the system is now rotated by a certain angle about a certain axis, the state vector changes to $\ket{\psi}_R$. Thus there exists an operator $U(R)$ in Hilbert space which carries the state $\ket{\psi}$ to $\ket{\psi}_R$, i.e.,
+\begin{equation}
+\label{chapter18.eqn14}
+\ket{\psi}_R = U(R) \ket{\psi}
+\end{equation}
+The operator $U(R)$ is unitary so that normalization of the states remain unaltered.
 
+
+What we have done is to established a correspondence between a rotation in real three-dimensional space and a unitary operator $U(R)$ in the Hilbert space,
+\begin{align*}
+R &\longleftrightarrow U(R) \\
+\qq{Rotation in 3-space}& \longleftrightarrow \qq{Transformation in Hilbert space}
+\end{align*}
+Note that $R$ is a $3\times 3$ orthogonal matrix acting on the components of a classical vector in $3$-space while $U(R)$ is a unitary operator acting on the \textit{vectors} of a Hilbert space (ket space). We could also find a matrix representation of the operator $U(R)$ in the Hilbert space by choosing an appropriate set of basis kets. If the number of kets in the basis set is $N$, then the matrix representation of $U(R)$ would be $N\times N$ dimensional.
+
+%% page 11
+For example, if we consider a spin-$1/2$ particle with no other degrees of freedom, then $N=2$ and $U(R)$ would be a $2\times 2$ unitary matrix, for a spin-$3/2$ particle with no other degrees of freedom, $N=4$, and $U(R)$ would be a $4\times 4$ unitary matrix.\\
+
+
+Now, we will construct the unitary operator $U(R)$. To do so, it is advantageous to consider infinitesimal rotations of the physical system. To be specific, suppose the physical system is rotated by an infinitesimal angle $\dd{\phi}$ about the $z$-axis. Therefore
+\begin{equation}
+R = \hat{z} \dd{\phi}
+\end{equation}
+We can write $U(R)$ as
+\begin{equation}
+\label{chapter18.eqn15}
+U(\dd{\phi} \hat{z}) = 1 - \frac{J_z}{\hbar} \dd{\phi}
+\end{equation}
+where $J_z$ is a hermitian operator with dimensions of action (i.e., dimensions of $\hbar$ : $\qq{Energy}\times \qq{Time}$ or $\qq{Position}\times \qq{Momentum}$). At this state $J_z$ is \textbf{not} yet identified with the $z$-component of the total angular momentum operator. This identification will be made later after we derive the commutations of $J_z$ with other generators.\\
+
+In Eq. (\ref{chapter18.eqn15}), $J_z$ is the generator of the unitary operator $U(\dd{\phi} \hat{z})$. The operator $U(\phi \hat{z})$ corresponding to a finite positive rotation $\phi$ about the $z$-axis can be obtained by successively compounding infinitesimal rotations about the same axis. Thus
+\begin{align}
+U_z(\phi) 
+&= \lim\limits_{N \rightarrow \infty} \qty[1 - \frac{\iu J_z}{\hbar} \frac{\phi}{N}]^N \nonumber\\
+\label{chapter18.eqn16a}
+&= e^{-\iu J_z \phi/\hbar} \\
+\label{chapter18.eqn16b}
+&= 1 - \frac{\iu J_z \phi}{\hbar} - \frac{J_z^2 \phi^2}{2 \hbar^2}
+\end{align}
+Similarly we can write
+\begin{align}
+\label{chapter18.eqn17}
+U_x(\phi) &= e^{-\iu J_x \phi/\hbar} \\
+\label{chapter18.eqn18}
+U_y(\phi) &= e^{-\iu J_y \phi/\hbar}
+\end{align}
+In general, for a positive rotation by an angle $\phi$ about an axis $\hat{n}$, we have
+\begin{align}
+\label{chapter18.eqn19}
+U_{\hat{n}}(\phi) &= e^{-\iu \vec{J}\cdot\hat{n} \phi/\hbar}
+\end{align}
+From Eqs. (\ref{chapter18.eqn16a}), (\ref{chapter18.eqn17}) and (\ref{chapter18.eqn18}) we note that the hermitian operators $J_x,\ J_y$ and $J_z$ are the generators of the unitary transformation operaors in the Hilbert space if the system is rotated about the $x$, $y$ and $z$-axis, respectively. We will now show that the three generators $J_x,\ J_y$ and $J_z$ obey the commutation relations of angular momentum operators.
 
 
 
 \section{Commutation relations of $J_x,J_y,J_z$}
 %% page 14
 
+To obtain the commutation relations between $J_x,\ J_y$ and $J_z$, we need the concept of a group (see Appendix (\ref{appendix4.group})). Now, the rotations form a group. The group multiplication is the application of two rotations successively. To see that the set of all rotations of a physical system form a group, we note that two successive rotations is equivalent to one single rotation. The inverse of a rotation $\phi \hat{n}$ is $-\phi\hat{n}$. The unit element is no rotation at all.\\
+
+
+To every rotation of the physical system there corresponds a $3\times 3$ orthogonal matrix $R$ acting on the coordinates of a classical vectors, and a unitary operator $U(R)$ acting on the state kets in the Hilbert space. We say that the $3\times 3$ orthogonal matrices $R$ is a representation of the rotation group in the ordinary $3$-space. The set of unitary operator $U(R)$ is also a representation of the rotation group but in the Hilbert space of state vectors. Thus we may postulate $U(R)$ has the same group properties as $R$
+\begin{table}
+	\begin{tabular}{c|c|c}
+		identity & $1\cdot R = R\cdot 1 = R$ & $\mathbb{1} U(R) = U(R) \mathbb{1} = U(R)$ \\ \hline
+		closure & $R_1 R_2 = R_3$ & $U(R_1) U(R_2) = U(R_3)$ \\ \hline
+		inverse & $R \cdot R^{-1} = 1 = R^{-1}\cdot R$ & 
+			\begin{minipage}{5cm}
+				\begin{align*}
+				U(R) U(R^{-1}) = \mathbb{1} =  U(R^{-1})  U(R)\\
+				\therefore  U(R^{-1}) =  U^{-1}(R) 
+				\end{align*}
+			\end{minipage}\\ \hline
+		associativity & 
+		\begin{minipage}{5cm}
+			\begin{align*}
+			R_1 \cdot (R_2 \cdot R_3) \\
+			= (R_1 \cdot R_2) \cdot R_3 \\
+			= R_1 \cdot R_2 \cdot R_3
+			\end{align*}
+		\end{minipage}
+			 & 
+		\begin{minipage}{5cm}
+			\begin{align*}
+			U(R_1)\qty(U(R_2) U(R_3)) \\
+			= \qty(U(R_1)U(R_2)) U(R_3)\\
+			= U(R_1)U(R_2) U(R_3)
+			\end{align*}
+		\end{minipage}
+	\end{tabular}
+\end{table}
+
+Therefore, to any equation involving the unitary operator $U(R)$. The analogue of Eq. (\ref{chapter18.eqn9}) in Hilbert space is
+\begin{equation}
+\label{chapter18.eqn20}
+U_x(\epsilon) U_y(\epsilon) - U_y(\epsilon) U_x(\epsilon) = U_z(\epsilon^2) - 1
+\end{equation}
+
+Eqs. (\ref{chapter18.eqn9}) and (\ref{chapter18.eqn20}) are valid up to second order in $\epsilon$. We therefore expand Eq. (\ref{chapter18.eqn20}) up to second order obtaining
+\begin{equation}
+\label{chapter18.eqn21}
+\begin{split}
+\qty(1 - \frac{\iu J_x \epsilon}{\hbar} - \frac{J_x^2 \epsilon^2}{2 \hbar^2}) 
+\qty(1 - \frac{\iu J_y \epsilon}{\hbar} - \frac{J_y^2 \epsilon^2}{2 \hbar^2})
+-
+\qty(1 - \frac{\iu J_y \epsilon}{\hbar} - \frac{J_y^2 \epsilon^2}{2 \hbar^2})
+\qty(1 - \frac{\iu J_x \epsilon}{\hbar} - \frac{J_x^2 \epsilon^2}{2 \hbar^2})\\
+= \qty(1 - \frac{\iu J_z \epsilon^2}{\hbar}) - 1
+\end{split}
+\end{equation}
+Terms of the order $\epsilon$ automatically drop out. Equating terms of order  $\epsilon^2$ on both sides of Eq. (\ref{chapter18.eqn21}) we obtain
+
+\begin{equation}
+\label{chapter18.eqn22}
+\comm{J_x}{J_y} = \iu \hbar J_z
+\end{equation}
+
+Repeating this kind of arguments with rotations about other axes, we obtain
+\begin{align}
+\label{chapter18.eqn23}
+\comm{J_y}{J_z} = \iu \hbar J_x \\
+\label{chapter18.eqn24}
+\comm{J_z}{J_x} = \iu \hbar J_y
+\end{align}
+Equations (\ref{chapter18.eqn22}) to (\ref{chapter18.eqn24}) are the fundamental commutation relation of angular momentum operators.
+We can combine Eqs. (\ref{chapter18.eqn22}) to (\ref{chapter18.eqn24}) as
+\begin{equation}
+	\comm{J_i}{J_j} = \iu \hbar \varepsilon_{i j k} J_k
+\end{equation}
+Where $\varepsilon_{i j k}$ is the levi-civita symbol.
+
+
+ We thus conclude that the generators of the unitary transformations of state vectors in Hilbert space corresponding to rotations of the physical system are nothing but the angular momentum operators.
+
+
 
 \section{Rotation operator applied to a spinless particle}
 %%% page 21
+
+
+
 
 
 \section{Rotation operator in spin space}
