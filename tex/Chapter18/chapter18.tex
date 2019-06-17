@@ -279,20 +279,467 @@ Where $\varepsilon_{i j k}$ is the levi-civita symbol.
 
 
 
+
 \section{Rotation operator applied to a spinless particle}
 %%% page 21
+Suppose that a system is rotated by an angle $\phi$ about an axis $\hat{n}$ in the positive sense. The state of the system changes from $\ket{\psi}$ to $\ket{\psi^\prime}$ according to 
+\begin{equation}
+\label{chapter18.eqn1-spinless}
+\ket{\psi^\prime} = U_{\hat{n}}\qty(\phi) \ket{\psi}
+\end{equation}
+where
+\begin{equation}
+\label{chapter18.eqn2-spinless}
+	 U_{\hat{n}}\qty(\phi) = e^{-i \vec{J}\cdot\hat{n} \phi/\hbar}
+\end{equation}
+Now, if the system is a spinless particle $(\vec{S}=0)$ then $\vec{J} = \vec{L}$ and the corresponding rotation operator is
+\begin{equation}
+\label{chapter18.eqn3-spinless}
+U_{\hat{n}}\qty(\phi) = e^{-i \vec{L}\cdot\hat{n} \phi/\hbar}
+\end{equation}
+For simplicity, we will consider rotation about the $z$-axis and see how the wavefunction changes under such a rotation.
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{rotation in Hilbert space}
+	\label{chapter18.fig4}
+\end{figure}
+In this case we have
+\begin{align}
+\ket{\psi^\prime} 
+&= U_{z}\qty(\phi) \ket{\psi} \nonumber\\
+\label{chapter18.eqn4-spinless}
+&= e^{-i L_z \phi/\hbar} \ket{\psi}
+\end{align}
+In coordinate representation Eq. (\ref{chapter18.eqn4-spinless}) is
+\begin{equation}
+\label{chapter18.eqn5-spinless}
+\braket{\vec{r}}{\psi^\prime} = \mel{\vec{r}}{e^{-i L_z \phi/\hbar}}{\psi}
+\end{equation}
+%% page 23
+Now
+\begin{equation*}
+\bra{\vec{r}} \hat{L}_z = \bra{\vec{r}} \qty(\hat{\vec{r}} \times \hat{\vec{p}})_z = \qty(\hat{\vec{r}} \times \frac{\hbar}{\iu} \vec{\nabla})_z \bra{\vec{r}}
+\end{equation*}
+Therefore, Eq. (\ref{chapter18.eqn5-spinless}) can be written as
+\begin{equation}
+\braket{\vec{r}}{\psi^\prime} = e^{-\frac{\iu}{\hbar} \phi \qty(\vec{r} \times \frac{\hbar}{\iu} \vec{\nabla})_z} \braket{\vec{r}}{\psi}
+\end{equation}
+For infinitesimal rotations $\dd{\phi}$ we have
+\begin{align*}
+\psi^\prime\qty(\vec{r}) 
+&= \qty[1 - \frac{\iu}{\hbar} \dd{\phi} \qty(\vec{r} \times \frac{\hbar}{\iu} \vec{\nabla})_z] \psi\qty(\vec{r}) \\
+&= \qty[1 - \dd{\phi} \qty(x \pdv{}{y} - y \pdv{}{x})] \psi\qty(\vec{r}) \\
+&= \psi\qty(\vec{r}) - \dd{\phi} x \pdv{\psi(x,y,z)}{y} + \dd{\phi} y \pdv{\psi(x,y,z)}{x} \\
+&= \psi\qty(x + y\dd{\phi}, y - x \dd{\phi}, z)
+\end{align*}
+
+Now
+\begin{align}
+\label{chapter18.eqn1.infinitesimal-3d}
+R_z(\dd{\phi}) &= \mqty[1 & -\dd{\phi} & 0 \\ \dd{\phi} & 1 & 0 \\ 0 & 0 & 1] \\
+\label{chapter18.eqn2.infinitesimal-3d}
+\therefore R^{-1}_z(\dd{\phi}) &= \mqty[1 & \dd{\phi} & 0 \\ -\dd{\phi} & 1 & 0 \\ 0 & 0 & 1] \\
+\end{align}
+Therefore
+\begin{equation*}
+R^{-1}_z(\dd{\phi}) \vec{r} = \mqty[1 & \dd{\phi} & 0 \\ -\dd{\phi} & 1 & 0 \\ 0 & 0 & 1]  \mqty[x\\y\\z] = \mqty[x+y\dd{\phi} \\ y - x\dd{\phi} \\ z]
+\end{equation*}
+Hence
+\begin{equation}
+\label{chapter18.eqn6-spinless}
+\psi^\prime(\vec{r}) = \psi(R^{-1} \vec{r})
+\end{equation}
+Since $\vec{r}$ is arbitrary in Eq. (\ref{chapter18.eqn6-spinless}), we can rewrite (\ref{chapter18.eqn6-spinless}) in the form
+\begin{equation}
+\label{chapter18.eqn7-spinless}
+\psi^\prime(R \vec{r}) = \psi(\vec{r})
+\end{equation}
+Eq. (\ref{chapter18.eqn7-spinless}) is intuitively obvious. If the system is rotated, the old wave function at any point $\vec{r}$ must be equal to the new wave function at the rotated point $R\vec{r}$.
+
+We have derived the transformation equation of the wavefunction (Eq. (\ref{chapter18.eqn6-spinless}) or (\ref{chapter18.eqn7-spinless})) of a spinless particle using the expression rotation operator given in Eq. (\ref{chapter18.eqn3-spinless}). We could \textit{work backwards}, i.e., starting from the obvious transformation of the wavefunction under rotation, i.e., Eq. (\ref{chapter18.eqn6-spinless}) or (\ref{chapter18.eqn7-spinless}),  we could work out the expression for the rotation operator in the Hilbert space of spinless particles.
 
 
+Thus, if the system is rotated by an angle $\phi$ about the $z$-axis, the wave function changes from $\phi(\vec{r})$ to $\psi^\prime(\vec{r})$ in such a manner that
+\begin{equation}
+\label{chapter18.eqn8-spinless}
+	\psi^\prime(\vec{r}) = \psi\qty(R^{-1}_z(\phi) \vec{r})
+\end{equation}
+We cast Eq. (\ref{chapter18.eqn8-spinless}) in the form
+\begin{equation}
+\label{chapter18.eqn9-spinless}
+	\psi^\prime(\vec{r}) = U_z(\phi) \psi(\vec{r})
+\end{equation}
+where $U_z(\phi)$ is the rotation operator in the Hilbert space. To express Eq. (\ref{chapter18.eqn8-spinless}) in the form Eq. (\ref{chapter18.eqn9-spinless}), it is convenient to consider infinitesimal rotations in Eq. (\ref{chapter18.eqn2.infinitesimal-3d}) and Eq. (\ref{chapter18.eqn8-spinless}) is
+
+\begin{align*}
+\psi^\prime(\vec{r}) 
+&= \psi(x + y\dd{\phi}, y - x\dd{\phi}, z) \\
+&= \psi\qty(\vec{r}) - \dd{\phi} x \pdv{\psi(x,y,z)}{y} + \dd{\phi} y \pdv{\psi(x,y,z)}{x} \\
+&= \qty[1 - \dd{\phi} \qty(x \pdv{}{y} - y \pdv{}{x})] \psi\qty(\vec{r}) \\
+&= \qty[1 - \frac{\iu}{\hbar} \dd{\phi} \qty(\vec{r} \times \frac{\hbar}{\iu} \vec{\nabla})_z] \psi\qty(\vec{r}) \\
+&= \qty[1 - \frac{\iu}{\hbar} \dd{\phi} \qty(\vec{r} \times \vec{p})_z] \psi(x,y,z) \\
+&= \qty[1 - \frac{\iu}{\hbar} \dd{\phi} \hat{L}_z] \psi(x,y,z)
+\end{align*}
+For a finite rotation we have
+\begin{equation}
+\label{chapter18.eqn11-spinless}
+\psi^\prime(\vec{r}) = e^{-\frac{\iu}{\hbar} \phi \hat{L}_z}  \psi(\vec{r})
+\end{equation}
+Hence, the rotation operator in Hilbert space  of a spin particle is given by Eq. (\ref{chapter18.eqn3-spinless}).
 
 
 
 \section{Rotation operator in spin space}
+\label{chapter28.sect.rotation-in-spin-space}
 %% page 27
+Consider a particle with only spin degrees of freedom, i.e., the particle's spatial degrees of freedom are suppressed. In this case $\vec{L} = 0$, and, therefore, $\vec{J}=\vec{S}$ where $\vec{S}$ is the spin angular momentum operator of the particle. The rotation operator in the spin Hilbert space is then 
+\begin{equation}
+\label{chapter18.eqn13-spin}
+U^{(s)}_{\hat{n}}\qty(\phi) = e^{- \frac{\iu}{\hbar} \vec{S}\cdot\hat{n} \phi}
+\end{equation}
+
+Consider now a rotation by a finite angle $\phi$ about the $z$-axis. If the ket of a spin-$1/2$ particle before rotation in $\ket{\alpha}$, the ket after rotation in given by
+\begin{equation}
+\label{chapter18.eqn14-spin}
+\ket{\alpha}_R = U^{(s)}_{z}\qty(\phi) \ket{\alpha} = e^{- \frac{\iu}{\hbar} S_z \phi} \ket{\alpha}
+\end{equation}
+
+To show that the operator (\ref{chapter18.eqn13-spin}) really rotates the physical system, let us look at its effects on $\expval{S_x}$. Under the rotation about the $z$-axis, this expectation value changes to
+\begin{equation}
+\expval{S_x} \rightarrow \expval{S_x}^\prime = \tensor[_R]{\mel{\alpha}{S_x}{\alpha}}{_R} = \mel{\alpha}{U^{\dagger}_z(\phi) S_x U_z(\phi)}{\alpha}
+\end{equation}
+We must therefore compute $U^{\dagger}_z(\phi) S_x U_z(\phi)$. Using the identity
+\begin{equation}
+e^{A} B e^{-A} = B + \comm{A}{B} + \frac{1}{2 !} \comm{A}{\comm{A}{B}} + \ldots
+\end{equation}
+
+we have
+\begin{align*}
+U^{\dagger}_z(\phi) S_x U_z(\phi) 
+&= e^{ \frac{\iu}{\hbar} S_z \phi} S_x e^{- \frac{\iu}{\hbar} S_z \phi} \\
+&= S_x + \qty(\frac{\iu \phi}{\hbar}) \comm{S_z}{S_x} + \frac{1}{2 !} \qty(\frac{\iu \phi}{\hbar})^2 \comm{S_z}{\comm{S_z}{S_x}} + \frac{1 }{3 !} \qty(\frac{\iu \phi}{\hbar})^3 \comm{S_z}{\comm{S_z}{\comm{S_z}{S_x}}}  + \ldots \\
+&= S_x + \qty(\frac{\iu \phi}{\hbar}) \iu \hbar S_y + \frac{1}{2 !} \qty(\frac{\iu \phi}{\hbar})^2 \hbar^2 S_x + \frac{1}{3 !} \qty(\frac{\iu \phi}{\hbar})^3 \iu \hbar^3 S_y + \ldots \\
+&= S_x \qty(1 - \frac{\phi^2}{2 !} + \ldots)  - S_y \qty(\phi - \frac{\phi^3}{3 !} + \ldots) \\
+&= S_x \cos\phi - S_y \sin\phi
+\end{align*}
+
+Thus
+\begin{equation}
+\expval{S_x}^\prime = \expval{S_x} \cos\phi - \expval{S_y}\sin\phi
+\end{equation}
+Similarly
+\begin{align}
+\label{chapter18.eqn15-spin}
+\expval{S_y}^\prime = \expval{S_x} \sin\phi + \expval{S_y}\cos\phi \\
+\expval{S_z}^\prime = \expval{S_z}
+\end{align}
+This shows that the \textit{rotation} operator (\ref{chapter18.eqn13-spin}) when applied to the state ket does rotate the expectation value of $\vec{S}$ around the $z$-axis by an angular $\phi$. In other words, the expectation values of the spin operator behaves as though it ware a classical vector!
+
+Up to now we have dealt with the expectation values of the spin operator in the rotated and unrotated spin states. Now let us look at the effect of the rotation $U_z(\phi)$ on a general spin state $\ket{\alpha}$. For a spin $1/2$ particle we write
+\begin{equation}
+\label{chapter18.eqn16-spin}
+\ket{\alpha} = \ket{+} \braket{+}{\alpha} + \ket{-} \braket{-}{\alpha}
+\end{equation}
+where $\ket{\pm}$ are the eigenstates of $S_z$ with eigenvalues $\pm \frac{1}{2} \hbar$. Now
+\begin{equation}
+e^{-\iu S_z \phi/\hbar} \ket{\alpha} = e^{-\iu \phi/2} \ket{+} \braket{+}{\alpha} + e^{\iu \phi/2} \ket{-} \braket{-}{\alpha}
+\end{equation}
+The appearance of the half angle $\phi/2$ here has an extremely interesting consequence. Let us consider a rotation by an angle $2\pi$. We then have
+\begin{equation}
+\label{chapter18.eqn17-spin}
+\ket{\phi} \substack{\rightarrow \\ R_z(2 \pi)} \ket{\alpha}_R = - \ket{\alpha}
+\end{equation}
+So that the ket for the $360^\circ$ rotated state differs from the original ket by a minus sign. We would require a $720^\circ$ or $\phi=4 \pi$ rotation to get back to the same state with plus sign. Notice that this minus sign disappears from the expectation of $\vec{S}$ because $\vec{S}$ is sandwiched between $\bra{\alpha}$ and $\ket{\alpha}$, both of which change sign. (Will this minus sign be observable ? see Sakurai)
+
+
+
 \subsection{Matrix Representation}
 %% page 32
+The rotation operator in spin space is given by Eq. (\ref{chapter18.eqn13-spin}). For a spin-$1/2$ particle we can use the eigenkets $\ket{\pm}$ of $S_z$ as basis. Then $\vec{S}$ and $U^{(s)}_{\hat{n}}\qty(\phi)$ are expressed as $2\times 2$ matrices. We then have
+\begin{equation}
+\vec{S} \doteq \frac{1}{2} \hbar \vec{\sigma}
+\end{equation}
+Therefore
+\begin{equation}
+e^{-\frac{\iu}{\hbar} \vec{S}\cdot \hat{n} \phi} \doteq e^{-\iu \frac{\vec{\sigma}\cdot \hat{n}}{2} \phi}
+\end{equation}
+
+The $2\times 2$ matrices $\exp(-\iu \frac{\vec{\sigma}\cdot \hat{n}}{2} \phi)$ act on the two component spinor $\chi$ where
+\begin{equation}
+\chi = \mqty[\braket{+}{\alpha} \\ \braket{-}{\alpha}]
+\end{equation}
+
+Now
+\begin{align*}
+U_n^{(s)}\qty(\phi) 
+&\doteq e^{-\iu \frac{\phi}{2} \vec{\sigma}\cdot\hat{n}} \\
+&= 1 + \qty(-\frac{\iu\phi}{2}) \vec{\sigma}\cdot\hat{n} 
++ \frac{1}{2 !} \qty(-\frac{\iu\phi}{2})^2 \qty(\vec{\sigma}\cdot\hat{n})^2 + \ldots 
++ \frac{1}{m !} \qty(-\frac{\iu\phi}{2})^m \qty(\vec{\sigma}\cdot\hat{n})^m + \ldots
+\end{align*}
+Applying the identity
+\begin{equation}
+\qty(\vec{\sigma}\cdot\hat{n})^2 = \hat{n}\cdot\hat{n} 1_{2\times 2} + \iu \vec{\sigma} \cdot \qty(\hat{n} \times \hat{n}) = 1_{2\times 2}
+\end{equation}
+Which leads to
+\begin{equation}
+\qty(\vec{\sigma}\cdot\hat{n})^m = 
+\begin{cases}
+1 \qq{if $m$ is even}\\
+0 \qq{if $m$ is odd}
+\end{cases}
+\end{equation}
+
+We get
+\begin{align}
+U_n^{(s)}\qty(\phi) 
+&= \qty[1 - \frac{1}{2!} \qty(\frac{\phi}{2})^2 + \frac{1}{4 !} \qty(\frac{\phi}{2})^4 - \ldots] 1_{2\times 2}
+- \iu \vec{\sigma} \cdot \hat{n} \qty[\phi - \frac{1}{3 !} \qty(\frac{\phi}{2})^3 + \frac{1}{5 !} \qty(\frac{\phi}{2})^5 - \ldots] \nonumber\\
+&= \cos(\frac{\phi}{2}) 1_{2\times 2} - \iu \vec{\sigma} \cdot \hat{n} \sin(\frac{\phi}{2}) \qq{spin 1/2 particles}
+\end{align}
+Next
+\begin{align*}
+\vec{\sigma} \cdot \hat{n} 
+&= \sigma_x n_x + \sigma_y n_y + \sigma_z n_z \\
+&= \mqty[0 & 1 \\ 1 & 0] n_x + \mqty[0 & -\iu \\ \iu & 0] n_y + \mqty[1 & 0 \\ 0 & -1] n_z \\
+&= \mqty[n_z & n_x - \iu n_y \\ n_x + \iu n_y & -n_z]
+\end{align*}
+Therefore
+\begin{equation}
+e^{-\iu \vec{\sigma} \cdot \hat{n} \phi/2} = \mqty[\cos(\phi/2) - \iu n_z \sin(\phi/2) & \qty(- \iu n_x - n_y) \sin(\phi/2) \\
+\qty(-\iu n_x + n_y) \sin(\phi/2) & \cos(\phi/2) + \iu n_z \sin(\phi/2)]
+\end{equation}
+Note that
+\begin{equation}
+\eval{e^{-\iu \vec{\sigma}\cdot \hat{n}\phi/2}}_{\phi=2 \pi} = -1 \qq{for eny} \hat{n}
+\end{equation}
+Thus
+\begin{align}
+\chi \quad \substack{\longrightarrow \\ 2\pi \qq{rotation}} \quad - \chi
+\end{align}
+
+
+
+\subsection{Eigen Spinors of $\vec{\sigma} \cdot \hat{n}$}
+%% page 36
+As an instructive application of the rotation matrix, let us see how we can construct eigenspinors of $\vec{\sigma}\cdot \hat{n}$ with eigenvalues $\pm 1$ where $\hat{n}$ is some unit vector along some specified direction. Out objective is to construct $\chi_{\pm}$ satisfying $\vec{\sigma} \cdot \hat{n} \chi_{\pm} = \pm \chi_{\pm}$
+Actually, $\chi_{\pm}$ can be obtained as a  straight eigenvalue problem, but here we present an alternative method using the rotation matrix.\\
+
+
+Let the polar and azimuthal angle of $\hat{n}$ be $\theta$ and $\phi$, respectively. Let us start with $\mqty[1 \\ 0]$, the two-component spinor that represents the spin up state. Given this, we first rotate about the $y$-axis by an angle $\theta$, then rotate by an angle $\phi$ about the $z$-axis, as shown in Fig. (\ref{chapter18.fig5})
+
+
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{.}
+	\label{chapter18.fig5}
+\end{figure}
+
+The described spin state is then obtained.
+\begin{align*}
+\chi_{+} 
+&= e^{-\iu \sigma_z \phi/2} e^{-\iu \sigma_y \theta/2} \mqty[1 \\ 0] \\
+&=  \qty[\cos(\frac{\phi}{2}) - \iu \sigma_z \sin(\frac{\phi}{2})] \qty[\cos(\frac{\theta}{2}) - \iu \sigma_y \sin(\frac{\theta}{2})] \mqty[1 \\ 0] \\
+&= \mqty[\cos(\phi/2) - \iu \sin(\phi/2) & 0 \\ 0 & \cos(\phi/2) + \iu \sin(\phi/2)] \mqty[\cos(\phi/2) & -\sin(\phi/2) \\ \sin(\phi/2) & \cos(\phi/2)] \mqty[1 \\ 0] \\
+&= \mqty[e^{-\iu \phi/2} & 0 \\ 0 & e^{\iu \phi/2}]
+\mqty[\cos(\theta/2) \\ \sin(\theta/2)] \\
+&= \mqty[e^{-\iu \phi/2}\cos(\theta/2) \\ e^{\iu \phi/2}\sin(\theta/2)]
+\end{align*}
+To get $\chi_{-}$ we could apply the same sequence of relations to $\mqty[0 \\1]$, or, we could get $\chi_{-}$ from  $\chi_{+}$ simply by noting that $-\hat{n}$ has polar coordinates $\qty(\pi - \theta, \pi + \phi)$, so that
+
+\begin{equation}
+\chi_{-} = \mqty[- \iu e^{-\iu \phi/2}\sin(\theta/2) \\ \iu e^{\iu \phi/2}\cos(\theta/2)]
+\end{equation}
+
+Disregarding the overall phase factor $\iu$, we cann write
+\begin{equation}
+\chi_{-} = \mqty[- e^{-\iu \phi/2}\sin(\theta/2) \\ e^{\iu \phi/2}\cos(\theta/2)]
+\end{equation}
+
+
 
 \subsection{Rotation of two component spinors}
 %% page 39
+We are now prepared to study the global behaviour of spin $1/2$ particle under rotation. That is, we shall now take into account both the internal and external degrees of freedom of the particle.
+
+
+Consider a spin $1/2$ particle whose state is represented by $\ket{\psi}$ in the state space (Hilbert space) $\mathcal{H} = \mathcal{H}_{r}\otimes \mathcal{H}_{s}$. The ket can be represented by the spinors $\qty[\psi]\qty(\vec{r})$ having the components
+\begin{equation}
+\psi_\epsilon\qty(\vec{r}) = \braket{\vec{r}, \epsilon}{\psi}
+\end{equation} 
+
+where $\epsilon = \pm$ represents the two degrees of freedom in the spin space. Then
+\begin{equation}
+\ket{\psi} \doteq \qty[\psi] \qty(\vec{r}) = \mqty[\psi_{+}\qty(\vec{r}) \\ \psi_{-}\qty(\vec{r})]
+\end{equation}
+If we perform an arbitrary rotation on the particle, its state vector changes to $\ket{\psi^\prime}$ where
+\begin{equation}
+\ket{\psi^\prime} = U \ket{\psi}
+\end{equation}
+
+with
+\begin{align*}
+ U 
+ &= e^{-\frac{\iu}{\hbar} \vec{J}\cdot \hat{n} \phi} = e^{-\frac{\iu}{\hbar} \qty(\vec{L} + \vec{S})\cdot \hat{n} \phi} \\
+ &= e^{-\frac{\iu}{\hbar} \vec{L}\cdot \hat{n} \phi} e^{-\frac{\iu}{\hbar} \vec{S}\cdot \hat{n} \phi} \\
+ &= U^{(r)}\qty(\phi) U^{(s)}\qty(\phi)
+\end{align*}
+Where
+\begin{align}
+U^{(r)}\qty(\phi) &= e^{-\frac{\iu}{\hbar} \vec{L}\cdot \hat{n} \phi} \\
+U^{(s)}\qty(\phi) &= e^{-\frac{\iu}{\hbar} \vec{S}\cdot \hat{n} \phi} 
+\end{align}
+Note that $\comm{\vec{L}}{\vec{S}} = 0$.\\
+
+The rotation operator $U^{(r)}\qty(\phi)$ acts in the space $\mathcal{H}_{r}$ with basis $\{\ket{\vec{r}}\}$, i.e., the space of external variables, and the operator $U^{(s)}\qty(\phi)$ acts on the spin space $\mathcal{H}_s$ with basis $\{\ket{\pm}\}$.
+
+
+%%% page 41
+We write the spinor corresponding to the transformed state as
+\begin{equation}
+\qty[\psi^\prime] \qty(\vec{r}) = \mqty[\psi_{+}^\prime\qty(\vec{r}) \\ \psi_{-}^\prime\qty(\vec{r})]
+\end{equation}
+We will now derive a formula which connects the spinor $\qty[\psi^\prime] \qty(\vec{r})$ to the spinor $\qty[\psi] \qty(\vec{r})$.
+First, let us write the components of $\psi_\epsilon^\prime\qty(\vec{r})$ of the spinor $\qty[\psi^\prime] \qty(\vec{r})$ as
+\begin{equation}
+ \psi_\epsilon^\prime\qty(\vec{r}) = \braket{\vec{r}\epsilon}{\psi^\prime} = \mel{\vec{r}\epsilon}{U}{\psi}
+\end{equation}
+Using the closure (i.e., completeness) relation
+\begin{equation}
+\sum_{\epsilon^\prime = \pm} \int \dd[3]{r^\prime} \ketbra{\vec{r}^\prime\epsilon^\prime}{\vec{r}^\prime\epsilon^\prime} = \hat{1}
+\end{equation}
+We obtain
+
+\begin{align*}
+\psi_\epsilon^\prime\qty(\vec{r}) =\sum_{\epsilon^\prime = \pm} \int \dd[3]{r^\prime} \mel{\vec{r}\epsilon}{U}{\vec{r^\prime}\epsilon^\prime} \braket{\vec{r^\prime}\epsilon^\prime}{\psi}
+\end{align*}
+
+Now, since the basis vectors $\{\ket{\vec{r}\epsilon} = \ket{\vec{r}} \otimes \ket{\epsilon}\}$ are tensor products, the matrix elements of the operator $U$ in this basis can be decomposed in the following manner:
+\begin{equation}
+\mel{\vec{r}\epsilon}{U}{\vec{r^\prime}\epsilon^\prime} = 
+\mel{\vec{r}}{U^{(r)}}{\vec{r^\prime}}
+\mel{\epsilon}{U^{(s)}}{\epsilon^\prime}
+\end{equation}
+
+Now, 
+\begin{align*}
+U^{(r)}\ket{\vec{r}} &= \ket{R\vec{r}} \\
+\therefore \bra{\vec{r}} U^{(r)^\dagger} &= \bra{R \vec{r}} \\
+\qq{or,} \bra{\vec{r}} = \bra{R r} U^{(r)} \qq{since $U^{(r)}$ is unitary}
+\end{align*}
+Since $\vec{r}$ is arbitrary
+\begin{equation}
+\bra{R^{-1} \vec{r}} = \bra{\vec{r}}  U^{(r)}
+\end{equation}
+Therefore we have
+\begin{equation}
+\mel{\vec{r}}{U^{(r)}}{\vec{r^\prime}} = \braket{R^{-1}\vec{r}}{\vec{r^\prime}} = \delta\qty(\vec{r^\prime} - R^{-1}\vec{r})
+\end{equation}
+
+Next, let us call
+\begin{equation}
+\mel{\epsilon}{U^{(s)}}{\epsilon^\prime} = U^{(1/2)}_{\epsilon\epsilon^\prime}
+\end{equation}
+Then
+\begin{equation}
+\mel{\vec{r}\epsilon}{U}{\vec{r^\prime}\epsilon^\prime} = \delta\qty(\vec{r^\prime} - R^{-1}\vec{r}) U^{(1/2)}_{\epsilon\epsilon^\prime}
+\end{equation}
+and the transformed spinor is
+\begin{equation}
+\psi^\prime_{\epsilon}\qty(\vec{r}) = \sum_{\epsilon^\prime = \pm} U^{(1/2)}_{\epsilon\epsilon^\prime} \psi_{\epsilon^\prime}\qty(R^{-1} \vec{r})
+\end{equation}
+Explicitly
+\begin{equation}
+\mqty[\psi^\prime_{+}\qty(\vec{r}) \\ \psi^\prime_{-}\qty(\vec{r})] = \mqty[U^{(1/2)}_{++} & U^{(1/2)}_{+-} \\ U^{(1/2)}_{-+} & U^{(1/2)}_{--}] \mqty[\psi_{+}\qty(R^{-1} \vec{r}) \\ \psi_{-}\qty(R^{-1} \vec{r}) ]
+\end{equation}
+Thus we obtain the following result : each component of the new spinor $\qty[\psi^\prime]$ at the point $\vec{r}$ is a linear combination of the two components of the original spinor $\qty[\psi]$ at the point $R^{-1}\vec{r}$. The coefficients of these linear combinations are the elements of the $2\times 2$ matrix which represents $U^{(s)}$ in the $\{\ket{\pm}\}$ basis.
 
 
 
+
+\subsection{spin Precession}
+Sakurai\\
+
+%% page 44
+Consider a spin $1/2$ particle with its space degrees of freedom suppressed. If the particle is subjected to an external magnetic field, its Hamiltonian can be written as
+\begin{equation}
+\label{chapter18.eqn1-spin-precession}
+H = -\vec{\mu} \cdot \vec{B}
+\end{equation}
+where $\vec{\mu}$ is the magnetic moment operator of the spin $1/2$ particle, say electron. Since the electron has only spin degrees of freedom, we can write
+\begin{equation}
+\label{chapter18.eqn2-spin-precession}
+\vec{\mu} = g_s \frac{q_e}{2 m_e} \vec{S}
+\end{equation}
+where $q=-e$ is the charge of the electron and $g_s=2$ is the spin gyromagnetic ratio of the electron. With $g_s=2$, the Hamiltonian can be written as
+\begin{equation}
+\label{chapter18.eqn3-spin-precession}
+H = + \frac{e}{m_e} \vec{S}\cdot\vec{B}
+\end{equation}
+
+If the direction of $\vec{B}$ is taken as the $\hat{z}$ axis, i.e., if $\vec{B} = \hat{z} B$, the Hamiltonian becomes
+\begin{equation}
+\label{chapter18.eqn5-spin-precession}
+H =  \frac{e B}{m_e} S_z = \omega S_z
+\end{equation}
+
+by defining
+\begin{equation}
+\label{chapter18.eqn4-spin-precession}
+\omega = \frac{e B}{m_e}
+\end{equation}
+Now suppose that the electron is in an initial spin-state $\ket{\alpha, t=0}$. We take what is the state of the system at a later time $t$. We can find this state by applying the time evolution operator to the initial state
+\begin{equation}
+\label{chapter18.eqn6-spin-precession}
+\ket{\alpha, t} = T(t, 0)\ket{\alpha, t=0}
+\end{equation}
+where $T(t,0)$ is the time evolution operator given by
+\begin{equation}
+\label{chapter18.eqn7-spin-precession}
+T(t, 0) = e^{-\iu H t/\hbar} \qq{assuming $H$ is time independent}
+\end{equation}
+In our case $H$ is given by Eq. (\ref{chapter18.eqn5-spin-precession}) so that
+\begin{equation}
+\label{chapter18.eqn8-spin-precession}
+T(t, 0) = e^{-\iu \omega t S_z / \hbar}
+\end{equation}
+Applying Eq. (\ref{chapter18.eqn8-spin-precession}) in Eq. (\ref{chapter18.eqn6-spin-precession}) we obtain
+\begin{equation}
+\label{chapter18.eqn9-spin-precession}
+\ket{\alpha,t} = e^{-\iu \omega t S_z / \hbar} \ket{\alpha,t=0}
+\end{equation}
+
+We notice that the time-evolution operator (Eq. (\ref{chapter18.eqn8-spin-precession})) is nothing but the rotation operator in the Hilbert space corresponding to the rotation of the physical system by an angle $\omega t$ about $z$-axis, i.e., about the direction of the applied magnetic field. This means that the spin precesses around the magnetic field as an axis. To see this let us calculate the expectation value of $S_x, S_y$ and $S_z$ at time $t$.
+
+\begin{align*}
+\expval{S_x}_t &= \mel{\alpha t}{S_x}{\alpha t} = \mel{\alpha t=0}{e^{\iu\omega t S_z / \hbar} S_x e^{-\iu\omega t S_z / \hbar}}{\alpha t=0} \\
+\expval{S_y}_t &= \mel{\alpha t}{S_y}{\alpha t} = \mel{\alpha t=0}{e^{\iu\omega t S_z / \hbar} S_y e^{-\iu\omega t S_z / \hbar}}{\alpha t=0} \\
+\expval{S_z}_t &= \mel{\alpha t}{S_z}{\alpha t} = \mel{\alpha t=0}{e^{\iu\omega t S_z / \hbar} S_z e^{-\iu\omega t S_z / \hbar}}{\alpha t=0}
+\end{align*}
+Now, we can easily show the following relations (from Section (\ref{chapter28.sect.rotation-in-spin-space}))
+\begin{align*}
+e^{\iu\omega t S_z / \hbar} S_x e^{-\iu\omega t S_z / \hbar} &= S_x\cos(\omega t) - S_y\sin(\omega t)\\
+e^{\iu\omega t S_z / \hbar} S_y e^{-\iu\omega t S_z / \hbar} &= S_x\sin(\omega t) + S_y\cos(\omega t) \\
+e^{\iu\omega t S_z / \hbar} S_z e^{-\iu\omega t S_z / \hbar} &= S_z
+\end{align*}
+Thus
+\begin{align}
+\label{chapter18.eqn10-spin-precession}
+\begin{split}
+\expval{S_x}_t &= \expval{S_x}_{t=0}\cos(\omega t) - \expval{S_y}_{t=0}\sin(\omega t) \\
+\expval{S_y}_t &= \expval{S_x}_{t=0}\sin(\omega t) + \expval{S_y}_{t=0}\cos(\omega t) \\
+\expval{S_z}_t &= \expval{S_z}_{t=0}
+\end{split}
+\end{align}
+The set of equations (\ref{chapter18.eqn10-spin-precession}) shows clearly that the spin of the electron precesses around the $z$-axis, i.e., around the direction of $\vec{B}$ with an angular frequency $\omega$, i.e., witha time period $\tau = \frac{2\pi}{\omega}$ see Fig. (\ref{chapter18.fig6})
+\begin{figure}
+	%%%%%%% TODO
+	\centering
+	\includegraphics[width=0.5\linewidth]{Pictures/not-found.jpg}
+	\caption{Precession of electron  around the $z$-axis, i.e., around the direction of $\vec{B}$ with an angular frequency $\omega$}
+	\label{chapter18.fig6}
+\end{figure}

@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: Chapter1/chapter1.aux
+A level-1 auxiliary file: Chapter2/chapter2.aux
+A level-1 auxiliary file: Chapter3/chapter3.aux
+A level-1 auxiliary file: Chapter4/chapter4.aux
+A level-1 auxiliary file: Chapter5/chapter5.aux
+A level-1 auxiliary file: Chapter6/chapter6.aux
+A level-1 auxiliary file: Chapter7/chapter7.aux
+A level-1 auxiliary file: Chapter8/chapter8.aux
+A level-1 auxiliary file: Chapter9/chapter9.aux
+A level-1 auxiliary file: Chapter10/chapter10.aux
+A level-1 auxiliary file: Chapter11/chapter11.aux
+A level-1 auxiliary file: Chapter12/chapter12.aux
+A level-1 auxiliary file: Chapter13/chapter13.aux
+A level-1 auxiliary file: Chapter14/chapter14.aux
+A level-1 auxiliary file: Chapter15/chapter15.aux
+A level-1 auxiliary file: Chapter16/chapter16.aux
+A level-1 auxiliary file: Chapter17/chapter17.aux
+A level-1 auxiliary file: Chapter18/chapter18.aux
+A level-1 auxiliary file: Chapter19/chapter19.aux
+A level-1 auxiliary file: Chapter20/chapter20.aux
+A level-1 auxiliary file: Chapter21/chapter21.aux
+A level-1 auxiliary file: Chapter22/chapter22.aux
+A level-1 auxiliary file: Chapter23/chapter23.aux
+A level-1 auxiliary file: Chapter24/chapter24.aux
+A level-1 auxiliary file: Chapter25/chapter25.aux
+A level-1 auxiliary file: Chapter26/chapter26.aux
+A level-1 auxiliary file: Appendix1/appendix1.aux
+A level-1 auxiliary file: Appendix2/appendix2.aux
+A level-1 auxiliary file: Appendix3/appendix3.aux
+A level-1 auxiliary file: Appendix4/appendix4.aux
+I found no \citation commands---while reading file main.aux
+I found no \bibdata command---while reading file main.aux
+I found no \bibstyle command---while reading file main.aux
+You've used 0 entries,
+            0 wiz_defined-function locations,
+            113 strings with 1154 characters,
+and the built_in function-call counts, 0 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 0
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 0
+format.name$ -- 0
+if$ -- 0
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 0
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 0
+purify$ -- 0
+quote$ -- 0
+skip$ -- 0
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 0
+(There were 3 error messages)
