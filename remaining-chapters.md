@@ -32,9 +32,6 @@ assigned : 2019.04.10
 submitted : ---
 
 
-# Chapter19
-
-
 # Chapter24
 
 
