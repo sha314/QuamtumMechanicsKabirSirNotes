@@ -9,6 +9,7 @@
 \graphicspath{{Chapter19/figs/}}
 \fi
 
+\section{Intro}
 Suppose we have two independent angular momentum operators $\vec{J_1}$ and $\vec{J_2}$ of a system. The operators $\vec{J_1}$ and $\vec{J_2}$ refers to particles $1$ and $2$ of a two particle system, or they might refer to orbital momentum and spin angular momentum of a single particle. Since $J_{1 i}$ and $J_{2 i}$, $i=1,2,3$ are angular momentum operators, they satisfy the following commutation relations
 \begin{align}
 \label{chapter19-eqn1}
@@ -178,7 +179,7 @@ j = j_1 + j_2, j_1 + j_2 - 1, \ldots, \abs{j_1-j_2}
 \end{equation}
 
 
-\subsection{Number of Basis Vectors for Given $j_1$ and $j_2$}
+\subsection{Number of Basis Vectors for Given \texorpdfstring{$j_1$}{PDFstring} and \texorpdfstring{$j_2$}{PDFstring}}
 %% page 11
 For given $j_1$ and $j_2$, the basis vectors are either $\ket{j_1 j_2 m_1 m_2}$ on $(m_1 m_2)$ basis or $\ket{j_1 j_2 j m}$ on $(j m)$ basis. Note that
 \begin{align*}
@@ -262,8 +263,8 @@ The Clebsch-Gordon Coefficient are written as $\braket{j_1 j_2; m_1 m_2}{j_1 j_2
 
 
 \section{Examples}
-\subsection{Two Spin $1/2$ particle}
-\subsubsection{Addition of two spins $1/2$}
+\subsection{Two Spin \texorpdfstring{$1/2$}{1/2} particle}
+\subsubsection{Addition of two spins \texorpdfstring{$1/2$}{1/2}}
 %% page 13
 Consider a two particle system where each particle has spin $1/2$, i.e., $s_1=s_2 = 1/2$. The basis of spin state of the system may be written (in the notation $\ket{s_1 s_2; m_1 m_2} = \ket{s_1 m_1}\ket{s_2 m_2}$) as
 \begin{align*}
@@ -384,7 +385,7 @@ We have also obtained
 
 
 \subsection{Electron in Atom (Spin + Orbit)}
-Suppose an electron in an atom is in the $p$-state. That is $l=1$ for the electron. The three orbital angular momentum states accesible to the electron are $\ket{l m_l}$ with $l=1$ and $m_l = 1,0,-1$. In the coordinate the orbital angular momentum states are just the spherical harmonics:
+Suppose an electron in an atom is in the $p$-state. That is $l=1$ for the electron. The three orbital angular momentum states accessible to the electron are $\ket{l m_l}$ with $l=1$ and $m_l = 1,0,-1$. In the coordinate the orbital angular momentum states are just the spherical harmonics:
 \begin{equation}
 \ket{l m_l} \doteq Y_{l m_l}\qty(\theta\phi)
 \end{equation}
@@ -430,11 +431,10 @@ Successively applying the ladder operator $J_{-} = L_{-} + S_{-}$ to the state $
 \begin{align}
 \sqrt{3} \mathcal{y}_{\frac{3}{2}\frac{1}{2}} 
 &= \sqrt{2} Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}} + Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}} \nonumber\\
-\label{chapter19.eqn2-spin-orbit}
 \mathcal{y}_{\frac{3}{2}\frac{1}{2}} 
 &= \sqrt{\frac{2}{3}} Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}} 
 +
-\frac{1}{\sqrt{3}} Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}} \nonumber
+\frac{1}{\sqrt{3}} Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}} \label{chapter19.eqn2-spin-orbit}
 \end{align}
 The corresponding CG coefficient are easily read off from this expression
 \begin{align*}

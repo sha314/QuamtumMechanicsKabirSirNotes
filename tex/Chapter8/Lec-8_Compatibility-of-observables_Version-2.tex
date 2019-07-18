@@ -1,10 +1,10 @@
 
-\setcounter{chapter}{8}
-\noindent
-\begin{Large}
-{\bf Lecture 8 \newline
-Compatibility of Observable: version 2}
-\end{Large}
+%\setcounter{chapter}{8}
+%\noindent
+%\begin{Large}
+%{\bf Lecture 8 \newline
+%Compatibility of Observable: version 2}
+%\end{Large}
 
 \section{Background Materials}
 Suppose that $\hat{A}$ is the Hermitian operator representing an observable A of a quantum system. The eigenkets of ${\hat A}$
@@ -12,14 +12,14 @@ form a complete set of orthonormal basis states. Let $|\psi\rangle$ be the state
 $|\psi\rangle$ in the eigenbasis of the operator ${\hat A}$:
 \be
 |\psi\rangle = \sum_a |a\rangle \langle a|\psi\rangle \, , 
-\label{eq:1}
+\label{aeq:1}
 \ee
 where $a$ runs over all the eigenvalues of ${\hat A}$, i.e., $a\in {\rm spec}(\hat{A})$, where ${\rm spec}\,(\hat{A}) =
 (a_1,a_2, a_3, \ldots )$ is the set of all eigenvalues of $\hat{A}$. This set is called the eigenvalue spectrum of $\hat{A}$.
 
 
 \paragraph{}
-In Eq. (\ref{eq:1}), we have assumed that each eigenvalue $a$ is non-degenerate, i.e., for each $a$ there exists only one linearly independent eigenvector $|a\rangle$. Therefore, the eigenvalue itself can be used to label the corresponding eigenket unambiguously.
+In Eq. (\ref{aeq:1}), we have assumed that each eigenvalue $a$ is non-degenerate, i.e., for each $a$ there exists only one linearly independent eigenvector $|a\rangle$. Therefore, the eigenvalue itself can be used to label the corresponding eigenket unambiguously.
 
 \paragraph{}
 However, it may so happen that some or all of the eigenvalues of ${\hat A}$ are degenerate, i.e., there may be more than one linearly independent eigenvector corresponding to the same eigenvalue. The number of linearly independent eigenvectors corresponding
@@ -66,7 +66,7 @@ Thus the state vector $|\psi\rangle$ of the system can be expanded as
 \end{eqnarray}			
 
 \paragraph{}
-For simplicity, we will continue to use Eq. (\ref{eq:1}) as the expansion for $|\psi\rangle$ in the eigenbasis of $\hat{A}$
+For simplicity, we will continue to use Eq. (\ref{aeq:1}) as the expansion for $|\psi\rangle$ in the eigenbasis of $\hat{A}$
 assuming that all the eigenvalues are non-degenerate. In case of degeneracy, notations can be generalized in a straightforward manner, as discussed above.			
 
 
@@ -230,7 +230,7 @@ with  eigenvalues $b_1, b_2, \cdots$ (some $b_i$'s may be repeated) in each eige
 of $\hat{A}$ and $\hat{B}$ in $H_a$ as follows:
 \be
 |a, b^{\prime}, i_{(ab^{\prime})} \rangle, \, i_{(ab^{\prime})} =1,2, \cdots , g_{(ab^{\prime})}, \, b^{\prime}= b_1,b_2,\ldots. \,. 
-\label{eq:simab}
+\label{aeq:simab}
 \ee
 Here $g_{(ab^{\prime})}$ is the order of degeneracy of the eigenvalue $b^{\prime}$ in the eigensubspace $H_a$, or, in other words, the order of degeneracy of the eigenavalue pair $(ab^{\prime})$ in the full Hilbert space $H$. The order of degeneracy of $b^{\prime}$ in the entire Hilbert space may be greater, for some of the linearly independent eigenvectors of $\hat{B}$  with the same degenerate eigenvalue  
 $b^{\prime}$ may lie in eigensubspaces other that $H_a$. 
@@ -257,7 +257,7 @@ $|a, b^{\prime}\in\{b_1,b_2, \ldots\}, i_{ab^{\prime}}\rangle$ that spans $H_a$.
 into $|\psi^{\prime \prime}\rangle$ which is the normalized projection of $|\psi^{\prime}\rangle$ onto $H_{b_i}$, i.e.,
 \be
 |\psi^{\prime}\rangle \xrightarrow{{\rm Measure}\; B}  |\psi^{\prime \prime}\rangle  =  N^{\prime\prime} \hat{P}_{b_i}\hat{P}_a |\psi\rangle
-\label{eq:psipp}
+\label{aeq:psipp}
 \ee
 where $N^{\prime\prime}$ is the normalization constant for $|\psi^{\prime \prime}\rangle$. The projection operator on the eigensubspace $H_{b_i}$ can be written as 
 \be
@@ -269,7 +269,7 @@ Noting the basis vectors are orthonormal, we have
 \be
 \hat{P}_{b_i}\hat{P}_a = \sum_{\alpha_{ (ab_i)}=1}^{g_{(ab_i)}} |a, b_i, \alpha_{(ab_i)}\rangle \langle a, b_i, \alpha_{(ab_i)}|.
 \ee
-The vector $|\psi^{\prime \prime}\rangle $ immediately after the measurement of $B$ given in Eq. (\ref{eq:psipp}) can now be written as
+The vector $|\psi^{\prime \prime}\rangle $ immediately after the measurement of $B$ given in Eq. (\ref{aeq:psipp}) can now be written as
 \be
 |\psi^{\prime \prime}\rangle = N^{\prime\prime} \sum_{\alpha_{ (ab_i)}=1}^{g_{(ab_i)}} |a, b_i, \alpha_{(ab_i)}\rangle \langle a, b_i, \alpha_{(ab_i)}|\psi\rangle.
 \ee
@@ -333,14 +333,14 @@ $\{|u_n\rangle,\, n= 1,2, \cdots\}$ are eigenvectors of both
 $\hat{A}$ and $\hat{B}$, we have
 \be
 \hat{A}|u_n\rangle = a_n |u_n\rangle\, ,
-\label{eq:A}
+\label{aeq:A}
 \ee
 and
 \be
 \hat{B}|u_n\rangle = b_n |u_n\rangle\, .
-\label{eq:B}
+\label{aeq:B}
 \ee
-Now, using Eq. (\ref{eq:A}) and (\ref{eq:B}), we can write
+Now, using Eq. (\ref{aeq:A}) and (\ref{aeq:B}), we can write
 \begin{eqnarray}
 [\hat{A},\hat{B}]|u_n\rangle &= & (\hat{A}\hat{B}-\hat{B}\hat{A}]|u_n\rangle \nonumber \\
                              &=& (a_nb_n-b_na_n)|u_n\rangle \nonumber \\
@@ -371,9 +371,9 @@ If all eigenvalues of $\hat{A}$ are non-degenerate, then it is possible to uniqu
 the eigenvalues only. Thus let $|a\rangle$ be the eigenstate of the operator $\hat{A}$ belonging to some eigenvalue $a$. Therefore,
 \begin{equation}
 \hat{A}|a\rangle = a |a\rangle\, .
-\label{eq:aa}
+\label{aeq:aa}
 \ee
-We start the proof by applying the operator $\hat{B}$ to Eq. (\ref{eq:aa}) to get
+We start the proof by applying the operator $\hat{B}$ to Eq. (\ref{aeq:aa}) to get
 \be
 \hat{B}\hat{A}|a\rangle = a\hat{B}|a\rangle\, .
 \ee
@@ -381,9 +381,9 @@ Since our assumption is that $\hat{A}$ and $\hat{B}$ commute, we can interchange
 of the above equation getting
 \be
 \hat{A}(\hat{B}|a\rangle)= a(\hat{B}|a\rangle)\, . 
-\label{eq:ab}
+\label{aeq:ab}
 \ee 
-From Eq. (\ref{eq:ab})  we can conclude that $\hat{B}|a\rangle$ is also an eigenvector of $\hat{A}$ with the same 
+From Eq. (\ref{aeq:ab})  we can conclude that $\hat{B}|a\rangle$ is also an eigenvector of $\hat{A}$ with the same 
 eigenvalue $a$. Since we have supposed the eigenvalues of $\hat{A}$ are non-degenerate, the vectors $|a\rangle$ and
 $\hat{B}|a\rangle$ represent the same physical state, i.e., $\hat{B}|a\rangle$ differs from $|a\rangle$ by a constant 
 multiplier which we denote by $b$. Therefore,
@@ -412,12 +412,12 @@ $\{|a,i\rangle, i=1,2,\cdots,g_a;\,a=a_1,a_2, \cdots\}$, as the basis for the Hi
 representation of $\hat{A}$ is diagonal. Denoting the matrix representing the operator $\hat{A}$ by $\underline{A}$, we have
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.90]{A.jpg}
 \vspace{-0.8 cm}
 \caption{The matrix representation of $\hat{A}$ in the eigenbasis of $\hat{A}$. }
-\label{fig:A}
+\label{afig:A}
 \end{figure}
 
 \noindent
@@ -443,7 +443,7 @@ or,
 If $a\neq a^{\prime}$, then $(a^{\prime}-a)\neq 0$ and we must have
 \be
 \langle a^{\prime}, i^{\prime}|\hat{B}|a,i\rangle =0, \quad {\rm if} \; a^{\prime}\neq a,
-\label{eq:matrixelement}
+\label{aeq:matrixelement}
 \ee
 i.e., $\hat{B}$ does not connect states with different eigenvalues of $\hat{A}$. In other words, $\hat{B}$ acting
 on any of the eigenvectors of $\hat{A}$ in the eigensubspace $H_a$, produces another vector which is also in $H_a$ with no components in other eigensubspaces orthogonal to $H_a$. The new vector, being in $H_a$, remains an eigenvector of $\hat{A}$. Thus, $\hat{B}$
@@ -453,16 +453,16 @@ consequence of the fact that $\hat{A}$ and $\hat{B}$ commute.
 \paragraph{}
 From the above arguments, we can conclude that the matrix representation of $\hat{B}$ in the eigenbasis of $\hat{A}$
 will be block diagonal as shown below.
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=1.0]{B.jpg}
 \vspace{-3 mm}
 \caption{The matrix representation of $\hat{B}$ in the eigenbasis of $\hat{A}$. }
-\label{fig:B}
+\label{afig:B}
 \end{figure}
 
 \noindent
-In each eigensubspace $H_a$, the matrix ${\underline B}^{(a)}$ is a $g_a \times g_a$ square matrix, which itself need not be diagonal if we choose an arbitrary basis for $H_a$. To see this we refer to Eq. (\ref{eq:matrixelement}). This equation tells us that, 
+In each eigensubspace $H_a$, the matrix ${\underline B}^{(a)}$ is a $g_a \times g_a$ square matrix, which itself need not be diagonal if we choose an arbitrary basis for $H_a$. To see this we refer to Eq. (\ref{aeq:matrixelement}). This equation tells us that, 
 if $\hat{A}$ and $\hat{B}$ commute, the matrix elements of $B$ are zero if $a\neq a^{\prime}$, but nothing is concluded about
 the matrix elements of $\hat{B}$ in any eigensubspace $H_a$, i.e., when $a=a^{\prime}$. 
 
@@ -478,22 +478,22 @@ case we will need another index to distinguish between the linearly independent 
 values for the eigenvalue pair $(ab_i)$. We diagonalize each diagonal block $\underline{B}^{(a_i)}$ of the matrix 
 $\underline{B}$ in the old basis, thereby obtaining simultaneous eigenvectors for both $\hat{A}$ and $\hat{B}$ in each eigensubspace.
 The set of simultaneous eigenvectors in all eigensubspaces $H_a, a\in {\rm spec}(\hat{A})$ can now be used as the basis set for
-the Hilbert space. In the new basis consisting of the simultaneous eigenvectors,  the matrix representation of $\hat{B}$ is diagonal as shown in  figure (\ref{fig:C}). The matrix representation of $\hat{A}$ in the new basis is also diagonal and remains the same as in Fig. (\ref{fig:A}). 
+the Hilbert space. In the new basis consisting of the simultaneous eigenvectors,  the matrix representation of $\hat{B}$ is diagonal as shown in  figure (\ref{afig:C}). The matrix representation of $\hat{A}$ in the new basis is also diagonal and remains the same as in Fig. (\ref{afig:A}). 
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=1.0]{C.jpg}
 \vspace{-6 mm}
 \caption{The matrix representation of $\hat{B}$ in the eigenbasis consisting of simultaneous eigenvectors of
 $\hat{A}$ and $\hat{B}$.}
-\label{fig:C}
+\label{afig:C}
 \end{figure}
 
 
 
 \paragraph{}
-The diagonal entries $b_i^{(n)}, i=1,2, \cdots , g_n$ in each eigensubspace $H_{a_n}$ in figure (\ref{fig:C}) are the various eigenvalues of the operator $\hat{B}$, i.e., $b_i^{(n)} \in \{b_1,b_2, \cdots\}$. In a given eigensubspace $H_{a_n}$, some of the eigenvalues of
+The diagonal entries $b_i^{(n)}, i=1,2, \cdots , g_n$ in each eigensubspace $H_{a_n}$ in figure (\ref{afig:C}) are the various eigenvalues of the operator $\hat{B}$, i.e., $b_i^{(n)} \in \{b_1,b_2, \cdots\}$. In a given eigensubspace $H_{a_n}$, some of the eigenvalues of
 $\hat{B}$ may be repeated. Further, a particular eigenvalue of $\hat{B}$ may also be repeated in several eigensubspaces $H_{a_n}$.
 
 \paragraph{}

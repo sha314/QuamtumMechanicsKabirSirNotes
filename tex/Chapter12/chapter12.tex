@@ -1,5 +1,8 @@
-\chapter{sheet-12 : The Path Integral Formulation of Quantum Theory}
 %% writing by shahnoor
+
+
+\chapter{sheet-12 : The Path Integral Formulation of Quantum Theory}
+
 \ifpdf
 \graphicspath{{Chapter12/figs/}}
 \else
@@ -9,7 +12,7 @@
 
 \section{Background Materials}
 \begin{enumerate}
-	\item Basis states \\
+	\item Basis states
 	\begin{align}
 		\hat{Q}_s \ket{q} &= q\ket{q} \\
 		\hat{P}_s \ket{p} &= p\ket{p} 
@@ -75,7 +78,7 @@
 		\hat{\Omega}_H(t) &= e^{\iu \hat{H}t/\hbar} \hat{\Omega}_S e^{-\iu \hat{H}t/\hbar}
 		\label{chapter12.eqn-schrodinger-to-heisengerg-operator}
 	\end{align}
-	where we have assumed the system is conservative, i.e., $\hat{H}$ is independent of time. \\
+	where we have assumed the system is conservative, i.e., $\hat{H}$ is independent of time. 
 	
 	In the Heisenberg picture, the base kets, for example, the eigenkets of $\hat{Q}_H(t)$ and $\hat{P}_H(t)$ are time dependent. We have
 	\begin{align}
@@ -130,7 +133,8 @@
 	%%%%%%%%%% TODO
 	%%%%%%%%%%%%%
 	\begin{equation}
-		U(q_2, t_2; q_1, t_1) = {\_H}\braket{q_2, t_2}{q_1, t_1}_H
+		U(q_2, t_2; q_1, t_1) =
+		\tensor[_H]{\braket{q_2, t_2}{q_1, t_1}}{_H}
 		\label{chapter12.eqn1-propagator}
 	\end{equation}
 	Transforming to the Schr\"{o}dinger picture base kets, we can write equation (\ref{chapter12.eqn1-propagator}) as
@@ -144,16 +148,16 @@
 		\psi_S(q,t )
 		&= \braket{q}{\psi_S(t)} \\
 		&= \bra{q}e^{-\iu \hat{H}t/\hbar} \ket{\psi_S(0)} \\
-		&= {\_H}\braket{q,t}{\psi}_H \\
-		&= \int \dd{q^\prime} {\_H}\braket{q,t}{q^\prime, t^\prime}_H {\_H}\braket{q^\prime, t^\prime}{\psi}_H \\
+		&= \tensor[_H]{\braket{q,t}{\psi}}{_H} \\
+		&= \int \dd{q^\prime} \tensor[_H]{\braket{q,t}{q^\prime, t^\prime}}{_H} \tensor[_H]{\braket{q^\prime, t^\prime}{\psi}}{_H} \\
 		&= \int \dd{q^\prime} U(q,t;q^\prime, t^\prime) \psi_S(q^\prime,t^\prime)
 	\end{align}
-	The path integral formalism of quantum dynamics provides a means to construct the transition amplitude ${\_H}\braket{q,t}{q^\prime, t^\prime}_H$ from the classical Hamiltonian or Lagrangian alone, without any reference to non commuting operators or Hilbert space vectors.\\
-	
+	The path integral formalism of quantum dynamics provides a means to construct the transition amplitude $\tensor[_H]{\braket{q,t}{q^\prime, t^\prime}}{_H}$ from the classical Hamiltonian or Lagrangian alone, without any reference to non commuting operators or Hilbert space vectors.
+
 	\section{Path Integral for the Propagator}
 		We will now calculate
 		\begin{equation}
-			U(x,t;x_0, t_0) = {\_H}\braket{x,t}{x_0, t_0}
+			U(x,t;x_0, t_0) = \tensor[_H]{\braket{x,t}{x_0, t_0}}{_H}
 			\label{chapter12.eqn1-propagator-path-integral}
 		\end{equation}
 		where $t>t_0$. For this purpose let us devide the time integral $(t,t_0)$ into $N$ equal segments each of duration $\epsilon$. Namely, let
@@ -175,7 +179,7 @@
 		
 		Here we have omitted the subscript $H$ in the Heisenberg picture basis vectors since there is no scope for confusion. Note that while there are $N$ scalar products in euquation (\ref{chapter12.eqn4-propagator-path-integral}), there are only $N-1$ intermediate points so that the number of integrations is $N-1$. Since $x_N = x$ and $t_N= t$, we can write equation (\ref{chapter12.eqn4-propagator-path-integral}) as
 		\begin{equation}
-			\braket{x t}{x_0 t_0} = \int \prod_{i=1}^{N-1} \dd{q_i} \prod_{i=0}^{N-1} \braket{x_{i+1} t_{i+1}}{x_i t_i}
+			\braket{x t}{x_0 t_0} = \int \prod_{i=1}^{N-1} \dd{x_i} \prod_{i=0}^{N-1} \braket{x_{i+1} t_{i+1}}{x_i t_i}
 			\label{chapter12.eqn5-propagator-path-integral}
 		\end{equation}
 		Equation (\ref{chapter12.eqn5-propagator-path-integral}) can be interpreted as follows: A particle that propagates from $x_0$ at time $t_0$ to $x$ at time $t$ can take an arbitrary intermediate trajectory, shown in figure (\ref{chapter12.fig1-propagator-path-integral-trajectory})
@@ -185,7 +189,9 @@
 			\caption{text}
 			\label{chapter12.fig1-propagator-path-integral-trajectory}
 		\end{figure}
-	Such a path is characterized by the coordinate values $x_i$ at intermediate grid @@@@ in the time interval $(t_0,t)$. One such path is shown in the figure as a zigzag curve. Since each intermediate coordinates $x_i\quad (i=1,2,\ldots,N-1)$ can vary form $-\infty$ to $\infty$, it is essential that all conceivable paths connecting the end points are taken into account. According tot the representation principle of Quantum Mechanics they all contribute to the transition amplitude (\ref{chapter12.eqn5-propagator-path-integral}). Of course, some trajectories may turn out to be more important than others.\\
+	
+	Such a path is characterized by the coordinate values $x_i$ at intermediate grid points in the time interval $(t_0,t)$. One such path is shown in the figure as a zigzag curve. Since each intermediate coordinates $x_i\quad (i=1,2,\ldots,N-1)$ can vary form $-\infty$ to $\infty$, it is essential that all conceivable paths connecting the end points are taken into account. According tot the representation principle of Quantum Mechanics they all contribute to the transition amplitude (\ref{chapter12.eqn5-propagator-path-integral}). Of course, some trajectories may turn out to be more important than others.
+	
 	
 	We will now calculate the intermediate scalar products which themselves are propagators but over infinitesimal time intervals. An intermediate scalar product has the form $\braket{x_{i+1} t_{i+1}}{x_i t_i}$. We can calculate this inner product up to first order in $\epsilon$ from equation (\ref{chapter12.eqn2-propagator-path-integral}) as follows
 	\begin{align}
@@ -213,7 +219,7 @@
 	\end{align}
 	In the above we have defined
 	\begin{equation}
-		\dot{x}_i = \frac{x_{i+1} x_i}{\epsilon}
+		\dot{x}_i = \frac{x_{i+1} - x_i}{\epsilon}
 	\end{equation}
 	Now
 	\begin{equation}
@@ -301,7 +307,7 @@
 		\caption{text}
 		\label{chapter12.fig2}
 	\end{figure}
-	For notational convenience we let $x_N = x$ where $x$ is the final position. We only integrate over the position the particle may have at intermediate times $t_1, t_2, \ldots, t_{N-1}$.\\
+	For notational convenience we let $x_N = x$ where $x$ is the final position. We only integrate over the position the particle may have at intermediate times $t_1, t_2, \ldots, t_{N-1}$.
 	
 	Using equation (\ref{chapter12.eqn13-path-integral-free-particle}), equation (\ref{chapter12.eqn12-path-integral-free-particle}) can be written as
 	\begin{align}
@@ -320,9 +326,10 @@
 		= \lim\limits_{N \rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \left(\frac{2\hbar \epsilon}{m}\right)^{(N-1)/2} \int \prod_{i=1}^{N-1} \dd{y_i} e^{-\sum_{i=0}^{N-1} \frac{(y_{i+1} - y_i)^2}{i}}
 		\label{chapter12.eqn15-path-integral-free-particle}
 	\end{equation}
-	We now have to do the gaussian integral over the variables $y_1, y_2, \ldots, y_{N-1}$.\\
+	We now have to do the gaussian integral over the variables $y_1, y_2, \ldots, y_{N-1}$.
 	
-	\textbf{$y_1$ integral}\\
+	\textbf{$y_1$ integral}
+	Take $N=2$ in Eq. (\ref{chapter12.eqn15-path-integral-free-particle})
 	\begin{equation}
 		I_1 = \int_{-\infty}^{\infty} \dd{y_1} \exp\left[-\frac{1}{\iu} \left[(y_1 - y_0)^2 + (y_2 - y_1)^2\right]\right]
 	\end{equation}
@@ -351,12 +358,19 @@
 		I_1 = \left(\frac{\iu \pi}{2}\right)^{1/2} \exp \left[-\frac{1}{2\iu} \left(y_2 - y_0\right)^2\right]
 		\label{chapter12.eqn16-path-integral-free-particle}
 	\end{equation}
-	Next we do the integral over $y_2$. THe variable $y_2$ occurs in the $i=2$ term in equation (\ref{chapter12.eqn15-path-integral-free-particle}) and also in $I_1$ in equation (\ref{chapter12.eqn16-path-integral-free-particle}). Therefore, the $y_2$ integral is
+	Next we do the integral over $y_2$. The variable $y_2$ occurs in the $i=2$ term in equation (\ref{chapter12.eqn15-path-integral-free-particle}) and also in $I_1$ in Eq. (\ref{chapter12.eqn16-path-integral-free-particle}). Thus taking $N=3$ in Eq. (\ref{chapter12.eqn15-path-integral-free-particle})
+	
+	\begin{align*}
+	I_2 &= \int \dd{y_1} \dd{y_2} \exp[-\frac{1}{\iu}\qty[\qty(y_1 - y_0)^2 + \qty(y_2 - y_1)^2 + \qty(y_3 - y_2)^2]] \\
+	&=\int \dd{y_2} \exp \left[-\frac{1}{\iu} \left(y_3 - y_2\right)^2\right] I_1
+	\end{align*}
+	
+	Therefore, the $y_2$ integral is
 	\begin{align*}
 		I_2 
 		&= \int \dd{y_2} \exp \left[-\frac{1}{\iu} \left(y_3 - y_2\right)^2\right] \left(\frac{\iu \pi}{2}\right)^{1/2} \exp \left[-\frac{1}{2 \iu} \left(y_2 - y_0\right)^2\right] \\
 		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \int \dd{y_2} \exp \left[-\frac{1}{\iu} \left(y_3 - y_2\right)^2 -\frac{1}{2 \iu} \left(y_2 - y_0\right)^2\right] \\
-		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \int \dd{y_2} \exp \left[-\frac{1}{\iu} \{\left(y_3 - y_2\right)^2 + \left(y_2 - y_0\right)^2\}\right] \\
+		&= \left(\frac{\iu \pi}{2}\right)^{1/2} \int \dd{y_2} \exp \left[-\frac{1}{2\iu} \{2 \left(y_3 - y_2\right)^2 + \left(y_2 - y_0\right)^2\}\right] \\
 	\end{align*}
 	Consider the term in the curly brackets
 	\begin{align*}
@@ -365,7 +379,7 @@
 	\end{align*}
 	where the first term is quadratic in $y_2$, second term is linear in $y_2$ and the last term is independent of $y_2$. We have
 	\begin{equation}
-		I_2 = \left(\frac{\iu \pi}{2}\right)^{1/2} \exp\left[-\frac{1}{2\iu}\left(2 y_3^2 + y_0^2\right)\right] \int \dd{y} \exp\left[-\frac{1}{2\iu} \left(3 y_2^2 - 2y_2 \left(2 y_3 + y_0\right)\right) \right]
+		I_2 = \left(\frac{\iu \pi}{2}\right)^{1/2} \exp\left[-\frac{1}{2\iu}\left(2 y_3^2 + y_0^2\right)\right] \int \dd{y_2} \exp\left[-\frac{1}{2\iu} \left(3 y_2^2 - 2y_2 \left(2 y_3 + y_0\right)\right) \right]
 	\end{equation}
 	
 	We use standard integral (\ref{appendix1.eqn2}) from appendix (\ref{appendix1.Integrals}) and choose
@@ -389,11 +403,12 @@
 		I_{N-1} = \frac{\left(\iu \pi\right)^{(N-1)/2}}{N^{1/2}} \exp\left[-\left(y_N - y_0\right)^2/N\iu
 		\right]
 	\end{equation}
-	where $y_N = y$.\\
+	where $y_N = y$.
 
 	Therefore, the path integral formula for the propagator of a free particle is (using the above formula in equation (\ref{chapter12.eqn15-path-integral-free-particle}))
 	\begin{align}
-		\braket{x t}{x_0 t_0}_{free} = U_{free}\left(x, t; x_0, t_0\right) = \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \left(\frac{2\hbar\epsilon}{m}\right)^{(N-1)/2}  \frac{(\iu \pi)^{(N-1)/2}}{N^{1/2}} \exp\left[-\left(y_N - y_0\right)^2 / N\iu
+		\braket{x t}{x_0 t_0}_{free} &= U_{free}\left(x, t; x_0, t_0\right) \nonumber\\
+		&= \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2\pi \hbar \iu \epsilon}\right)^{N/2} \left(\frac{2\hbar\epsilon}{m}\right)^{(N-1)/2}  \frac{(\iu \pi)^{(N-1)/2}}{N^{1/2}} \exp\left[-\left(y_N - y_0\right)^2 / N\iu
 		\right]
 	\end{align}
 	previously we defined
@@ -406,8 +421,9 @@
 		&= \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2\pi\hbar\iu\epsilon}\right)^{N/2} \left(\frac{2\hbar \epsilon}{m}\right)^{(N-1)/2} \frac{(\iu \pi)^{(N-1)/2}}{N^{1/2}} \exp \left[-\frac{m(x_N - x_0)^2}{2\hbar \epsilon N \iu}\right] \\
 		&= \lim\limits_{N\rightarrow \infty} \left(\frac{m}{2\pi\hbar\iu N \epsilon}\right)^{N/2} \left(\frac{2\pi\hbar N \iu \epsilon}{m}\right)^{(N-1)/2} \exp \left[-\frac{m(x_N - x_0)^2}{2\hbar \epsilon N \iu}\right]
 	\end{align*}
+	
 	Now $\lim\limits_{N\rightarrow \infty} N\epsilon = t-t_0 \equiv \Delta t$,
-	also $x_N = x$.\\
+	also $x_N = x$.
 	
 	Hence
 	\begin{equation}
@@ -433,8 +449,8 @@
 	Thus, the free particle propagator (equation (\ref{chapter12.eqn18-path-integral-free-particle})) has the correct limiting behavior in the limit $t\rightarrow t_0$.
 	
 	\section{Derivation of the propagator for a free particle without using the path integral formula}
-	Since for a free particle, the Hamiltonian is simple and its eigenvalues and eigenvectors are known, we can find the propagator $U\qty(x, t; x_0, t_0)$ without using the path integral formula. We now calculate the propagator for a free particle directly without using the path integral formula.\\
-	
+	Since for a free particle, the Hamiltonian is simple and its eigenvalues and eigenvectors are known, we can find the propagator $U\qty(x, t; x_0, t_0)$ without using the path integral formula. We now calculate the propagator for a free particle directly without using the path integral formula.
+		
 	
 	The propagator is 
 	\begin{align}
@@ -466,7 +482,7 @@
 	
 	
 	\section{The Classical Action}
-		Suppose a particle propagates from $x_0$ at time $t_0$ to $x$ at a later time $t$. Of all the conceivable paths from $\qty(x_0, t_0)$ to $\qty(x,t)$, there is one path for which the action is minimum. This path is called the classical path and the minimum value of the action along the classical is called the classical action.
+		Suppose a particle propagates from $x_0$ at time $t_0$ to $x$ at a later time $t$. Of all the conceivable paths from $\qty(x_0, t_0)$ to $\qty(x,t)$, there is one path for which the action is minimum. This path is called the classical path and the minimum value of the action along the classical path is called the classical action.
 		
 		
 		%%% figure
@@ -482,7 +498,7 @@
 		\begin{equation}
 			x_{cl}\qty(t^\prime) = x_0 + \frac{\qty(x-x_0)}{\qty(t-t_0)} \qty(t^\prime - t_0)
 		\end{equation}
-		Here $t$ and $t_0$ are fixed times and $t$'s is the running variable. From the above equation we have
+		Here $t$ and $t_0$ are fixed times and $t^\prime$  is the running variable. From the above equation we have
 		\begin{equation}
 			\dot{x}_{cl}\qty(t^\prime) = \frac{x-x_0}{t-t_0} = constant
 		\end{equation}
@@ -517,7 +533,7 @@
 		\end{figure}
 		Suppose a particle follows the path $x(t^\prime)$. Then the action for this path is
 		\begin{equation}
-			S\qty[x(\qty(t^\prime))] = \int_{t_0}^{t} L(x(t^\prime), \dot{x}(t^\prime)) \dd{t^\prime}
+			S\qty[x\qty(t^\prime)] = \int_{t_0}^{t} L(x(t^\prime), \dot{x}(t^\prime)) \dd{t^\prime}
 		\end{equation}
 		Next consider a slightly varied path
 		
@@ -578,7 +594,7 @@
 		\begin{equation}
 			U = \sum_{all\ paths} e^{\frac{\iu}{\hbar} S\qty[x\qty(t^\prime)]}
 		\end{equation}
-		The most surprising this about the path integral is that every path, including the classical path $x_{cl}\qty(t^\prime)$ gets the same weight, that is to say a complex number of unit modules.\\
+		The most surprising this about the path integral is that every path, including the classical path $x_{cl}\qty(t^\prime)$ gets the same weight, that is to say a complex number of unit modules.
 		
 		
 		Of all the paths, there is a special path, called the classical path for which $S$ is minimum or stationary. A slight change in path from the classical one does not change the action, more precisely the change in action is only of second order in the change of path.
@@ -596,17 +612,19 @@
 	\begin{equation}
 		Z_a = e^{\iu S\qty[x_a\qty(t^\prime)] / \hbar}
 	\end{equation}
-	While doing the path integral if we vary the path from $x_a\qty(t^\prime)$ to a neighboring one, there will be slightly change in the action. But, there will be a large change in the phase $S/\hbar$, since $\hbar$ is small. So, for paths well away from the classical path, contributions cancel because of the large change in phase from one path to the next. However, the situation is different for the classical path and the bundle of paths close to it. Here the action is stationary and so the phase of each of the paths near the classical path is about the same. In other words, the paths in the neighborhood of the classical path contribute constructively to the path integral.\\
+	While doing the path integral if we vary the path from $x_a\qty(t^\prime)$ to a neighboring one, there will be slightly change in the action. But, there will be a large change in the phase $S/\hbar$, since $\hbar$ is small. So, for paths well away from the classical path, contributions cancel because of the large change in phase from one path to the next. However, the situation is different for the classical path and the bundle of paths close to it. Here the action is stationary and so the phase of each of the paths near the classical path is about the same. In other words, the paths in the neighborhood of the classical path contribute constructively to the path integral.
 	
 	
 	
-	Thus the propagator $U$ is dominated by the paths near the classical path. The classical path is important not because it contributes a lot by itself, but because the paths in the vicinity of the classical path contribute coherently.\\
+	
+	Thus the propagator $U$ is dominated by the paths near the classical path. The classical path is important not because it contributes a lot by itself, but because the paths in the vicinity of the classical path contribute coherently.
 	
 	
-	How far from the classical path must we deviate before destructive interference sets in? One may say crudely that coherence would be lost once the phase differs from the stationary value $\frac{1}{\hbar} S\qty[x_{cl}(t^\prime)]$ by about $\pi$, i.e., if the action changes from the classical action by about $\pi \hbar$. For a macroscopic partivle this means a very tight constraint on its path since $S_{cl}$ is typically of the order of $1\ erg\ sec \approx 10^{27} \hbar$[\footnote{$\hbar = 1.0546 \times 10^-27 \ erg\ sec = 1.0546 \times 10^{-34} J s$}]. For a macroscopic particle, a slight change of the path from the classical would change the action by an amount much more than $\pi \hbar$. So, only the classical path contributes to the path integral. Therefore a macroscopic particle has a well defined path, namely the classical path. \\
+	
+	How far from the classical path must we deviate before destructive interference sets in? One may say crudely that coherence would be lost once the phase differs from the stationary value $\frac{1}{\hbar} S\qty[x_{cl}(t^\prime)]$ by about $\pi$, i.e., if the action changes from the classical action by about $\pi \hbar$. For a macroscopic particle this means a very tight constraint on its path since $S_{cl}$ is typically of the order of $1\ erg\ sec \approx 10^{27} \hbar$[\footnote{$\hbar = 1.0546 \times 10^-27 \ erg\ sec = 1.0546 \times 10^{-34} J s$}]. For a macroscopic particle, a slight change of the path from the classical would change the action by an amount much more than $\pi \hbar$. So, only the classical path contributes to the path integral. Therefore a macroscopic particle has a well defined path, namely the classical path. 
 	
 	
-	For a microscopic particle like an electron, the action is much smaller. Hence for a large variation of the path from the classical one, the change of action remains less than $\pi \hbar$. It follows that a large number of widely varying paths around the classical path contributes coherently to the propagator $U$. Therefore one cannot say that a microscopic particle follows a definite path as it propagates from one point to another. There is  a lot of --- in the path that a microscopic particle can choose as it propagates between two fixed space time points.\\
+	For a microscopic particle like an electron, the action is much smaller. Hence for a large variation of the path from the classical one, the change of action remains less than $\pi \hbar$. It follows that a large number of widely varying paths around the classical path contributes coherently to the propagator $U$. Therefore one cannot say that a microscopic particle follows a definite path as it propagates from one point to another. There is  a lot of --- in the path that a microscopic particle can choose as it propagates between two fixed space time points.
 	
 	
 	Consider the following example. A free particle leaves the origin at $t=0$ and arrives at $x=1\ cm$ at $t= 1 \ sec$, the classical path is 
@@ -666,7 +684,7 @@
 		\psi\qty(x, \epsilon) = \int_{-\infty}^{\infty} U(x, \epsilon; x^\prime) \psi\qty(x^\prime, 0) \dd{x^\prime}
 		\label{chapter12.eqn3-equivalence-schrodinger}
 	\end{equation}
-	The calculation of $U\qty(\epsilon)$ is simplified by the fact that there is no need to integrate over intermediate $x$'s since there is one slice of time between start to finish.\\
+	The calculation of $U\qty(\epsilon)$ is simplified by the fact that there is no need to integrate over intermediate $x$'s since there is one slice of time between start to finish.
 	
 	So,
 	\begin{equation}
@@ -695,7 +713,7 @@
 		U(x, \epsilon; x^\prime) = \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \exp\qty(\frac{i}{\hbar} \qty[\frac{m\qty(x-x^\prime)^2}{2 \epsilon}  -\epsilon V(\frac{x+x^\prime}{2}, 0)])
 		\label{chapter12.eqn5-equivalence-schrodinger}
 	\end{equation}
-	If $V$ is time dependent, we take the time argument of $V$ to be zero since there is already a factor $\epsilon$ before it and any variation of $V$ with time is the interval $0$ to $\epsilon$ will produce an effect of second order in $\epsilon$.\\
+	If $V$ is time dependent, we take the time argument of $V$ to be zero since there is already a factor $\epsilon$ before it and any variation of $V$ with time is the interval $0$ to $\epsilon$ will produce an effect of second order in $\epsilon$.
 	
 	So, substituting equation (\ref{chapter12.eqn5-equivalence-schrodinger}) in euqation (\ref{chapter12.eqn3-equivalence-schrodinger}) we have
 	\begin{equation}
@@ -730,16 +748,19 @@
 	Where the terms of the order of $\eta \epsilon$ are neglected. Equation (\ref{chapter12.eqn8-equivalence-schrodinger}) now becomes
 	
 	\begin{align}
+		\begin{split}
 		\psi\qty(x, \epsilon) 
 		&= \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \int_{-\infty}^{\infty} \exp\qty[\frac{\iu m \eta^2}{2\hbar \epsilon}]  \qty[1 - \frac{\iu \epsilon}{\hbar} V(x, 0)+ \ldots] \left[\psi\qty(x, 0) + \eta \pdv{\psi}{x} + \frac{\eta^2}{2} \pdv[2]{\psi}{x}\right] \dd{\eta}\\
 		&= \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \int_{-\infty}^{\infty} \exp\qty[\frac{\iu m \eta^2}{2\hbar \epsilon}] \left[\qty(1 - \frac{\iu \epsilon}{\hbar} V(x, 0))\psi\qty(x, 0) + \eta \pdv{\psi}{x} + \frac{\eta^2}{2} \pdv[2]{\psi}{x} \right] \dd{\eta}
+		\end{split}
 	\end{align}
 	where terms of the orders of $\epsilon \eta$ and $\epsilon \eta^2$ are neglected.
 	
 	Using standard integrals (from appendix) (\ref{appendix1.eqn3}) and (\ref{appendix1.eqn4}) we get
 	\begin{align*}
 		\psi\qty(x, \epsilon) 
-		&= \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \qty[\qty(\frac{2\pi \hbar \iu \epsilon}{m})^{1/2}\  qty(1 - \frac{\iu \epsilon}{\hbar} V\qty(x , 0))\psi\qty(x,0)  +  \qty(\frac{2\pi \hbar \iu \epsilon}{m})^{1/2} \frac{\iu \hbar \epsilon}{2 m} \pdv[2]{\psi}{x}] \\
+		&= \qty(\frac{m}{2\pi \hbar \iu \epsilon})^{1/2} \qty[\qty(\frac{2\pi \hbar \iu \epsilon}{m})^{1/2}
+		\qty(1 - \frac{\iu \epsilon}{\hbar} V\qty(x , 0))\psi\qty(x,0)  +  \qty(\frac{2\pi \hbar \iu \epsilon}{m})^{1/2} \frac{\iu \hbar \epsilon}{2 m} \pdv[2]{\psi}{x}] \\
 		&= \psi\qty(x, 0) - \frac{\iu \epsilon}{\hbar} V\qty(x, 0) \psi\qty(x, 0) - \frac{\iu \epsilon}{\hbar} \qty(- \frac{\hbar^2}{2 m}) \pdv[2]{\psi}{x}
 	\end{align*}
 	Where we have used $a = \frac{m}{2\hbar\iu \epsilon}$
@@ -752,7 +773,7 @@
 	Which agrees with the Schr\"{o}dinger prediction, equation (\ref{chapter12.eqn2-equivalence-schrodinger})
 
 
-	\section{Potentials of the Form $V=a+b x+ c x^2 + d \dot{x} + e x \dot{x}$}
+	\section{Potentials of the Form \texorpdfstring{$V=a+b x+ c x^2 + d \dot{x} + e x \dot{x}$}{PDFstring}}
 	We wish to compute
 	\begin{equation}
 		U\qty(x, t; x^\prime) = \int_{x^\prime}^{x} e^{\iu S\qty[x\qty(t^{\prime\prime})] / \hbar}  \mathcal{D}\qty[x\qty(t^{\prime\prime})]
@@ -790,20 +811,25 @@
 		\label{chapter12.eqn5-potential}
 	\end{equation}
 	The next step is to expand the functional $S$ in a Taylor series about $x_{cl}$
-	\begin{align*}
-		S\qty[x_{cl} + y] 
-		&= \int_{0}^{t} L\qty(x_{cl} + y, \dot{x}_{cl} + \dot{y}) \dd{t^\prime\prime} \\
-		&= \int_{0}^{t} \left[
+	\begin{align}
+		\begin{split}
+		S\qty[x_{cl} + y] 	&= \int_{0}^{t} L\qty(x_{cl} + y, \dot{x}_{cl} + \dot{y}) \dd{t^\prime\prime}\\
+		&=
+		\int_{0}^{t} \left[
 		L(x_{cl}, \dot{x}_{cl})  + \left(\eval{\pdv{L}{x}}_{x_{cl}} y + \eval{\pdv{L}{\dot{x}}}_{x_{cl}} \dot{y}\right)
-		+ \frac{1}{2} \left(
+		+\right.
+		\\ 
+		&\left.
+		 \frac{1}{2} \left(
 		\eval{\pdv[2]{L}{x}}_{x_{cl}} y^2 
 		+ 2 \eval{\pdv[2]{L}{x}{\dot{x}}}_{x_{cl}} y\dot{y} 
 		+ \eval{\pdv[2]{L}{\dot{x}}}_{x_{cl}} \dot{y}^2		\right)
 		\right] \dd{t^{\prime\prime}}
+		\end{split}
 		\label{chapter12.eqn6-potential}
-	\end{align*}
-	The series terminates since $L$ is a quadratic polynomial.\\
-	The first piece $L\qty(x_{cl}, \dot{x}_{cl})$ integrates to give $S\qty[x_{cl}] \equiv S_{cl}$. The second piece, linear in $y$ and $\dot{y}$ vanishes due to classical equation of motion.\\
+	\end{align}
+	The series terminates since $L$ is a quadratic polynomial.
+	The first piece $L\qty(x_{cl}, \dot{x}_{cl})$ integrates to give $S\qty[x_{cl}] \equiv S_{cl}$. The second piece, linear in $y$ and $\dot{y}$ vanishes due to classical equation of motion.
 		
 		To show this, first recall the classical equation of motion
 		\begin{equation}

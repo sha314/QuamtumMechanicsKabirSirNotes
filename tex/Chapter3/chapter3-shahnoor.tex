@@ -159,16 +159,19 @@ In Dirac notation we represent the vector $\psi_a$ as $\ket{a}$ and the basis ve
 \ket{a} = \sum_{i=1}^{\infty} a_i \ket{i}
 \end{equation}
 Orthonormality of the basis kets can be written as
-\begin{equation}\label{eqn3.41}
+\begin{equation}
+\label{eqn3.41}
 \braket{i}{j} = \delta_{ij}
 \end{equation}
 The complex scalar $a_i$ are called the components of the ket $\ket{a}$ along $\ket{i}$. Using the orthonormality condition of the basis vectors (\ref{eqn3.40}), we have 
-\begin{equation}\label{eqn3.42}
+\begin{equation}
+\label{eqn3.42}
 a_i = \braket{i}{\psi}
 \end{equation}
 These scalars $a_1, a_2, \ldots$ arranged as a column matrix is called the representation of $\ket{a}$ in the basis $\{\ket{i} \}, i=1,2,\ldots$.\\
 Thus
-\begin{equation}\label{eqn3.43}
+\begin{equation}
+\label{eqn3.43}
 \ket{a} \rightarrow \left(
 \begin{matrix}
 a_1 \\ a_2 \\ \vdots
@@ -180,7 +183,8 @@ a_1 \\ a_2 \\ \vdots
 \right)
 \end{equation}
 We can write down the representation of any one of the basis vectors in the same basis as
-\begin{eqnarray}\label{eqn3.44}
+\begin{eqnarray}
+\label{eqn3.44}
 \ket{1} \rightarrow \left(
 \begin{matrix}
 1 \\ 0 \\ 0 \\ \vdots
@@ -199,16 +203,18 @@ We can write down the representation of any one of the basis vectors in the same
 \end{matrix}
 \right)
 \end{eqnarray}
-and so on.\\
-Now, using equation \ref{eqn:3.42} in equation \ref{eqn:3.40} we have
-\begin{align}\label{eqn3.45-3.48}
+and so on.
+Now, using equation \ref{eqn3.42} in equation \ref{eqn3.40} we have
+\begin{align}
+\label{eqn3.45-3.48}
 	\ket{a} &= \sum_{i} a_i \ket{i} \\
 	&= \sum_{i} \braket{i}{a} \ket{i} \\
 	&= \sum_{i} \ket{i}\braket{i}{a}\\
 	&= \left(\sum_{i} \hat{P_i}\right)\ket{a}
 \end{align}
 where
-\begin{equation}\label{eqn3.49}
+\begin{equation}
+\label{eqn3.49}
 \hat{P_i} = \ket{i}\bra{i}
 \end{equation}
 is the projection operator along $\ket{i}$. Since equation \ref{eqn3.45-3.48} is true for all $\ket{a}$ in the vector space (this is because $\{\ket{i}\}$ form a complete set), we must have

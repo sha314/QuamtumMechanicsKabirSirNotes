@@ -26,7 +26,7 @@ Time dependent perturbation theory applies when $H$ is of the form
 	H = H_0 + V
 	\label{chapter20.eqn2-intro}
 \end{equation}
-where the eigenvalues and eigenvectors of $H_0$ are completely known and $V$ is an additional time-independent potential called the perturbation.\\
+where the eigenvalues and eigenvectors of $H_0$ are completely known and $V$ is an additional time-independent potential called the perturbation.
 
 
 Let us denote the eigenvalues of $H_0$ as $E_n^{(0)}$ and the corresponding eigenvectors as $\ket{E_n^{(0)}}$  so that the eigenvalue equation for $H_0$ is written as
@@ -53,12 +53,12 @@ Now we modify the eigenvalue equation for the full Hamiltonian $H$ (equation (\r
 	(H_0 + \lambda V) \ket{E_n}_\lambda = E_{n\lambda} \ket{E_n}_\lambda
 	\label{chapter20.eqn6-non-degenerate}
 \end{equation}
-Where we have introduced a real parameter $\lambda$ whose value lies in the range $(0,1)$. The eigenvalue $E_{n \lambda}$ and the eigenvector $\ket{E_n}_\lambda$  in equation (\ref{chapter20.eqn6-intro}) are not quite the same as the corresponding quantities in equation (\ref{chapter20.eqn1-intro}). It is only in the limit the limit $\lambda\rightarrow 1$ would $E_{n\lambda}$ and  $\ket{E_n}_\lambda$ in equation (\ref{chapter20.eqn6-non-degenerate}) coincide with actual values. Furthermore,
+Where we have introduced a real parameter $\lambda$ whose value lies in the range $(0,1)$. The eigenvalue $E_{n \lambda}$ and the eigenvector $\ket{E_n}_\lambda$  in equation (\ref{chapter20.eqn6-non-degenerate}) are not quite the same as the corresponding quantities in equation (\ref{chapter20.eqn1-intro}). It is only in the limit the limit $\lambda\rightarrow 1$ would $E_{n\lambda}$ and  $\ket{E_n}_\lambda$ in equation (\ref{chapter20.eqn6-non-degenerate}) coincide with actual values. Furthermore,
 \begin{align}
 	\lim\limits_{\lambda \rightarrow 0} E_{n \lambda} &= E_n^{(0)} \\
 	\lim\limits_{\lambda \rightarrow 0} \ket{E_n}_\lambda &= \ket{E_{n}^{(0)}}
 \end{align}
-Thus, as $\lambda \rightarrow 0$, the perturbation is switched off and as $\lambda \rightarrow 1$, the full perturbation $V$ is operative.\\
+Thus, as $\lambda \rightarrow 0$, the perturbation is switched off and as $\lambda \rightarrow 1$, the full perturbation $V$ is operative.
 
 We will now set up a perturbative scheme for solving $E_{n,\lambda}$ and $\ket{E_n}_\lambda$ and at the end set $\lambda = 1$. First, we write $E_{n,\lambda}$ and $\ket{E_n}_\lambda$ as power series in $\lambda$
 \begin{align}
@@ -92,7 +92,7 @@ We will solve this equation order by order in $\lambda$. So we equate the coeffi
 \end{align}
 Equation (\ref{chapter20.eqn8b-non-degenerate}) is considered solved because we have assumed that we know fully the eigenvalues and eigenvectors of $H_0$.
 
-\subsection{First-Order correction to energy: $E_n^{(1)}$}
+\subsection{First-Order correction to energy: \texorpdfstring{$E_n^{(1)}$}{PDFstring}}
 The first order correction to the unperturbed energy of the $n$-th level is $E_n^{(1)}$. This can be found from equation (\ref{chapter20.eqn9-non-degenerate}). We start by taking the product of equation (\ref{chapter20.eqn9-non-degenerate}) with $\bra{E_n^{(0)}}$. We get
 
 \begin{equation}
@@ -153,7 +153,7 @@ If $k=n$, the left side is zero and we recover the result
 \begin{equation}
 E_n^{(1)}  = \matrixel{E_n^{(0)}} {V} {E_n^{(0)}} , \quad k = n
 \end{equation}
-Thus, we cannot determine $C^{(1)}_{n n}$ from equation (\ref{chapter20.eqn16-non-degenerate}). This coefficient has to be determined from siderations of normalization of the eigenvectors as discussed later.\\
+Thus, we cannot determine $C^{(1)}_{n n}$ from equation (\ref{chapter20.eqn16-non-degenerate}). This coefficient has to be determined from siderations of normalization of the eigenvectors as discussed later.
 
 Next, if $k \neq n$, then equation (\ref{chapter20.eqn16-non-degenerate})ecomes
 \begin{equation}
@@ -215,7 +215,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 	\begin{equation}
 		\braket{E^{(0)}_n}{E^{(1)}_n} \equiv C^{(1)}_{n n} = \iu \alpha = 0
 	\end{equation}
-	i.e., we can choose $\ket{E_n^{(1)}}$ to be orthonormal to $\ket{E_n^{(0)}}$.\\
+	i.e., we can choose $\ket{E_n^{(1)}}$ to be orthonormal to $\ket{E_n^{(0)}}$.
 	
 	Thus, up to first order
 	\begin{equation}
@@ -230,7 +230,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 	\end{align}
 	
 	
-	\subsection{Second-Order Correction to Energy: $E_n^{(2)}$}
+	\subsection{Second-Order Correction to Energy: \texorpdfstring{$E_n^{(2)}$}{PDFstring}}
 	
 	We can find the second order correction to the energy, i.e., $E^{(2)}_n$ from equation (\ref{chapter20.eqn10-non-degenerate}). First, multiply equation (\ref{chapter20.eqn10-non-degenerate}) by $\bra{E_n^{(0)}}$ 
 	\begin{equation}
@@ -380,7 +380,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 		E_{n\alpha} = E_n^{(0)} + \lambda E_{n\alpha}^{(1)} + \lambda^2 E_{n\alpha}^{(2)}
 		\label{chapter20.eqn10-degenerate}
 	\end{equation}
-	where we have used the fact that $E_{n\alpha}^{(0)} = E_n^{(0)}$ for all $\alpha$.\\
+	where we have used the fact that $E_{n\alpha}^{(0)} = E_n^{(0)}$ for all $\alpha$.
 	
 	Next, we substitute (\ref{chapter20.eqn9-degenerate}) and (\ref{chapter20.eqn10-degenerate}) in equation (\ref{chapter20.eqn7-degenerate}). We have
 
@@ -451,14 +451,14 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 		\sum_{\beta=1}^{g_n} \qty(H^{\prime (n)}_{\gamma \beta}  -  E_{n\alpha}^{(1)}\delta_{\gamma \beta}) a_{\beta \alpha} = 0
 		\label{chapter20.eqn17-degenerate}
 	\end{equation}
-	Equation (\ref{chapter20.eqn16-degenerate}) is a set of $g_n$ linear equations for unknowns $\qty{a_{1\alpha}, a_{2\alpha}, \ldots, a_{g_n \alpha}}$ corresponding to $E_{n\alpha}^{(1)}$. The value of $E_{n\alpha}^{(1)}$ are not known a priori.\\
+	Equation (\ref{chapter20.eqn16-degenerate}) is a set of $g_n$ linear equations for unknowns $\qty{a_{1\alpha}, a_{2\alpha}, \ldots, a_{g_n \alpha}}$ corresponding to $E_{n\alpha}^{(1)}$. The value of $E_{n\alpha}^{(1)}$ are not known a priori.
 		
 		However, we note that, for a solution of equation (\ref{chapter20.eqn17-degenerate}) to exist, the determinant formed by the coefficient of $a_{\beta\alpha}$ must vanish, i.e.,
 		\begin{equation}
 			\det \qty[H^{\prime (n)}_{\gamma \beta}  -  E^{(1)}_{n\alpha} \delta_{\gamma \beta}] = 0
 			\label{chapter20.eqn18-degenerate}
 		\end{equation}
-		This is called the secular equation, which is a polynomial of degree $g_n$ in $E_{n\alpha}^{(1)}$. It has $g_n$ real roots $E_{n 1}^{(1)}, E_{n 2}^{(1)}, \ldots, E_{n, g_n}^{(1)}$. If all these roots are distinct, the degeneracy is completely removed to first order in the perturbation. On the other hand, if some or all roots of equation (\ref{chapter20.eqn18-degenerate}) are identical, the degeneracy is only partially (or not at all) removed. The residual degeneracy may then either be removed in higher order perturbation theory, or it may persist in all orders.\\
+		This is called the secular equation, which is a polynomial of degree $g_n$ in $E_{n\alpha}^{(1)}$. It has $g_n$ real roots $E_{n 1}^{(1)}, E_{n 2}^{(1)}, \ldots, E_{n, g_n}^{(1)}$. If all these roots are distinct, the degeneracy is completely removed to first order in the perturbation. On the other hand, if some or all roots of equation (\ref{chapter20.eqn18-degenerate}) are identical, the degeneracy is only partially (or not at all) removed. The residual degeneracy may then either be removed in higher order perturbation theory, or it may persist in all orders.
 		
 		Next, substituting each of the roots $E_{n\alpha}^{(1)}, \ \alpha=1,2,\ldots,g_n$ in equation (\ref{chapter20.eqn17-degenerate}) we can solve for coefficients $a_{1\alpha}, a_{2 \alpha}, \ldots, a_{g_n \alpha}$. In fact, one of the coefficients remain undetermined and the other coefficients are found in terms of the undetermined one. This is because the set of equation given by equation (\ref{chapter20.eqn17-degenerate}) are homogeneous. The undetermined coefficient is then obtained up to a phase by requiring that the eigenvector $a_{\beta\alpha}; \beta = 1,2,\ldots, g_n$ be normalized to unity.
 		\begin{equation}
@@ -483,7 +483,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			\chi_{n\alpha}^{(0)} &= \mqty[a_{1\alpha} \\ a_{2\alpha} \\ \vdots \\ a_{g_n\alpha}] 
 		\end{align}
 		
-		Thus, in summary, the first-order corrections to the $n^{th}$ degenerate level of $H_0$ with energy $E_n^{(0)}$ are obtained by diagonalizing $H^\prime$ in the eigen subspace of $E_n^{(0)}$. The eigenvalues of $H^\prime$ are the corrections to the energy and the corresponding eigenvectors of $H^\prime$ are the zeroth order approximation of the wavefunction.\\
+		Thus, in summary, the first-order corrections to the $n^{th}$ degenerate level of $H_0$ with energy $E_n^{(0)}$ are obtained by diagonalizing $H^\prime$ in the eigen subspace of $E_n^{(0)}$. The eigenvalues of $H^\prime$ are the corrections to the energy and the corresponding eigenvectors of $H^\prime$ are the zeroth order approximation of the wavefunction.
 		
 		Once the correct zeroth-order wavefunctions $\chi_{n\alpha}^{(0)}\ , \alpha=1,2, \ldots, g_n$, have been determined, the first order correction $\psi_{n \alpha}^{(1)}$ to the wavefunction and second-order energy correction $E_{n\alpha}^{(2)}$ can be obtained in a way similar to non-degenerate perturbation theory.
 		
@@ -493,9 +493,9 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 		\section{Examples of Non-Degenerate Perturbation Theory}
 		\begin{enumerate}[label=Problem.\arabic*,start=1]
 			\item 
-			Calculate the first order energy shifts for the first three states of the infinite square well of width $a$ in one dimension due to the perturbation $V(x) = V_0 \frac{x}{a}$.\\
+			Calculate the first order energy shifts for the first three states of the infinite square well of width $a$ in one dimension due to the perturbation $V(x) = V_0 \frac{x}{a}$.
 			
-			\underline{Ans}\\
+			\underline{Ans}
 			\begin{equation*}
 				H = H_0 + V
 			\end{equation*}
@@ -538,7 +538,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			\begin{equation*}
 				k = \sqrt{\frac{2 m E_0}{\hbar^2}}
 			\end{equation*}
-			The wave function must be zero at the boundaries of the potential and outside the potential.\\
+			The wave function must be zero at the boundaries of the potential and outside the potential.
 			
 			The general solution of the interior wave function $\psi^{(0)}\qty(x)$ is
 			\begin{equation*}
@@ -616,9 +616,9 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 				T = E - m c^2 = \sqrt{m^2 c^4 + p^2 c^2} - m c^2
 			\end{equation}
 			(a) Determine the lowest order correction to the kinetic energy due to relativistic effects.\\
-			(b) Considering the correction to the kinetic energy as a perturbation, compute the relativistic correction to the ground state energy.\\
+			(b) Considering the correction to the kinetic energy as a perturbation, compute the relativistic correction to the ground state energy.
 			
-			\underline{Ans}\\
+			\underline{Ans}
 			(a) We have
 			\begin{align*}
 				T = E - mc^2 &= \sqrt{m^2 c^4 + p^2 c^2} - m c^2 \\
@@ -820,9 +820,9 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			
 			
 			
-			\item Linear harmonic oscillator of charge $q=+e$ ($e$ is positive) and mass $m$ perturbed by a uniform electric field $E$ in the $x$ direction.\\
+			\item Linear harmonic oscillator of charge $q=+e$ ($e$ is positive) and mass $m$ perturbed by a uniform electric field $E$ in the $x$ direction.
 			
-			\underline{Ans.}\\
+			\underline{Ans.}
 			%% page 48
 			\begin{figure}
 				%% TODO
@@ -845,7 +845,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			\begin{equation}
 				E_n^{(1)} = \expval{V}{n} = -e E \expval{x}{n} = 0
 			\end{equation}
-			because the integral is odd in the coordinate representation.\\
+			because the integral is odd in the coordinate representation.
 			
 			We now calculate the energy correction in the $2nd$ order.
 			\begin{equation}
@@ -917,9 +917,9 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			In the present problem, the second order perturbation theory to give the correct result.
 			
 			
-			\item Calculate the shift in energy of the $1 s$ state (i.e. the ground state) of hydrogen if the proton is assumed to be a uniformly charged spherical shell of radius $10^{-15} m$ rather than a point charge. Use first order perturbation theory.\\
+			\item Calculate the shift in energy of the $1 s$ state (i.e. the ground state) of hydrogen if the proton is assumed to be a uniformly charged spherical shell of radius $10^{-15} m$ rather than a point charge. Use first order perturbation theory.
 			
-			\underline{Ans.}\\
+			\underline{Ans.}
 			%% page 52
 			\begin{figure}
 				%%% TODO
@@ -931,7 +931,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			\begin{equation}
 				H_0 = - \frac{\hbar^2}{2 m} \nabla^2 + V_0(r) = - \frac{\hbar^2}{2 m} \nabla^2 - \frac{e^2}{4 \pi \epsilon_0 r}
 			\end{equation}
-			Perturbed system:\\
+			Perturbed system:
 			
 			\begin{figure}
 				%%% TODO
@@ -1016,9 +1016,11 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			The ground state has increased in energy, but the increase is very small.
 			
 			
-			\item Calculate the shift in the ground state energy of the hydrogen atom if the proton is considered as a uniform sphere of radius $R$ instead than a point charge. \\
+			\item Calculate the shift in the ground state energy of the hydrogen atom if the proton is considered as a uniform sphere of radius $R$ instead than a point charge. 
 			
-			\underline{Ans.}\\
+			\underline{Ans.}
+			
+			
 			%% page 59
 			
 			\begin{figure}
@@ -1116,7 +1118,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 			\begin{align*}
 				\therefore \delta E^{(1)} = \frac{4 \pi}{\pi a_0^3} \qty(\frac{e^3}{4 \pi \epsilon_0 R^3}) \int_{0}^{R} \qty(-\frac{3}{2} + \frac{r^2}{2 R}  +  \frac{R}{r}) e^{-2 r / a_0} r^2 \dd{r}
 			\end{align*}
-			Now $r_{max} = R = 10^{-15} m$ and $a_0 \approx 10^{-10} m$. Therefore $2 r  / a_0$ is very small, so $e^{-2 r / a_0} \approx 1$.\\
+			Now $r_{max} = R = 10^{-15} m$ and $a_0 \approx 10^{-10} m$. Therefore $2 r  / a_0$ is very small, so $e^{-2 r / a_0} \approx 1$.
 			
 			The first order correction is then
 			\begin{equation*}
@@ -1167,7 +1169,7 @@ Using equation (\ref{chapter20.eqn14-non-degenerate}) and (\ref{chapter20.eqn17-
 				&= - \frac{Z^2 e^2}{\qty(4 \pi \epsilon_0) 2 a_0} - \frac{Z^2 e^2}{\qty(4 \pi \epsilon_0) 2 a_0}\\
 				&= - 2 Z^2 E_H
 			\end{align*}
-			Where $E_H = \frac{e^2}{\qty(4 \pi \epsilon_0) 2 a_0} = 13.6 eV$ and $a_0 = \frac{4 \pi \epsilon_0  \hbar^2}{m e^2}$ is the Bohr radius.\\
+			Where $E_H = \frac{e^2}{\qty(4 \pi \epsilon_0) 2 a_0} = 13.6 eV$ and $a_0 = \frac{4 \pi \epsilon_0  \hbar^2}{m e^2}$ is the Bohr radius.
 			
 			
 			The corresponding unperturbed eigen function is the product of the eigenfunctions of each electron (neglecting anti-symmetry):

@@ -8,7 +8,7 @@
 \graphicspath{{Chapter18/figs/}}
 \fi
 
-reference : Sakurai, Cohen-Tanondgi\\
+reference : Sakurai, Cohen-Tanondgi\newline
 
 A rotation of a physical system is specified by the angle of rotation and the axis of rotation. The rotation can be either positive or negative. If a right-handed screw turned in the direction of rotation proceeds along the positive direction of the axis, the rotation is said to be positive. Thus, for examp, $\phi\hat{z}$ denotes a positive rotation by an angle $\phi$ about the z-axis Fig. (\ref{chapter18.fig1})
 
@@ -19,9 +19,11 @@ A rotation of a physical system is specified by the angle of rotation and the ax
 	\caption{A positive rotation of the physical system by an angle $\phi$ about the $z$-axis.}
 	\label{chapter18.fig1}
 \end{figure}
-In our subsequent discussions we will consider active rotation\index{active and passive rotation}, i.e., rotation of the physical system rather than the rotation of the coordinates.\\
+In our subsequent discussions we will consider active rotation\index{active and passive rotation}, i.e., rotation of the physical system rather than the rotation of the coordinates.
 
-Now, finite rotations about different axes do not commute, i.e., the change in the coordinate of a point in the physical system depends on the order the rotations are performed. To work out quantitatively the extent in which rotations about different axes fail to commute, we have to construct the matrices corresponding to rotations in the three-dimensional real space $(x,y,z)$.\\
+
+Now, finite rotations about different axes do not commute, i.e., the change in the coordinate of a point in the physical system depends on the order the rotations are performed. To work out quantitatively the extent in which rotations about different axes fail to commute, we have to construct the matrices corresponding to rotations in the three-dimensional real space $(x,y,z)$.
+
 
 In each rotation a vector $\vec{r}$ with coordinates $(x, y, z)$ changes to a new vector $\vec{r^\prime}$ with coordinate $(x^\prime,y^\prime,z^\prime)$. The matrix connecting $(x^\prime,y^\prime,z^\prime)$ with $(x,y,z)$ is the matrix corresponding to the rotation.
 
@@ -159,7 +161,7 @@ R &\longleftrightarrow U(R) \\
 Note that $R$ is a $3\times 3$ orthogonal matrix acting on the components of a classical vector in $3$-space while $U(R)$ is a unitary operator acting on the \textit{vectors} of a Hilbert space (ket space). We could also find a matrix representation of the operator $U(R)$ in the Hilbert space by choosing an appropriate set of basis kets. If the number of kets in the basis set is $N$, then the matrix representation of $U(R)$ would be $N\times N$ dimensional.
 
 %% page 11
-For example, if we consider a spin-$1/2$ particle with no other degrees of freedom, then $N=2$ and $U(R)$ would be a $2\times 2$ unitary matrix, for a spin-$3/2$ particle with no other degrees of freedom, $N=4$, and $U(R)$ would be a $4\times 4$ unitary matrix.\\
+For example, if we consider a spin-$1/2$ particle with no other degrees of freedom, then $N=2$ and $U(R)$ would be a $2\times 2$ unitary matrix, for a spin-$3/2$ particle with no other degrees of freedom, $N=4$, and $U(R)$ would be a $4\times 4$ unitary matrix.
 
 
 Now, we will construct the unitary operator $U(R)$. To do so, it is advantageous to consider infinitesimal rotations of the physical system. To be specific, suppose the physical system is rotated by an infinitesimal angle $\dd{\phi}$ about the $z$-axis. Therefore
@@ -171,7 +173,8 @@ We can write $U(R)$ as
 \label{chapter18.eqn15}
 U(\dd{\phi} \hat{z}) = 1 - \frac{J_z}{\hbar} \dd{\phi}
 \end{equation}
-where $J_z$ is a hermitian operator with dimensions of action (i.e., dimensions of $\hbar$ : $\qq{Energy}\times \qq{Time}$ or $\qq{Position}\times \qq{Momentum}$). At this state $J_z$ is \textbf{not} yet identified with the $z$-component of the total angular momentum operator. This identification will be made later after we derive the commutations of $J_z$ with other generators.\\
+where $J_z$ is a hermitian operator with dimensions of action (i.e., dimensions of $\hbar$ : $\qq{Energy}\times \qq{Time}$ or $\qq{Position}\times \qq{Momentum}$). At this state $J_z$ is \textbf{not} yet identified with the $z$-component of the total angular momentum operator. This identification will be made later after we derive the commutations of $J_z$ with other generators.
+
 
 In Eq. (\ref{chapter18.eqn15}), $J_z$ is the generator of the unitary operator $U(\dd{\phi} \hat{z})$. The operator $U(\phi \hat{z})$ corresponding to a finite positive rotation $\phi$ about the $z$-axis can be obtained by successively compounding infinitesimal rotations about the same axis. Thus
 \begin{align}
@@ -198,15 +201,17 @@ From Eqs. (\ref{chapter18.eqn16a}), (\ref{chapter18.eqn17}) and (\ref{chapter18.
 
 
 
-\section{Commutation relations of $J_x,J_y,J_z$}
+\section{Commutation relations of \texorpdfstring{$J_x,J_y,J_z$}{PDFstring}}
 %% page 14
 
-To obtain the commutation relations between $J_x,\ J_y$ and $J_z$, we need the concept of a group (see Appendix (\ref{appendix4.group})). Now, the rotations form a group. The group multiplication is the application of two rotations successively. To see that the set of all rotations of a physical system form a group, we note that two successive rotations is equivalent to one single rotation. The inverse of a rotation $\phi \hat{n}$ is $-\phi\hat{n}$. The unit element is no rotation at all.\\
+To obtain the commutation relations between $J_x,\ J_y$ and $J_z$, we need the concept of a group (see Appendix (\ref{appendix4.group})). Now, the rotations form a group. The group multiplication is the application of two rotations successively. To see that the set of all rotations of a physical system form a group, we note that two successive rotations is equivalent to one single rotation. The inverse of a rotation $\phi \hat{n}$ is $-\phi\hat{n}$. The unit element is no rotation at all.
+
 
 
 To every rotation of the physical system there corresponds a $3\times 3$ orthogonal matrix $R$ acting on the coordinates of a classical vectors, and a unitary operator $U(R)$ acting on the state kets in the Hilbert space. We say that the $3\times 3$ orthogonal matrices $R$ is a representation of the rotation group in the ordinary $3$-space. The set of unitary operator $U(R)$ is also a representation of the rotation group but in the Hilbert space of state vectors. Thus we may postulate $U(R)$ has the same group properties as $R$
+
 \begin{table}
-	\begin{tabular}{c|c|c}
+	\begin{tabular}{|c|c|c|}
 		identity & $1\cdot R = R\cdot 1 = R$ & $\mathbb{1} U(R) = U(R) \mathbb{1} = U(R)$ \\ \hline
 		closure & $R_1 R_2 = R_3$ & $U(R_1) U(R_2) = U(R_3)$ \\ \hline
 		inverse & $R \cdot R^{-1} = 1 = R^{-1}\cdot R$ & 
@@ -522,10 +527,10 @@ Thus
 
 
 
-\subsection{Eigen Spinors of $\vec{\sigma} \cdot \hat{n}$}
+\subsection{Eigen Spinors of \texorpdfstring{$\vec{\sigma} \cdot \hat{n}$}{PDFstring}}
 %% page 36
 As an instructive application of the rotation matrix, let us see how we can construct eigenspinors of $\vec{\sigma}\cdot \hat{n}$ with eigenvalues $\pm 1$ where $\hat{n}$ is some unit vector along some specified direction. Out objective is to construct $\chi_{\pm}$ satisfying $\vec{\sigma} \cdot \hat{n} \chi_{\pm} = \pm \chi_{\pm}$
-Actually, $\chi_{\pm}$ can be obtained as a  straight eigenvalue problem, but here we present an alternative method using the rotation matrix.\\
+Actually, $\chi_{\pm}$ can be obtained as a  straight eigenvalue problem, but here we present an alternative method using the rotation matrix.
 
 
 Let the polar and azimuthal angle of $\hat{n}$ be $\theta$ and $\phi$, respectively. Let us start with $\mqty[1 \\ 0]$, the two-component spinor that represents the spin up state. Given this, we first rotate about the $y$-axis by an angle $\theta$, then rotate by an angle $\phi$ about the $z$-axis, as shown in Fig. (\ref{chapter18.fig5})
@@ -662,7 +667,7 @@ Thus we obtain the following result : each component of the new spinor $\qty[\ps
 
 
 \subsection{spin Precession}
-Sakurai\\
+\textbf{Sakurai}
 
 %% page 44
 Consider a spin $1/2$ particle with its space degrees of freedom suppressed. If the particle is subjected to an external magnetic field, its Hamiltonian can be written as

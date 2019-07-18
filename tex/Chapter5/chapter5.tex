@@ -140,9 +140,13 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	eigenvalues and the number of times an eigenvalue is repeated is called the \textit{order of degeneracy} of that eigenvalue.
 	
 	\section{Non-degenerate roots}
-	In this case all the roots $\lambda_i$ are distinct and there are $n$ of them if the vector space is $n$ dimensional. If $A$ is hermitian, the roots are real. For a non-hermitian operator some or all of the roots may be complex.\\
+	In this case all the roots $\lambda_i$ are distinct and there are $n$ of them if the vector space is $n$ dimensional. If $A$ is hermitian, the roots are real. For a non-hermitian operator some or all of the roots may be complex.
 	
-	Now, for each eigenvalue (root of secular equation) we can solve the eigenvalue equation (\ref{chapter5.eqn7-eigenvalue-matrix-form}) to get $n$ linearly independent eigenvectors $\ket{\lambda_i}$. Since the $\ket{\lambda_i}$'s are linearly independent, they span the $n$ dimensional vector space, i.e., they form a complete set of basis vectors.\\
+	
+	Now, for each eigenvalue (root of secular equation) we can solve the eigenvalue equation (\ref{chapter5.eqn7-eigenvalue-matrix-form}) to get $n$ linearly independent eigenvectors $\ket{\lambda_i}$. Since the $\ket{\lambda_i}$'s are linearly independent, they span the $n$ dimensional vector space, i.e., they form a complete set of basis vectors.
+	
+	
+	
 	If $A$ is hermitian, the eigenvectors are guarenteed to b orthogonal, i.e., $\braket{\lambda_i}{\lambda_j} = 0$ if $i\neq j$. However, for a non-hermitian operator the eigenvectors may or may not be orthogonal.
 	Using the eigenvectors of $A$ as the basis (This basis is called the eigenbasis of $A$), the matrix representation of $A$ is
 	\begin{equation}
@@ -170,29 +174,41 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\end{matrix}
 		\right]
 	\end{equation}
-	An operator or a matrix $\mathbb{A}$ is said to be diagonalizable, if we can find a basis in which the matrix becomes diagonal. For a hermitian operator we can always find a basis, the eigenbasis of the operator, in which the matrix representation of the operator is diagonal with the eigenvalues as the diagonal elements.\\
+	An operator or a matrix $\mathbb{A}$ is said to be diagonalizable, if we can find a basis in which the matrix becomes diagonal. For a hermitian operator we can always find a basis, the eigenbasis of the operator, in which the matrix representation of the operator is diagonal with the eigenvalues as the diagonal elements.
+	
+	
 	
 	For a non-hermitian operator in an $n$  dimensional vector space, there is no guarantee that the matrix reprsentation $A_{ij}^\prime$ in the eigenbasis of the operator is diagonal. This is because, in general, the eigenvectors are  not orthogonal, i.e., $\braket{\lambda_i}{\lambda_j} \neq \delta_{ij}$
 	
 	\section{Degenerate roots}
-	The secular equation (\ref{chapter5.eqn8-matrix-reps}) may have roots some or all of which are repeated. So, the number of \underline{distinct} eigenvalues is now less than the dimension of the vector space.\\
+	The secular equation (\ref{chapter5.eqn8-matrix-reps}) may have roots some or all of which are repeated. So, the number of \underline{distinct} eigenvalues is now less than the dimension of the vector space.
 	
-	As an example, suppose we have a six-dimensional vector space ($n=6$) with three distinct roots $\lambda_1, \lambda_2, \lambda_3$. Suppose $\lambda_1$ is repeated three times, $\lambda_2$ is repeated two times and $\lambda_3$ occurs only once. Thus the six roots of the secular equation are $\lambda_1, \lambda_1, \lambda_1, \lambda_2, \lambda_2, \lambda_3$.\\
+	
+	As an example, suppose we have a six-dimensional vector space ($n=6$) with three distinct roots $\lambda_1, \lambda_2, \lambda_3$. Suppose $\lambda_1$ is repeated three times, $\lambda_2$ is repeated two times and $\lambda_3$ occurs only once. Thus the six roots of the secular equation are $\lambda_1, \lambda_1, \lambda_1, \lambda_2, \lambda_2, \lambda_3$.
+	
+	
+	
+	
 	
 	We say $\lambda_1$ is three-fold degenerate, $\lambda_2$ is two-fold degenerate and $\lambda_3$ is non-degenerate. We represent the order of degeneracy of a distinct eigenvalue $\lambda_i$ by $g_{\lambda_i}$. In the present example, $g_{\lambda_1}=3, g_{\lambda_2}=2$ and $ g_{\lambda_3}=1$. We have
 	\begin{equation}
 		g_{\lambda_1} + g_{\lambda_2} + g_{\lambda_3} = 6 \quad \text{dimension of the vector space}
 	\end{equation}
-	Now, it may be shown that, for a \underline{hermitian operator} if a root $\lambda$ is $g$-fold degenerate, there are always $g$ linearly independent eigenvectors corresponding to $\lambda$. For a non-hermitian operator, there may not exist as many linearly independent eigenvectors as the order of degeneracy.\\
+	Now, it may be shown that, for a \underline{hermitian operator} if a root $\lambda$ is $g$-fold degenerate, there are always $g$ linearly independent eigenvectors corresponding to $\lambda$. For a non-hermitian operator, there may not exist as many linearly independent eigenvectors as the order of degeneracy.
 	
-	In the above example, if $\lambda_1, \lambda_2$ and $\lambda_3$ are eigenvalues of a hermitian operator, there are three linearly independent eigenvectors with eigenvalue $\lambda_1$, two linearly independent eigenvectors with eigenvalue $\lambda_2$ and one eigenvector with eigenvalue $\lambda_3$. Thus, the total number of linearly indepent eigenvector is six, the same as the dimension of the vector space. Hence these six linearly independent eigenvectors form a \textit{complete basis set of vectors}.\\
+	
+	
+	In the above example, if $\lambda_1, \lambda_2$ and $\lambda_3$ are eigenvalues of a hermitian operator, there are three linearly independent eigenvectors with eigenvalue $\lambda_1$, two linearly independent eigenvectors with eigenvalue $\lambda_2$ and one eigenvector with eigenvalue $\lambda_3$. Thus, the total number of linearly indepent eigenvector is six, the same as the dimension of the vector space. Hence these six linearly independent eigenvectors form a \textit{complete basis set of vectors}.
+	
+	
 	
 	If, however, $\lambda_1, \lambda_2$ and $\lambda_3$ are eigenvalues of a non-hermitian operator with the same eigenvalues, there may not exist three linearly independent eigenvectors with eigenvalue $\lambda_1$, or  two linearly independent eigenvectors with eigenvalue $\lambda_2$. In such a situation, the number of linearly independent eigenvectors of the non-hermitian operator $A$ is less than the dimension $n$ of the vector space. Hence, these eigenvectors \textit{do not form a basis set} for a $n$ dimensional vector space.
 	
 	
 	
 	\section{Digonalization of a Hermitian Operator}
-	Let $A$ be a hermitian operator with distinct eigenvalues $\lambda_1,\lambda_2\ldots$. Some or all of the eigenvalues may be degenerate, with the order or degree of degeneracy of an eigenvalue $\lambda_i$ being denoted by $g_{\lambda_i}$. If $g_{\lambda_j}=1$ for some $\lambda_j$, then $\lambda_j$ is said to be non-degenerate.\\
+	Let $A$ be a hermitian operator with distinct eigenvalues $\lambda_1,\lambda_2\ldots$. Some or all of the eigenvalues may be degenerate, with the order or degree of degeneracy of an eigenvalue $\lambda_i$ being denoted by $g_{\lambda_i}$. If $g_{\lambda_j}=1$ for some $\lambda_j$, then $\lambda_j$ is said to be non-degenerate.
+	
 	
 	Since $A$ is hermitian there will always be $g_{\lambda_i}$ linearly independent eigenvectors, each belonging to the same eigenvalue $\lambda_i$. We will now require another index, $s^{(i)}$, to distinguish between these linearly independent eigenvectors. We write
 	\begin{equation}
@@ -204,7 +220,9 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		A \left(\sum_{s^{(i)}}^{g_{\lambda_i}}  C_{s^{(i)}} \ket{\lambda_i, s^{(i)}}\right) = \lambda_i \left(\sum_{s^{(i)}}^{g_{\lambda_i}}  C_{s^{(i)}} \ket{\lambda_i, s^{(i)}}\right)
 		\label{chapter5.eqn10-combination-degenerate-eigenvectors}
 	\end{equation}
-	Thus, the set of vectors $\{ \ket{\lambda_i, s^{(i)}}; \quad \lambda_i \quad \text{fixed}, \quad s^{(i)}=1,2\ldots,g_{\lambda_i} \}$ spans a subspace, called the eigen subspace of $\lambda_i$, of the original $n$ dimensional vector space. The eigenvectors belonging to a degenerate eigenvalue need not be orthogonal to each other even if they are linearly independent, as the general theorem of hermitian operators proves the orthogonality of eigenvectors belonging to different eigenvalues.\\
+	Thus, the set of vectors $\{ \ket{\lambda_i, s^{(i)}}; \quad \lambda_i \quad \text{fixed}, \quad s^{(i)}=1,2\ldots,g_{\lambda_i} \}$ spans a subspace, called the eigen subspace of $\lambda_i$, of the original $n$ dimensional vector space. The eigenvectors belonging to a degenerate eigenvalue need not be orthogonal to each other even if they are linearly independent, as the general theorem of hermitian operators proves the orthogonality of eigenvectors belonging to different eigenvalues.
+	
+	
 	
 	However, using Schmidt orthonormalization procedure (see section (\ref{chapter2.schmidt-orthonormalization-method})), we can get a set of $g_{\lambda_i}$ orthogonal 
 	eigenfunctions %@@@@@@@ or
@@ -212,9 +230,12 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	  of eigenvalue $\lambda_i$ from a set of $g_{\lambda_i}$ linearly independent set of
 	  eigenfunctions
 %	 eigenvectors %@@@@@@@ ?
-	   of eigenvalue $\lambda_i$.\\
+	   of eigenvalue $\lambda_i$.
 	   
-	   Thus, all the eigenvectors of the hermitian operator, wherether belonging to same or different eigenvalues can be considered as orthogonal to each other. Further, they are also normalized. Using the set of orthonormal eigenfunctions as the basis, the matrix representation of $A$ is diagonal. \\
+	   
+	   Thus, all the eigenvectors of the hermitian operator, wherether belonging to same or different eigenvalues can be considered as orthogonal to each other. Further, they are also normalized. Using the set of orthonormal eigenfunctions as the basis, the matrix representation of $A$ is diagonal.
+	   
+	   
 	   
 	   As a concrete example of diagonalization of a hermitian operator, suppose we have a finite seven-dimensional linear vector space. If, all the eigenvectors are non-degenerate, then there are seven distinct eigenvalues $\lambda_1, \ldots, \lambda_7$ and corresponding to each eigenvalue there will be one eigenvector $\ket{\lambda_1}, \ldots, \ket{\lambda_7}$. These eigenvectors are orthogonal and they are normalized. Using the eigenvectors as the basis, the matrix representation of $A$ is 
 	   \begin{equation}
@@ -230,7 +251,9 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		   \end{matrix}
 		   \right]
 	   \end{equation}
-	But if some of the eigenvalues are degenerate, then the number of distinct eigenvalues will be less than seven. Suppose that there are three distinct eigenvalues $\lambda_1, \lambda_2, \lambda_3$. Also suppose that $\lambda_1$ is three-fold degenerate and $\lambda_2$ and $\lambda_3$ both are two-fold degenerate. Thus $g_{\lambda_1}=3, g_{\lambda_2}=2, g_{\lambda_3}=2$ and $g_{\lambda_1} + g_{\lambda_2} + g_{\lambda_3}=7$ which is the dimension of the vector space.\\
+	But if some of the eigenvalues are degenerate, then the number of distinct eigenvalues will be less than seven. Suppose that there are three distinct eigenvalues $\lambda_1, \lambda_2, \lambda_3$. Also suppose that $\lambda_1$ is three-fold degenerate and $\lambda_2$ and $\lambda_3$ both are two-fold degenerate. Thus $g_{\lambda_1}=3, g_{\lambda_2}=2, g_{\lambda_3}=2$ and $g_{\lambda_1} + g_{\lambda_2} + g_{\lambda_3}=7$ which is the dimension of the vector space.
+	
+	
 	
 	There are three linearly independent (but not necessarily orthogonal) eigenvectors with eigenvalue $\lambda_1$ and two linearly independent eigenvectors for each eigenvalue $\lambda_2$ and $\lambda_3$. The eigenvectors with eigenvalue $\lambda_1$ can be labled as 
 	$\ket{\lambda_1, s^{(1)}}$ with $s^{(1)} = 1,2,3$, i.e., $\ket{\lambda_1,1}, \ket{\lambda_1,2}, \ket{\lambda_1,3}$.
@@ -321,15 +344,18 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 	\end{block}
 	\end{blockarray}
 	\end{equation}
-	Thus the matrix representation of a hermitian operator $A$ is diagonalized.\\
+	Thus the matrix representation of a hermitian operator $A$ is diagonalized.
 	
-	We have proved that a hermitian operator (or a hermitian matrix) is always diagonalizable in a finite dimensional vector space. By diagonalizable we mean that we can always find a basis in which the matrix representation of $A$ is diagonal. This basis is simply the basis consisting of the orthogonalized eigenvectors of $A$, called eigenbasis of $A$.\\
+	
+	We have proved that a hermitian operator (or a hermitian matrix) is always diagonalizable in a finite dimensional vector space. By diagonalizable we mean that we can always find a basis in which the matrix representation of $A$ is diagonal. This basis is simply the basis consisting of the orthogonalized eigenvectors of $A$, called eigenbasis of $A$.
+	
 	
 	 The eigenvectors of a non-hermitian operator my be fewer in numbers than the dimension of the vector space if there is degeneracy. If an  eigenvector $\lambda_i$ is $g_i$-fold degenerate, then the number of linearly independent eigenvectors belonging to $\lambda_i$ may be less than $g_i$. Therefore, the eigenvectors of a non-hermitian operator cannot form a basis set for the vector space. Therefore, a non-hermitian operator is not diagonalizable.
 	
 	
 	\section{Basis independence of the eigenvalues of an Operator}
-	Basis independence refers to representation independence. To find the eigenvalues of a hermitian operator $\hat{A}$, first we choose an orthonormal basis set $\{\ket{u_i}\}$ and form the matrix representation of the operator. Then we solve the secular equation to find the eigenvalues. Although we have to integrate a basis set to find the eigenvalues, it is easy to verify that the eigenvalues are independent of the choice of the basis. \\
+	Basis independence refers to representation independence. To find the eigenvalues of a hermitian operator $\hat{A}$, first we choose an orthonormal basis set $\{\ket{u_i}\}$ and form the matrix representation of the operator. Then we solve the secular equation to find the eigenvalues. Although we have to integrate a basis set to find the eigenvalues, it is easy to verify that the eigenvalues are independent of the choice of the basis. 
+	
 	
 	Indeed, if we choose a new orthogonal set of basis vectors $\{\ket{u_i}\}$ which are related to the old set according to 
 	\begin{equation}
@@ -359,9 +385,11 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		&= \det(\mathbb{S}(\mathbb{A} - \lambda \mathbb{I}) \mathbb{S}^{-1})\nonumber \\
 		&= \det(\mathbb{A} - \lambda \mathbb{I})
 	\end{eqnarray}
-	Thus, there is no change in the secular equation even if we change the basis set. Since the eigenvalues are the roots of the secular equation, the eigenvalues are representation independent. They are characteristics of the operator $\hat{A}$ itself, and not of any particular representation.\\
+	Thus, there is no change in the secular equation even if we change the basis set. Since the eigenvalues are the roots of the secular equation, the eigenvalues are representation independent. They are characteristics of the operator $\hat{A}$ itself, and not of any particular representation.
+	
+	
 
-	Next, we will show that the determinant and the trace of the matrix representation $A$ are independent of the basis used for the representation.\\
+	Next, we will show that the determinant and the trace of the matrix representation $A$ are independent of the basis used for the representation.
 	
 	Since $\mathbb{A}^\prime = \mathbb{S} \mathbb{A} \mathbb{S}^{-1}$ we have 
 	\begin{eqnarray}
@@ -370,7 +398,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		&= \det(\mathbb{S}^{-1}\mathbb{S} \mathbb{A} ) \nonumber \\
 		&= \det(\mathbb{A})
 	\end{eqnarray}
-	i.e., the determinant is independent of the representation.\\
+	i.e., the determinant is independent of the representation.
 	
 	We also have
 	\begin{equation}
@@ -386,28 +414,31 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\det \mathbb{A} &= \prod_i \lambda_i \\
 		\Tr \mathbb{A} &= \sum_i \lambda_i 
 	\end{eqnarray}
-	If an eigenvalue is $g$-fold degenerate, then that eigenvalue has to be repeated $g$ times while calculating the determinant and trace of the matrix $\mathbb{A}$.\\
+	If an eigenvalue is $g$-fold degenerate, then that eigenvalue has to be repeated $g$ times while calculating the determinant and trace of the matrix $\mathbb{A}$.
 	
 	
 	
 	\section{Infinite dimensional vector space}
-	We have shown that a linear operaor is a finite $n$-dimensional vector space has $n$ eigenvalues some of which may be repeated. If the operator is hermitian, then the eigenvalues are real and eigenvectors belonging to different eigenvalues are orthogonal and hence linearly independent.\\
+	We have shown that a linear operaor is a finite $n$-dimensional vector space has $n$ eigenvalues some of which may be repeated. If the operator is hermitian, then the eigenvalues are real and eigenvectors belonging to different eigenvalues are orthogonal and hence linearly independent.
 	
-	Further, if an eigenvalue $\lambda$ of a hermitian operator is $g$-fold degenerate, then there are $g$ linearly independent eigenvectors corresponding to $\lambda$, these degenerate eigenvectors are not necessarily orthogonal even if they are linearly independent. However, we can orthogonalize the degenerate eigenvectors using the Schmidt orthonormalization procedure (see section (\ref{chapter2.schmidt-orthonormalization-method})). \\
-	
-	Thus in a finite $n$-dimensional vector space, the eigenvectors of any hermitian operator form a set of orthonormal basis vectors.\\
-	
-	In an infinite dimensional vector space, the number of eigenvalues and eigenvectors of a hermitian operators are infinitely many. However, it is possible that the eigenvectors of some hermitian operators do not form a complete set in an infinite dimensional vector space.\\
+	Further, if an eigenvalue $\lambda$ of a hermitian operator is $g$-fold degenerate, then there are $g$ linearly independent eigenvectors corresponding to $\lambda$, these degenerate eigenvectors are not necessarily orthogonal even if they are linearly independent. However, we can orthogonalize the degenerate eigenvectors using the Schmidt orthonormalization procedure (see section (\ref{chapter2.schmidt-orthonormalization-method})). 
 	
 	
-	Hermitian operators are of vital importance in quantum mechanics because to every observable (e.g., position, linear momentum, angular momentum, spin etc.) we \textit{associate} a corresponding hermitian operator. Of course, there are hermitian operators which are not associated with any observable.\\
+	Thus in a finite $n$-dimensional vector space, the eigenvectors of any hermitian operator form a set of orthonormal basis vectors.
 	
-	The eigenvectors of a hermitian operator representing a physical observable form a complete set even in an infinite-dimensional Hilbert space. The eigenvectors of a hermitian operator not associated with any observale may not form a complete basis set in an infinite dimensional space.\\
+	
+	In an infinite dimensional vector space, the number of eigenvalues and eigenvectors of a hermitian operators are infinitely many. However, it is possible that the eigenvectors of some hermitian operators do not form a complete set in an infinite dimensional vector space.
+
+	
+	Hermitian operators are of vital importance in quantum mechanics because to every observable (e.g., position, linear momentum, angular momentum, spin etc.) we \textit{associate} a corresponding hermitian operator. Of course, there are hermitian operators which are not associated with any observable.
+	
+	
+	The eigenvectors of a hermitian operator representing a physical observable form a complete set even in an infinite-dimensional Hilbert space. The eigenvectors of a hermitian operator not associated with any observale may not form a complete basis set in an infinite dimensional space.
 	
 	
 	
 	\section{Completeness condition for the eigenvectors of a Hermitian Operator}
-	Let us assume that the eigenvalue spectrum of a hermitian operator $\hat{A}$ form a discrete set. In other words, the eigenvalues $a_i,\quad i=1,2,\ldots$ of the operator are discrete real numbers.\\
+	Let us assume that the eigenvalue spectrum of a hermitian operator $\hat{A}$ form a discrete set. In other words, the eigenvalues $a_i,\quad i=1,2,\ldots$ of the operator are discrete real numbers.
 	
 	Assume, for the time being, that the eigenvalues are non-degenerate so that these is only one linearly independent eigenvectors $\ket{a_i}$ corresponding to each eigenvalue $a_i$. The eigenvectors $\{\ket{a_i}, i=1,2,\ldots\}$ form a complete orthogonal set of basis vectors. Therefore, an arbitrary vector $\ket{\psi}$ of the vector space can be expanded as a linear combination of the vector in the basis set, i.e.,
 	\begin{equation}
@@ -427,7 +458,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\hat{P}_i = \ket{a_i}\bra{a_i}
 		\label{chapter5.eqn2-projection}
 	\end{equation}
-	is the projection along $\ket{a_i}$.\\
+	is the projection along $\ket{a_i}$.
 	
 	Using the basis $\{\ket{u_i}\}$, any operator $\hat{O}$ can be expressed as 
 	\begin{eqnarray}
@@ -441,7 +472,8 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\hat{A} = \sum_i a_i \ket{a_i}\bra{a_i} = \sum_i a_i \hat{P}_i
 		\label{chapter5.eqn4-diagonalized-operator-projection}
 	\end{equation}
-	Any other oberator $\hat{B}$ will in general not be diagonal in the eigenbasis of $\hat{A}$ unless the eigenvectors of $\hat{B}$ and $\hat{A}$ coincide. Later, we will see that two operators $\hat{A}$ and $\hat{B}$ have simultaneous eigenvectors if they commute, i.e., if $[\hat{A},\hat{B}]=0$.\\
+	Any other oberator $\hat{B}$ will in general not be diagonal in the eigenbasis of $\hat{A}$ unless the eigenvectors of $\hat{B}$ and $\hat{A}$ coincide. Later, we will see that two operators $\hat{A}$ and $\hat{B}$ have simultaneous eigenvectors if they commute, i.e., if $[\hat{A},\hat{B}]=0$.
+	
 	
 	Now, we will generalize the notation to include degeneracy, suppose the eigenvalue $a_i$ is a $g_i$ fold degenerate. Then the eigenvectors belonging to the eigenvalue $a_i$ is written as $\ket{a_i, s^{(i)}}$ where $s^{(i)}$ can take values $1,2,\ldots, g_i$. The set of vectors $\{\ket{a_i, s^{(i)}}, \quad s^{(i)}=1,2,\ldots,g_i;\quad i=1,2,\ldots\}$ Form a complete orthogonal set. The completeness condition is
 	\begin{equation}
@@ -482,14 +514,15 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 			\int da \quad \ket{a}\bra{a} = \hat{\mathbb{1}}
 			\label{chapter5.eqn10-completenss-continuous}
 		\end{equation}
-		Where the integral extends over the entire domain in which $a$ varies. Usually this domain is $-\infty$ to $\infty$.\\
+		Where the integral extends over the entire domain in which $a$ varies. Usually this domain is $-\infty$ to $\infty$.
 		
 		Two eigenkets $\ket{a}$ and $\ket{a^\prime}$ with $a\neq a^\prime$ are orthogonal because $A$ is  hermitian operator, i.e.,
 		\begin{equation}
 			\braket{a}{a^\prime} = 0 ; \quad  a \neq a^\prime
 			\label{chapter5.eqn11-orthogonal-continuous}
 		\end{equation}
-		What will the scalar product be if $a=a^\prime$ ? Can we take $\braket{a}{a} = 1$ as in the discrete case where we normalized the eigenkets as $\braket{a_i}{a_i} = 1$?\\
+		What will the scalar product be if $a=a^\prime$ ? Can we take $\braket{a}{a} = 1$ as in the discrete case where we normalized the eigenkets as $\braket{a_i}{a_i} = 1$?
+		
 		
 		The answer is \textbf{no}, i.e., in the case where the eigenvalues $a$ vary continuously, the kets $\ket{a}$ cannot be normalized to unity. To see this, expand an arbitrary ket $\ket{f}$ in the eigenbasis $\{\ket{a}\}$ of the operator $\hat{A}$. We have
 		\begin{equation}
@@ -516,9 +549,13 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\begin{equation}
 			\braket{a}{a} = \delta(0) = \infty
 		\end{equation}
-		In other words, the eigenkets $\{\ket{a}\}$ are not normalizable to unity since $\braket{a}{a}$ is not finite. Therefore, the eigenkets $\braket{a}{a}$ do not belong to the Hilbert space. However, we can include such eigenkets in the vector space, and the augmented vector space is called the \underline{physical Hilbert space}.\\
+		In other words, the eigenkets $\{\ket{a}\}$ are not normalizable to unity since $\braket{a}{a}$ is not finite. Therefore, the eigenkets $\braket{a}{a}$ do not belong to the Hilbert space. However, we can include such eigenkets in the vector space, and the augmented vector space is called the \underline{physical Hilbert space}.
 		
-		The kets $\{\ket{a}\}$  are not physically realizable in the sense that no physical state of a system can have a state vector $\ket{\psi}$ which is one of the eigenkets $\ket{a}$. However, the set of eigenkets $\{\ket{a}\}$ can form a basis set because arbitrary ket $\ket{\psi}$ of finite norm can always be expanded in terms of $\{\ket{a}\}$.\\
+		
+		
+		The kets $\{\ket{a}\}$  are not physically realizable in the sense that no physical state of a system can have a state vector $\ket{\psi}$ which is one of the eigenkets $\ket{a}$. However, the set of eigenkets $\{\ket{a}\}$ can form a basis set because arbitrary ket $\ket{\psi}$ of finite norm can always be expanded in terms of $\{\ket{a}\}$.
+		
+		
 		
 		As a matter of terminology, we say that the eigenkets belonging to continuously varying eigenvalues of a hermitian operator are "normalizable" to a delta function, i.e. $\braket{a}{a^\prime} = \delta(a-a^\prime)$, even though the kets $\ket{a}$ are not normalizable in the strict mathematical sense, since
 		\begin{equation}
@@ -559,9 +596,10 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 			1 & 1 \\ 0 & 1
 			\end{matrix}\right]
 		\end{equation}
-		can this matrix be diagonalized?\\
+		can this matrix be diagonalized?
 		
-		\textbf{Ans.}\\
+		
+		\textbf{Ans.}\newline
 		The eigenvalue eqation is
 		\begin{equation}
 		\left[
@@ -586,9 +624,11 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 			\end{matrix}\right| &=0 \nonumber \\
 			\left(1-\lambda\right)^2 &= 0 \nonumber
 		\end{eqnarray}
-		i.e., $\lambda = 1,1$ (2 fold degeneracy)\\
+		i.e., $\lambda = 1,1$ (2 fold degeneracy)
 		
-		\underline{Eigenvector}\\
+		\underline{Eigenvector}
+		
+		
 		With $\lambda=1$ the eigenvalue equation is
 		\begin{eqnarray}
 			\left[\begin{matrix}
@@ -639,7 +679,8 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\right]
 	\end{equation}
 	\textbf{Ans.}\\
-	 First note that $A^\dagger=A$, i.e., the matrix is hermitian. Hence the eigenvalues would be real and the eigenvectors belonging to distinct eigenvalues would be orthogonal. \\
+	 First note that $A^\dagger=A$, i.e., the matrix is hermitian. Hence the eigenvalues would be real and the eigenvectors belonging to distinct eigenvalues would be orthogonal. 
+	 
 	 The eigenvalue equation is
 	 \begin{eqnarray}
 		 \left[\begin{matrix}
@@ -673,7 +714,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		 \lambda = 2,4
 	 \end{eqnarray}
 	None of the roots are degenerate.\\
-	\underline{Eigenvector for $\lambda=2$}\\
+	\underline{Eigenvector for $\lambda=2$}
 	\begin{eqnarray}
 		\left[\begin{matrix}
 		3-2 & \iu \\ -\iu & 3-2
@@ -721,7 +762,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		x_2 = e^{\iu \phi} \frac{1}{\sqrt{2}} \\
 	\end{equation}
 
-	In all cases $\left|x_2\right| = \frac{1}{\sqrt{2}}$\\
+	In all cases $\left|x_2\right| = \frac{1}{\sqrt{2}}$
 	
 	Normalized eigenvector $\ket{2}$ is
 	\begin{equation}
@@ -730,8 +771,7 @@ We now take up the eigenvalue problem of a hermitian operators. Two theorems are
 		\end{matrix}\right]
 	\end{equation}
 	
-	
-	\underline{Eigenvector for $\lambda=4$}\\
+	\paragraph{Eigenvector for $\lambda=4$}
 	\begin{eqnarray}
 	\left[\begin{matrix}
 	3-4 & \iu \\ -\iu & 3-4

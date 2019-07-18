@@ -54,7 +54,7 @@ We shall now prove that $\expval{H}$ is an upperbound to the ground state energy
 		&= E_0 \quad \text{since } \sum_{i} \abs{a_i}^2=1 \  (\text{equation} \ref{chapter21.eqn5-principle})\\
 		Thus, \ \expval{H} &\geq E_0
 	\end{align*}
-	The equality sign holds if $\ket{\psi}$ is exactly equal to the ground state vector $\ket{\phi}$, in which case $a_0=1$ and all other $a_i$'s are zero. Thus we have shown that the expectation value of $H$ in any state $\ket{\psi}$ gives an upper bound to the ground state energy. This result is the basis of the variational method for finding the ground state energy and the wavefunction.\\
+	The equality sign holds if $\ket{\psi}$ is exactly equal to the ground state vector $\ket{\phi}$, in which case $a_0=1$ and all other $a_i$'s are zero. Thus we have shown that the expectation value of $H$ in any state $\ket{\psi}$ gives an upper bound to the ground state energy. This result is the basis of the variational method for finding the ground state energy and the wavefunction.
 	
 	The inequality $E_0 \leq \expval{H}$ shows that if we choose a number of trial wavefunctions $\psi_1, \psi_2, \ldots$ and calculate the corresponding expectation values $\expval{H}_i$, then each of the expectation values is greater that $E_0$. Therefore, the lowest expectation value is closest to $E_0$. In this variational method we  proceed as follows:
 	\begin{enumerate}
@@ -152,7 +152,7 @@ We shall now prove that $\expval{H}$ is an upperbound to the ground state energy
 	&= \qty(\frac{\alpha}{\pi})^{1/2} \frac{1}{2} m \omega_0^2 \frac{1}{2 \alpha} \qty(\frac{\pi}{\alpha})^{1/2} \\
 	&= \frac{m \omega_0^2}{4 \alpha}
 	\end{align*}
-	Using the gamma integrals (appendix (\ref{appendix1.Integrals})).\\
+	Using the gamma integrals (appendix (\ref{appendix1.Integrals})).
 	
 	Next, we will calculate $\expval{T}_\alpha$. Integrating by parts we get
 	\begin{align*}
@@ -195,7 +195,7 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 	\subsubsection{First excited state}
 	%% page 9
 	
-	The trial wavefunction has to be chosen such that it is orthogonal to the ground state wavefunction. Since the ground state wavefunction is even, the trial wave function mus be chosen as an \textbf{odd} function of $x$. In that case, the trial wavefunction will be orthogonal to the ground state wavefunction.\\
+	The trial wavefunction has to be chosen such that it is orthogonal to the ground state wavefunction. Since the ground state wavefunction is even, the trial wave function mus be chosen as an \textbf{odd} function of $x$. In that case, the trial wavefunction will be orthogonal to the ground state wavefunction.
 	
 	Let the trial wavefunction be
 	\begin{align}
@@ -283,7 +283,7 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 		or, \ 4\pi \abs{A}^2 \frac{2 !}{\qty(2\beta)^3} &= 1 \\
 		or, \ \abs{A}^2 = \frac{\beta^3}{\pi}
 	\end{align*}
-	We have used the solid angle $\dd{\Omega} = \sin\theta \dd{\theta} \dd{\phi}$.\\
+	We have used the solid angle $\dd{\Omega} = \sin\theta \dd{\theta} \dd{\phi}$.
 	
 	Choosing $A$ to be real and positive we have
 	\begin{equation}
@@ -392,9 +392,10 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 	\caption{Helium Atom}
 \end{figure}
 	The Hamiltonian is
-	\begin{align}
+	\begin{equation}
 		H = - \frac{\hbar^2}{2 m} \qty(\nabla_1^2 + \nabla_2^2) - \frac{2 e^2}{4 \pi \epsilon_0} \qty(\frac{1}{r_1} + \frac{1}{r_2})  +  \frac{e^2}{4 \pi \epsilon_0 r_{1 2}}
-	\end{align}
+		\label{chapter21.eqn1-example-helium}
+	\end{equation}
 	Next, we have to choose an approximate trial wave function. We note that, for a helimum ion, the exact ground state wave function is
 	\begin{align}
 		\psi_{1 0 0}\qty(\vec{r}) = \sqrt{\frac{Z^3}{\pi a_0^3}} e^{-Z r / a_0} \quad (Z=2)
@@ -456,7 +457,7 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 		\label{chapter21.eqn3-example-helium}
 	\end{align}
 	
-	\underline{Expectation value of $\frac{e^2}{4\pi \epsilon_0 r_{1 2}}$}\\
+	\underline{Expectation value of $\frac{e^2}{4\pi \epsilon_0 r_{1 2}}$}
 	\begin{align}
 		\expval{\frac{e^2}{4\pi \epsilon_0 r_{1 2}}} &= \frac{e^2}{4\pi \epsilon_0} \expval{\frac{1}{r_{1 2}}} \\
 		&= \frac{e^2}{4\pi \epsilon_0} \int \psi^*\qty(\vec{r_1}, \vec{r_2}) \frac{1}{r_{1 2}} \psi\qty(\vec{r_1}, \vec{r_2}) \dd[3]{r_1} \dd[3]{r_2} \\
@@ -476,13 +477,13 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 	\end{align*}
 
 	Hence
-	\begin{align*}
-		\expval{\frac{e^2}{4\pi \epsilon_0 r_{1 2}}} &= \frac{e^2}{4\pi \epsilon_0}  \frac{Z^6}{\pi^2 a_0^6} \frac{2 Z}{a_0} \qty(\frac{a_0}{2 Z})^6  \int \frac{e^{-\qty(\rho_1 + \rho_2)}}{\rho_{12}} \d[3]{\rho_1} \d[3]{\rho_2} \\
-		&= \frac{e^2}{4\pi \epsilon_0} \frac{Z}{32 \pi^2 a_0} \int \frac{e^{-\qty(\rho_1 + \rho_2)}}{\rho_{12}} \d[3]{\rho_1} \d[3]{\rho_2} \\
-		&= \frac{e^2}{4\pi \epsilon_0} \frac{Z}{32 \pi^2 a_0} \cdot 20 \pi^2 \\
+	\begin{align}
+		\expval{\frac{e^2}{4\pi \epsilon_0 r_{1 2}}} &= \frac{e^2}{4\pi \epsilon_0}  \frac{Z^6}{\pi^2 a_0^6} \frac{2 Z}{a_0} \qty(\frac{a_0}{2 Z})^6  \int \frac{e^{-\qty(\rho_1 + \rho_2)}}{\rho_{12}} \dd[3]{\rho_1} \dd[3]{\rho_2} \nonumber\\
+		&= \frac{e^2}{4\pi \epsilon_0} \frac{Z}{32 \pi^2 a_0} \int \frac{e^{-\qty(\rho_1 + \rho_2)}}{\rho_{12}} \dd[3]{\rho_1} \dd[3]{\rho_2} \nonumber\\
+		&= \frac{e^2}{4\pi \epsilon_0} \frac{Z}{32 \pi^2 a_0} \cdot 20 \pi^2 \nonumber\\
 		&= \frac{e^2}{4\pi \epsilon_0} \frac{5 Z}{8 a_0} 
 		\label{chapter21.eqn4-example-helium}
-	\end{align*}
+	\end{align}
 	
 	Substituting equations (\ref{chapter21.eqn2-example-helium}, \ref{chapter21.eqn3-example-helium},\ref{chapter21.eqn4-example-helium}) in equation (\ref{chapter21.eqn1-example-helium}) we get
 	\begin{align*}
@@ -616,16 +617,17 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 	
 	Substituting equation (\ref{chapter21.eqn4-appendix}) in equation (\ref{chapter21.eqn3-appendix}). We get
 	
-	\begin{align*}
-		J &= \qty(2 \pi) \int_{0}^{\infty} e^{-r_2} r_2^2 \dd{r_2} \begin{cases}
+	\begin{align}
+		J &= \qty(2 \pi) \int_{0}^{\infty} e^{-r_2} r_2^2 \dd{r_2} 
+		\begin{cases}
 			\frac{2}{r_1} \ \text{if} \ r_2 < r_1 \\
 			\frac{2}{r_2} \ \text{if} \ r_2 > r_1
-		\end{cases}\\
+		\end{cases}\nonumber\\
 		&= 4\pi \left[
 		\frac{1}{r_1} \int_{0}^{r_1} e^{-r_2} r_2^2 \dd{r_2} + \int_{r_1}^{\infty} e^{-r_2} r_2 \dd{r_2}
 		\right]
 		\label{chapter21.eqn5-appendix}
-	\end{align*}
+	\end{align}
 	Using the standard integrals from appendix (\ref{appendix1.Integrals}), equation (\ref{chapter21.eqn5-appendix}) becomes
 	\begin{align*}
 		J &= 4 \pi \left[

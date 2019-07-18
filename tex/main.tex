@@ -45,7 +45,7 @@
 \usepackage{calrsfs}
 \usepackage{calligra} % Math Caligraphy
 
-\usepackage{exsheets}
+%\usepackage{exsheets} % gives error
 \usepackage{answers}
 \usepackage{probsoln}
 \usepackage{enumitem}
@@ -56,6 +56,8 @@
 
 \usepackage[toc,page]{appendix} %% for appendix facilities
 \usepackage{makeidx} %% for indexing at the end of the document
+\usepackage{siunitx} %% SI units
+\usepackage[pdfencoding=auto]{hyperref}
 
 % Bibliography
 %\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
@@ -98,9 +100,9 @@
 
 %\noindent %\textsc{github.com/LaurethTeX/Clustering}\\ % URL
 
-{\noindent This notes are compiled under supervision of Dr. Khorshed Kabir}\\ % License information
+{\noindent This notes are compiled under supervision of Dr. Khorshed Kabir} % License information
 
-{\noindent \textsc{University of Dhaka}}\\
+{\noindent \textsc{University of Dhaka}}
 
 {\noindent \textit{First release, %August
 	 2019}} % Printing/edition date
@@ -112,10 +114,10 @@
 \newpage
 
 
-Thanks to the following individuals \\
+Thanks to the following individuals 
 %\vfill
 {\centering
-Muhammad Shahnoor Rahman, Department of Physics, University of Dhaka.\\}
+Muhammad Shahnoor Rahman, Department of Physics, University of Dhaka.}
 
 
 
@@ -183,3 +185,4 @@ Muhammad Shahnoor Rahman, Department of Physics, University of Dhaka.\\}
 
 \clearpage\printindex
 \end{document}
+

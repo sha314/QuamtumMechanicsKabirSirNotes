@@ -1,4 +1,5 @@
-
+% text by shahnoor
+% mail : shahnoor3pl@gmail.com
 %\chapter{sheet-2 : Linear Vector Space}
 References
 \begin{enumerate}
@@ -272,12 +273,16 @@ and anti-linear with respect to the pre factors, i.e.,
 		&= \psi_a^T \psi_b \\
 		&- \sum_{i=1}^{3} a_i b_i
 	\end{eqnarray}
-	This scalar product also has all the postulated properties of a scalar product.\\
+	This scalar product also has all the postulated properties of a scalar product.
 	
-	In case of the vector space $\mathbb{R}^3$, the vectors $\psi_a$ and $\psi_b$ could be represented as directed lines $\vec{a}$ and $\vec{b}$ in a three dimensional coordinate system.\\
 	
-	\textbf{figure}
-	\\
+	In case of the vector space $\mathbb{R}^3$, the vectors $\psi_a$ and $\psi_b$ could be represented as directed lines $\vec{a}$ and $\vec{b}$ in a three dimensional coordinate system.
+	
+	
+	\begin{figure}
+		\caption{Figure}
+	\end{figure}
+	
 	The Scalar product $(\psi_a, \psi_b)$ is the usual dot product
 	\begin{eqnarray}\label{eqn:2.47-2.48}
 		\vec{a} . \vec{b} &= a_1 b_1 + a_2 b_2 + a_3 b_3 \\
@@ -345,7 +350,8 @@ The best inequality is obtained if $\lambda$ is chosen so as to minimize the lef
 \begin{equation}\label{eqn:2.61}
 \lambda = - \frac{(\psi_b, \psi_a)}{\psi_b, \psi_b}
 \end{equation}
-Substituting this value of $\lambda$ in the above equation yields the Schwarz inequality.\\
+Substituting this value of $\lambda$ in the above equation yields the Schwarz inequality.
+
 
 We note that the equality sign holds if and only if $(\psi, \psi) = 0$, i.e., $\psi$ is the null vector, i.e., $\psi = \phi$, in other words
 \begin{equation}\label{eqn:2.62}
@@ -359,7 +365,9 @@ i.e.,
 Hence, the equality holds if $\psi_a$ and $\psi_b$ are multiple of each other, or if $\psi_a$ and $\psi_b$ are "parallel".\\
 It follows from the Schwarz inequality that the scalar product $(\psi_a, \psi_b)$ is finite if the norms of $\psi_a$ and $\psi_b$ are finite.
 
-\section{Analogy of Schwarz inequlity with vectors in a three-dimensional Euclidean space $\mathbb{R}^3$}
+
+
+\section{Analogy of Schwarz inequlity with vectors in a three-dimensional Euclidean space \texorpdfstring{$\mathbb{R}^3$}{Lg}}
 In $\mathbb{R}^3$, the vectors can be represented by directed lines (i.e. arrows). We have the scalar product ordinary vectors in the form
 \begin{equation}\label{eqn:2.65}
 \vec{A} . \vec{B} = |\vec{A}| \ |\vec{B}| \cos(\theta)
@@ -494,13 +502,16 @@ f_k(x) = \begin{cases}
 0 \ \text{ for } \ -1 \leq x \leq - \frac{1}{k}
 \end{cases}
 \end{equation}
-$k = 1, 2, 3, \ldots$\\
+$k = 1, 2, 3, \ldots$
+
 The graph of the sequence of functions is shown below:
-\\	
-% figure
-\textbf{figure}
-\\
-Note that,  in this example each $f_k(x)$ is continuous, but their first derivatives are discontinuous.\\
+
+\begin{figure}
+	\caption{Figure}
+\end{figure}
+
+
+Note that,  in this example each $f_k(x)$ is continuous, but their first derivatives are discontinuous.
 
 Let us define the scalar product in this space as
 \begin{equation}\label{eqn:2.92}
@@ -613,10 +624,10 @@ To show this, consider the following
 Hence the linear vector space consisting of all square integrable functions is indeed a Hilbert space.
 
 \section{Dirac notation}
-(Cohen-Tannoudji; page 109) \\
-"ket" vectors and "bra" vectors.\\
+(Cohen-Tannoudji; page 109)
+"ket" vectors and "bra" vectors.
 
-\textbf{Notation} \\
+\textbf{Notation}\newline
 Any element, or vector of a vector space $V$ is called a \underline{ket vector}, or more simply, a \underline{ket}. It is represented by the symbol $\ket{}$, inside which is placed a distinctive sign which enables us to distinguish between different kets, for example $\ket{\psi}$.
 \subsection{Scalar product}
 With each pair of kets $\ket{\phi}$ and $\ket{\psi}$, taken in this order, we associate a complex number, which is their scalar product $(\ket{\phi}, \ket{\psi})$ and which satisfies various properties discussed earlier (section \ref{inner_product}).
@@ -630,10 +641,10 @@ and
 \begin{equation}
 \chi (\lambda_1 \ket{\psi} + \lambda_2 \ket{\psi_2}) = \lambda_1 \chi \ket{\psi_1} + \lambda_2 \chi \ket{\psi_2}
 \end{equation}
-The set of all linear functions defined in the kets of a cector space $V$ themselves form a linear vector space called the dual space of $V$ and symbolized by $V^*$.
+The set of all linear functions defined in the kets of a vector space $V$ themselves form a linear vector space called the dual space of $V$ and symbolized by $V^*$.
 
-\subsection{Bra notation for the vectors of $V^*$}
-Any element, or vector, of the space $V^*$ is called a "bra vector", or more simply, a bra. It is symbolized by $\bra{}$. For example, the bra $\bra{\chi}$ designates the inear functional $\chi$ we shall henceforth use the notation $\braket{\chi}{\psi}$ to denote the number obtained by causing the linear funcitonal $\bra{\chi} \in V^*$ to act on the ket $\ket{\psi} \in V$. Thus
+\subsection{Bra notation for the vectors of \texorpdfstring{$V^*$}{PDFstring}}
+Any element, or vector, of the space $V^*$ is called a "bra vector", or more simply, a bra. It is symbolized by $\bra{}$. For example, the bra $\bra{\chi}$ designates the inear functional $\chi$ we shall henceforth use the notation $\braket{\chi}{\psi}$ to denote the number obtained by causing the linear functional $\bra{\chi} \in V^*$ to act on the ket $\ket{\psi} \in V$. Thus
 \begin{equation}
 \chi (\ket{\psi}) = \braket{\chi}{\psi}
 \end{equation}

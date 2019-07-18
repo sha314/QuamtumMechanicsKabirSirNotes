@@ -1,29 +1,29 @@
 
 
-\begin{titlepage}
-\begin{center}
-        
-\vspace*{5cm}
-        
-\Huge
-\textbf{DIRAC DELTA FUNCTION \\ FOR \\ STUDENTS IN A HURRY}
+%\begin{titlepage}
+%\begin{center}
+%        
+%\vspace*{5cm}
+%        
+%\Huge
+%\textbf{DIRAC DELTA FUNCTION \\ FOR \\ STUDENTS IN A HURRY}
+%
+%\vspace*{1cm}
+%
+%\large
+%\textbf{\textit{by}}
+%
+%\vspace*{1cm}
+%\Large
+%\textbf{Prof. Dr. Khorshed Ahmed Kabir}
+%
+%\end{center}
+%
+%\end{titlepage}
 
-\vspace*{1cm}
-
-\large
-\textbf{\textit{by}}
-
-\vspace*{1cm}
-\Large
-\textbf{Prof. Dr. Khorshed Ahmed Kabir}
-
-\end{center}
-
-\end{titlepage}
 
 
-
-\section*{Dirac Delta Function}
+\section{Dirac Delta Function}
 Consider the function $D_\epsilon (x)$ given by 
 \begin{align*}
 D_\epsilon (x) & = \frac{1}{\epsilon} \ \ ;\ for -\frac{\epsilon}{2} \leq x \leq \frac{\epsilon}{2} \\
@@ -31,7 +31,7 @@ D_\epsilon (x) & = \frac{1}{\epsilon} \ \ ;\ for -\frac{\epsilon}{2} \leq x \leq
 \end{align*}
 where $\epsilon$ is a positive parameter. The plot of the function is shown below.
 
-\vspace{0.2cm}
+%\vspace{0.2cm}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{DiracDeltaFig1.jpg}
 \end{center}
@@ -41,7 +41,7 @@ The integral of the function with respect to x is 1, i.e,
 \int_{-\infty}^\infty D_\epsilon (x) dx = 1 
 \end{equation}
 
-Now imagine making $\epsilon$ smaller. As we decrease $\epsilon$, the function gets narrower and taller, but the integral of the function i.e, the area under the graph remain constant at the value 1. In the limit $\epsilon \to 0$, the function $D_{\epsilon} (x)$ collapses to a single point $x=0$ and gets infinitely tall. So, $\lim_{\epsilon \to 0} D_\epsilon (x)$ is not a function at all and the procedure of taking the limit $\epsilon \to 0$ is not justified.\\
+Now imagine making $\epsilon$ smaller. As we decrease $\epsilon$, the function gets narrower and taller, but the integral of the function i.e, the area under the graph remain constant at the value 1. In the limit $\epsilon \to 0$, the function $D_{\epsilon} (x)$ collapses to a single point $x=0$ and gets infinitely tall. So, $\lim_{\epsilon \to 0} D_\epsilon (x)$ is not a function at all and the procedure of taking the limit $\epsilon \to 0$ is not justified.
 
 However, we can make the limiting procedure meaningful if multiply $D_\epsilon (x)$ by some well defined function $f(x)$, integrate over x and then take the limit $\epsilon \to 0$. Consider, the integral $$\int_{-\infty}^\infty D_\epsilon (x) f(x) dx $$ where $f(x)$ is a well defined function. If $\epsilon$ is significantly small, the variation of $f(x)$ over the effective integration interval $[-\frac{\epsilon}{2},\frac{\epsilon}{2}]$ is negligible and $f(x)$ remain practically equal to f(0). Therefore,
 \begin{equation}
@@ -59,7 +59,8 @@ This equation is valid for any function defined at the origin. More generally, $
 \begin{equation}
 \int_{-\infty}^\infty \delta (x-x_0) f(x) dx = f(x_0)
 \end{equation}
-Actually, the integral notation $\int_{-\infty}^\infty \delta (x) f(x) dx $ is not justified because $\delta(x)$ is not really a function. Physically, there is no problem since it becomes impossible to distinguish between $D_\epsilon (x)$ and $\delta (x)$ as soon as $\epsilon$ becomes negligible compared to all the distances involved in a physical problem. Whenever a mathematical difficulty arise, all we need to do is to assume that $\delta (x)$ is actually $D_\epsilon (x)$ with $\epsilon$ extemely small but not strictly zero.\\
+Actually, the integral notation $\int_{-\infty}^\infty \delta (x) f(x) dx $ is not justified because $\delta(x)$ is not really a function. Physically, there is no problem since it becomes impossible to distinguish between $D_\epsilon (x)$ and $\delta (x)$ as soon as $\epsilon$ becomes negligible compared to all the distances involved in a physical problem. Whenever a mathematical difficulty arise, all we need to do is to assume that $\delta (x)$ is actually $D_\epsilon (x)$ with $\epsilon$ extemely small but not strictly zero.
+
 
 Formally, we can express $\delta(x)$ as a sequence of proper functions $$\lim_{\epsilon \to 0} D_\epsilon (x) \equiv \delta(x) $$ Here, $D_\epsilon (x)$, which is a proper function of x is called the representation of the delta function. One representation is the 'Square Function' given at the beginning. The representation is not unique. There are other functions which approach the delta function when appropriate limits are taken.
 
@@ -79,7 +80,8 @@ When plotted against x, the function has a peak at the origin. The peak has a he
 \begin{equation}
 \delta (x) = \lim_{\epsilon \to 0} \frac{1}{\epsilon \sqrt{\pi}} e^{-x^2/\epsilon^2}
 \end{equation}
-\\\\
+
+
 Note: $$\int_{-\infty}^{\infty} e^{-x^2}dx = \sqrt{\pi}$$
 Let, 
 \begin{align*}
