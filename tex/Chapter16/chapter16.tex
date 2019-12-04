@@ -283,39 +283,34 @@ Similarly, since $j^{\prime}$ is the minimum value of $m$,
 \label{eq:jp}
 \ee
 As the next step we apply $\hat{J}_{-}$ on Eq. (\ref{eq:j}) to get
-\[ \hat{J}_{-}\hat{J}_{+} |\lambda j\rangle = 0 \, , \]
-i.e.,
-\[ \left( \hat{J}^2-\hat{J}_z^2 - \hbar\hat{J}_z\right)|\lambda j\rangle = 0 \, , \]
-or
-\be
-(\lambda-j^2-j)\hbar^2 |\lambda j\rangle = 0 \, .
-\ee
-Hence
-\[ \lambda - j^2-j =0\, , \]
-i.e.,
-\be
-\lambda = j(j+1) \, .
-\label{eq:lambda1}
-\ee
+
+\begin{align}
+	\hat{J}_{-}\hat{J}_{+} |\lambda j\rangle &= 0   \nonumber\\
+	\qq{i.e.,} \left( \hat{J}^2-\hat{J}_z^2 - \hbar\hat{J}_z\right)|\lambda j\rangle &= 0  \nonumber\\
+	\qq{i.e.,}	(\lambda-j^2-j)\hbar^2 |\lambda j\rangle &= 0 \, . \\
+	\qq{Hence,} \lambda - j^2-j &= 0 \nonumber\\
+	\qq{i.e.,} \lambda &= j(j+1) \, .
+	\label{eq:lambda1}
+\end{align}
+
 
 \paragraph{}
 Similarly, by applying $\hat{J}_{+}$ on Eq. (\ref{eq:jp}), we obtain
-\[ \hat{J}_{+}\hat{J}_{-} |\lambda j^{\prime}\rangle = 0 \, , \]
-i.e.,
-\[ \left( \hat{J}^2-\hat{J}_z^2 + \hbar\hat{J}_z\right)|\lambda j^{\prime}\rangle = 0 \, , \]
-or
-\be
-(\lambda-j^{\prime 2}+j^{\prime})\hbar^2 |\lambda j^{\prime}\rangle = 0 \, .
-\ee
-Hence
-\[ \lambda - j^{\prime 2}+j^{\prime} =0\, , \]
-i.e.,
-\be
-\lambda = j^{\prime}(j^{\prime}-1) \, .
+\begin{align}
+ \hat{J}_{+}\hat{J}_{-} |\lambda j^{\prime}\rangle &= 0 \, , \nonumber\\
+\qq{i.e.,}  \left( \hat{J}^2-\hat{J}_z^2 + \hbar\hat{J}_z\right)|\lambda j^{\prime}\rangle &= 0 \, , \nonumber\\
+\qq{i.e.,} (\lambda-j^{\prime 2}+j^{\prime})\hbar^2 |\lambda j^{\prime}\rangle &= 0 \, . \\
+\qq{Hence,}\lambda - j^{\prime 2}+j^{\prime} &= 0\, , \nonumber\\
+\qq{i.e.,} \lambda &= j^{\prime}(j^{\prime}-1) \, .
 \label{eq:lambda2}
-\ee
+\end{align}
+
+
 Comparing Eqs. (\ref{eq:lambda1}) and (\ref{eq:lambda2}) we can write
-\[ j(j+1) = j^{\prime}(j^{\prime}-1) \, . \]
+\begin{equation*}
+j(j+1) = j^{\prime}(j^{\prime}-1) \, . 
+\end{equation*}
+
 Thus, either $j^{\prime}=-j$ or $j^{\prime}=j+1$. The second solution is meaningless since $j$ is the greatest value of $m$.
 Hence, the only possibility is that
 \be
@@ -398,31 +393,36 @@ and
 since
 \[ \hat{J}_+^{\dagger} =\hat{J}_- \quad {\rm and} \quad \hat{J}_-^{\dagger} =\hat{J}_+\, . \]
 Now, combining Eqs. (\ref{eq:plus}) and (\ref{eq:plusadjoint}) we have
-\[ \langle j\, m|\hat{J}_- \hat{J}_+ |j\, m\rangle = |c_+|^2 \langle j\, m+1|j\, m+1\rangle \, , \]
-or,
-\[ \langle j\, m|\hat{J}^2 - \hat{J}_z^2 - \hbar \hat{J}_z |j\, m\rangle = |c_+|^2 \langle j\, m+1|j\, m+1\rangle \, , \]
-or,
-\[ \hbar^2 \left( j(j+1)-m^2-m \right) \langle j\, m|j\, m \rangle = |c_+|^2 \langle j\, m+1|j\, m+1\rangle \, . \]
+
+\begin{align*}
+\mel{j m}{\hat{J}_- \hat{J}_+ }{j m} &= |c_+|^2 \braket{j,m+1}{j,m+1} \\
+\qq{or,}\mel{j m}{\hat{J}^2 - \hat{J}_z^2 - \hbar \hat{J}_z }{j m} &=  |c_+|^2 \braket{j,m+1}{j,m+1} \\
+\qq{or,}  \hbar^2 \left( j(j+1)-m^2-m \right) \braket{j m}{j m} &= |c_+|^2  \braket{j,m+1}{j,m+1}
+\end{align*}
+
 Since the states $|j\,m\rangle$ and $|j\, m+1\rangle$ are normalized, we have
-\[ \hbar^2 \left( j(j+1)-m^2-m\right) = |c_+|^2 \, . \]
+\begin{equation*}
+\hbar^2 \left( j(j+1)-m^2-m\right) = |c_+|^2 \, . 
+\end{equation*}
 If $c_+$ is taken to be real and positive, we have
-\[ c_+ = \sqrt{j(j+1)-m(m+1)}\, \hbar \]
-or,
-\be
-c_+ = \sqrt{(j-m)(j+m+1)}\, \hbar\, .
-\ee
+\begin{align}
+c_+ &= \sqrt{j(j+1)-m(m+1)}\, \hbar \nonumber\\
+\qq{or,} c_+ &= \sqrt{(j-m)(j+m+1)}\, \hbar
+\end{align}
+
 Similarly, combining eqs. (\ref{eq:minus}) and (\ref{eq:minusadjoint}) we have
-\[ \langle j\, m|\hat{J}_+ \hat{J}_-|j\, m\rangle = |c_-|^2 \langle j\, m-1|j\, m-1\rangle \, , \]
-or,
-\[ \langle j\, m|\hat{J}^2-\hat{J}_z^2 +\hbar \hat{J}_z|j\, m \rangle = |c_-|^2 \]
-or,
-\[ |c_-|^2 = \left( j(j+1)-m(m-1) \right) \hbar^2\, . \]
+\begin{align*}
+\mel{j m}{\hat{J}_+ \hat{J}_-}{j m} &= |c_-|^2 \braket{j,m-1}{j,m-1} \\
+\qq{or,}\mel{j m}{\hat{J}^2-\hat{J}_z^2 +\hbar \hat{J}_z}{j m}
+&= |c_-|^2  \\
+\qq{i.e.,}|c_-|^2 &= \left( j(j+1)-m(m-1) \right) \hbar^2
+\end{align*}
+
 Taking $c_-$ to be real and positive, we have
-\[ c_- = \sqrt{j(j+1)-m(m-1)}\,\, \hbar \, , \]
-or,
-\be
-c_-=\sqrt{(j+m)(j-m+1)}\,\, \hbar\, . 
-\ee
+\begin{align}
+c_- &= \sqrt{j(j+1)-m(m-1)}\,\, \hbar \, ,  \nonumber\\
+\qq{or,} c_- &=\sqrt{(j+m)(j-m+1)}\,\, \hbar\, . 
+\end{align}
 
 
 Summarizing, we have shown
@@ -430,6 +430,7 @@ Summarizing, we have shown
 \hat{J}_+ |j\, m\rangle &=& \sqrt{(j-m)(j+m+1)}\,\, \hbar |j\, m+1\rangle \label{eqnarray:1} \\ 
 \hat{J}_-|j\,m\rangle & = & \sqrt{(j+m)(j-m+1)}\,\, \hbar |j\, m-1\rangle \, .
 \label{eqnarray:2}
+\label{chapter16.eqn.angular-momentum-raising-lowering}
 \end{eqnarray}
 Note that
 \[ \hat{J}_+ |j\, j\rangle = 0 \]

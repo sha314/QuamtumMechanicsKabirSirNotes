@@ -217,7 +217,7 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 	\begin{align*}
 		\expval{T}_\beta 
 		&= - \frac{\hbar^2}{2 m} \int_{-\infty}^{\infty} \psi^*\qty(x) \dv[2]{}{x} \psi\qty(x) \dd{x}\\
-		&= \frac{\hbar^2}{2 m} \int_{-\infty}^{\infty} \dv{\psi^*}{x} \dv{\psi}{x} \dd{x} \ quad \text{Integrating by parts}\\
+		&= \frac{\hbar^2}{2 m} \int_{-\infty}^{\infty} \dv{\psi^*}{x} \dv{\psi}{x} \dd{x} \quad \text{Integrating by parts}\\
 		&= \frac{\hbar^2 B^2}{2 m} \int_{-\infty}^{\infty} \qty[\dv{}{x} \qty(x e^{-\beta x^2/2})]^2 \dd{x}\\
 		&= \frac{\hbar^2 B^2}{2 m} \int_{-\infty}^{\infty} \qty[e^{-\beta x^2/2} - \beta x^2 e^{-\beta x^2/2}]^2 \dd{x} \\
 		&= 	\frac{\hbar^2 B^2}{2 m} \int_{-\infty}^{\infty} \qty[1 - 2\beta x^2 + \beta^2 x^4] e^{-\beta x^2} \dd{x} \\
@@ -295,11 +295,11 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 	\end{equation}
 	Now, the Hamiltonian for the hydrogen atom is
 	\begin{align}
-		H = - \frac{\hbar^2}{2 m} \laplacian{} - \frac{3^2}{4\pi\epsilon}
+		H = - \frac{\hbar^2}{2 m} \laplacian{} - \frac{e^2}{4\pi\epsilon}\frac{1}{r}
 	\end{align}
 	Therefore
 	\begin{align}
-		\expval{H} = \expval{- \frac{\hbar^2}{2 m} \laplacian{}}  + \expval{- \frac{3^2}{4\pi\epsilon}}  = \expval{T}  + \expval{V} 
+		\expval{H} = \expval{- \frac{\hbar^2}{2 m} \laplacian{}}  + \expval{- \frac{e^2}{4\pi\epsilon}\frac{1}{r}}  = \expval{T}  + \expval{V} 
 	\end{align}
 	Consider the expectation value of kinetic energy
 	\begin{align}
@@ -320,7 +320,7 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 			\expval{T} 
 			&= -\frac{\hbar^2}{2 m} \int \psi^*\laplacian{\psi} \dd[3]{r} \\
 			&= \frac{\hbar^2}{2 m} \int \grad{\psi^*} \cdot \grad{\psi} \dd[3]{r} \\
-			&= \frac{\hbar^2}{2 m} \int \abs{\grad{\vec{\psi}}^2} \dd[3]{3}
+			&= \frac{\hbar^2}{2 m} \int \abs{\grad{\vec{\psi}}^2} \dd[3]{r}
 		\end{align*}
 		Now, $\psi$ is only a function of $r\equiv \abs{\vec{r}}$. Therefore
 		\begin{align*}
@@ -346,7 +346,7 @@ or, \	E_0 &\leq \frac{1}{2} \hbar \omega_0
 		\begin{align*}
 			\expval{V} 
 			&= - \frac{e^2}{4 \pi \epsilon_0} \qty(4\pi) \int_{0}^{\infty} \psi^2\qty(r) r \dd{r}\\
-			&= - \frac{e^2}{4 \pi \epsilon_0} \qty(4\pi) \frac{\beta^3}{\pi} int_{0}^{\infty} e^{-2\beta r} r \dd{r}\\
+			&= - \frac{e^2}{4 \pi \epsilon_0} \qty(4\pi) \frac{\beta^3}{\pi} \int_{0}^{\infty} e^{-2\beta r} r \dd{r}\\
 			&= - \frac{e^2}{4 \pi \epsilon_0} \qty(4\pi) \frac{\beta^3}{\pi} \frac{1}{4\beta^2}\\
 			&= - \frac{\beta e^2}{4 \pi \epsilon_0}
 		\end{align*}

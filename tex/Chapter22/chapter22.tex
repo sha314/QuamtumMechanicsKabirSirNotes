@@ -15,7 +15,7 @@ Consider the one dimensional Schr\"{o}dinger equation
 	\label{chapter22.eqn1}
 \end{align}
 
-For a free particle, $V\qty(x) = constant = V_0$ and the solution of equitation (\ref{chapter22.eqn1}) is of the form
+For a free particle, $V\qty(x) = constant = V_0$ and the solution of equation (\ref{chapter22.eqn1}) is of the form
 \begin{equation}
 	\psi\qty(x) = e^{\pm \iu p_0 x / \hbar}
 	\label{chapter22.eqn2}
@@ -25,7 +25,7 @@ where
 	p_0 = \sqrt{2 m \qty(E - V_0)}
 	\label{chapter22.eqn3}
 \end{equation}
-This suggests that when $V(x)$ is  slowing varying we try a solution of the form
+This suggests that when $V(x)$ is  slowing varying we try a solution of the form (Note that $s(x)$ have the dimension of $\hbar$, in other words $s(x)$ is momentum times displacement)
 
 \begin{align}
 \label{chapter22.eqn4}
@@ -53,7 +53,7 @@ equation (\ref{chapter22.eqn7-0}) can be written as
 \qty(\dv{s}{x})^2 = p^2\qty(x) + \iu \hbar \dv[2]{s}{x}
 \label{chapter22.eqn8}
 \end{equation}
-Note that for a free particle $\dv[2]{s}{x} = 0$, since $s=const \times x$. This suggests that for a slowly varying potential $\dv[2]{s}{x}$ is small. Thus we may set up a successive approximation scheme for solving equation (\ref{chapter22.eqn8}). The zeroth order, i.e., the dominant term of $s(x)$ is obtain by setting the second term on the right hand side of equation (\ref{chapter22.eqn8}) to zero, i.e., by setting $\hbar=0$. The correction to $s(x)$ is of the order of $\hbar$. Thus we write $s(x)$ as
+Note that for a free particle (constant momentum) $\dv[2]{s}{x} = 0$, since $s=const \times x$. This suggests that for a slowly varying potential $\dv[2]{s}{x}$ is small. Thus we may set up a successive approximation scheme for solving equation (\ref{chapter22.eqn8}). The zeroth order, i.e., the dominant term of $s(x)$ is obtain by setting the second term on the right hand side of equation (\ref{chapter22.eqn8}) to zero, i.e., by setting $\hbar=0$. The correction to $s(x)$ is of the order of $\hbar$. Thus we write $s(x)$ as
 
 %% page 3
 a series involving successive higher powers of $\hbar$:
@@ -67,7 +67,11 @@ The WKB approximation consists of retaining only the first two terms of equation
 \label{chapter22.eqn10}
 S_{wkb}(x) \simeq S_0(x) + \frac{\hbar}{\iu} S_1(x)
 \end{equation}
-The WKB approximation is also called semi classical approximation. If we did set $\hbar=0$, i.e., if we took $s(x) = S_0(x)$ we would have the classical limit of the quantum mechanical problem. However, we retain terms which are linear in $\hbar$, neglecting terms of higher order in $\hbar$. In this sense, the WKB approximation is semiclassical.
+The WKB approximation is also called semi classical approximation. If we did set $\hbar=0$, i.e., if we took $s(x) = S_0(x)$ we would have the classical limit of the quantum mechanical problem. However, we retain terms which are linear in $\hbar$, neglecting terms of higher order in $\hbar$. In this sense, the WKB approximation is semi-classical.
+
+
+This method is named after physicists Gregor Wentzel, Hendrik Anthony Kramers, and Léon Brillouin, who all developed it in 1926. The name is an initialism for Wentzel–Kramers–Brillouin. It is also known as the LG or Liouville–Green method.
+
 
 %% page 3
 Next, we substitute equation (\ref{chapter22.eqn9}) in equation (\ref{chapter22.eqn8}) and equate the coefficients of equal powers of $\hbar$ on both sides of the resulting equation. We obtain

@@ -282,7 +282,7 @@
 \contentsline {paragraph}{}{205}{section*.151}% 
 \contentsline {paragraph}{}{205}{section*.152}% 
 \contentsline {paragraph}{}{206}{section*.153}% 
-\contentsline {section}{\numberline {16.4}Matrix Elements of Angular Momentum Operators in the $\ket {j,m}$ Basis}{207}{section.16.4}% 
+\contentsline {section}{\numberline {16.4}Matrix Elements of Angular Momentum Operators in the $\ket {j,m}$ Basis}{206}{section.16.4}% 
 \contentsline {paragraph}{}{207}{section*.154}% 
 \contentsline {subsection}{\numberline {16.4.1}$j=1/2$ Representation}{209}{subsection.16.4.1}% 
 \contentsline {subsection}{\numberline {16.4.2}$j=1$ Representation}{210}{subsection.16.4.2}% 
@@ -351,6 +351,7 @@
 \contentsline {subsubsection}{calculation of $\mel {2 0 0}{H^\prime }{2 1 0}$}{300}{section*.192}% 
 \contentsline {subsubsection}{Eigenvalues of $H^\prime $}{302}{section*.193}% 
 \contentsline {subsubsection}{Eigenvectors of $H$ in the zeroth order}{302}{section*.195}% 
+\contentsline {section}{\numberline {20.5}Hellmann\IeC {\textendash }Feynman theorem}{304}{section.20.5}% 
 \contentsline {chapter}{\numberline {21}sheet-21 : Variational Method}{307}{chapter.21}% 
 \ttl@stoptoc {default@20}
 \ttl@starttoc {default@21}
@@ -369,92 +370,92 @@
 \ttl@stoptoc {default@21}
 \ttl@starttoc {default@22}
 \contentsline {section}{\numberline {22.1}Validity of WKB approximation}{330}{section.22.1}% 
-\contentsline {section}{\numberline {22.2}Connection Formulas}{331}{section.22.2}% 
-\contentsline {section}{\numberline {22.3}Application to bound state problems}{337}{section.22.3}% 
-\contentsline {subsection}{\numberline {22.3.1}Transmission Through a Barrier}{339}{subsection.22.3.1}% 
+\contentsline {section}{\numberline {22.2}Connection Formulas}{332}{section.22.2}% 
+\contentsline {section}{\numberline {22.3}Application to bound state problems}{338}{section.22.3}% 
+\contentsline {subsection}{\numberline {22.3.1}Transmission Through a Barrier}{340}{subsection.22.3.1}% 
 \contentsline {section}{\numberline {22.4}Examples}{342}{section.22.4}% 
-\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{349}{chapter.23}% 
+\contentsline {chapter}{\numberline {23}sheet-23 : Time Dependent Perturbation}{351}{chapter.23}% 
 \ttl@stoptoc {default@22}
 \ttl@starttoc {default@23}
-\contentsline {section}{\numberline {23.1}Perturbation Scheme for Solving Eq. (\ref {chapter23.eqn17})}{351}{section.23.1}% 
-\contentsline {section}{\numberline {23.2}Examples}{353}{section.23.2}% 
-\contentsline {subsection}{\numberline {23.2.1}Constant perturbation}{353}{subsection.23.2.1}% 
-\contentsline {subsection}{\numberline {23.2.2}Oscillating Electric Field}{356}{subsection.23.2.2}% 
-\contentsline {subsection}{\numberline {23.2.3}Harmonic Perturbation}{359}{subsection.23.2.3}% 
-\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{363}{chapter.24}% 
+\contentsline {section}{\numberline {23.1}Perturbation Scheme for Solving Eq. (\ref {chapter23.eqn17})}{353}{section.23.1}% 
+\contentsline {section}{\numberline {23.2}Examples}{355}{section.23.2}% 
+\contentsline {subsection}{\numberline {23.2.1}Constant perturbation}{355}{subsection.23.2.1}% 
+\contentsline {subsection}{\numberline {23.2.2}Oscillating Electric Field}{358}{subsection.23.2.2}% 
+\contentsline {subsection}{\numberline {23.2.3}Harmonic Perturbation}{361}{subsection.23.2.3}% 
+\contentsline {chapter}{\numberline {24}sheet-24 : Scattering Theory}{365}{chapter.24}% 
 \ttl@stoptoc {default@23}
 \ttl@starttoc {default@24}
-\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{365}{chapter.25}% 
+\contentsline {chapter}{\numberline {25}sheet-25 : Integral Equation for Scattering Theory}{367}{chapter.25}% 
 \ttl@stoptoc {default@24}
 \ttl@starttoc {default@25}
-\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{367}{chapter.26}% 
+\contentsline {chapter}{\numberline {26}sheet-26 : Identical Particles}{369}{chapter.26}% 
 \ttl@stoptoc {default@25}
 \ttl@starttoc {default@26}
-\contentsline {section}{\numberline {26.1}Indistinguishability of identical particles}{367}{section.26.1}% 
-\contentsline {paragraph}{}{367}{section*.232}% 
-\contentsline {paragraph}{}{368}{section*.233}% 
-\contentsline {subsection}{\numberline {26.1.1}The wave function of two identical particles}{368}{subsection.26.1.1}% 
-\contentsline {paragraph}{}{368}{section*.234}% 
-\contentsline {subsection}{\numberline {26.1.2}Spin Statistics Theorem}{369}{subsection.26.1.2}% 
-\contentsline {paragraph}{}{369}{section*.235}% 
-\contentsline {subsection}{\numberline {26.1.3}Statistics of Composite Particles}{369}{subsection.26.1.3}% 
-\contentsline {paragraph}{}{369}{section*.236}% 
-\contentsline {subsection}{\numberline {26.1.4}Operators for s system of identical particles}{370}{subsection.26.1.4}% 
-\contentsline {paragraph}{}{370}{section*.237}% 
-\contentsline {paragraph}{}{370}{section*.238}% 
-\contentsline {section}{\numberline {26.2}States of Noninteracting Identical Particles}{370}{section.26.2}% 
-\contentsline {paragraph}{}{371}{section*.239}% 
-\contentsline {paragraph}{}{371}{section*.240}% 
-\contentsline {subsection}{\numberline {26.2.1}Identical Fermions}{371}{subsection.26.2.1}% 
-\contentsline {paragraph}{}{372}{section*.241}% 
-\contentsline {subsection}{\numberline {26.2.2}Identical Bosons}{372}{subsection.26.2.2}% 
-\contentsline {subsubsection}{Example}{373}{section*.242}% 
-\contentsline {paragraph}{}{373}{section*.243}% 
-\contentsline {paragraph}{}{374}{section*.244}% 
-\contentsline {subsection}{\numberline {26.2.3}Exchange Forces}{374}{subsection.26.2.3}% 
-\contentsline {subsubsection}{Case 1: Distinguishable Particles.}{374}{section*.245}% 
-\contentsline {subsubsection}{Case 2: Identical Particles}{375}{section*.246}% 
-\contentsline {paragraph}{}{376}{section*.247}% 
-\contentsline {paragraph}{}{376}{section*.248}% 
-\contentsline {paragraph}{}{376}{section*.249}% 
-\contentsline {paragraph}{}{377}{section*.251}% 
-\contentsline {section}{\numberline {26.3}The Helium Atom}{377}{section.26.3}% 
-\contentsline {paragraph}{}{378}{section*.252}% 
-\contentsline {subsubsection}{Ground State}{378}{section*.253}% 
-\contentsline {paragraph}{}{379}{section*.254}% 
-\contentsline {subsubsection}{Excited State}{379}{section*.255}% 
-\contentsline {paragraph}{}{380}{section*.256}% 
-\contentsline {paragraph}{}{381}{section*.258}% 
-\contentsline {section}{\numberline {26.4}Collision Between Identical Particles}{382}{section.26.4}% 
-\contentsline {subsection}{\numberline {26.4.1}Scattering of Two Identical Spinless Bosons}{382}{subsection.26.4.1}% 
-\contentsline {paragraph}{}{383}{section*.261}% 
-\contentsline {paragraph}{}{384}{section*.262}% 
-\contentsline {paragraph}{}{385}{section*.263}% 
-\contentsline {subsection}{\numberline {26.4.2}Partial wave expansion for the scattering amplitude of two spinless bosons}{385}{subsection.26.4.2}% 
-\contentsline {section}{\numberline {26.5}Scattering of Two Identical Spin-1/2 Fermions}{386}{section.26.5}% 
-\contentsline {paragraph}{}{386}{section*.264}% 
-\contentsline {subsection}{\numberline {26.5.1}Partial Wave Expansion of the Scattering Amplitude}{388}{subsection.26.5.1}% 
-\contentsline {subsubsection}{Note:}{388}{section*.265}% 
-\contentsline {chapter}{Appendices}{389}{section*.266}% 
-\contentsline {chapter}{\numberline {A}Standard Integrals}{391}{Appendix.a.A}% 
+\contentsline {section}{\numberline {26.1}Indistinguishability of identical particles}{369}{section.26.1}% 
+\contentsline {paragraph}{}{369}{section*.232}% 
+\contentsline {paragraph}{}{370}{section*.233}% 
+\contentsline {subsection}{\numberline {26.1.1}The wave function of two identical particles}{370}{subsection.26.1.1}% 
+\contentsline {paragraph}{}{370}{section*.234}% 
+\contentsline {subsection}{\numberline {26.1.2}Spin Statistics Theorem}{371}{subsection.26.1.2}% 
+\contentsline {paragraph}{}{371}{section*.235}% 
+\contentsline {subsection}{\numberline {26.1.3}Statistics of Composite Particles}{371}{subsection.26.1.3}% 
+\contentsline {paragraph}{}{371}{section*.236}% 
+\contentsline {subsection}{\numberline {26.1.4}Operators for s system of identical particles}{372}{subsection.26.1.4}% 
+\contentsline {paragraph}{}{372}{section*.237}% 
+\contentsline {paragraph}{}{372}{section*.238}% 
+\contentsline {section}{\numberline {26.2}States of Noninteracting Identical Particles}{372}{section.26.2}% 
+\contentsline {paragraph}{}{373}{section*.239}% 
+\contentsline {paragraph}{}{373}{section*.240}% 
+\contentsline {subsection}{\numberline {26.2.1}Identical Fermions}{373}{subsection.26.2.1}% 
+\contentsline {paragraph}{}{374}{section*.241}% 
+\contentsline {subsection}{\numberline {26.2.2}Identical Bosons}{374}{subsection.26.2.2}% 
+\contentsline {subsubsection}{Example}{375}{section*.242}% 
+\contentsline {paragraph}{}{375}{section*.243}% 
+\contentsline {paragraph}{}{376}{section*.244}% 
+\contentsline {subsection}{\numberline {26.2.3}Exchange Forces}{376}{subsection.26.2.3}% 
+\contentsline {subsubsection}{Case 1: Distinguishable Particles.}{376}{section*.245}% 
+\contentsline {subsubsection}{Case 2: Identical Particles}{377}{section*.246}% 
+\contentsline {paragraph}{}{378}{section*.247}% 
+\contentsline {paragraph}{}{378}{section*.248}% 
+\contentsline {paragraph}{}{378}{section*.249}% 
+\contentsline {paragraph}{}{379}{section*.251}% 
+\contentsline {section}{\numberline {26.3}The Helium Atom}{379}{section.26.3}% 
+\contentsline {paragraph}{}{380}{section*.252}% 
+\contentsline {subsubsection}{Ground State}{380}{section*.253}% 
+\contentsline {paragraph}{}{381}{section*.254}% 
+\contentsline {subsubsection}{Excited State}{381}{section*.255}% 
+\contentsline {paragraph}{}{382}{section*.256}% 
+\contentsline {paragraph}{}{383}{section*.258}% 
+\contentsline {section}{\numberline {26.4}Collision Between Identical Particles}{384}{section.26.4}% 
+\contentsline {subsection}{\numberline {26.4.1}Scattering of Two Identical Spinless Bosons}{384}{subsection.26.4.1}% 
+\contentsline {paragraph}{}{385}{section*.261}% 
+\contentsline {paragraph}{}{386}{section*.262}% 
+\contentsline {paragraph}{}{387}{section*.263}% 
+\contentsline {subsection}{\numberline {26.4.2}Partial wave expansion for the scattering amplitude of two spinless bosons}{387}{subsection.26.4.2}% 
+\contentsline {section}{\numberline {26.5}Scattering of Two Identical Spin-1/2 Fermions}{388}{section.26.5}% 
+\contentsline {paragraph}{}{388}{section*.264}% 
+\contentsline {subsection}{\numberline {26.5.1}Partial Wave Expansion of the Scattering Amplitude}{390}{subsection.26.5.1}% 
+\contentsline {subsubsection}{Note:}{390}{section*.265}% 
+\contentsline {chapter}{Appendices}{391}{section*.266}% 
+\contentsline {chapter}{\numberline {A}Standard Integrals}{393}{Appendix.a.A}% 
 \ttl@stoptoc {default@26}
 \ttl@starttoc {default@27}
-\contentsline {section}{\numberline {A.1}List of Standard Integrals}{391}{section.a.A.1}% 
-\contentsline {section}{\numberline {A.2}Proofs}{391}{section.a.A.2}% 
-\contentsline {section}{\numberline {A.3}Gamma Beta functions}{392}{section.a.A.3}% 
-\contentsline {section}{\numberline {A.4}From Chapter 21}{393}{section.a.A.4}% 
-\contentsline {chapter}{\numberline {B}Series}{395}{Appendix.a.B}% 
+\contentsline {section}{\numberline {A.1}List of Standard Integrals}{393}{section.a.A.1}% 
+\contentsline {section}{\numberline {A.2}Proofs}{393}{section.a.A.2}% 
+\contentsline {section}{\numberline {A.3}Gamma Beta functions}{394}{section.a.A.3}% 
+\contentsline {section}{\numberline {A.4}From Chapter 21}{395}{section.a.A.4}% 
+\contentsline {chapter}{\numberline {B}Series}{397}{Appendix.a.B}% 
 \ttl@stoptoc {default@27}
 \ttl@starttoc {default@28}
-\contentsline {section}{\numberline {B.1}Binomial expansion}{395}{section.a.B.1}% 
-\contentsline {section}{\numberline {B.2}Taylor expansion}{395}{section.a.B.2}% 
-\contentsline {chapter}{\numberline {C}Gamma Beta Functions}{397}{Appendix.a.C}% 
+\contentsline {section}{\numberline {B.1}Binomial expansion}{397}{section.a.B.1}% 
+\contentsline {section}{\numberline {B.2}Taylor expansion}{397}{section.a.B.2}% 
+\contentsline {chapter}{\numberline {C}Gamma Beta Functions}{399}{Appendix.a.C}% 
 \ttl@stoptoc {default@28}
 \ttl@starttoc {default@29}
-\contentsline {section}{\numberline {C.1}Gamma Function}{397}{section.a.C.1}% 
-\contentsline {subsection}{\numberline {C.1.1}Properties of Gamma function}{397}{subsection.a.C.1.1}% 
-\contentsline {section}{\numberline {C.2}Beta Function}{397}{section.a.C.2}% 
-\contentsline {chapter}{\numberline {D}Group and Their Properties}{399}{Appendix.a.D}% 
+\contentsline {section}{\numberline {C.1}Gamma Function}{399}{section.a.C.1}% 
+\contentsline {subsection}{\numberline {C.1.1}Properties of Gamma function}{399}{subsection.a.C.1.1}% 
+\contentsline {section}{\numberline {C.2}Beta Function}{399}{section.a.C.2}% 
+\contentsline {chapter}{\numberline {D}Group and Their Properties}{401}{Appendix.a.D}% 
 \ttl@stoptoc {default@29}
 \ttl@starttoc {default@30}
 \contentsfinish 

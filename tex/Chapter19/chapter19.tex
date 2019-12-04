@@ -115,7 +115,7 @@ in the ket space of $j_1$ and $j_2$. The coefficients $\braket{j_1 j_2 m_1 m_2}{
 
 We are now ready to find the possible values of $j$ for given $j_1$ and $j_2$. Without loss of generality we assume that $j_1 \geq j_2$. Now, since $m= m _1 + m_2$, the maximum value of $m$ is
 \begin{equation}
-m^{max} = m_1^{max} + m_2^{max} = j_1 + j +2
+m^{max} = m_1^{max} + m_2^{max} = j_1 + j_2
 \end{equation} 
 Since $m$ can take on $\qty(2 j + 1)$ values $-j, -j+1, \ldots, 0, \ldots, j-1, j$, it follows that the maximum possible value of $j$ is also $j_1+j_2$. Thus there is only one basis state corresponding to $m=m^{max}=j_1 + j_2$. This state can be written as either $\ket{j_1 j_2, j_1 j_2}$ in the uncoupled $\qty(m_1 m_2)$ basis, or as $\ket{j_1 j_2; j_1+j_2, j_1+j_2}$ in coupled $\qty(j m)$ basis. Since there is only one state corresponding to $m_1 = j_1$ and $m_2 = j_2$, we have apart from a phase
 \begin{equation}
@@ -129,7 +129,7 @@ m_1 = j_1 - 1 &\quad m_2 = j_2
 \end{align*}
 Thus in the $\qty(m_1 m_2)$ basis, the two basis states for $m=j_1 + j_2 - 1$ are
 \begin{equation*}
-\ket{j_1 j_2 j_1 j_2-1} \qq{and} \ket{j_1 j_2 j_1-a j_2}
+\ket{j_1 j_2; j_1, j_2-1} \qq{and} \ket{j_1 j_2; j_1-1, j_2}
 \end{equation*}
 
 for $m=j_1 + j_2 - 1$, there must be two-folded degeneracy in the basis $\ket{j_1 j_2 j m}$ as well. Since $m=j_1 j _ 2 - 1$ is compatible with either $j=j_1 + j _2$ or with $j=j_1 + j_2 - 1$, the two states in the $\ket{j_1 j_2 j m}$ basis are identified with
@@ -172,7 +172,7 @@ The $(2 j_2 + 1)$ fold degeneracy must be associated with
 j&=j_1 + j_2, j_1 + j_2 - 1, \ldots, j_1 + j_2 - (2 j_2 + 1 - 1) \\
 \qq{i.e.,} j&= j_1 + j_2, j_1 + j_2 - 1, \ldots, j_1-j_2
 \end{align*}
-If we lift the restriction $j1 \geq j_2$, we can write
+If we lift the restriction $j_1 \geq j_2$, we can write
 \begin{equation}
 \label{chapter19-eqn9}
 j = j_1 + j_2, j_1 + j_2 - 1, \ldots, \abs{j_1-j_2}
@@ -219,7 +219,7 @@ The Clebsch-Gordon Coefficient are written as $\braket{j_1 j_2; m_1 m_2}{j_1 j_2
 	\end{equation}
 	Since the vectors $\ket{j_1 j_2; m_1 m_2}$ also form an orthonormal basis is the space of $j_1$ and $j_2$, we can also write 
 	\begin{equation}
-	\ket{j_1 j_2; m_1 m_2} = \sum_{j=\abs{j_1 - j_2}}^{j_1 + j_2} \sum_{m=-j}^{j} \ketbra{j_1 j_2; j m}{j_1 j_2; j m} \ket{j_1 j_2; m_1 m_2}
+	\ket{j_1 j_2; m_1 m_2} = \sum_{j=\abs{j_1 - j_2}}^{j_1 + j_2} \sum_{m=-j}^{j} \ket{j_1 j_2; j m}\braket{j_1 j_2; j m}{j_1 j_2; m_1 m_2}
 	\end{equation}
 	Since CG coefficients are chosen to be real,
 	\begin{equation}
@@ -297,9 +297,12 @@ S_{-}\ket{s, m} = \sqrt{(s + m)(s - m + 1)} \ket{s, m-1}
 \end{equation}
 Similar formulas hold if we apply $S_{1-}$ and $S_{2-}$ to the state $\ket{s_1 m_1}$ and $\ket{s_2 m_2}$ respectively. Thus
 \begin{align*}
+\begin{split}
 S_{-} \chi_{11} &= \qty(S_{1-}\ket{\frac{1}{2}\frac{1}{2}}_1)\ket{\frac{1}{2}\frac{1}{2}}_2 + \ket{\frac{1}{2}\frac{1}{2}}_1\qty(S_{2-}\ket{\frac{1}{2}\frac{1}{2}}_2)\\
-\sqrt{(1 + 1)(1 - 1 + 1)} \chi_{1 0} &= \sqrt{\qty(\frac{1}{2}+\frac{1}{2})\qty(\frac{1}{2} - \frac{1}{2} + 1)} \ket{\frac{1}{2},-\frac{1}{2}}_1\ket{\frac{1}{2} \frac{1}{2}}_2 + \ket{\frac{1}{2} \frac{1}{2}}_1 \sqrt{\qty(\frac{1}{2}+\frac{1}{2})\qty(\frac{1}{2} - \frac{1}{2} + 1)}\ket{\frac{1}{2},-\frac{1}{2}}_2 \\
+\sqrt{(1 + 1)(1 - 1 + 1)} \chi_{1 0} &= \sqrt{\qty(\frac{1}{2}+\frac{1}{2})\qty(\frac{1}{2} - \frac{1}{2} + 1)} \ket{\frac{1}{2},-\frac{1}{2}}_1\ket{\frac{1}{2} \frac{1}{2}}_2 \\
+&+ \ket{\frac{1}{2} \frac{1}{2}}_1 \sqrt{\qty(\frac{1}{2}+\frac{1}{2})\qty(\frac{1}{2} - \frac{1}{2} + 1)}\ket{\frac{1}{2},-\frac{1}{2}}_2 \\
 \sqrt{2} \chi_{1 0} &= \ket{\frac{1}{2},-\frac{1}{2}}_1 \ket{\frac{1}{2} \frac{1}{2}}_2 + \ket{\frac{1}{2} \frac{1}{2}}_1 \ket{\frac{1}{2},-\frac{1}{2}}_2
+\end{split}
 \end{align*}
 \begin{equation}
 \label{chapter19-eqn2-spin-half}
@@ -397,29 +400,30 @@ Now, the quantum number $j$ for the total angular momentum is
 \begin{equation}
 j = l \oplus s = 1 \oplus \frac{1}{2} = \frac{3}{2}, \frac{1}{2}
 \end{equation}
-The coupled states, i.e., the eigenstates of $\{L^2, S^2, J^2, J_z\}$ are written as $\ket{l s; j m}$. Since $l$ and $s$ are given and fixed, the coupled states are simply written as $\ket{j m}$ omitting the quantum numbers $l$ and $s$. Sometimes we denote the coupled states with a curly $y$, e.g., $\mathcal{y}_{j m}$.\\
+The coupled states, i.e., the eigenstates of $\{L^2, S^2, J^2, J_z\}$ are written as $\ket{l s; j m}$. Since $l$ and $s$ are given and fixed, the coupled states are simply written as $\ket{j m}$ omitting the quantum numbers $l$ and $s$. Sometimes we denote the coupled states with a curly $y$, e.g., $\mathcal{Y}_{j m}$.\\
 
 Now
+
 \begin{align*}
 \ket{j m} &= \sum_{m_l m_s} \braket{l s; m_l m_s}{j m} \ket{l s; m_l m_s} \\
 &= \sum_{m_l m_s} \braket{l s; m_l m_s}{j m} \ket{l m_l}\ket{s m_s} \\
-\qq{i.e.,}\mathcal{y}_{j m}\qty(\theta\phi) &= \sum_{m_l m_s} \braket{l s; m_l m_s}{j m} Y_{l m_l}\qty(\theta, \phi) \chi_{s,m_s}
+\qq{i.e.,}\mathcal{Y}_{j m}\qty(\theta\phi) &= \sum_{m_l m_s} \braket{l s; m_l m_s}{j m} Y_{l m_l}\qty(\theta, \phi) \chi_{s,m_s}
 \end{align*}
 In the present example, the coupled states are
 \begin{equation}
-\mathcal{y}_{j m} :
-\mathcal{y}_{\frac{3}{2}\frac{3}{2}}
-\mathcal{y}_{\frac{3}{2}\frac{1}{2}}
-\mathcal{y}_{\frac{3}{2}-\frac{1}{2}}
-\mathcal{y}_{\frac{3}{2}-\frac{3}{2}}
-\mathcal{y}_{\frac{1}{2}\frac{1}{2}}
-\mathcal{y}_{\frac{1}{2}-\frac{1}{2}}
+\mathcal{Y}_{j m} :
+\mathcal{Y}_{\frac{3}{2}\frac{3}{2}}
+\mathcal{Y}_{\frac{3}{2}\frac{1}{2}}
+\mathcal{Y}_{\frac{3}{2}-\frac{1}{2}}
+\mathcal{Y}_{\frac{3}{2}-\frac{3}{2}}
+\mathcal{Y}_{\frac{1}{2}\frac{1}{2}}
+\mathcal{Y}_{\frac{1}{2}-\frac{1}{2}}
 \end{equation}
 
-Let us first consider $\mathcal{y}_{\frac{3}{2}\frac{3}{2}}$. The only way we can have $m=m_l + m_s = \frac{3}{2}$ is by taking $m_l= 1$ and $m_s = \frac{1}{2}$. So, we must have
+Let us first consider $\mathcal{Y}_{\frac{3}{2}\frac{3}{2}}$. The only way we can have $m=m_l + m_s = \frac{3}{2}$ is by taking $m_l= 1$ and $m_s = \frac{1}{2}$. So, we must have
 \begin{equation}
 \label{chapter19.eqn1-spin-orbit}
-\mathcal{y}_{\frac{3}{2}\frac{3}{2}} = Y_{1 1}\chi_{\frac{1}{2}\frac{1}{2}}
+\mathcal{Y}_{\frac{3}{2}\frac{3}{2}} = Y_{1 1}\chi_{\frac{1}{2}\frac{1}{2}}
 \end{equation}
 The corresponding CG coefficient is therefore
 \begin{equation*}
@@ -427,11 +431,11 @@ The corresponding CG coefficient is therefore
 \end{equation*}
 
 %%% edited by shahnoor
-Successively applying the ladder operator $J_{-} = L_{-} + S_{-}$ to the state $\mathcal{y}_{\frac{3}{2}\frac{3}{2}}$ we get
+Successively applying the ladder operator $J_{-} = L_{-} + S_{-}$ to the state $\mathcal{Y}_{\frac{3}{2}\frac{3}{2}}$ we get
 \begin{align}
-\sqrt{3} \mathcal{y}_{\frac{3}{2}\frac{1}{2}} 
+\sqrt{3} \mathcal{Y}_{\frac{3}{2}\frac{1}{2}} 
 &= \sqrt{2} Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}} + Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}} \nonumber\\
-\mathcal{y}_{\frac{3}{2}\frac{1}{2}} 
+\mathcal{Y}_{\frac{3}{2}\frac{1}{2}} 
 &= \sqrt{\frac{2}{3}} Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}} 
 +
 \frac{1}{\sqrt{3}} Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}} \label{chapter19.eqn2-spin-orbit}
@@ -442,36 +446,36 @@ The corresponding CG coefficient are easily read off from this expression
 \braket{1 \frac{1}{2}; 1 -\frac{1}{2}}{\frac{3}{2}\frac{1}{2}} &= \frac{1}{\sqrt{3}}
 \end{align*}
 
-Next, to obtain the state $\mathcal{y}_{\frac{3}{2}-\frac{1}{2}}$ we could apply the lowering operator again to the state $\mathcal{y}_{\frac{3}{2}\frac{1}{2}}$. However, it is easier to write down the state $\mathcal{y}_{\frac{3}{2}-\frac{3}{2}}$ and then to apply the raising operator to this state. Now obviously
+Next, to obtain the state $\mathcal{Y}_{\frac{3}{2}-\frac{1}{2}}$ we could apply the lowering operator again to the state $\mathcal{Y}_{\frac{3}{2}\frac{1}{2}}$. However, it is easier to write down the state $\mathcal{Y}_{\frac{3}{2}-\frac{3}{2}}$ and then to apply the raising operator to this state. Now obviously
 \begin{equation}
 \label{chapter19.eqn3-spin-orbit}
-\mathcal{y}_{\frac{3}{2}-\frac{3}{2}} = Y_{1 -1}\chi_{\frac{1}{2}-\frac{1}{2}}
+\mathcal{Y}_{\frac{3}{2}-\frac{3}{2}} = Y_{1 -1}\chi_{\frac{1}{2}-\frac{1}{2}}
 \end{equation}
-Hence $\braket{1 \frac{1}{2}; -1 -\frac{1}{2}}{\frac{3}{2}-\frac{3}{2}} = 1$. Applying the raising operator $J_{+} = L_{+} + S_{+}$ to $\mathcal{y}_{\frac{3}{2}-\frac{3}{2}}$ we obtain
+Hence $\braket{1 \frac{1}{2}; -1 -\frac{1}{2}}{\frac{3}{2}-\frac{3}{2}} = 1$. Applying the raising operator $J_{+} = L_{+} + S_{+}$ to $\mathcal{Y}_{\frac{3}{2}-\frac{3}{2}}$ we obtain
 \begin{equation}
 \label{chapter19.eqn4-spin-orbit}
-\mathcal{y}_{\frac{3}{2}-\frac{1}{2}} = \frac{1}{\sqrt{3}} Y_{1 -1} \chi_{\frac{1}{2}\frac{1}{2}} + \sqrt{\frac{2}{3}} Y_{1 0}\chi_{\frac{1}{2}-\frac{1}{2}}
+\mathcal{Y}_{\frac{3}{2}-\frac{1}{2}} = \frac{1}{\sqrt{3}} Y_{1 -1} \chi_{\frac{1}{2}\frac{1}{2}} + \sqrt{\frac{2}{3}} Y_{1 0}\chi_{\frac{1}{2}-\frac{1}{2}}
 \end{equation}
 The corresponding CG coefficients are
 \begin{align*}
 \braket{1 \frac{1}{2};-1\frac{1}{2}}{\frac{3}{2}-\frac{1}{2}} &= \frac{1}{\sqrt{3}} \\
 \braket{1\frac{1}{2};0-\frac{1}{2}}{\frac{3}{2}-\frac{1}{2}} &= \sqrt{\frac{2}{3}}
 \end{align*}
-Finally for $j=\frac{1}{2}$, we have to form the two coupled states, $\mathcal{y}_{\frac{1}{2}\frac{1}{2}}$ and $\mathcal{y}_{\frac{1}{2}-\frac{1}{2}}$. For $m=m_l + m_s = \frac{1}{2}$, The possible choices of $\qty(m_l, m_s)$ are $(0,\frac{1}{2})$ and $(1,-\frac{1}{2})$. Thus $\mathcal{y}_{\frac{1}{2}\frac{1}{2}}$ must be a linear combination of states $Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}}$ and $Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}}$. We write
+Finally for $j=\frac{1}{2}$, we have to form the two coupled states, $\mathcal{Y}_{\frac{1}{2}\frac{1}{2}}$ and $\mathcal{Y}_{\frac{1}{2}-\frac{1}{2}}$. For $m=m_l + m_s = \frac{1}{2}$, The possible choices of $\qty(m_l, m_s)$ are $(0,\frac{1}{2})$ and $(1,-\frac{1}{2})$. Thus $\mathcal{Y}_{\frac{1}{2}\frac{1}{2}}$ must be a linear combination of states $Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}}$ and $Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}}$. We write
 \begin{equation}
-\mathcal{y}_{\frac{1}{2}\frac{1}{2}} = c_1 Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}} + c_2 Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}}
+\mathcal{Y}_{\frac{1}{2}\frac{1}{2}} = c_1 Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}} + c_2 Y_{1 1}\chi_{\frac{1}{2}-\frac{1}{2}}
 \end{equation}
-The state $\mathcal{y}_{\frac{3}{2}\frac{1}{2}}$ in Eq. (\ref{chapter19.eqn2-spin-orbit}) is a different linear combination of the same states. Now $\mathcal{y}_{\frac{1}{2}\frac{1}{2}}$ must be orthogonal to $\mathcal{y}_{\frac{3}{2}\frac{1}{2}}$ and also should be normalized. Therefore,
+The state $\mathcal{Y}_{\frac{3}{2}\frac{1}{2}}$ in Eq. (\ref{chapter19.eqn2-spin-orbit}) is a different linear combination of the same states. Now $\mathcal{Y}_{\frac{1}{2}\frac{1}{2}}$ must be orthogonal to $\mathcal{Y}_{\frac{3}{2}\frac{1}{2}}$ and also should be normalized. Therefore,
 \begin{align}
-\qty(\mathcal{y}_{\frac{3}{2}\frac{1}{2}},\mathcal{y}_{\frac{1}{2}\frac{1}{2}}) &= 0 \nonumber\\
+\qty(\mathcal{Y}_{\frac{3}{2}\frac{1}{2}},\mathcal{Y}_{\frac{1}{2}\frac{1}{2}}) &= 0 \nonumber\\
 \label{chapter19.eqn5-spin-orbit}
 \qq{i.e.,}\sqrt{\frac{2}{3}} c_1 + \frac{1}{\sqrt{3}} c_2 = 0
 \end{align}
 And
 \begin{align}
-\qty(\mathcal{y}_{\frac{1}{2}\frac{1}{2}},\mathcal{y}_{\frac{1}{2}\frac{1}{2}}) &= 1 \nonumber\\
+\qty(\mathcal{Y}_{\frac{1}{2}\frac{1}{2}},\mathcal{Y}_{\frac{1}{2}\frac{1}{2}}) &= 1 \nonumber\\
 \label{chapter19.eqn6-spin-orbit}
-\qq{i.e.,} \abs{c_1}^2 + \abs{c_2}^2 = 0
+\qq{i.e.,} \abs{c_1}^2 + \abs{c_2}^2 = 1
 \end{align}
 We can choose $c_1$ and $c_2$ to be real with the values
 \begin{equation}
@@ -480,12 +484,12 @@ c_1 = \frac{1}{\sqrt{3}} \qq{and} c_2 = - \sqrt{\frac{2}{3}}
 Therefore
 \begin{equation}
 \label{chapter19.eqn7-spin-orbit}
-\mathcal{y}{\frac{1}{2}\frac{1}{2}} = \frac{1}{\sqrt{3}} Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}} - \sqrt{\frac{2}{3}} Y_{11} \chi_{\frac{1}{2}-\frac{1}{2}}
+\mathcal{Y}_{\frac{1}{2}\frac{1}{2}} = \frac{1}{\sqrt{3}} Y_{1 0}\chi_{\frac{1}{2}\frac{1}{2}} - \sqrt{\frac{2}{3}} Y_{11} \chi_{\frac{1}{2}-\frac{1}{2}}
 \end{equation}
 The corresponding CG coefficients are then
 \begin{align*}
 \braket{1\frac{1}{2};0\frac{1}{2}}{\frac{1}{2}\frac{1}{2}} &= \frac{1}{\sqrt{3}} \\
-\braket{1 \frac{1}{2}; 1 -\frac{1}{2}}{\frac{1}{2} \frac{1}{2}} &= \sqrt{\frac{2}{3}}
+\braket{1 \frac{1}{2}; 1 -\frac{1}{2}}{\frac{1}{2} \frac{1}{2}} &= - \sqrt{\frac{2}{3}}
 \end{align*}
 Note that there is an arbitrariness in the choice of sign of the CG coefficients. We could equally well have chosen $c_1 = - \frac{1}{\sqrt{3}}$ and $c_2 = \sqrt{\frac{2}{3}}$. This choice will reverse the sign of the CG coefficients above.
 
